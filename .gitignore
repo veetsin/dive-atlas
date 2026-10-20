@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vite/
+*.log
+.DS_Store
+
+# GPT raw output and reference images are large and not needed for the build
+art/raw/
+art/reference/
+
+# Natural Earth downloads (regenerate with `npm run geo`)
+scripts/.cache/
+
+# Headless map previews (regenerate with `npm run preview:map`)
+preview/

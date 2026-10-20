@@ -1,0 +1,17 @@
+[
+  {"id": "pacific", "tier": 1, "name": {"zh": "太平洋", "en": "Pacific Ocean"}, "anchor": [-168, -6]},
+  {"id": "indian", "tier": 1, "name": {"zh": "印度洋", "en": "Indian Ocean"}, "anchor": [80, -30]},
+  {"id": "atlantic", "tier": 1, "name": {"zh": "大西洋", "en": "Atlantic Ocean"}, "anchor": [-21, -6], "vertical": true},
+  {"id": "arctic", "tier": 1, "name": {"zh": "北冰洋", "en": "Arctic Ocean"}, "anchor": [150, 80]},
+
+  {"id": "south-china-sea", "tier": 2, "name": {"zh": "南海", "en": "South China Sea"}, "anchor": [113, 14], "minZoom": 2.5},
+  {"id": "philippine-sea", "tier": 2, "name": {"zh": "菲律宾海", "en": "Philippine Sea"}, "anchor": [134, 18], "minZoom": 3.5},
+  {"id": "java-sea", "tier": 2, "name": {"zh": "爪哇海", "en": "Java Sea"}, "anchor": [111, -5], "minZoom": 5},
+  {"id": "banda-sea", "tier": 2, "name": {"zh": "班达海", "en": "Banda Sea"}, "anchor": [127.5, -5.8], "minZoom": 7},
+  {"id": "andaman-sea", "tier": 2, "name": {"zh": "安达曼海", "en": "Andaman Sea"}, "anchor": [96, 11], "minZoom": 6, "vertical": true},
+  {"id": "bay-of-bengal", "tier": 2, "name": {"zh": "孟加拉湾", "en": "Bay of Bengal"}, "anchor": [88, 14], "minZoom": 4.5},
+  {"id": "arabian-sea", "tier": 2, "name": {"zh": "阿拉伯海", "en": "Arabian Sea"}, "anchor": [64, 10], "minZoom": 3.5},
+  {"id": "coral-sea", "tier": 2, "name": {"zh": "珊瑚海", "en": "Coral Sea"}, "anchor": [153, -17], "minZoom": 3.5},
+  {"id": "red-sea", "tier": 2, "name": {"zh": "红海", "en": "Red Sea"}, "anchor": [38, 21], "minZoom": 4, "vertical": true},
+  {"id": "caribbean", "tier": 2, "name": {"zh": "加勒比海", "en": "Caribbean Sea"}, "anchor": [-75, 15], "minZoom": 3.5}
+]

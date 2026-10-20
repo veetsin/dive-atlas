@@ -1,0 +1,16 @@
+[
+  { "id": "pacific", "tier": 1, "name": { "zh": "太平洋", "en": "Pacific Ocean" }, "anchor": [-170, 8] },
+  { "id": "indian", "tier": 1, "name": { "zh": "印度洋", "en": "Indian Ocean" }, "anchor": [80, -26] },
+  { "id": "atlantic", "tier": 1, "name": { "zh": "大西洋", "en": "Atlantic Ocean" }, "anchor": [-38, -45] },
+  { "id": "arctic", "tier": 1, "name": { "zh": "北冰洋", "en": "Arctic Ocean" }, "anchor": [-160, 77] },
+
+  { "id": "southern", "tier": 2, "name": { "zh": "南大洋", "en": "Southern Ocean" }, "anchor": [100, -55] },
+  { "id": "south-china-sea", "tier": 2, "name": { "zh": "南海", "en": "South China Sea" }, "anchor": [113, 16] },
+  { "id": "philippine-sea", "tier": 2, "name": { "zh": "菲律宾海", "en": "Philippine Sea" }, "anchor": [135, 18] },
+  { "id": "arabian-sea", "tier": 2, "name": { "zh": "阿拉伯海", "en": "Arabian Sea" }, "anchor": [63, 13] },
+  { "id": "bay-of-bengal", "tier": 2, "name": { "zh": "孟加拉湾", "en": "Bay of Bengal" }, "anchor": [88, 13] },
+  { "id": "coral-sea", "tier": 2, "name": { "zh": "珊瑚海", "en": "Coral Sea" }, "anchor": [156, -18] },
+  { "id": "tasman-sea", "tier": 2, "name": { "zh": "塔斯曼海", "en": "Tasman Sea" }, "anchor": [161, -39] },
+  { "id": "caribbean", "tier": 2, "name": { "zh": "加勒比海", "en": "Caribbean Sea" }, "anchor": [-74, 15] },
+  { "id": "red-sea", "tier": 2, "name": { "zh": "红海", "en": "Red Sea" }, "anchor": [38, 20] }
+]

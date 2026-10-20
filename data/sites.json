@@ -1,0 +1,301 @@
+[
+  {
+    "id": "sipadan",
+    "name": { "zh": "诗巴丹", "en": "Sipadan" },
+    "country": { "zh": "马来西亚", "en": "Malaysia" },
+    "region": "coral-triangle",
+    "coords": [118.63, 4.11],
+    "bestMonths": [4, 5, 6, 7, 8, 9],
+    "species": ["green-turtle", "barracuda", "jack-school", "bumphead-parrotfish", "grey-reef-shark"],
+    "level": "AOW",
+    "types": ["wall", "drift", "reef"],
+    "access": ["boat"],
+    "waterTempC": [27, 30],
+    "visibilityM": [15, 30],
+    "summary": {
+      "zh": "一座从深海拔地而起的海洋岛，峭壁边缘常年有海龟巡游，梭鱼与杰克鱼在蓝水中旋成风暴。每日入岛名额有限，需提前预订。",
+      "en": "An oceanic island rising from deep water. Turtles patrol the wall, barracuda and trevally spin into tornadoes in the blue. Daily permits are limited — book early."
+    },
+    "highlights": [
+      { "zh": "Barracuda Point 的梭鱼风暴", "en": "Barracuda tornado at Barracuda Point" },
+      { "zh": "几乎每一潜都能遇到绿海龟", "en": "Green turtles on nearly every dive" }
+    ],
+    "sources": [],
+    "verified": false,
+    "notes": "示例种子数据：数值为常见说法，待逐条核实并补来源。",
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "komodo",
+    "name": { "zh": "科莫多", "en": "Komodo" },
+    "country": { "zh": "印度尼西亚", "en": "Indonesia" },
+    "region": "coral-triangle",
+    "coords": [119.49, -8.55],
+    "bestMonths": [4, 5, 6, 7, 8, 9, 10, 11],
+    "species": ["reef-manta", "grey-reef-shark", "pygmy-seahorse", "nudibranch"],
+    "level": "AOW",
+    "types": ["drift", "reef", "muck"],
+    "access": ["boat", "liveaboard"],
+    "waterTempC": [24, 29],
+    "visibilityM": [10, 30],
+    "summary": {
+      "zh": "强流塑造的国家公园：北部是放流与大货，南部冷水里是软珊瑚与微距。潮汐决定一切，跟着潜导的流况判断走。",
+      "en": "A national park shaped by current: drift dives and big fish in the north, cooler water with soft corals and macro in the south. Tides rule — follow your guide's call."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "raja-ampat",
+    "name": { "zh": "四王群岛", "en": "Raja Ampat" },
+    "country": { "zh": "印度尼西亚", "en": "Indonesia" },
+    "region": "coral-triangle",
+    "coords": [130.5, -0.55],
+    "bestMonths": [10, 11, 12, 1, 2, 3, 4],
+    "species": ["reef-manta", "pygmy-seahorse", "nudibranch", "jack-school", "napoleon-wrasse"],
+    "level": "AOW",
+    "types": ["reef", "drift", "muck"],
+    "access": ["liveaboard", "boat"],
+    "waterTempC": [27, 30],
+    "visibilityM": [10, 25],
+    "summary": {
+      "zh": "珊瑚三角的核心，鱼类多样性居世界前列。船宿是最省心的玩法，一周里能从蝠鲼清洁站看到豆丁海马。",
+      "en": "The heart of the Coral Triangle, with some of the highest fish diversity on earth. A liveaboard is the easy way: manta cleaning stations to pygmy seahorses in one week."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "tubbataha",
+    "name": { "zh": "图巴塔哈", "en": "Tubbataha" },
+    "country": { "zh": "菲律宾", "en": "Philippines" },
+    "region": "coral-triangle",
+    "coords": [119.9, 8.85],
+    "bestMonths": [3, 4, 5, 6],
+    "species": ["whale-shark", "reef-manta", "grey-reef-shark", "whitetip-reef-shark", "green-turtle"],
+    "level": "AOW",
+    "types": ["wall", "reef", "pelagic"],
+    "access": ["liveaboard"],
+    "waterTempC": [27, 30],
+    "visibilityM": [20, 40],
+    "summary": {
+      "zh": "苏禄海中央的世界遗产环礁，每年只开放一个短季，只能船宿前往。峭壁、鲨鱼与极高的能见度是它的标签。",
+      "en": "A World Heritage atoll in the middle of the Sulu Sea, open only for a short season and reachable only by liveaboard. Walls, sharks and exceptional visibility."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "malapascua",
+    "name": { "zh": "马拉帕斯夸（妈妈岛）", "en": "Malapascua" },
+    "country": { "zh": "菲律宾", "en": "Philippines" },
+    "region": "coral-triangle",
+    "coords": [124.12, 11.33],
+    "bestMonths": [],
+    "species": ["thresher-shark", "mandarinfish", "nudibranch"],
+    "level": "AOW",
+    "types": ["pelagic", "muck", "reef"],
+    "access": ["boat"],
+    "waterTempC": [26, 30],
+    "visibilityM": [10, 25],
+    "summary": {
+      "zh": "清晨出海，在清洁站边等长尾鲨甩着长尾巴从深处升上来——这是全球最稳定的长尾鲨观测点之一。",
+      "en": "Head out before dawn and wait beside a cleaning station as thresher sharks rise from the deep — one of the most reliable places in the world to see them."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "similan",
+    "name": { "zh": "斯米兰群岛", "en": "Similan Islands" },
+    "country": { "zh": "泰国", "en": "Thailand" },
+    "region": "southeast-asia",
+    "coords": [97.64, 8.65],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "species": ["whale-shark", "reef-manta", "eagle-ray", "green-turtle"],
+    "level": "OW",
+    "types": ["reef", "drift"],
+    "access": ["liveaboard", "boat"],
+    "waterTempC": [27, 30],
+    "visibilityM": [15, 30],
+    "summary": {
+      "zh": "安达曼海的花岗岩巨石与珊瑚花园，公园每年旱季开放。船宿常把 Richelieu Rock 一并纳入，那里是鲸鲨的热点。",
+      "en": "Granite boulders and coral gardens in the Andaman Sea; the park opens for the dry season only. Liveaboards usually include Richelieu Rock, a whale shark hotspot."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "hanifaru-bay",
+    "name": { "zh": "哈尼法鲁湾", "en": "Hanifaru Bay" },
+    "country": { "zh": "马尔代夫", "en": "Maldives" },
+    "region": "indian-ocean",
+    "coords": [73.13, 5.17],
+    "bestMonths": [5, 6, 7, 8, 9, 10, 11],
+    "species": ["reef-manta", "whale-shark"],
+    "level": "OW",
+    "types": ["pelagic"],
+    "access": ["boat", "liveaboard"],
+    "waterTempC": [27, 30],
+    "visibilityM": [10, 25],
+    "summary": {
+      "zh": "芭环礁的一处小海湾，西南季风把浮游生物推进湾里，蝠鲼成群进食。这里是浮潜观赏区，不允许水肺。",
+      "en": "A small bay in Baa Atoll where the southwest monsoon pushes plankton in and mantas gather to feed. Snorkel-only — scuba is not permitted inside the bay."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "ras-mohammed",
+    "name": { "zh": "拉斯穆罕默德", "en": "Ras Mohammed" },
+    "country": { "zh": "埃及", "en": "Egypt" },
+    "region": "red-sea",
+    "coords": [34.25, 27.73],
+    "bestMonths": [3, 4, 5, 9, 10, 11],
+    "species": ["barracuda", "jack-school", "napoleon-wrasse", "hawksbill"],
+    "level": "OW",
+    "types": ["wall", "reef", "wreck"],
+    "access": ["boat", "liveaboard"],
+    "waterTempC": [21, 28],
+    "visibilityM": [20, 40],
+    "summary": {
+      "zh": "西奈半岛顶端的国家公园，Shark & Yolanda Reef 的峭壁在夏初常被成群的梭鱼和鲹鱼笼罩。",
+      "en": "The national park at the tip of Sinai. In early summer the walls of Shark & Yolanda Reef are wrapped in schools of barracuda and trevally."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "palau",
+    "name": { "zh": "帕劳", "en": "Palau" },
+    "country": { "zh": "帕劳", "en": "Palau" },
+    "region": "pacific",
+    "coords": [134.22, 7.13],
+    "bestMonths": [11, 12, 1, 2, 3, 4],
+    "species": ["grey-reef-shark", "reef-manta", "napoleon-wrasse", "green-turtle"],
+    "level": "AOW",
+    "types": ["drift", "wall", "wreck"],
+    "access": ["boat", "liveaboard"],
+    "waterTempC": [27, 30],
+    "visibilityM": [20, 40],
+    "summary": {
+      "zh": "Blue Corner 的放流、German Channel 的蝠鲼、以及二战沉船——帕劳把大流、大货和历史装进了同一片海。",
+      "en": "Drift at Blue Corner, mantas at German Channel, WWII wrecks in the lagoon — Palau packs current, big animals and history into one sea."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "galapagos",
+    "name": { "zh": "加拉帕戈斯", "en": "Galápagos" },
+    "country": { "zh": "厄瓜多尔", "en": "Ecuador" },
+    "region": "eastern-pacific",
+    "coords": [-92.0, 1.67],
+    "bestMonths": [6, 7, 8, 9, 10, 11],
+    "species": ["hammerhead", "whale-shark", "galapagos-shark", "sea-lion", "sunfish"],
+    "level": "AOW",
+    "types": ["pelagic", "coldwater", "drift"],
+    "access": ["liveaboard"],
+    "waterTempC": [18, 26],
+    "visibilityM": [10, 25],
+    "summary": {
+      "zh": "达尔文岛与沃尔夫岛只能船宿抵达。凉季里，双髻鲨成群在流中列队，鲸鲨从蓝水中缓缓经过。",
+      "en": "Darwin and Wolf are liveaboard-only. In the cool season, hammerheads line up in the current and whale sharks cruise past out of the blue."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "socorro",
+    "name": { "zh": "索科罗", "en": "Socorro" },
+    "country": { "zh": "墨西哥", "en": "Mexico" },
+    "region": "eastern-pacific",
+    "coords": [-110.97, 18.8],
+    "bestMonths": [11, 12, 1, 2, 3, 4, 5],
+    "species": ["oceanic-manta", "humpback-whale", "hammerhead", "dolphin", "tiger-shark"],
+    "level": "AOW",
+    "types": ["pelagic"],
+    "access": ["liveaboard"],
+    "waterTempC": [21, 27],
+    "visibilityM": [15, 30],
+    "summary": {
+      "zh": "距离巴哈半岛一整夜航程的火山群岛，以主动靠近潜水员的大洋蝠鲼闻名；冬季水下还能听见座头鲸的歌声。",
+      "en": "Volcanic islands a full night's sail from Baja, famous for oceanic mantas that approach divers. In winter you can hear humpbacks singing underwater."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "great-barrier-reef",
+    "name": { "zh": "大堡礁", "en": "Great Barrier Reef" },
+    "country": { "zh": "澳大利亚", "en": "Australia" },
+    "region": "australia-nz",
+    "coords": [145.65, -14.7],
+    "bestMonths": [6, 7, 8, 9, 10, 11],
+    "species": ["green-turtle", "napoleon-wrasse", "whitetip-reef-shark", "reef-manta"],
+    "level": "OW",
+    "types": ["reef", "wall"],
+    "access": ["boat", "liveaboard"],
+    "waterTempC": [23, 29],
+    "visibilityM": [15, 30],
+    "summary": {
+      "zh": "从凯恩斯出发的船宿可以抵达外礁的 Ribbon Reefs，远离日潜人潮；冬季的小须鲸季是这里最特别的体验。",
+      "en": "Liveaboards from Cairns reach the Ribbon Reefs on the outer reef, far from the day-trip crowds. The winter minke whale season is the standout experience."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "cocos-island",
+    "name": { "zh": "科科斯岛", "en": "Cocos Island" },
+    "country": { "zh": "哥斯达黎加", "en": "Costa Rica" },
+    "region": "eastern-pacific",
+    "coords": [-87.07, 5.52],
+    "bestMonths": [6, 7, 8, 9, 10, 11],
+    "species": ["hammerhead", "whitetip-reef-shark", "tiger-shark", "eagle-ray"],
+    "level": "AOW",
+    "types": ["pelagic", "drift"],
+    "access": ["liveaboard"],
+    "waterTempC": [23, 28],
+    "visibilityM": [10, 25],
+    "summary": {
+      "zh": "离岸 36 小时航程的孤岛，雨季的双髻鲨群是它的招牌，夜潜时上百条白顶礁鲨一起猎食。",
+      "en": "A lone island 36 hours offshore. Wet-season hammerhead schools are its signature, and on night dives hundreds of whitetip reef sharks hunt together."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "id": "silfra",
+    "name": { "zh": "丝浮拉裂缝", "en": "Silfra" },
+    "country": { "zh": "冰岛", "en": "Iceland" },
+    "region": "polar",
+    "coords": [-21.12, 64.26],
+    "bestMonths": [],
+    "species": [],
+    "level": "OW",
+    "types": ["coldwater"],
+    "access": ["shore"],
+    "waterTempC": [2, 4],
+    "visibilityM": [70, 100],
+    "summary": {
+      "zh": "在两块大陆板块之间的裂缝里潜水，冰川融水能见度常常超过 100 米。需要干衣证书或等效经验。",
+      "en": "Dive in the fissure between two continental plates, in glacial meltwater with visibility often beyond 100 m. Drysuit certification or equivalent experience required."
+    },
+    "sources": [],
+    "verified": false,
+    "updatedAt": "2026-10-20"
+  }
+]

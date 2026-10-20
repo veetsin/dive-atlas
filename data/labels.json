@@ -1,0 +1,29 @@
+[
+  { "id": "north-pacific", "tier": 1, "name": { "zh": "北太平洋", "en": "North Pacific Ocean" }, "at": [-170, 33] },
+  { "id": "south-pacific", "tier": 1, "name": { "zh": "南太平洋", "en": "South Pacific Ocean" }, "at": [-128, -29] },
+  { "id": "indian", "tier": 1, "name": { "zh": "印度洋", "en": "Indian Ocean" }, "at": [81, -27] },
+  { "id": "south-atlantic", "tier": 1, "name": { "zh": "南大西洋", "en": "South Atlantic Ocean" }, "at": [-12, -27] },
+
+  { "id": "north-atlantic", "tier": 2, "name": { "zh": "北大西洋", "en": "North Atlantic Ocean" }, "at": [-50, 33] },
+  { "id": "arctic", "tier": 2, "name": { "zh": "北冰洋", "en": "Arctic Ocean" }, "at": [140, 80] },
+  { "id": "southern", "tier": 2, "name": { "zh": "南大洋", "en": "Southern Ocean" }, "at": [40, -56] },
+  { "id": "south-china-sea", "tier": 2, "name": { "zh": "南海", "en": "South China Sea" }, "at": [113.5, 15.5] },
+  { "id": "philippine-sea", "tier": 2, "name": { "zh": "菲律宾海", "en": "Philippine Sea" }, "at": [134, 20.5] },
+  { "id": "coral-sea", "tier": 2, "name": { "zh": "珊瑚海", "en": "Coral Sea" }, "at": [159.5, -19.5] },
+  { "id": "arabian-sea", "tier": 2, "name": { "zh": "阿拉伯海", "en": "Arabian Sea" }, "at": [63.5, 11.5] },
+  { "id": "bering-sea", "tier": 2, "name": { "zh": "白令海", "en": "Bering Sea" }, "at": [-177, 56.5] },
+  { "id": "tasman-sea", "tier": 2, "name": { "zh": "塔斯曼海", "en": "Tasman Sea" }, "at": [161, -39.5] },
+
+  { "id": "bay-of-bengal", "tier": 3, "name": { "zh": "孟加拉湾", "en": "Bay of Bengal" }, "at": [88, 10] },
+  { "id": "caribbean", "tier": 3, "name": { "zh": "加勒比海", "en": "Caribbean Sea" }, "at": [-76, 15] },
+  { "id": "mediterranean", "tier": 3, "name": { "zh": "地中海", "en": "Mediterranean Sea" }, "at": [18.5, 34.5] },
+  { "id": "okhotsk", "tier": 3, "name": { "zh": "鄂霍次克海", "en": "Sea of Okhotsk" }, "at": [149, 52.5] },
+  { "id": "red-sea", "tier": 3, "name": { "zh": "红海", "en": "Red Sea" }, "at": [38, 20], "along": [[33, 28], [42, 13.5]] },
+  { "id": "andaman-sea", "tier": 3, "name": { "zh": "安达曼海", "en": "Andaman Sea" }, "at": [95.5, 11] },
+  { "id": "java-sea", "tier": 3, "name": { "zh": "爪哇海", "en": "Java Sea" }, "at": [111, -5] },
+  { "id": "banda-sea", "tier": 3, "name": { "zh": "班达海", "en": "Banda Sea" }, "at": [127.5, -5.5] },
+  { "id": "timor-sea", "tier": 3, "name": { "zh": "帝汶海", "en": "Timor Sea" }, "at": [127.5, -11.5] },
+  { "id": "east-china-sea", "tier": 3, "name": { "zh": "东海", "en": "East China Sea" }, "at": [125.5, 28.5] },
+  { "id": "sulu-sea", "tier": 3, "name": { "zh": "苏禄海", "en": "Sulu Sea" }, "at": [120.3, 8.3] },
+  { "id": "gulf-of-mexico", "tier": 3, "name": { "zh": "墨西哥湾", "en": "Gulf of Mexico" }, "at": [-90.5, 25] }
+]

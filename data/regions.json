@@ -1,0 +1,12 @@
+[
+  { "id": "red-sea", "name": { "zh": "红海", "en": "Red Sea" }, "center": [35.5, 24.0], "color": "#F2795B" },
+  { "id": "indian-ocean", "name": { "zh": "印度洋", "en": "Indian Ocean" }, "center": [73.0, 3.0], "color": "#F6C453" },
+  { "id": "southeast-asia", "name": { "zh": "东南亚", "en": "Southeast Asia" }, "center": [100.0, 8.0], "color": "#2EB8A6" },
+  { "id": "coral-triangle", "name": { "zh": "珊瑚三角", "en": "Coral Triangle" }, "center": [124.0, 0.0], "color": "#E9743F" },
+  { "id": "pacific", "name": { "zh": "太平洋岛屿", "en": "Pacific Islands" }, "center": [160.0, 0.0], "color": "#3F8FD9" },
+  { "id": "australia-nz", "name": { "zh": "澳大利亚与新西兰", "en": "Australia & NZ" }, "center": [148.0, -22.0], "color": "#8A6BD1" },
+  { "id": "caribbean", "name": { "zh": "加勒比海", "en": "Caribbean" }, "center": [-75.0, 16.0], "color": "#F2B5A7" },
+  { "id": "eastern-pacific", "name": { "zh": "东太平洋", "en": "Eastern Pacific" }, "center": [-95.0, 5.0], "color": "#C94C4C" },
+  { "id": "atlantic-med", "name": { "zh": "大西洋与地中海", "en": "Atlantic & Mediterranean" }, "center": [-10.0, 35.0], "color": "#6C9BD1" },
+  { "id": "polar", "name": { "zh": "极地与冷水", "en": "Polar & Cold Water" }, "center": [-20.0, 65.0], "color": "#9ED9C9" }
+]

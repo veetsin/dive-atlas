@@ -1,0 +1,102 @@
+/* ---- Design tokens (see docs/SPEC.md §5) — day theme ("editorial atlas") ---- */
+:root {
+  --ocean-deep: #0e2a47; /* frame edges, vignette, body background */
+  --ocean-mid: #124a6c;
+  --ocean: #19858f; /* equatorial band */
+  --ocean-shallow: #6fcbbe; /* radial highlight */
+  --seafoam: #9ed9c9;
+  /* continental-shelf bands, widest → narrowest */
+  --ring-far: #6fcbbe;
+  --ring-mid: #6fcbbe;
+  --ring-near: #6fcbbe;
+  --land: #f3e6cb;
+  --land-hi: #f6ead2; /* land gradient, top-left */
+  --land-2: #eedcbb; /* land gradient, bottom-right */
+  --land-edge: #d8c49a;
+  --map-line: #fbf8f1; /* graticule, sea names, frame, compass */
+  --coral: #f2795b;
+  --sun: #f6c453;
+  --shell: #f2b5a7;
+  --ink: #13293d;
+  --ink-soft: rgba(19, 41, 61, 0.62);
+  --paper: #fbf8f1;
+  --paper-2: #f2ede2;
+  --line: rgba(19, 41, 61, 0.12);
+  --glass: rgba(251, 248, 241, 0.88); /* floating pills over the map */
+
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(14, 42, 71, 0.18);
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Noto Sans CJK SC', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: 'Songti SC', 'STSong', 'Noto Serif CJK SC', Georgia, 'Times New Roman', serif;
+
+  --header-h: 56px;
+  --card-w: 360px;
+}
+
+/* Night-dive theme: tokens only; MapView toggles a few layers on data-theme (SPEC §5.2). */
+:root[data-theme='night'] {
+  --ocean-mid: #0b1f35;
+  --ocean: #123a5c;
+  --ocean-shallow: #2a6a85;
+  --seafoam: #4a8fa6;
+  --ring-far: #2a6a85;
+  --ring-mid: #397c97;
+  --ring-near: #4a8fa6;
+  --land: #36526d;
+  --land-hi: #3d5b77;
+  --land-2: #33506a;
+  --land-edge: transparent;
+  --map-line: #9ed9c9;
+  --shell: #f9a68b;
+  --paper: #13293d;
+  --paper-2: #1b3550;
+  --ink: #fbf8f1;
+  --ink-soft: rgba(251, 248, 241, 0.65);
+  --line: rgba(251, 248, 241, 0.14);
+  --glass: rgba(19, 41, 61, 0.82);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--ocean-deep);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  padding: 0;
+}
+
+a {
+  color: var(--coral);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
