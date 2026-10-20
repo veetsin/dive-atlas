@@ -3,19 +3,13 @@
   import { get } from 'svelte/store';
   import { select } from 'd3-selection';
   import { zoom as d3zoom, zoomIdentity, type ZoomTransform, type ZoomBehavior } from 'd3-zoom';
-  import { geoGraticule, geoArea } from 'd3-geo';
-  import { merge } from 'topojson-client';
-  import type {
-    Topology,
-    GeometryCollection,
-    Polygon as TopoPolygon,
-    MultiPolygon as TopoMultiPolygon,
-  } from 'topojson-specification';
-  import type { MultiPolygon, MultiLineString, Polygon, Position } from 'geojson';
+  import { geoGraticule } from 'd3-geo';
+  import type { MultiPolygon, MultiLineString, Position } from 'geojson';
 
-  import { createMapProjection, UNWRAP_LIST, LAT_RANGE, type MapProjection } from '../lib/projection';
-  import { sites, siteById, labels, inSeason, speciesById, spriteUrl } from '../lib/data';
-  import { month, selectedSiteId, speciesFilter, lang } from '../lib/stores';
+  import { createMapProjection, LAT_RANGE, type MapProjection } from '../lib/projection';
+  import { loadCoast } from '../lib/geo';
+  import { sites, siteById, labels, inSeason, speciesById, spriteUrl, spritePx, SPRITE_PX } from '../lib/data';
+  import { month, selectedSiteId, speciesFilter, lang, footprint, viewing, markOf, flyTo } from '../lib/stores';
   import { t, tx } from '../lib/i18n';
   import type { DiveSite, SeaLabel } from '../lib/types';
 
@@ -31,13 +25,9 @@
   const ZOOM_EXTENT: [number, number] = [1, 8];
   /** Site labels appear above this zoom; narrow screens need more room. */
   const LABEL_ZOOM = { wide: 2.5, narrow: 4 };
-  /** Polygons smaller than this (steradians, ≈ 4 000 km²) only get the narrow shelf bands. */
-  const SMALL_SR = 1e-4;
   /** A sea-name tier shows once one degree of longitude spans this many pixels. */
   const TIER_PX_PER_DEG = [0, 0, 2.2, 4.5];
   const PHONE_START: { center: [number, number]; k: number } = { center: [118, 8], k: 1.9 };
-
-  type CountryProps = { ADM0_A3: string };
 
   let width = $state(0);
   let height = $state(0);
@@ -104,7 +94,7 @@
   const visibleSites = $derived(
     sites.filter((s) => !$speciesFilter || s.species.includes($speciesFilter)),
   );
-  type Marker = { site: DiveSite; x: number; y: number; season: boolean; sprite?: string };
+  type Marker = { site: DiveSite; x: number; y: number; season: boolean; sprite?: string; size: number };
   const markers: Marker[] = $derived.by(() => {
     if (!proj) return [];
     const out: Marker[] = [];
@@ -113,17 +103,22 @@
       if (!p) continue;
       const first = site.species[0];
       const sp = first ? speciesById.get(first) : undefined;
+      const ready = sp && !brokenSprites.has(sp.sprite) ? spriteUrl(sp.sprite, 192) : undefined;
       out.push({
         site,
         x: p[0],
         y: p[1],
         season: inSeason(site, $month),
-        sprite: sp && !brokenSprites.has(sp.sprite) ? sp.sprite : undefined,
+        sprite: ready,
+        size: sp ? spritePx(sp) : SPRITE_PX.m,
       });
     }
     return out;
   });
   const showLabels = $derived(zoomT.k >= (narrow ? LABEL_ZOOM.narrow : LABEL_ZOOM.wide));
+  /** Whose footprint colours the markers: a friend's while viewing a shared link, else mine. */
+  const fpView = $derived($viewing ?? $footprint);
+  const hasMarks = $derived(fpView.dived.length + fpView.wish.length > 0);
 
   // ---- static furniture ----
   function mulberry32(seed: number) {
@@ -151,14 +146,14 @@
       if (!p) continue;
       const x = zoomT.applyX(p[0]);
       if (x < o + 24 || x > width - o - 24) continue;
-      lon.push({ x, text: L === 0 || L === -180 ? `${Math.abs(L)}°` : `${Math.abs(L)}°${L > 0 ? 'E' : 'W'}` });
+      lon.push({ x, text: L === 0 || L === -180 ? `${Math.abs(L)}°` : `${Math.abs(L)}°${L > 0 ? $t('tick.e') : $t('tick.w')}` });
     }
     for (let B = -60; B <= 80; B += 30) {
       const p = proj.projection([150, B]);
       if (!p) continue;
       const y = zoomT.applyY(p[1]);
       if (y < o + 24 || y > height - o - 24) continue;
-      lat.push({ y, text: B === 0 ? '0°' : `${Math.abs(B)}°${B > 0 ? 'N' : 'S'}` });
+      lat.push({ y, text: B === 0 ? '0°' : `${Math.abs(B)}°${B > 0 ? $t('tick.n') : $t('tick.s')}` });
     }
     return { lon, lat };
   });
@@ -169,29 +164,10 @@
   // ---- data loading ----
   async function loadGeo() {
     try {
-      const res = await fetch(`${import.meta.env.BASE_URL}geo/countries.topo.json`);
-      if (!res.ok) throw new Error(String(res.status));
-      const topo = (await res.json()) as Topology;
-      const key = Object.keys(topo.objects)[0];
-      if (!key) throw new Error('empty topology');
-      const obj = topo.objects[key] as GeometryCollection<CountryProps>;
-      type Country = (TopoPolygon<CountryProps> | TopoMultiPolygon<CountryProps>) & { properties: CountryProps };
-      const countries = obj.geometries.filter(
-        (g): g is Country => (g.type === 'Polygon' || g.type === 'MultiPolygon') && !!g.properties,
-      );
-      const main = countries.filter((g) => !UNWRAP_LIST.has(g.properties.ADM0_A3));
-      const unwrapped = countries.filter((g) => UNWRAP_LIST.has(g.properties.ADM0_A3));
-      // Coastlines only: dissolve every country into one MultiPolygon (shared borders vanish).
-      const merged = merge(topo, main) as MultiPolygon;
-      landGeom = merged;
-      bigGeom = {
-        type: 'MultiPolygon',
-        coordinates: merged.coordinates.filter((c) => {
-          const a = geoArea({ type: 'Polygon', coordinates: c } as Polygon);
-          return Math.min(a, 4 * Math.PI - a) >= SMALL_SR;
-        }),
-      };
-      grlGeom = unwrapped.length ? (merge(topo, unwrapped) as MultiPolygon) : null;
+      const coast = await loadCoast();
+      landGeom = coast.land;
+      bigGeom = coast.big;
+      grlGeom = coast.greenland;
       geoStatus = 'ready';
     } catch {
       geoStatus = 'missing';
@@ -220,7 +196,14 @@
     const p = proj.projection(site.coords);
     if (!p) return false;
     const cy = width < 600 ? Math.max(height * 0.23, 140) : height / 2;
-    zoomBehavior.transform(select(svgEl), zoomIdentity.translate(width / 2, cy).scale(4).translate(-p[0], -p[1]));
+    const wanted = zoomIdentity.translate(width / 2, cy).scale(4).translate(-p[0], -p[1]);
+    // zoom.transform() skips the pan limits that gestures respect; constrain by hand so an
+    // edge site does not snap on the first touch.
+    const extent: [[number, number], [number, number]] = [
+      [0, 0],
+      [width, height],
+    ];
+    zoomBehavior.transform(select(svgEl), zoomBehavior.constrain()(wanted, extent, extent));
     return true;
   }
 
@@ -275,6 +258,16 @@
       [0, 0],
       [width, height],
     ]);
+  });
+
+  // Search results and other "take me there" requests.
+  $effect(() => {
+    const id = $flyTo;
+    if (!id) return;
+    untrack(() => {
+      focusSite(id);
+      flyTo.set(null);
+    });
   });
 
   function onMapClick(e: MouseEvent) {
@@ -351,9 +344,13 @@
         <g class="sites">
           {#each markers as m (m.site.id)}
             {@const selected = $selectedSiteId === m.site.id}
+            {@const mark = markOf(fpView, m.site.id)}
             <g
               class="site"
               class:selected
+              class:dived={mark === 'dived'}
+              class:wish={mark === 'wish'}
+              class:unmarked={hasMarks && !mark}
               class:off={!m.season}
               transform={`translate(${m.x},${m.y}) scale(${1 / zoomT.k})`}
               role="button"
@@ -371,13 +368,14 @@
               <circle class="glow" r="10" />
               {#if m.sprite}
                 <image
-                  href={spriteUrl(m.sprite, 192)}
-                  x="-22"
-                  y="-22"
-                  width="44"
-                  height="44"
+                  href={m.sprite}
+                  x={-m.size / 2}
+                  y={-m.size / 2}
+                  width={m.size}
+                  height={m.size}
                   onerror={() => {
-                    brokenSprites = new Set([...brokenSprites, m.sprite!]);
+                    const sp = speciesById.get(m.site.species[0] ?? '');
+                    if (sp) brokenSprites = new Set([...brokenSprites, sp.sprite]);
                   }}
                 />
               {:else}
@@ -386,7 +384,7 @@
                 <circle class="dot" r={selected ? 5 : 4} />
               {/if}
               {#if selected || (showLabels && m.season)}
-                <text class="label" x={m.sprite ? 0 : 11} y={m.sprite ? 34 : 4} text-anchor={m.sprite ? 'middle' : 'start'}>
+                <text class="label" x={m.sprite ? 0 : 11} y={m.sprite ? m.size / 2 + 12 : 4} text-anchor={m.sprite ? 'middle' : 'start'}>
                   {$tx(m.site.name)}
                 </text>
               {/if}
@@ -519,10 +517,14 @@
     text-anchor: middle;
     pointer-events: none;
   }
-  .sea-1 { font-size: 18px; letter-spacing: 0.5em; fill-opacity: 0.5; }
-  .sea-2 { font-size: 11.5px; letter-spacing: 0.3em; fill-opacity: 0.55; }
-  .sea-3 { font-size: 9.5px; letter-spacing: 0.2em; fill-opacity: 0.55; }
-  .sea-en { font-size: 8px; letter-spacing: 0.3em; fill-opacity: 0.4; }
+  .sea-1 { font-size: 18px; letter-spacing: 0.5em; fill-opacity: 0.62; }
+  .sea-2 { font-size: 11.5px; letter-spacing: 0.3em; fill-opacity: 0.7; }
+  .sea-3 { font-size: 9.5px; letter-spacing: 0.2em; fill-opacity: 0.7; }
+  .sea-en { font-size: 8px; letter-spacing: 0.3em; fill-opacity: 0.5; }
+  /* English names are 4–6× longer than the Chinese ones: tighter tracking, smaller caps. */
+  :global(html[lang='en']) .sea-1 { font-size: 13px; letter-spacing: 0.18em; }
+  :global(html[lang='en']) .sea-2 { font-size: 10px; letter-spacing: 0.12em; }
+  :global(html[lang='en']) .sea-3 { font-size: 9px; letter-spacing: 0.08em; }
   :global(:root[data-theme='night']) .sea-1 { fill-opacity: 0.45; }
 
   /* ---- sites ---- */
@@ -531,8 +533,13 @@
     outline: none;
     transition: opacity 0.25s ease;
   }
+  .site.unmarked { opacity: 0.75; }
   .site.off { opacity: 0.3; }
   :global(:root[data-theme='night']) .site.off { opacity: 0.4; }
+  /* footprint: 潜过 = coral disc inside a coral ring, 想去 = sun ring */
+  .site.dived .ring { fill: var(--coral); }
+  .site.dived .dot { fill: var(--paper); }
+  .site.wish .ring { fill: var(--sun); }
   .site .hit { fill: transparent; }
   .glow {
     display: none;

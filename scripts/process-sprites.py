@@ -21,6 +21,8 @@ Options:
     --sizes 192,512   output long-edge sizes (default 192,512)
     --quality 82      WebP quality (default 82)
     --alpha-erode N   erode the alpha mask by N px to kill light fringes (default 0)
+    --outline PX      die-cut sticker edge in off-white, PX wide at the 192 px size (scaled for
+                      other sizes; default 0 = none). Keeps dark animals visible on the night map.
     --pad 0.04        safety margin as a fraction of the long edge (default 0.04)
     --out DIR         output dir (default public/sprites)
     --no-rembg        skip background removal (input already transparent)
@@ -55,6 +57,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--sizes", default="192,512")
     p.add_argument("--quality", type=int, default=82)
     p.add_argument("--alpha-erode", type=int, default=0)
+    p.add_argument("--outline", type=float, default=0.0)
     p.add_argument("--pad", type=float, default=0.04)
     p.add_argument("--out", type=Path, default=ROOT / "public" / "sprites")
     p.add_argument("--no-rembg", action="store_true")
@@ -83,6 +86,19 @@ def erode_alpha(img: Image.Image, px: int) -> Image.Image:
     r, g, b, a = img.split()
     a = a.filter(ImageFilter.MinFilter(px * 2 + 1))
     return Image.merge("RGBA", (r, g, b, a))
+
+
+OUTLINE_RGB = (251, 248, 241)  # --paper
+
+
+def add_outline(img: Image.Image, px: int) -> Image.Image:
+    """Die-cut sticker edge: grow the alpha mask by `px` and fill it with off-white under the art."""
+    if px <= 0:
+        return img
+    grown = img.getchannel("A").filter(ImageFilter.MaxFilter(px * 2 + 1)).filter(ImageFilter.GaussianBlur(0.7))
+    backing = Image.new("RGBA", img.size, OUTLINE_RGB + (0,))
+    backing.putalpha(grown)
+    return Image.alpha_composite(backing, img)
 
 
 def trim(img: Image.Image, pad: float) -> Image.Image:
@@ -130,13 +146,18 @@ def main() -> None:
     manifest: dict = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
 
     for sprite_id, cell in zip(ids, cells):
+        if sprite_id == "-":  # ids.txt placeholder: a cell that failed acceptance and was redrawn elsewhere
+            continue
         img = cell if args.no_rembg else remove_bg(cell)
         img = erode_alpha(img, args.alpha_erode)
         img = trim(img, args.pad)
         entry = {"files": {}, "aspect": round(img.width / img.height, 3)}
         for size in sizes:
             dest = out / f"{sprite_id}-{size}.webp"
-            fit(img, size).save(dest, "WEBP", quality=args.quality, method=6)
+            scaled = fit(img, size)
+            if args.outline > 0:
+                scaled = add_outline(scaled, max(1, round(args.outline * size / 192)))
+            scaled.save(dest, "WEBP", quality=args.quality, method=6)
             data = dest.read_bytes()
             entry["files"][str(size)] = {"bytes": len(data), "sha1": hashlib.sha1(data).hexdigest()[:10]}
             budget = 15_000 if size <= 192 else 40_000

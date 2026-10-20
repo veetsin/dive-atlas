@@ -1,9 +1,15 @@
 <script lang="ts">
   import { t, MONTH_KEYS } from '../lib/i18n';
   import { month } from '../lib/stores';
+
+  let el: HTMLDivElement | undefined = $state();
+  // A deep-linked month can sit off-screen in the scrolling strip; bring it into view once.
+  $effect(() => {
+    el?.querySelector('.active')?.scrollIntoView({ inline: 'center', block: 'nearest' });
+  });
 </script>
 
-<div class="months" role="radiogroup" aria-label={$t('card.bestSeason')}>
+<div class="months" role="radiogroup" aria-label={$t('card.bestSeason')} bind:this={el}>
   <button
     class="m"
     class:active={$month === 0}

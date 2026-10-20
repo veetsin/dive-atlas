@@ -267,7 +267,7 @@ Bottom-right — Cloud C: one long low off-white cloud.
 
 主体填格 70% → 3:2 的格里长条形主体约 540 px 长边，卡片 512 px 不用放大；1:1 的格里约 360 px，高身鱼在卡片上略有放大，可接受。如果比例选择器给到更高分辨率（2K），直接用。
 
-体型等级（`species.json` 的 `sizeClass`）决定地图上的显示尺寸：`xl` 96 px · `l` 80 px · `m` 64 px · `s` 48 px。
+地图上的显示尺寸由 `species.json` 的 `lengthM`（典型成体体长，米）按对数缩放：2 cm → 22 px、1 m → 45 px、10 m → 58 px、25 m → 64 px（CSS px，@2x 即 44–128 px）。鱼群类按"看到的群体"估尺寸。没有 `lengthM` 时退回 `sizeClass`：`xl` 48 · `l` 40 · `m` 32 · `s` 24 px。
 
 ---
 
@@ -298,13 +298,13 @@ uv run --python 3.13 --with pillow python -I -c "from PIL import Image;import sy
 本机 `python3` 是 3.14 且 `pyexpat` 损坏，**统一用 uv 指定 3.13 运行**（首次会下载 179 MB 的 isnet 模型到 `~/.rembg/`，之后秒级）：
 
 ```bash
-# 一张 2x2 宫格（id 顺序：左上、右上、左下、右下）
+# 一张 2x2 宫格（id 顺序 = 同目录 ids.txt，左上、右上、左下、右下）。--outline 2.5 是定稿标准，每批都加
 uv run --python 3.13 --with 'rembg[cpu]' --with pillow \
   python scripts/process-sprites.py art/raw/batch-01/grid.png --grid 2x2 \
-  --ids whale-shark,reef-manta,green-turtle,nudibranch
+  --ids-file art/raw/batch-01/ids.txt --outline 2.5
 
 # 真透明的图跳过抠图
-uv run --python 3.13 --with pillow python scripts/process-sprites.py art/raw/batch-01/grid.png --grid 2x2 --ids ... --no-rembg
+uv run --python 3.13 --with pillow python scripts/process-sprites.py art/raw/batch-01/grid.png --grid 2x2 --ids-file ... --outline 2.5 --no-rembg
 ```
 （`npm run sprites -- …` 等价于直接调脚本，但它用的是系统 `python3`，在这台机器上不可用。）
 
@@ -318,6 +318,8 @@ art/raw/<batch>/grid.png        ← ChatGPT 下载的原图（PNG）
 4. 等比缩放到 192 / 512 长边，导出 WebP（quality 82，method 6）；超预算会打印 "← over budget"
 5. 写入 public/sprites/manifest.json
 ```
+
+`--outline 2.5`（**2026-10-21 定稿，所有贴纸统一加**）：一圈 2.5 px（按 192 尺寸计，512 尺寸按比例放大）的米白"刀模边"，解决深色物种（鲸鲨、蝠鲼）在夜间深蓝海面上看不见的问题；边是在导出时烘进 WebP 的，运行时零开销，体积反而略小。
 
 检查项：
 - `public/sprites/*-192.webp` 全部 ≤ 15 KB；超了先降 quality 到 75，再考虑简化画面重画。

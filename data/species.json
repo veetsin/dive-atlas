@@ -1,29 +1,605 @@
 [
-  { "id": "whale-shark", "name": { "zh": "鲸鲨", "en": "Whale shark" }, "sci": "Rhincodon typus", "sprite": "whale-shark", "sizeClass": "xl", "tags": ["pelagic", "big"] },
-  { "id": "reef-manta", "name": { "zh": "礁蝠鲼", "en": "Reef manta ray" }, "sci": "Mobula alfredi", "sprite": "reef-manta", "sizeClass": "l", "tags": ["big"] },
-  { "id": "oceanic-manta", "name": { "zh": "大洋蝠鲼", "en": "Oceanic manta ray" }, "sci": "Mobula birostris", "sprite": "oceanic-manta", "sizeClass": "xl", "tags": ["pelagic", "big"] },
-  { "id": "hammerhead", "name": { "zh": "路氏双髻鲨", "en": "Scalloped hammerhead" }, "sci": "Sphyrna lewini", "sprite": "hammerhead", "sizeClass": "l", "tags": ["pelagic", "shark"] },
-  { "id": "thresher-shark", "name": { "zh": "浅海长尾鲨", "en": "Pelagic thresher shark" }, "sci": "Alopias pelagicus", "sprite": "thresher-shark", "sizeClass": "l", "tags": ["shark"] },
-  { "id": "grey-reef-shark", "name": { "zh": "灰礁鲨", "en": "Grey reef shark" }, "sci": "Carcharhinus amblyrhynchos", "sprite": "grey-reef-shark", "sizeClass": "m", "tags": ["shark"] },
-  { "id": "whitetip-reef-shark", "name": { "zh": "白顶礁鲨", "en": "Whitetip reef shark" }, "sci": "Triaenodon obesus", "sprite": "whitetip-reef-shark", "sizeClass": "m", "tags": ["shark"] },
-  { "id": "tiger-shark", "name": { "zh": "虎鲨", "en": "Tiger shark" }, "sci": "Galeocerdo cuvier", "sprite": "tiger-shark", "sizeClass": "l", "tags": ["shark", "big"] },
-  { "id": "galapagos-shark", "name": { "zh": "加拉帕戈斯鲨", "en": "Galapagos shark" }, "sci": "Carcharhinus galapagensis", "sprite": "galapagos-shark", "sizeClass": "m", "tags": ["shark"] },
-  { "id": "eagle-ray", "name": { "zh": "鹰鳐", "en": "Spotted eagle ray" }, "sci": "Aetobatus narinari", "sprite": "eagle-ray", "sizeClass": "m", "tags": [] },
-  { "id": "green-turtle", "name": { "zh": "绿海龟", "en": "Green sea turtle" }, "sci": "Chelonia mydas", "sprite": "green-turtle", "sizeClass": "m", "tags": ["turtle"] },
-  { "id": "hawksbill", "name": { "zh": "玳瑁", "en": "Hawksbill turtle" }, "sci": "Eretmochelys imbricata", "sprite": "hawksbill", "sizeClass": "m", "tags": ["turtle"] },
-  { "id": "humpback-whale", "name": { "zh": "座头鲸", "en": "Humpback whale" }, "sci": "Megaptera novaeangliae", "sprite": "humpback-whale", "sizeClass": "xl", "tags": ["whale", "big"] },
-  { "id": "sperm-whale", "name": { "zh": "抹香鲸", "en": "Sperm whale" }, "sci": "Physeter macrocephalus", "sprite": "sperm-whale", "sizeClass": "xl", "tags": ["whale", "big"] },
-  { "id": "orca", "name": { "zh": "虎鲸", "en": "Orca" }, "sci": "Orcinus orca", "sprite": "orca", "sizeClass": "xl", "tags": ["whale", "big", "coldwater"] },
-  { "id": "dolphin", "name": { "zh": "海豚", "en": "Dolphin" }, "sci": "Stenella longirostris", "sprite": "dolphin", "sizeClass": "m", "tags": [] },
-  { "id": "dugong", "name": { "zh": "儒艮", "en": "Dugong" }, "sci": "Dugong dugon", "sprite": "dugong", "sizeClass": "l", "tags": [] },
-  { "id": "sea-lion", "name": { "zh": "海狮", "en": "Sea lion" }, "sci": "Zalophus wollebaeki", "sprite": "sea-lion", "sizeClass": "m", "tags": [] },
-  { "id": "sunfish", "name": { "zh": "翻车鲀", "en": "Ocean sunfish" }, "sci": "Mola mola", "sprite": "sunfish", "sizeClass": "l", "tags": ["pelagic"] },
-  { "id": "barracuda", "name": { "zh": "梭鱼风暴", "en": "Barracuda school" }, "sci": "Sphyraena qenie", "sprite": "barracuda", "sizeClass": "m", "tags": ["school"] },
-  { "id": "jack-school", "name": { "zh": "杰克鱼风暴", "en": "Trevally school" }, "sci": "Caranx sexfasciatus", "sprite": "jack-school", "sizeClass": "m", "tags": ["school"] },
-  { "id": "sardine-run", "name": { "zh": "沙丁鱼风暴", "en": "Sardine run" }, "sci": "Sardinops sagax", "sprite": "sardine-run", "sizeClass": "l", "tags": ["school"] },
-  { "id": "bumphead-parrotfish", "name": { "zh": "隆头鹦哥鱼", "en": "Bumphead parrotfish" }, "sci": "Bolbometopon muricatum", "sprite": "bumphead-parrotfish", "sizeClass": "m", "tags": [] },
-  { "id": "napoleon-wrasse", "name": { "zh": "苏眉", "en": "Napoleon wrasse" }, "sci": "Cheilinus undulatus", "sprite": "napoleon-wrasse", "sizeClass": "m", "tags": [] },
-  { "id": "pygmy-seahorse", "name": { "zh": "豆丁海马", "en": "Pygmy seahorse" }, "sci": "Hippocampus bargibanti", "sprite": "pygmy-seahorse", "sizeClass": "s", "tags": ["macro"] },
-  { "id": "nudibranch", "name": { "zh": "海蛞蝓", "en": "Nudibranch" }, "sci": "Chromodoris annae", "sprite": "nudibranch", "sizeClass": "s", "tags": ["macro"] },
-  { "id": "mandarinfish", "name": { "zh": "麒麟鱼", "en": "Mandarinfish" }, "sci": "Synchiropus splendidus", "sprite": "mandarinfish", "sizeClass": "s", "tags": ["macro"] }
+  {
+    "id": "whale-shark",
+    "name": {
+      "zh": "鲸鲨",
+      "en": "Whale shark"
+    },
+    "sci": "Rhincodon typus",
+    "sprite": "whale-shark",
+    "sizeClass": "xl",
+    "tags": [
+      "pelagic",
+      "big"
+    ],
+    "lengthM": 10
+  },
+  {
+    "id": "reef-manta",
+    "name": {
+      "zh": "礁蝠鲼",
+      "en": "Reef manta ray"
+    },
+    "sci": "Mobula alfredi",
+    "sprite": "reef-manta",
+    "sizeClass": "l",
+    "tags": [
+      "big"
+    ],
+    "lengthM": 3.5
+  },
+  {
+    "id": "oceanic-manta",
+    "name": {
+      "zh": "大洋蝠鲼",
+      "en": "Oceanic manta ray"
+    },
+    "sci": "Mobula birostris",
+    "sprite": "oceanic-manta",
+    "sizeClass": "xl",
+    "tags": [
+      "pelagic",
+      "big"
+    ],
+    "lengthM": 5
+  },
+  {
+    "id": "hammerhead",
+    "name": {
+      "zh": "路氏双髻鲨",
+      "en": "Scalloped hammerhead"
+    },
+    "sci": "Sphyrna lewini",
+    "sprite": "hammerhead",
+    "sizeClass": "l",
+    "tags": [
+      "pelagic",
+      "shark"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "thresher-shark",
+    "name": {
+      "zh": "浅海长尾鲨",
+      "en": "Pelagic thresher shark"
+    },
+    "sci": "Alopias pelagicus",
+    "sprite": "thresher-shark",
+    "sizeClass": "l",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 3.3
+  },
+  {
+    "id": "grey-reef-shark",
+    "name": {
+      "zh": "灰礁鲨",
+      "en": "Grey reef shark"
+    },
+    "sci": "Carcharhinus amblyrhynchos",
+    "sprite": "grey-reef-shark",
+    "sizeClass": "m",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 1.8
+  },
+  {
+    "id": "whitetip-reef-shark",
+    "name": {
+      "zh": "白顶礁鲨",
+      "en": "Whitetip reef shark"
+    },
+    "sci": "Triaenodon obesus",
+    "sprite": "whitetip-reef-shark",
+    "sizeClass": "m",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 1.6
+  },
+  {
+    "id": "tiger-shark",
+    "name": {
+      "zh": "虎鲨",
+      "en": "Tiger shark"
+    },
+    "sci": "Galeocerdo cuvier",
+    "sprite": "tiger-shark",
+    "sizeClass": "l",
+    "tags": [
+      "shark",
+      "big"
+    ],
+    "lengthM": 4
+  },
+  {
+    "id": "galapagos-shark",
+    "name": {
+      "zh": "加拉帕戈斯鲨",
+      "en": "Galapagos shark"
+    },
+    "sci": "Carcharhinus galapagensis",
+    "sprite": "galapagos-shark",
+    "sizeClass": "m",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "eagle-ray",
+    "name": {
+      "zh": "鹰鳐",
+      "en": "Spotted eagle ray"
+    },
+    "sci": "Aetobatus narinari",
+    "sprite": "eagle-ray",
+    "sizeClass": "m",
+    "tags": [],
+    "lengthM": 2
+  },
+  {
+    "id": "green-turtle",
+    "name": {
+      "zh": "绿海龟",
+      "en": "Green sea turtle"
+    },
+    "sci": "Chelonia mydas",
+    "sprite": "green-turtle",
+    "sizeClass": "m",
+    "tags": [
+      "turtle"
+    ],
+    "lengthM": 1.1
+  },
+  {
+    "id": "hawksbill",
+    "name": {
+      "zh": "玳瑁",
+      "en": "Hawksbill turtle"
+    },
+    "sci": "Eretmochelys imbricata",
+    "sprite": "hawksbill",
+    "sizeClass": "m",
+    "tags": [
+      "turtle"
+    ],
+    "lengthM": 0.9
+  },
+  {
+    "id": "humpback-whale",
+    "name": {
+      "zh": "座头鲸",
+      "en": "Humpback whale"
+    },
+    "sci": "Megaptera novaeangliae",
+    "sprite": "humpback-whale",
+    "sizeClass": "xl",
+    "tags": [
+      "whale",
+      "big"
+    ],
+    "lengthM": 14
+  },
+  {
+    "id": "sperm-whale",
+    "name": {
+      "zh": "抹香鲸",
+      "en": "Sperm whale"
+    },
+    "sci": "Physeter macrocephalus",
+    "sprite": "sperm-whale",
+    "sizeClass": "xl",
+    "tags": [
+      "whale",
+      "big"
+    ],
+    "lengthM": 16
+  },
+  {
+    "id": "orca",
+    "name": {
+      "zh": "虎鲸",
+      "en": "Orca"
+    },
+    "sci": "Orcinus orca",
+    "sprite": "orca",
+    "sizeClass": "xl",
+    "tags": [
+      "whale",
+      "big",
+      "coldwater"
+    ],
+    "lengthM": 7
+  },
+  {
+    "id": "dolphin",
+    "name": {
+      "zh": "海豚",
+      "en": "Dolphin"
+    },
+    "sci": "Stenella longirostris",
+    "sprite": "dolphin",
+    "sizeClass": "m",
+    "tags": [],
+    "lengthM": 2
+  },
+  {
+    "id": "dugong",
+    "name": {
+      "zh": "儒艮",
+      "en": "Dugong"
+    },
+    "sci": "Dugong dugon",
+    "sprite": "dugong",
+    "sizeClass": "l",
+    "tags": [],
+    "lengthM": 3
+  },
+  {
+    "id": "sea-lion",
+    "name": {
+      "zh": "海狮",
+      "en": "Sea lion"
+    },
+    "sci": "Zalophus wollebaeki",
+    "sprite": "sea-lion",
+    "sizeClass": "m",
+    "tags": [],
+    "lengthM": 2
+  },
+  {
+    "id": "sunfish",
+    "name": {
+      "zh": "翻车鲀",
+      "en": "Ocean sunfish"
+    },
+    "sci": "Mola mola",
+    "sprite": "sunfish",
+    "sizeClass": "l",
+    "tags": [
+      "pelagic"
+    ],
+    "lengthM": 2.5
+  },
+  {
+    "id": "barracuda",
+    "name": {
+      "zh": "梭鱼风暴",
+      "en": "Barracuda school"
+    },
+    "sci": "Sphyraena qenie",
+    "sprite": "barracuda",
+    "sizeClass": "m",
+    "tags": [
+      "school"
+    ],
+    "lengthM": 2.5
+  },
+  {
+    "id": "jack-school",
+    "name": {
+      "zh": "杰克鱼风暴",
+      "en": "Trevally school"
+    },
+    "sci": "Caranx sexfasciatus",
+    "sprite": "jack-school",
+    "sizeClass": "m",
+    "tags": [
+      "school"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "sardine-run",
+    "name": {
+      "zh": "沙丁鱼风暴",
+      "en": "Sardine run"
+    },
+    "sci": "Sardinops sagax",
+    "sprite": "sardine-run",
+    "sizeClass": "l",
+    "tags": [
+      "school"
+    ],
+    "lengthM": 6
+  },
+  {
+    "id": "bumphead-parrotfish",
+    "name": {
+      "zh": "隆头鹦哥鱼",
+      "en": "Bumphead parrotfish"
+    },
+    "sci": "Bolbometopon muricatum",
+    "sprite": "bumphead-parrotfish",
+    "sizeClass": "m",
+    "tags": [],
+    "lengthM": 1.2
+  },
+  {
+    "id": "napoleon-wrasse",
+    "name": {
+      "zh": "苏眉",
+      "en": "Napoleon wrasse"
+    },
+    "sci": "Cheilinus undulatus",
+    "sprite": "napoleon-wrasse",
+    "sizeClass": "m",
+    "tags": [],
+    "lengthM": 1.5
+  },
+  {
+    "id": "pygmy-seahorse",
+    "name": {
+      "zh": "豆丁海马",
+      "en": "Pygmy seahorse"
+    },
+    "sci": "Hippocampus bargibanti",
+    "sprite": "pygmy-seahorse",
+    "sizeClass": "s",
+    "tags": [
+      "macro"
+    ],
+    "lengthM": 0.02
+  },
+  {
+    "id": "nudibranch",
+    "name": {
+      "zh": "海蛞蝓",
+      "en": "Nudibranch"
+    },
+    "sci": "Chromodoris annae",
+    "sprite": "nudibranch",
+    "sizeClass": "s",
+    "tags": [
+      "macro"
+    ],
+    "lengthM": 0.05
+  },
+  {
+    "id": "mandarinfish",
+    "name": {
+      "zh": "麒麟鱼",
+      "en": "Mandarinfish"
+    },
+    "sci": "Synchiropus splendidus",
+    "sprite": "mandarinfish",
+    "sizeClass": "s",
+    "tags": [
+      "macro"
+    ],
+    "lengthM": 0.06
+  },
+  {
+    "id": "leopard-shark",
+    "name": {
+      "zh": "豹纹鲨",
+      "en": "Leopard shark"
+    },
+    "sci": "Stegostoma tigrinum",
+    "sprite": "leopard-shark",
+    "sizeClass": "m",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 2.5
+  },
+  {
+    "id": "frogfish",
+    "name": {
+      "zh": "躄鱼（娃娃鱼）",
+      "en": "Frogfish"
+    },
+    "sci": "Antennarius pictus",
+    "sprite": "frogfish",
+    "sizeClass": "s",
+    "tags": [
+      "macro"
+    ],
+    "lengthM": 0.15
+  },
+  {
+    "id": "oceanic-whitetip",
+    "name": {
+      "zh": "远洋白鳍鲨",
+      "en": "Oceanic whitetip shark"
+    },
+    "sci": "Carcharhinus longimanus",
+    "sprite": "oceanic-whitetip",
+    "sizeClass": "l",
+    "tags": [
+      "pelagic",
+      "shark"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "potato-cod",
+    "name": {
+      "zh": "土豆石斑",
+      "en": "Potato cod"
+    },
+    "sci": "Epinephelus tukula",
+    "sprite": "potato-cod",
+    "sizeClass": "l",
+    "tags": [
+      "big"
+    ],
+    "lengthM": 1.5
+  },
+  {
+    "id": "dwarf-minke-whale",
+    "name": {
+      "zh": "小须鲸",
+      "en": "Dwarf minke whale"
+    },
+    "sci": "Balaenoptera acutorostrata",
+    "sprite": "dwarf-minke-whale",
+    "sizeClass": "xl",
+    "tags": [
+      "whale",
+      "big"
+    ],
+    "lengthM": 7
+  },
+  {
+    "id": "giant-grouper",
+    "name": {
+      "zh": "龙趸",
+      "en": "Giant grouper"
+    },
+    "sci": "Epinephelus lanceolatus",
+    "sprite": "giant-grouper",
+    "sizeClass": "l",
+    "tags": [
+      "big"
+    ],
+    "lengthM": 2.5
+  },
+  {
+    "id": "grey-nurse-shark",
+    "name": {
+      "zh": "沙虎鲨",
+      "en": "Grey nurse shark"
+    },
+    "sci": "Carcharias taurus",
+    "sprite": "grey-nurse-shark",
+    "sizeClass": "l",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "great-white-shark",
+    "name": {
+      "zh": "大白鲨",
+      "en": "Great white shark"
+    },
+    "sci": "Carcharodon carcharias",
+    "sprite": "great-white-shark",
+    "sizeClass": "xl",
+    "tags": [
+      "shark",
+      "big",
+      "pelagic",
+      "coldwater"
+    ],
+    "lengthM": 5
+  },
+  {
+    "id": "short-tail-stingray",
+    "name": {
+      "zh": "短尾魟",
+      "en": "Short-tail stingray"
+    },
+    "sci": "Bathytoshia brevicaudata",
+    "sprite": "short-tail-stingray",
+    "sizeClass": "l",
+    "tags": [
+      "coldwater"
+    ],
+    "lengthM": 2
+  },
+  {
+    "id": "southern-stingray",
+    "name": {
+      "zh": "魟鱼",
+      "en": "Southern stingray"
+    },
+    "sci": "Hypanus americanus",
+    "sprite": "southern-stingray",
+    "sizeClass": "m",
+    "tags": [],
+    "lengthM": 1.5
+  },
+  {
+    "id": "caribbean-reef-shark",
+    "name": {
+      "zh": "加勒比礁鲨",
+      "en": "Caribbean reef shark"
+    },
+    "sci": "Carcharhinus perezi",
+    "sprite": "caribbean-reef-shark",
+    "sizeClass": "m",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 2.5
+  },
+  {
+    "id": "silky-shark",
+    "name": {
+      "zh": "丝鲨",
+      "en": "Silky shark"
+    },
+    "sci": "Carcharhinus falciformis",
+    "sprite": "silky-shark",
+    "sizeClass": "m",
+    "tags": [
+      "shark",
+      "pelagic"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "lemon-shark",
+    "name": {
+      "zh": "柠檬鲨",
+      "en": "Lemon shark"
+    },
+    "sci": "Negaprion brevirostris",
+    "sprite": "lemon-shark",
+    "sizeClass": "l",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "bull-shark",
+    "name": {
+      "zh": "公牛鲨",
+      "en": "Bull shark"
+    },
+    "sci": "Carcharhinus leucas",
+    "sprite": "bull-shark",
+    "sizeClass": "l",
+    "tags": [
+      "shark",
+      "big"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "nurse-shark",
+    "name": {
+      "zh": "护士鲨",
+      "en": "Nurse shark"
+    },
+    "sci": "Ginglymostoma cirratum",
+    "sprite": "nurse-shark",
+    "sizeClass": "m",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "american-crocodile",
+    "name": {
+      "zh": "美洲鳄",
+      "en": "American crocodile"
+    },
+    "sci": "Crocodylus acutus",
+    "sprite": "american-crocodile",
+    "sizeClass": "l",
+    "tags": [
+      "big"
+    ],
+    "lengthM": 4
+  }
 ]

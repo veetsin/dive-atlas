@@ -11,9 +11,11 @@ const sites = JSON.parse(readFileSync(file, 'utf8'));
 
 let changed = 0;
 for (const s of sites) {
-  const full = pinyin(s.name.zh, { toneType: 'none', type: 'array' }).join('');
-  const initials = pinyin(s.name.zh, { pattern: 'first', toneType: 'none', type: 'array' }).join('');
-  const value = `${full} ${initials}`.toLowerCase();
+  // Brackets hold aliases (马拉帕斯夸（妈妈岛）): index them as separate words, drop the punctuation.
+  const zh = s.name.zh.replace(/[（）()]/g, ' ').trim();
+  const full = pinyin(zh, { toneType: 'none', type: 'array' }).join('');
+  const initials = pinyin(zh, { pattern: 'first', toneType: 'none', type: 'array' }).join('');
+  const value = `${full} ${initials}`.replace(/\s+/g, ' ').toLowerCase();
   if (s.pinyin !== value) {
     s.pinyin = value;
     changed++;

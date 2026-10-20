@@ -47,6 +47,8 @@ export interface Species {
   sci?: string;
   sprite: string;
   sizeClass: SizeClass;
+  /** Typical adult length in metres (for schools: the size of the school as seen); drives sprite size on the map. */
+  lengthM?: number;
   tags?: string[];
 }
 

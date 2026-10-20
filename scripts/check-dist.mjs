@@ -31,11 +31,15 @@ const RULES = {
   ],
 };
 
+// The budget is for the FIRST load: html + bundled js/css + the base map. Sprites and the
+// optional detail map are lazy-loaded and must not count against it.
+const firstLoad = (p) => /^(index\.html|assets\/[^/]+\.(?:js|css)|geo\/countries\.topo\.json)$/.test(relative(dist, p));
+
 let problems = 0;
 let gzipTotal = 0;
 for (const f of files) {
   const buf = readFileSync(f);
-  gzipTotal += gzipSync(buf).length;
+  if (firstLoad(f)) gzipTotal += gzipSync(buf).length;
   const rules = RULES[extname(f)];
   if (!rules) continue;
   const text = buf.toString('utf8');
@@ -47,7 +51,7 @@ for (const f of files) {
     }
   }
 }
-console.log(`dist: ${files.length} files, ${(gzipTotal / 1024).toFixed(0)} KB gzip (budget ${BUDGET / 1024} KB)`);
+console.log(`dist: ${files.length} files, first load ${(gzipTotal / 1024).toFixed(0)} KB gzip (budget ${BUDGET / 1024} KB)`);
 if (gzipTotal > BUDGET) {
   console.log('OVER BUDGET');
   problems++;

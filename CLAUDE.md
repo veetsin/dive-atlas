@@ -85,14 +85,17 @@ art/raw/                  ← GPT 原始出图（gitignore，体积大）
 ## 当前状态（2026-10-20）
 
 - [x] 规格与插画规范（docs/，0.2 版）
-- [x] 脚手架：地图渲染、中英切换、月份筛选、潜点卡片、URL 同步、GitHub Pages 工作流；`check` / `data:validate` / `build` 全绿，首屏 ≈ 104 KB gzip
+- [x] 脚手架：地图渲染、中英切换、月份筛选、潜点卡片、URL 同步（单一 derived 订阅、保留 hash、无效 site 忽略）、复制链接带 execCommand 回退、Escape / 点海面关卡片、`check:dist` 零外链与体积门禁、GitHub Pages 工作流（`BASE_PATH` 仓库变量可切自定义域名）；git 已初始化，首次提交 `954a18f`；首屏 ≈ 116 KB gzip
 - [x] 底图数据：`public/geo/countries.topo.json` 已生成（Natural Earth 10m CHN POV，简化 3%，160 KB / gzip 48 KB），1280 与 375 宽度预览已确认投影与格陵兰正常
 - [x] 贴纸流水线本机验证通过（uv + Python 3.13 + rembg）
-- [ ] 贴纸：按 `docs/ILLUSTRATION_GUIDE.md` §3.3 的 B1 开始，通过 §7 验收后冻结为参考图
+- [x] 贴纸 B1（鲸鲨 / 礁蝠鲼 / 绿海龟 / 海蛞蝓）已出图、验收、入库，**冻结为后续批次的参考图**（`art/raw/batch-01/grid.png`）；统一加 `--outline 2.5` 米白刀模边；地图贴纸按 `species.lengthM` 对数缩放
+- [ ] 贴纸 B2–B7、D1–D2：按 §3.3 继续（现在 43 个物种里只有 4 个有贴纸，其余显示圆点）
 - [x] 底图风格重设计落地：日 / 夜主题、海域名、图框罗盘；1280 与 375、日夜四种组合已在浏览器确认；顺带修了 zoom 重建弹回、深链接被抽屉遮挡、`role="img"`、`color-mix` 等缺陷
-- [ ] 足迹 + 分享图 + 二维码（SPEC §6.1 #10–#12；新依赖 `lean-qr`，新文件 `data/footprint-index.json`）
-- [ ] v1 潜点数据：60–80 个热门潜点，逐条核实（`data/sites.json` 目前只有示例种子，`verified: false`）；物种中文名策略见 ILLUSTRATION_GUIDE §3.4
-- [ ] 分级缩放 + 区域聚合气泡
-- [ ] 搜索（中文 / 英文 / 拼音）
+- [x] 足迹 + 分享图 + 二维码（SPEC §6.1 #10–#12）：`stores.ts` 的 `footprint` / `viewing` 与位图编解码、`share-image.ts`（Canvas2D + lean-qr）、`FootprintPanel.svelte`、`data/footprint-index.json`；浏览器里已验证标记、分享图、`?d=&w=` 查看模式不落盘、导入覆盖。**真机未测**：微信长按保存 / 识别二维码、低端安卓渲染耗时
+- [ ] v1 潜点数据：**目标 ≥ 200 个**（用户要求不少于参考图）。2026-10-21 第一波已合并 43 个（东南亚 / 红海 / 澳新 / 美洲，34 个已核实，含来源与维护 notes）；珊瑚三角、东亚、印度洋、太平洋、大西洋/极地 5 个区域因额度中断待续跑（workflow `wf_7dc44019-bfe` 可 resume），之后再跑第二波补到 200+。物种中文名策略见 ILLUSTRATION_GUIDE §3.4。**200 个潜点前必须先做区域聚合气泡（SPEC §6.2 #10），否则世界视图挤成一团**
+- [ ] 分级缩放 + 区域聚合气泡（数据过百后的硬需求）
+- [ ] 地球模式（可拖动旋转的正射投影，日/夜）：已评估可行，d3-geo 自带、零新依赖；效果预览见 `preview/map-style-candidates/globe-preview.png`；排在聚合气泡之后
+- [x] 搜索（中文 / 英文 / 拼音 / 国家）：工具栏放大镜 → `SearchPanel.svelte`，选中后 `openSite()` 飞到潜点；`pinyin` 字段由 `npm run data:pinyin` 生成并被校验脚本要求；`?sp=` 物种筛选现在有可关闭的芯片
+- [x] 贴纸落地准备：`spriteUrl()` 只对 `public/sprites/manifest.json` 里有的贴纸返回地址（没画的不再 404），地图贴纸尺寸按 `sizeClass` 48/40/32/24 px
 - [ ] 买域名 → 托管拍板 → 国内实测：三网测速 + 微信扫码打开
 - 下一步见 `docs/SPEC.md` §11 里程碑

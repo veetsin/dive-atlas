@@ -202,16 +202,16 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mas
 | # | 功能 | 验收标准 |
 |---|---|---|
 | 1 | 缩放平移 | 滚轮 / 双指缩放 1x–8x；拖动平移；标记与文字保持像素大小不随地图放大 |
-| 2 | 潜点标记 | 世界视图显示圆点（按区域色），hover/点击高亮；放大 > 2.5x 显示名称标签 |
+| 2 | 潜点标记 | 圆点统一珊瑚色（足迹状态另有配色），有贴纸的潜点显示贴纸；hover / 点击高亮；放大 > 2.5x（窄屏 4x）时显示当季潜点的名称标签 |
 | 3 | 潜点详情卡 | 桌面：右侧栏 360 px；手机：底部抽屉，上拉至 70% 高。内容：中英名、国家/区域、12 格季节条、明星物种、水温、能见度、难度/证书、潜水类型、访问方式、简介、来源、"待核实"标记 |
-| 4 | 月份筛选 | 顶部 12 个月 + "全年"；选中后当季潜点 100%、非当季 25% 透明；卡片季节条同步高亮 |
+| 4 | 月份筛选 | 顶部 12 个月 + "全年"；选中后当季潜点 100%、非当季 30%（夜间 40%）透明；卡片季节条同步高亮 |
 | 5 | 中英切换 | 右上角开关；所有文案、地名、卡片即时切换；写入 URL 与 localStorage |
 | 6 | 分享链接 | URL 完整还原 lang / month / site / species；卡片上"复制链接"按钮 |
 | 7 | 搜索 | 输入框匹配中文名、英文名、拼音（用 `pinyin-pro` 预生成拼音字段，不在运行时引入拼音库） |
-| 8 | 移动端 | 375 px 可用；触控目标 ≥ 40 px；抽屉可拖动关闭；窄屏默认 1.9x 定位到东南亚（整张世界图在手机上太小） |
+| 8 | 移动端 | 375 px 可用；触控目标 ≥ 40 px；抽屉可点海面 / Escape / × 关闭（拖动关闭移至 v1.5）；窄屏默认 1.9x 定位到东南亚（整张世界图在手机上太小） |
 | 9 | 可访问性 | 标记可键盘聚焦；卡片有 `aria-label`；动效尊重 `prefers-reduced-motion` |
 | 10 | 我的足迹 | 卡片底部两个开关"潜过 / 想去"（≥ 40 px，`aria-pressed`）；地图上潜过 = 珊瑚色实心、想去 = 日光色圆环、其余弱化；顶部"足迹"按钮打开面板（计数、名单、一行隐私提示） |
-| 11 | 分享图 + 二维码 | 面板点"生成分享图"：Canvas2D 画 1080×1920 PNG（顶部 1/3 世界图 + 足迹点，下方计数与地名，右下二维码 ≥ 8 px/模块、ECC M）；结果以 `<img src="data:image/png…">` 弹层显示并提示"长按保存"（微信里 `download`、`navigator.share(files)` 都不可用）；二维码内容 = 足迹链接 |
+| 11 | 分享图 + 二维码 | 面板点"生成分享图"：Canvas2D 画 1080×1920 JPEG（q 0.92；顶部 1/3 世界图 + 足迹点，下方计数与地名，右下二维码 8 px/模块、ECC M）；结果以 `<img src="data:image/jpeg…">` 弹层显示并提示"长按保存"（微信里 `download`、`navigator.share(files)` 都不可用）；二维码内容 = 足迹链接 |
 | 12 | 足迹查看模式 | 扫码 / 点链接打开 `?d=&w=` 时只读展示朋友足迹，横幅提供"看我的"与"导入为我的足迹"（二次确认）；复制链接在微信失败时回退到 `execCommand('copy')`，再失败显示可长按选中的链接框 |
 
 ### 6.2 v1.5（惊艳点）
@@ -260,9 +260,13 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mas
   "highlights": [ { "zh": "…", "en": "…" } ],   // 2–4 条看点，可选
   "sources": ["https://…"],             // verified:true 时至少 1 条；官方 / 公园管理处 / 权威潜水媒体优先
   "verified": false,                    // 逐条核实后改 true
+  "notes": "…",                         // 维护备注（来源分歧、肩季、坐标精度）。构建时由 vite.config.ts 的 stripNotes 剥掉，不进 bundle
+  "pinyin": "shibadan sbd",             // 由 npm run data:pinyin 生成，必填
   "updatedAt": "2026-10-20"
 }
 ```
+
+体积提醒：潜点数据目前随 JS 打包（43 个潜点约 21 KB gzip，不含 notes）。超过约 120 个潜点时 JS 会逼近 150 KB 预算，届时把 `summary / highlights / sources` 拆成按需 `import()` 的 `data/site-details.json`，轻字段留在主包。
 
 ### 7.2 `data/species.json`
 
@@ -272,7 +276,8 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mas
   "name": { "zh": "鲸鲨", "en": "Whale shark" },
   "sci": "Rhincodon typus",
   "sprite": "whale-shark",              // public/sprites/whale-shark-192.webp / -512.webp
-  "sizeClass": "xl",                    // xl | l | m | s → 地图上贴纸的显示尺寸
+  "sizeClass": "xl",                    // xl | l | m | s → 没有 lengthM 时的兜底尺寸
+  "lengthM": 10,                        // 典型成体体长（米；鱼群按看到的群体尺寸），地图贴纸按对数缩放：2 cm→22 px，1 m→45 px，10 m→58 px，25 m→64 px
   "tags": ["pelagic", "big"]
 }
 ```
@@ -374,3 +379,22 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mas
 | 足迹链接泄露行踪 | 面板一行提示；单潜点链接不带足迹参数；查看模式不落盘 |
 | 季节数据有争议 | 标"参考"，多来源交叉，保留 `notes` |
 | 名称 | `dive-atlas` 仅代号；正式名称与域名待定 |
+
+---
+
+## 13. 变更记录
+
+### 2026-10-20 · 0.2 实现落地
+
+- **底图**：按 §5 实现日间（印刷图集）与夜间（夜潜）两套主题，`MapView.svelte` 一套 SVG 结构 + `data-theme` 切换；新增 `data/labels.json`（25 个海域名）、`ThemeToggle.svelte`、`theme` store；`scripts/preview-map.mts` 支持 `--theme night`。
+- **足迹**：§3.4 / §6.1 #10–#12 / §7.3a 全部实现。与设计稿的差异：分享图导出 JPEG（q 0.92，≈ 150 KB）而非 PNG，便于微信长按保存与识别；分享图里未叠物种贴纸（v2 #17）；单潜点"复制链接"会主动剥掉 `d` / `w`。
+- **脚手架修复**：缩放行为只创建一次；深链接标记放在手机可见带；`<svg>` 去掉 `role="img"`；标签只在当季潜点显示；URL 同步改为单一 derived 订阅并保留 hash；复制链接带 `execCommand` 回退与只读链接框；`color-mix` 改 `--glass`；抽屉适配安全区；Escape / 点海面关卡片；`scripts/check-dist.mjs` 作为零外链与 800 KB gzip 门禁进入工作流；内联 favicon。
+- **搜索与筛选**：§6.1 #7 实现为工具栏放大镜 + `SearchPanel.svelte`（匹配中文名、英文名、拼音全拼 / 首字母、国家），`pinyin` 字段由 `scripts/gen-pinyin.mjs` 生成（括号别名拆成独立词）且为必填；`?sp=` 物种筛选有可关闭芯片。`spriteUrl()` 以 `public/sprites/manifest.json` 为准，未生成的贴纸不发请求；地图贴纸按 `sizeClass` 取 48 / 40 / 32 / 24 px。
+- **未做**：微信真机验证（长按保存、识别二维码、低端安卓渲染耗时）、80 个潜点下的标签避让、抽屉拖动关闭（现为点海面 / Escape / ×）、`countries-detail.topo.json` 的合并方式需与 `src/lib/geo.ts` 一致。
+
+### 2026-10-21 · 数据第一波、贴纸落地、体积
+
+- **贴纸**：B1 四物种入库，`--outline 2.5` 刀模边定为标准；地图贴纸尺寸改为按 `species.lengthM` 对数缩放（§7.2）；`spriteUrl()` 以 manifest 为准，未生成的物种不发请求。
+- **数据**：第一波合并 43 个潜点（东南亚 8、红海 8、澳新 6、美洲 13 + 8 个未重做的种子），34 个 `verified: true`，新增 16 个物种；每条带 `notes`（构建时剥离）。目标提高到 ≥ 200 个（用户要求不少于参考海报），第二波待续跑。
+- **体积**：43 个潜点时 JS 87 KB gzip（剥 notes 前 95 KB）。按每潜点约 0.5 KB gzip 估算，200 个潜点需要把 `summary / highlights / sources` 拆成按需 `import()`（§7.1 体积提醒）。
+- **评估**：地球模式（d3 `geoOrthographic`）可行、零新依赖，静态效果见 `preview/map-style-candidates/globe-preview.png`，渲染脚本 `docs/map-style-candidates/globe-preview.mjs`；建议做成"平面 / 地球"切换而不是替代平面图，排在区域聚合之后。

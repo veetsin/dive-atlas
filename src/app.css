@@ -92,6 +92,21 @@ a {
   color: var(--coral);
 }
 
+/* Floating control over the map (language / theme / footprint buttons). */
+.pill {
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--glass);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.pill:hover {
+  background: var(--paper);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

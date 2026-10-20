@@ -1,6 +1,6 @@
 <script lang="ts">
   import { t, tx, MONTH_KEYS } from '../lib/i18n';
-  import { month, shareUrl } from '../lib/stores';
+  import { month, shareUrl, footprint, viewing, setMark, markOf } from '../lib/stores';
   import { speciesById, regionById, spriteUrl } from '../lib/data';
   import { copyText } from '../lib/clipboard';
   import type { DiveSite } from '../lib/types';
@@ -14,7 +14,8 @@
 
   const heroSprite = $derived.by(() => {
     const first = site.species[0];
-    return first ? speciesById.get(first)?.sprite : undefined;
+    const sp = first ? speciesById.get(first) : undefined;
+    return sp ? spriteUrl(sp.sprite, 512) : undefined;
   });
 
   async function copyLink() {
@@ -32,7 +33,7 @@
     {#if heroSprite && !heroBroken}
       <img
         class="hero"
-        src={spriteUrl(heroSprite, 512)}
+        src={heroSprite}
         alt=""
         loading="lazy"
         onerror={() => (heroBroken = true)}
@@ -106,6 +107,29 @@
   </section>
 
   <footer>
+    {#if $viewing}
+      <p class="muted">{$t('footprint.viewingBanner')}</p>
+    {:else}
+      {@const mark = markOf($footprint, site.id)}
+      <div class="marks">
+        <button
+          class="mark"
+          class:on={mark === 'dived'}
+          aria-pressed={mark === 'dived'}
+          onclick={() => setMark(site.id, mark === 'dived' ? null : 'dived')}
+        >
+          {$t('footprint.dived')}
+        </button>
+        <button
+          class="mark wish"
+          class:on={mark === 'wish'}
+          aria-pressed={mark === 'wish'}
+          onclick={() => setMark(site.id, mark === 'wish' ? null : 'wish')}
+        >
+          {$t('footprint.wish')}
+        </button>
+      </div>
+    {/if}
     <button class="primary" onclick={copyLink}>{copied ? $t('card.copied') : $t('card.copyLink')}</button>
     {#if copyFailed}
       <p class="muted">{$t('card.longPressCopy')}</p>
@@ -257,6 +281,28 @@
   }
   footer {
     margin-top: 16px;
+  }
+  .marks {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .mark {
+    flex: 1;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--paper-2);
+    color: var(--ink);
+    font-weight: 600;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .mark.on {
+    background: var(--coral);
+    color: #fff;
+  }
+  .mark.wish.on {
+    background: var(--sun);
+    color: var(--ocean-deep);
   }
   .primary {
     width: 100%;

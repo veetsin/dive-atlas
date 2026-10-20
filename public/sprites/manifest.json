@@ -1,0 +1,353 @@
+{
+  "barracuda": {
+    "aspect": 1.706,
+    "files": {
+      "192": {
+        "bytes": 10938,
+        "sha1": "6ab87d4c01"
+      },
+      "512": {
+        "bytes": 29864,
+        "sha1": "0682fd2ca1"
+      }
+    }
+  },
+  "bumphead-parrotfish": {
+    "aspect": 1.49,
+    "files": {
+      "192": {
+        "bytes": 6068,
+        "sha1": "eef80357d2"
+      },
+      "512": {
+        "bytes": 16738,
+        "sha1": "9b7be98e9c"
+      }
+    }
+  },
+  "dolphin": {
+    "aspect": 2.296,
+    "files": {
+      "192": {
+        "bytes": 4426,
+        "sha1": "5437383298"
+      },
+      "512": {
+        "bytes": 11250,
+        "sha1": "c225d61fcd"
+      }
+    }
+  },
+  "dugong": {
+    "aspect": 2.074,
+    "files": {
+      "192": {
+        "bytes": 3768,
+        "sha1": "f039fa540f"
+      },
+      "512": {
+        "bytes": 9542,
+        "sha1": "1222ac97d5"
+      }
+    }
+  },
+  "eagle-ray": {
+    "aspect": 1.627,
+    "files": {
+      "192": {
+        "bytes": 5386,
+        "sha1": "e41d8149b3"
+      },
+      "512": {
+        "bytes": 14388,
+        "sha1": "01cd0494c1"
+      }
+    }
+  },
+  "galapagos-shark": {
+    "aspect": 1.863,
+    "files": {
+      "192": {
+        "bytes": 4432,
+        "sha1": "a98b6e540b"
+      },
+      "512": {
+        "bytes": 11404,
+        "sha1": "ed92e5097a"
+      }
+    }
+  },
+  "green-turtle": {
+    "aspect": 1.621,
+    "files": {
+      "192": {
+        "bytes": 6160,
+        "sha1": "f1de7551d9"
+      },
+      "512": {
+        "bytes": 20440,
+        "sha1": "73e028ad07"
+      }
+    }
+  },
+  "grey-reef-shark": {
+    "aspect": 2.151,
+    "files": {
+      "192": {
+        "bytes": 4658,
+        "sha1": "3e6922f9a7"
+      },
+      "512": {
+        "bytes": 12266,
+        "sha1": "3bc89e1380"
+      }
+    }
+  },
+  "hammerhead": {
+    "aspect": 1.519,
+    "files": {
+      "192": {
+        "bytes": 5352,
+        "sha1": "b0099a1c5b"
+      },
+      "512": {
+        "bytes": 13842,
+        "sha1": "3e6c26e296"
+      }
+    }
+  },
+  "hawksbill": {
+    "aspect": 1.738,
+    "files": {
+      "192": {
+        "bytes": 7012,
+        "sha1": "cdfa8918b2"
+      },
+      "512": {
+        "bytes": 23976,
+        "sha1": "110fbcbed7"
+      }
+    }
+  },
+  "humpback-whale": {
+    "aspect": 1.842,
+    "files": {
+      "192": {
+        "bytes": 5504,
+        "sha1": "7a41b1b951"
+      },
+      "512": {
+        "bytes": 15370,
+        "sha1": "e03eb30668"
+      }
+    }
+  },
+  "jack-school": {
+    "aspect": 1.093,
+    "files": {
+      "192": {
+        "bytes": 15780,
+        "sha1": "cd961e468d"
+      },
+      "512": {
+        "bytes": 45062,
+        "sha1": "98a873633f"
+      }
+    }
+  },
+  "mandarinfish": {
+    "aspect": 1.367,
+    "files": {
+      "192": {
+        "bytes": 9644,
+        "sha1": "93f37c1ac4"
+      },
+      "512": {
+        "bytes": 31974,
+        "sha1": "89593dd846"
+      }
+    }
+  },
+  "napoleon-wrasse": {
+    "aspect": 1.62,
+    "files": {
+      "192": {
+        "bytes": 6074,
+        "sha1": "933911d956"
+      },
+      "512": {
+        "bytes": 20900,
+        "sha1": "61f4b70c2b"
+      }
+    }
+  },
+  "nudibranch": {
+    "aspect": 2.148,
+    "files": {
+      "192": {
+        "bytes": 6932,
+        "sha1": "483e8ff480"
+      },
+      "512": {
+        "bytes": 22338,
+        "sha1": "5f1a02e748"
+      }
+    }
+  },
+  "oceanic-manta": {
+    "aspect": 1.477,
+    "files": {
+      "192": {
+        "bytes": 4922,
+        "sha1": "cb850471e2"
+      },
+      "512": {
+        "bytes": 12726,
+        "sha1": "547b9dd0ad"
+      }
+    }
+  },
+  "orca": {
+    "aspect": 1.76,
+    "files": {
+      "192": {
+        "bytes": 4750,
+        "sha1": "2c2a101a62"
+      },
+      "512": {
+        "bytes": 11642,
+        "sha1": "562a76cfb8"
+      }
+    }
+  },
+  "pygmy-seahorse": {
+    "aspect": 0.745,
+    "files": {
+      "192": {
+        "bytes": 8986,
+        "sha1": "07a7561ea2"
+      },
+      "512": {
+        "bytes": 26086,
+        "sha1": "c0b7e73c02"
+      }
+    }
+  },
+  "reef-manta": {
+    "aspect": 1.292,
+    "files": {
+      "192": {
+        "bytes": 4816,
+        "sha1": "2df2748f33"
+      },
+      "512": {
+        "bytes": 12622,
+        "sha1": "8d7a907957"
+      }
+    }
+  },
+  "sardine-run": {
+    "aspect": 1.035,
+    "files": {
+      "192": {
+        "bytes": 13902,
+        "sha1": "28c8e948df"
+      },
+      "512": {
+        "bytes": 42252,
+        "sha1": "b513a5687a"
+      }
+    }
+  },
+  "sea-lion": {
+    "aspect": 1.698,
+    "files": {
+      "192": {
+        "bytes": 4570,
+        "sha1": "604441234c"
+      },
+      "512": {
+        "bytes": 12258,
+        "sha1": "38a6577c29"
+      }
+    }
+  },
+  "sperm-whale": {
+    "aspect": 2.468,
+    "files": {
+      "192": {
+        "bytes": 3700,
+        "sha1": "64334773cf"
+      },
+      "512": {
+        "bytes": 8966,
+        "sha1": "ae59518eec"
+      }
+    }
+  },
+  "sunfish": {
+    "aspect": 1.0,
+    "files": {
+      "192": {
+        "bytes": 4930,
+        "sha1": "36c4c69919"
+      },
+      "512": {
+        "bytes": 13682,
+        "sha1": "7fd354f848"
+      }
+    }
+  },
+  "thresher-shark": {
+    "aspect": 1.618,
+    "files": {
+      "192": {
+        "bytes": 4852,
+        "sha1": "dda7912c09"
+      },
+      "512": {
+        "bytes": 12864,
+        "sha1": "f741409b13"
+      }
+    }
+  },
+  "tiger-shark": {
+    "aspect": 1.982,
+    "files": {
+      "192": {
+        "bytes": 5520,
+        "sha1": "2fbf047514"
+      },
+      "512": {
+        "bytes": 14704,
+        "sha1": "c853b09442"
+      }
+    }
+  },
+  "whale-shark": {
+    "aspect": 1.753,
+    "files": {
+      "192": {
+        "bytes": 6798,
+        "sha1": "41c5f8949e"
+      },
+      "512": {
+        "bytes": 19856,
+        "sha1": "baa420880a"
+      }
+    }
+  },
+  "whitetip-reef-shark": {
+    "aspect": 2.455,
+    "files": {
+      "192": {
+        "bytes": 3470,
+        "sha1": "071cf88abd"
+      },
+      "512": {
+        "bytes": 8906,
+        "sha1": "af37c967d3"
+      }
+    }
+  }
+}
