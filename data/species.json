@@ -727,5 +727,161 @@
     "tags": [
       "school"
     ]
+  },
+  {
+    "id": "giant-kelp",
+    "name": {
+      "zh": "巨藻森林",
+      "en": "Giant kelp forest"
+    },
+    "sci": "Macrocystis pyrifera",
+    "sprite": "giant-kelp",
+    "sizeClass": "l",
+    "lengthM": 20,
+    "tags": [
+      "kelp",
+      "coldwater"
+    ]
+  },
+  {
+    "id": "giant-sea-bass",
+    "name": {
+      "zh": "巨型黑鲈",
+      "en": "Giant sea bass"
+    },
+    "sci": "Stereolepis gigas",
+    "sprite": "giant-sea-bass",
+    "sizeClass": "l",
+    "lengthM": 2,
+    "tags": [
+      "big"
+    ]
+  },
+  {
+    "id": "california-leopard-shark",
+    "name": {
+      "zh": "加州豹纹鲨",
+      "en": "California leopard shark"
+    },
+    "sci": "Triakis semifasciata",
+    "sprite": "california-leopard-shark",
+    "sizeClass": "m",
+    "lengthM": 1.4,
+    "tags": [
+      "shark"
+    ]
+  },
+  {
+    "id": "striped-marlin",
+    "name": {
+      "zh": "条纹旗鱼",
+      "en": "Striped marlin"
+    },
+    "sci": "Kajikia audax",
+    "sprite": "striped-marlin",
+    "sizeClass": "l",
+    "lengthM": 2.8,
+    "tags": [
+      "pelagic",
+      "big"
+    ]
+  },
+  {
+    "id": "blue-whale",
+    "name": {
+      "zh": "蓝鲸",
+      "en": "Blue whale"
+    },
+    "sci": "Balaenoptera musculus",
+    "sprite": "blue-whale",
+    "sizeClass": "xl",
+    "lengthM": 24,
+    "tags": [
+      "whale",
+      "big"
+    ]
+  },
+  {
+    "id": "weedy-seadragon",
+    "name": {
+      "zh": "草海龙",
+      "en": "Weedy seadragon"
+    },
+    "sci": "Phyllopteryx taeniolatus",
+    "sprite": "weedy-seadragon",
+    "sizeClass": "s",
+    "lengthM": 0.4,
+    "tags": [
+      "coldwater"
+    ]
+  },
+  {
+    "id": "giant-spider-crab",
+    "name": {
+      "zh": "巨型蜘蛛蟹",
+      "en": "Giant spider crab"
+    },
+    "sci": "Leptomithrax gaimardii",
+    "sprite": "giant-spider-crab",
+    "sizeClass": "s",
+    "lengthM": 0.4,
+    "tags": [
+      "coldwater"
+    ]
+  },
+  {
+    "id": "sea-snake",
+    "name": {
+      "zh": "海蛇",
+      "en": "Sea snake"
+    },
+    "sci": "Laticauda colubrina",
+    "sprite": "sea-snake",
+    "sizeClass": "m",
+    "lengthM": 1,
+    "tags": []
+  },
+  {
+    "id": "walking-shark",
+    "name": {
+      "zh": "肩章鲨",
+      "en": "Walking shark"
+    },
+    "sci": "Hemiscyllium freycineti",
+    "sprite": "walking-shark",
+    "sizeClass": "m",
+    "lengthM": 0.7,
+    "tags": [
+      "shark"
+    ]
+  },
+  {
+    "id": "great-hammerhead",
+    "name": {
+      "zh": "无沟双髻鲨（大锤头）",
+      "en": "Great hammerhead"
+    },
+    "sci": "Sphyrna mokarran",
+    "sprite": "great-hammerhead",
+    "sizeClass": "l",
+    "lengthM": 4,
+    "tags": [
+      "shark",
+      "big"
+    ]
+  },
+  {
+    "id": "goliath-grouper",
+    "name": {
+      "zh": "大西洋巨石斑",
+      "en": "Goliath grouper"
+    },
+    "sci": "Epinephelus itajara",
+    "sprite": "goliath-grouper",
+    "sizeClass": "l",
+    "lengthM": 2,
+    "tags": [
+      "big"
+    ]
   }
 ]
