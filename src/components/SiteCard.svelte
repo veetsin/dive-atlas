@@ -1,9 +1,9 @@
 <script lang="ts">
   import { t, tx, MONTH_KEYS } from '../lib/i18n';
-  import { month, shareUrl, footprint, viewing, setMark, markOf } from '../lib/stores';
+  import { lang, month, shareUrl, footprint, viewing, setMark, markOf } from '../lib/stores';
   import { speciesById, regionById, spriteUrl, loadSiteDetails } from '../lib/data';
   import { copyText } from '../lib/clipboard';
-  import type { DiveSite, SiteDetails } from '../lib/types';
+  import type { DiveSite, SiteDetails, Species, LocalizedText } from '../lib/types';
 
   // App.svelte wraps this in {#key site.id}, so transient state resets per site for free.
   let { site, onclose }: { site: DiveSite; onclose: () => void } = $props();
@@ -25,6 +25,21 @@
     const sp = first ? speciesById.get(first) : undefined;
     return sp ? spriteUrl(sp.sprite, 512) : undefined;
   });
+
+  // Species chips open one inline panel at a time. `blurb` may not be in the data yet.
+  type SpeciesInfo = Species & { blurb?: LocalizedText };
+  /** lengthM of a school, a reef or a kelp stand is not a body length, so it is not shown. */
+  const NO_LENGTH = new Set(['school', 'coral', 'kelp']);
+  let openSp: string | null = $state(null);
+  const chipEls: Record<string, HTMLButtonElement> = {};
+  const openInfo = $derived(openSp ? (speciesById.get(openSp) as SpeciesInfo | undefined) : undefined);
+  const lengthText = (m: number) => (m >= 1 ? `${+m.toFixed(1)} m` : `${Math.round(m * 100)} cm`);
+  /** Collapse from the panel's × and hand focus back to the chip that opened it. */
+  function collapse() {
+    const id = openSp;
+    openSp = null;
+    if (id) chipEls[id]?.focus();
+  }
 
   function hostOf(url: string): string {
     try {
@@ -81,9 +96,32 @@
     <div class="chips">
       {#each site.species as id}
         {@const sp = speciesById.get(id)}
-        <span class="chip">{sp ? $tx(sp.name) : id}</span>
+        {@const thumb = sp && spriteUrl(sp.sprite, 192)}
+        <button
+          class="chip"
+          bind:this={chipEls[id]}
+          aria-expanded={openSp === id}
+          aria-controls="sp-panel"
+          onclick={() => (openSp = openSp === id ? null : id)}
+        >
+          {#if thumb}<img src={thumb} alt="" loading="lazy" decoding="async" />{:else}<span class="disc"></span>{/if}
+          {sp ? $tx(sp.name) : id}
+        </button>
       {/each}
     </div>
+    {#if openInfo}
+      {@const big = spriteUrl(openInfo.sprite, 512)}
+      <div id="sp-panel" class="sp-wrap"><div class="sp">
+        <button class="sp-close" onclick={collapse} aria-label={$t('species.collapse')}>×</button>
+        {#if big}<img class="sp-img" src={big} alt="" decoding="async" />{:else}<span class="disc"></span>{/if}
+        <h4>{$tx(openInfo.name)} <small>{openInfo.name[$lang === 'zh' ? 'en' : 'zh']}</small></h4>
+        {#if openInfo.sci}<p class="sci">{openInfo.sci}</p>{/if}
+        {#if openInfo.lengthM && !openInfo.tags?.some((x) => NO_LENGTH.has(x))}
+          <p class="len"><span>{$t('species.length')}</span> {$t('species.about')} {lengthText(openInfo.lengthM)}</p>
+        {/if}
+        {#if openInfo.blurb}<p class="blurb">{$tx(openInfo.blurb)}</p>{/if}
+      </div></div>
+    {/if}
   </section>
 
   <dl class="facts">
@@ -248,10 +286,111 @@
     gap: 6px;
   }
   .chip {
-    padding: 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 40px;
+    padding: 4px 12px 4px 4px;
     border-radius: 999px;
     background: var(--paper-2);
     font-size: 13px;
+  }
+  .chip[aria-expanded='true'] {
+    box-shadow: inset 0 0 0 2px var(--coral);
+  }
+  .chip img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  .disc {
+    display: block;
+    flex: none;
+    border-radius: 50%;
+    background: var(--line);
+  }
+  .chip .disc {
+    width: 20px;
+    height: 20px;
+    margin: 0 6px; /* same 32 px slot as a thumbnail */
+  }
+  /* Expands by animating its one grid row 0fr → 1fr; app.css drops the animation for reduced motion. */
+  .sp-wrap {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin-top: 8px;
+    overflow: hidden;
+    animation: sp-open 0.18s ease-out;
+  }
+  @keyframes sp-open {
+    from {
+      grid-template-rows: 0fr;
+      opacity: 0;
+    }
+  }
+  .sp {
+    position: relative;
+    min-height: 0;
+    padding: 12px 14px 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--paper);
+  }
+  .sp-close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--ink-soft);
+    background: var(--paper-2);
+  }
+  .sp-img {
+    display: block;
+    width: 100%;
+    height: 160px; /* fixed box: no reflow when the image arrives */
+    object-fit: contain;
+  }
+  .sp .disc {
+    width: 48px;
+    height: 48px;
+  }
+  h4 {
+    margin: 10px 0 0;
+    padding-right: 36px;
+    font-size: 18px;
+  }
+  h4 small {
+    margin-left: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--ink-soft);
+  }
+  .sci {
+    margin: 2px 0 0;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+  .len {
+    margin: 8px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .len span {
+    margin-right: 4px;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .blurb {
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.6;
   }
   .facts {
     display: grid;

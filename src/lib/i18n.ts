@@ -53,6 +53,9 @@ const dict = {
   'card.copied': { zh: '已复制', en: 'Copied' },
   'card.longPressCopy': { zh: '复制失败，长按下面的链接手动复制', en: 'Copy blocked, long-press the link below to copy' },
   'card.close': { zh: '关闭', en: 'Close' },
+  'species.length': { zh: '体长', en: 'Length' },
+  'species.about': { zh: '约', en: '≈' },
+  'species.collapse': { zh: '收起', en: 'Collapse' },
   'map.loading': { zh: '地图加载中…', en: 'Loading map…' },
   'map.noGeo': {
     zh: '还没有底图数据，请先运行 npm run geo',

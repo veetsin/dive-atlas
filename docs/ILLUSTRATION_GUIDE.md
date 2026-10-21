@@ -631,6 +631,17 @@ art/raw/<batch>/grid.png + ids.txt   ← ChatGPT 下载的原图（PNG）+ 四�
 
 ---
 
+### 6.1 特例配方（2026-10-22，B14–B23 实测）
+
+- 洞填充现在只回填"原像素不是底灰"的孔：白肚子照旧补上，巨藻叶间、柳珊瑚枝间的真空隙保持透明。
+- `--key`（可选）：不用 rembg，按每个像素与平灰底的色距抠图，适合被 rembg 当成背景的浅色 / 细碎主体。只对单格用，其余格照常。
+- 已用的特例命令（都带 `--outline 2.5`，重跑普通命令会把这些格切坏或超预算）：
+  - B14 `--ids=-,giant-kelp,red-gorgonian,- --quality 60`
+  - B15 `--ids=-,glassfish,-,- --key`
+  - B19 `--ids=-,-,giant-spider-crab,- --key`；`--ids=-,-,-,black-coral --key --quality 60`
+  - B22 `--ids=-,-,-,white-spotted-pufferfish --key`
+- 超预算先试 `--quality 60`（沙丁鱼、巨藻、柳珊瑚、蜘蛛蟹、黑珊瑚都是这样过的），没有 384 px 的备用路线。
+
 ## 7. 每张图的验收清单（存进 `art/raw/` 之前）
 
 1. **文件**：PNG；像素 ≥ 1536×1024（3:2）或 ≥ 1024×1024（1:1）。`sips -g pixelWidth -g pixelHeight -g hasAlpha grid.png`。小了或是 JPEG → 重生成。

@@ -12,6 +12,19 @@
       }
     }
   },
+  "angel-shark": {
+    "aspect": 1.403,
+    "files": {
+      "192": {
+        "bytes": 5054,
+        "sha1": "f9635dc983"
+      },
+      "512": {
+        "bytes": 13756,
+        "sha1": "fe0df479ad"
+      }
+    }
+  },
   "arctic-char": {
     "aspect": 2.261,
     "files": {
@@ -22,6 +35,19 @@
       "512": {
         "bytes": 12844,
         "sha1": "c100440bdc"
+      }
+    }
+  },
+  "atlantic-cod": {
+    "aspect": 2.213,
+    "files": {
+      "192": {
+        "bytes": 4964,
+        "sha1": "3c2f3ea87f"
+      },
+      "512": {
+        "bytes": 14766,
+        "sha1": "8610c8beb9"
       }
     }
   },
@@ -38,6 +64,32 @@
       }
     }
   },
+  "basking-shark": {
+    "aspect": 1.793,
+    "files": {
+      "192": {
+        "bytes": 4744,
+        "sha1": "c17becd58c"
+      },
+      "512": {
+        "bytes": 11748,
+        "sha1": "cd1a8c9623"
+      }
+    }
+  },
+  "black-coral": {
+    "aspect": 0.843,
+    "files": {
+      "192": {
+        "bytes": 7936,
+        "sha1": "170062bb5e"
+      },
+      "512": {
+        "bytes": 27566,
+        "sha1": "cd8f663434"
+      }
+    }
+  },
   "blacktip-reef-shark": {
     "aspect": 2.19,
     "files": {
@@ -51,16 +103,42 @@
       }
     }
   },
-  "brydes-whale": {
-    "aspect": 2.698,
+  "blue-whale": {
+    "aspect": 2.72,
     "files": {
       "192": {
-        "bytes": 3842,
-        "sha1": "06aab4a416"
+        "bytes": 3790,
+        "sha1": "2d3a04a534"
       },
       "512": {
-        "bytes": 10526,
-        "sha1": "a788ef6389"
+        "bytes": 10632,
+        "sha1": "d6b583b55e"
+      }
+    }
+  },
+  "broadnose-sevengill-shark": {
+    "aspect": 2.351,
+    "files": {
+      "192": {
+        "bytes": 3652,
+        "sha1": "2748656288"
+      },
+      "512": {
+        "bytes": 9480,
+        "sha1": "ce5a143f7b"
+      }
+    }
+  },
+  "brydes-whale": {
+    "aspect": 2.897,
+    "files": {
+      "192": {
+        "bytes": 3500,
+        "sha1": "e947db1462"
+      },
+      "512": {
+        "bytes": 9456,
+        "sha1": "cb7f99c2b0"
       }
     }
   },
@@ -90,6 +168,19 @@
       }
     }
   },
+  "california-leopard-shark": {
+    "aspect": 2.465,
+    "files": {
+      "192": {
+        "bytes": 4768,
+        "sha1": "591e3ddf44"
+      },
+      "512": {
+        "bytes": 12772,
+        "sha1": "d342083d34"
+      }
+    }
+  },
   "caribbean-reef-shark": {
     "aspect": 2.09,
     "files": {
@@ -103,6 +194,32 @@
       }
     }
   },
+  "clione": {
+    "aspect": 0.836,
+    "files": {
+      "192": {
+        "bytes": 4498,
+        "sha1": "4a2066f3f8"
+      },
+      "512": {
+        "bytes": 12326,
+        "sha1": "5213c36fa1"
+      }
+    }
+  },
+  "clownfish": {
+    "aspect": 1.52,
+    "files": {
+      "192": {
+        "bytes": 6550,
+        "sha1": "eb8bbe2d87"
+      },
+      "512": {
+        "bytes": 17576,
+        "sha1": "3dd78006b2"
+      }
+    }
+  },
   "dolphin": {
     "aspect": 2.303,
     "files": {
@@ -113,6 +230,19 @@
       "512": {
         "bytes": 10668,
         "sha1": "e4370af2fb"
+      }
+    }
+  },
+  "dourado": {
+    "aspect": 2.039,
+    "files": {
+      "192": {
+        "bytes": 5992,
+        "sha1": "d9b9db1edf"
+      },
+      "512": {
+        "bytes": 20890,
+        "sha1": "8ffa09a654"
       }
     }
   },
@@ -194,6 +324,19 @@
       }
     }
   },
+  "giant-cuttlefish": {
+    "aspect": 1.961,
+    "files": {
+      "192": {
+        "bytes": 4616,
+        "sha1": "ebc39c569e"
+      },
+      "512": {
+        "bytes": 13258,
+        "sha1": "e73c8338c6"
+      }
+    }
+  },
   "giant-grouper": {
     "aspect": 1.566,
     "files": {
@@ -204,6 +347,97 @@
       "512": {
         "bytes": 18832,
         "sha1": "fe252b390e"
+      }
+    }
+  },
+  "giant-kelp": {
+    "aspect": 0.911,
+    "files": {
+      "192": {
+        "bytes": 13090,
+        "sha1": "b3a68a8e3a"
+      },
+      "512": {
+        "bytes": 33312,
+        "sha1": "e9f9925eac"
+      }
+    }
+  },
+  "giant-pacific-octopus": {
+    "aspect": 1.257,
+    "files": {
+      "192": {
+        "bytes": 9982,
+        "sha1": "514c8d8cd7"
+      },
+      "512": {
+        "bytes": 28086,
+        "sha1": "d284c2463b"
+      }
+    }
+  },
+  "giant-sea-bass": {
+    "aspect": 1.891,
+    "files": {
+      "192": {
+        "bytes": 5326,
+        "sha1": "87b09ca127"
+      },
+      "512": {
+        "bytes": 15238,
+        "sha1": "868a0e72c0"
+      }
+    }
+  },
+  "giant-spider-crab": {
+    "aspect": 1.129,
+    "files": {
+      "192": {
+        "bytes": 14164,
+        "sha1": "1fd3bd1d17"
+      },
+      "512": {
+        "bytes": 38838,
+        "sha1": "d33460011c"
+      }
+    }
+  },
+  "glassfish": {
+    "aspect": 1.796,
+    "files": {
+      "192": {
+        "bytes": 9012,
+        "sha1": "b162b7a014"
+      },
+      "512": {
+        "bytes": 22302,
+        "sha1": "335b580024"
+      }
+    }
+  },
+  "goliath-grouper": {
+    "aspect": 2.024,
+    "files": {
+      "192": {
+        "bytes": 4730,
+        "sha1": "690a43a0bb"
+      },
+      "512": {
+        "bytes": 12922,
+        "sha1": "4350a780e1"
+      }
+    }
+  },
+  "great-hammerhead": {
+    "aspect": 1.678,
+    "files": {
+      "192": {
+        "bytes": 4572,
+        "sha1": "a86af87d8d"
+      },
+      "512": {
+        "bytes": 11278,
+        "sha1": "23bccb5394"
       }
     }
   },
@@ -273,15 +507,15 @@
     }
   },
   "hard-coral": {
-    "aspect": 1.538,
+    "aspect": 1.067,
     "files": {
       "192": {
-        "bytes": 10514,
-        "sha1": "9bead5647f"
+        "bytes": 12742,
+        "sha1": "41014ae088"
       },
       "512": {
-        "bytes": 37340,
-        "sha1": "17c1ad2d39"
+        "bytes": 35708,
+        "sha1": "ad7f7c0f4e"
       }
     }
   },
@@ -324,6 +558,32 @@
       }
     }
   },
+  "jewel-anemone": {
+    "aspect": 1.212,
+    "files": {
+      "192": {
+        "bytes": 10102,
+        "sha1": "b402ddb0c3"
+      },
+      "512": {
+        "bytes": 29498,
+        "sha1": "a07e8b20e6"
+      }
+    }
+  },
+  "leafy-seadragon": {
+    "aspect": 1.313,
+    "files": {
+      "192": {
+        "bytes": 11038,
+        "sha1": "495f586326"
+      },
+      "512": {
+        "bytes": 29056,
+        "sha1": "50e7c28607"
+      }
+    }
+  },
   "lemon-shark": {
     "aspect": 2.106,
     "files": {
@@ -347,6 +607,32 @@
       "512": {
         "bytes": 13812,
         "sha1": "6de472d93e"
+      }
+    }
+  },
+  "loggerhead-turtle": {
+    "aspect": 1.611,
+    "files": {
+      "192": {
+        "bytes": 5896,
+        "sha1": "052fd02a4e"
+      },
+      "512": {
+        "bytes": 18638,
+        "sha1": "fe8f880eda"
+      }
+    }
+  },
+  "manatee": {
+    "aspect": 2.064,
+    "files": {
+      "192": {
+        "bytes": 3586,
+        "sha1": "ea74214bdc"
+      },
+      "512": {
+        "bytes": 9290,
+        "sha1": "9449e51213"
       }
     }
   },
@@ -390,15 +676,15 @@
     }
   },
   "nurse-shark": {
-    "aspect": 2.442,
+    "aspect": 2.505,
     "files": {
       "192": {
-        "bytes": 3860,
-        "sha1": "fe55bd0308"
+        "bytes": 3374,
+        "sha1": "1143c41b7f"
       },
       "512": {
-        "bytes": 9600,
-        "sha1": "91cd9607a7"
+        "bytes": 8208,
+        "sha1": "60bce1bfd0"
       }
     }
   },
@@ -441,6 +727,19 @@
       }
     }
   },
+  "penguin": {
+    "aspect": 0.73,
+    "files": {
+      "192": {
+        "bytes": 8064,
+        "sha1": "3476fa471c"
+      },
+      "512": {
+        "bytes": 21396,
+        "sha1": "c5eddabc32"
+      }
+    }
+  },
   "potato-cod": {
     "aspect": 1.545,
     "files": {
@@ -464,6 +763,32 @@
       "512": {
         "bytes": 24740,
         "sha1": "1176ad177d"
+      }
+    }
+  },
+  "red-coral": {
+    "aspect": 0.963,
+    "files": {
+      "192": {
+        "bytes": 13868,
+        "sha1": "6932f26166"
+      },
+      "512": {
+        "bytes": 39702,
+        "sha1": "6bb88abf6f"
+      }
+    }
+  },
+  "red-gorgonian": {
+    "aspect": 1.167,
+    "files": {
+      "192": {
+        "bytes": 13280,
+        "sha1": "9e142eee4c"
+      },
+      "512": {
+        "bytes": 29366,
+        "sha1": "5081ad3fde"
       }
     }
   },
@@ -503,6 +828,32 @@
       "512": {
         "bytes": 11542,
         "sha1": "d0de061fee"
+      }
+    }
+  },
+  "sea-snake": {
+    "aspect": 4.187,
+    "files": {
+      "192": {
+        "bytes": 3444,
+        "sha1": "6cea8a1d56"
+      },
+      "512": {
+        "bytes": 8544,
+        "sha1": "2cad850fd0"
+      }
+    }
+  },
+  "seahorse": {
+    "aspect": 0.62,
+    "files": {
+      "192": {
+        "bytes": 6430,
+        "sha1": "e628836a2f"
+      },
+      "512": {
+        "bytes": 16806,
+        "sha1": "f2391133f0"
       }
     }
   },
@@ -571,6 +922,19 @@
       }
     }
   },
+  "southern-right-whale": {
+    "aspect": 2.19,
+    "files": {
+      "192": {
+        "bytes": 4232,
+        "sha1": "89e6d169d9"
+      },
+      "512": {
+        "bytes": 10684,
+        "sha1": "34c9b67a68"
+      }
+    }
+  },
   "southern-stingray": {
     "aspect": 1.554,
     "files": {
@@ -594,6 +958,19 @@
       "512": {
         "bytes": 8744,
         "sha1": "2e36f260ec"
+      }
+    }
+  },
+  "striped-marlin": {
+    "aspect": 1.923,
+    "files": {
+      "192": {
+        "bytes": 5034,
+        "sha1": "555d8fc8fe"
+      },
+      "512": {
+        "bytes": 12994,
+        "sha1": "3d21ddf458"
       }
     }
   },
@@ -636,6 +1013,45 @@
       }
     }
   },
+  "walking-shark": {
+    "aspect": 2.446,
+    "files": {
+      "192": {
+        "bytes": 4934,
+        "sha1": "89dc5c119e"
+      },
+      "512": {
+        "bytes": 13252,
+        "sha1": "f57778f322"
+      }
+    }
+  },
+  "walrus": {
+    "aspect": 1.297,
+    "files": {
+      "192": {
+        "bytes": 5130,
+        "sha1": "ddb7049e15"
+      },
+      "512": {
+        "bytes": 14906,
+        "sha1": "e94f04f6a3"
+      }
+    }
+  },
+  "weedy-seadragon": {
+    "aspect": 1.225,
+    "files": {
+      "192": {
+        "bytes": 8316,
+        "sha1": "7816c63c64"
+      },
+      "512": {
+        "bytes": 22784,
+        "sha1": "c2883a0a7e"
+      }
+    }
+  },
   "whale-shark": {
     "aspect": 2.043,
     "files": {
@@ -649,6 +1065,19 @@
       }
     }
   },
+  "white-spotted-pufferfish": {
+    "aspect": 2.125,
+    "files": {
+      "192": {
+        "bytes": 5400,
+        "sha1": "32c7aa241f"
+      },
+      "512": {
+        "bytes": 15358,
+        "sha1": "215466ede6"
+      }
+    }
+  },
   "whitetip-reef-shark": {
     "aspect": 2.461,
     "files": {
@@ -659,6 +1088,32 @@
       "512": {
         "bytes": 8582,
         "sha1": "7846c90f8d"
+      }
+    }
+  },
+  "wolf-eel": {
+    "aspect": 2.97,
+    "files": {
+      "192": {
+        "bytes": 4144,
+        "sha1": "02332b0d32"
+      },
+      "512": {
+        "bytes": 12348,
+        "sha1": "c85ff66422"
+      }
+    }
+  },
+  "wolffish": {
+    "aspect": 2.35,
+    "files": {
+      "192": {
+        "bytes": 4320,
+        "sha1": "663ac80060"
+      },
+      "512": {
+        "bytes": 11748,
+        "sha1": "d5ac24c451"
       }
     }
   }

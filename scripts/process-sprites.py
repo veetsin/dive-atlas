@@ -14,7 +14,8 @@ split into connected components, and each component is assigned to the cell that
 its centroid. A tail or wingtip that crosses the invisible cell boundary therefore stays
 with its animal instead of being amputated by a fixed crop, and a neighbour's fin that
 pokes into a cell is not picked up. Specks are dropped, enclosed holes left by the matte
-(white bellies against the grey background) are filled from the original pixels.
+(white bellies against the grey background) are filled from the original pixels, unless the
+hole is itself background-coloured (a real gap between kelp fronds or gorgonian branches).
 
 Options:
     --grid RxC        cells per sheet (default: one subject per file)
@@ -28,6 +29,9 @@ Options:
     --pad 0.04        safety margin as a fraction of the long edge (default 0.04)
     --out DIR         output dir (default public/sprites)
     --no-rembg        input already transparent: skip background removal
+    --key             matte by distance from the flat sheet background instead of rembg, for pale,
+                      finely cut subjects rembg drops (black coral, glassfish school); pair with
+                      --ids=-,id,-,- so only the affected cell is written
 
 Writes <id>-<size>.webp and updates <out>/manifest.json.
 """
@@ -39,7 +43,7 @@ import json
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageFilter
+from PIL import Image, ImageChops, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 OUTLINE_RGB = (251, 248, 241)  # --paper
@@ -65,6 +69,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--pad", type=float, default=0.04)
     p.add_argument("--out", type=Path, default=ROOT / "public" / "sprites")
     p.add_argument("--no-rembg", action="store_true")
+    p.add_argument("--key", action="store_true")
     return p.parse_args()
 
 
@@ -76,6 +81,23 @@ def remove_bg(img: Image.Image) -> Image.Image:
     session = new_session("isnet-general-use")
     return remove(img, session=session, alpha_matting=True, alpha_matting_foreground_threshold=240,
                   alpha_matting_background_threshold=10, alpha_matting_erode_size=10).convert("RGBA")
+
+
+def sheet_bg(rgb: Image.Image) -> tuple[int, int, int]:
+    """Flat background colour: per-channel median of the corners and edge midpoints."""
+    w, h = rgb.size
+    pts = [(x, y) for x in (2, w // 2, w - 3) for y in (2, h // 2, h - 3) if (x, y) != (w // 2, h // 2)]
+    return tuple(sorted(ch)[len(ch) // 2] for ch in zip(*(rgb.getpixel(q) for q in pts)))
+
+
+def key_bg(img: Image.Image, lo: int = 8, hi: int = 16) -> Image.Image:
+    """Colour-key matte for a flat background: alpha ramps from 0 at channel distance `lo` to 255 at `hi`."""
+    rgb = img.convert("RGB")
+    r, g, b = ImageChops.difference(rgb, Image.new("RGB", rgb.size, sheet_bg(rgb))).split()
+    out = rgb.copy()
+    out.putalpha(ImageChops.lighter(ImageChops.lighter(r, g), b).point(
+        lambda d: max(0, min(255, (d - lo) * 255 // (hi - lo)))))
+    return out
 
 
 # ---------------------------------------------------------------- components
@@ -128,8 +150,9 @@ def label_components(mask: bytes, w: int, h: int) -> tuple[list[Component], list
     return comps, labels
 
 
-def fill_holes(mask: bytearray, w: int, h: int, max_hole: int) -> None:
-    """Set enclosed zero-regions (not reachable from the border) to 255, if smaller than max_hole px."""
+def fill_holes(mask: bytearray, w: int, h: int, max_hole: int, rgb: bytes, bg: tuple[int, int, int]) -> None:
+    """Set enclosed zero-regions (not reachable from the border) to 255, if smaller than max_hole px
+    and not mostly background-coloured in `rgb` (the raw crop) — those are real gaps, not lost bellies."""
     outside = bytearray(w * h)
     stack = [i for i in range(w) if not mask[i]] + [i for i in range((h - 1) * w, w * h) if not mask[i]]
     stack += [y * w for y in range(h) if not mask[y * w]] + [y * w + w - 1 for y in range(h) if not mask[y * w + w - 1]]
@@ -145,7 +168,12 @@ def fill_holes(mask: bytearray, w: int, h: int, max_hole: int) -> None:
     # remaining zeros are holes; fill them component by component so huge gaps are left alone
     hole_mask = bytes(255 if (not mask[i] and not outside[i]) else 0 for i in range(w * h))
     holes, hole_labels = label_components(hole_mask, w, h)
-    small = {c.id for c in holes if c.area <= max_hole}
+    bgish: dict[int, int] = {}
+    for i in range(w * h):
+        lab = hole_labels[i]
+        if lab and max(abs(rgb[3 * i + c] - bg[c]) for c in range(3)) <= 8:
+            bgish[lab] = bgish.get(lab, 0) + 1
+    small = {c.id for c in holes if c.area <= max_hole and bgish.get(c.id, 0) < c.area / 2}
     if not small:
         return
     for i in range(w * h):
@@ -167,6 +195,7 @@ def cut_cells(raw: Image.Image, cut: Image.Image, rows: int, cols: int) -> list[
         by_cell.setdefault(idx, []).append(c)
 
     raw_rgb = raw.convert("RGB")
+    bg = sheet_bg(raw_rgb)
     cells: list[Image.Image | None] = []
     for idx in range(rows * cols):
         group = by_cell.get(idx, [])
@@ -189,11 +218,11 @@ def cut_cells(raw: Image.Image, cut: Image.Image, rows: int, cols: int) -> list[
                 if labels[row + x] in keep:
                     cell_alpha[o + x] = alpha[row + x]
                     solid[o + x] = 255
-        fill_holes(solid, bw, bh, max_hole=int(biggest * 0.15))
+        rgb = raw_rgb.crop((x0, y0, x1, y1))
+        fill_holes(solid, bw, bh, max_hole=int(biggest * 0.15), rgb=rgb.tobytes(), bg=bg)
         for i in range(bw * bh):
             if solid[i] and cell_alpha[i] < 255 and not (labels[(y0 + i // bw) * w + x0 + i % bw] in keep):
                 cell_alpha[i] = 255  # filled hole: fully opaque, colour comes from the raw sheet
-        rgb = raw_rgb.crop((x0, y0, x1, y1))
         a = Image.frombytes("L", (bw, bh), bytes(cell_alpha))
         rgba = rgb.copy()
         rgba.putalpha(a)
@@ -254,7 +283,7 @@ def main() -> None:
     cells: list[Image.Image | None] = []
     for path in args.inputs:
         raw = Image.open(path).convert("RGBA")
-        cut = raw if args.no_rembg else remove_bg(raw)
+        cut = raw if args.no_rembg else key_bg(raw) if args.key else remove_bg(raw)
         if args.grid:
             rows, cols = (int(x) for x in args.grid.lower().split("x"))
             cells += cut_cells(raw, cut, rows, cols)
