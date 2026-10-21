@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// Gate on the two hard constraints the build can prove: no runtime request to another origin
-// (CLAUDE.md #1) and first-load gzip within budget (#7). Run after `npm run build`.
+// Gate on the hard constraints the build can prove: no runtime request to another origin
+// (CLAUDE.md #1), no third-party brand name in shipped text (#2) and first-load gzip within
+// budget (#7). Run after `npm run build`.
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 import { join, extname, relative } from 'node:path';
@@ -40,14 +41,24 @@ const firstLoad = (p) => {
   return r === 'index.html' || r === 'geo/countries.topo.json' || [...referenced].some((ref) => ref.endsWith(r));
 };
 
+// Brand names that must not reach the page (CLAUDE.md #2); source hosts show on the site card.
+const BRANDS = /\bpadi\b|xiaohongshu|小红书|awesome\s?maps|divessi/i;
+const TEXT = new Set([".html", ".js", ".css", ".json", ".svg", ".txt", ".webmanifest"]);
+
 let problems = 0;
 let gzipTotal = 0;
 for (const f of files) {
   const buf = readFileSync(f);
   if (firstLoad(f)) gzipTotal += gzipSync(buf).length;
+  if (!TEXT.has(extname(f))) continue;
+  const text = buf.toString('utf8');
+  const brand = text.match(BRANDS);
+  if (brand) {
+    console.log(`BRAND     ${relative(dist, f)}: ${brand[0]}`);
+    problems++;
+  }
   const rules = RULES[extname(f)];
   if (!rules) continue;
-  const text = buf.toString('utf8');
   for (const re of rules) {
     const m = text.match(re);
     if (m) {

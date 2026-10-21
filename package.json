@@ -12,7 +12,8 @@
     "check:dist": "node scripts/check-dist.mjs",
     "geo": "bash scripts/build-geo.sh",
     "preview:map": "node --experimental-strip-types scripts/preview-map.mts",
-    "data:validate": "node scripts/validate-data.mjs",
+    "data:validate": "node scripts/validate-data.mjs && node scripts/check-sites-geo.mjs",
+    "data:geo": "node scripts/check-sites-geo.mjs",
     "data:pinyin": "node scripts/gen-pinyin.mjs",
     "sprites": "python3 scripts/process-sprites.py"
   },

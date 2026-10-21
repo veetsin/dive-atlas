@@ -55,8 +55,7 @@
     ],
     "sources": [
       "https://scubadiverlife.com/best-diving-marsa-alam",
-      "https://www.duikersgids.nl/en/marsa-abu-dabbab",
-      "https://blog.padi.com/top-10-dive-sites-in-egypt/"
+      "https://www.duikersgids.nl/en/marsa-abu-dabbab"
     ],
     "verified": true,
     "notes": "三个来源均称全年可潜、无特定季节，故 bestMonths 留空；Scuba Diver Life 在马萨阿拉姆区域物种日历里写儒艮 5–8 月较多。深度各说 18–35 m，湾内主潜区约 20 m。水温取马萨阿拉姆区域值（12 月约 23°C、8 月约 29°C）。坐标为海湾中部。",
@@ -190,8 +189,6 @@
     ],
     "sources": [
       "https://visitaqaba.com.jo/EN/Pages/DivingEn",
-      "https://www.padi.com/diving-in/jordan/aqaba-governorate/",
-      "https://www.padi.com/dive-site/jordan/wreck-of-the-cedar-pride/",
       "https://divemagazine.com/scuba-diving-travel/wreck-diving-aqaba",
       "https://divernet.com/world-dives/in-deep-in-aqaba/",
       "https://divernet.com/scuba-diving/scuba-diving-in-jordan-and-aqaba-wrecks/"
@@ -270,7 +267,6 @@
     "sources": [
       "https://www.liveaboard.com/diving/egypt/the-brothers/scuba",
       "https://www.dive-the-world.com/diving-sites-egypt-brother-islands.php",
-      "https://www.padi.com/dive-site/egypt/brother-islands/",
       "https://divernet.com/world-dives/brotherly-luck/",
       "https://en.wikipedia.org/wiki/El_Ikhwa_Islands"
     ],
@@ -346,7 +342,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/dive-site/egypt/daedalus-reef/",
       "https://www.dive-the-world.com/diving-sites-egypt-daedalus-reef.php",
       "https://masterliveaboards.com/best-dive-site-in-the-red-sea-dive-daedalus-reef/",
       "https://en.wikipedia.org/wiki/Daedalus_Reef"
@@ -413,9 +408,6 @@
     ],
     "sources": [
       "https://www.cameldive.com/dive-sites/blue-hole/",
-      "https://www.divessi.com/en/blog/scuba-diving-in-dahab-1412",
-      "https://www.padi.com/dive-site/egypt/blue-hole-17/",
-      "https://blog.padi.com/top-10-dive-sites-in-egypt/",
       "https://en.wikipedia.org/wiki/Blue_Hole_(Red_Sea)",
       "https://www.responsibletravel.com/holidays/diving-in-the-red-sea/travel-guide/dahab"
     ],
@@ -487,7 +479,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/dive-site/egypt/elphinstone-reef-4/",
       "https://dive-the-world.com/diving-sites-egypt-elphinstone.php",
       "https://www.liveaboard.com/diving/egypt/elphinstone/",
       "https://scubadiverlife.com/best-diving-marsa-alam",
@@ -638,7 +629,6 @@
     "sources": [
       "https://www.dive-the-world.com/diving-sites-egypt-ras-mohammed.php",
       "https://divernet.com/world-dives/sharm-el-sheikh/",
-      "https://blog.padi.com/top-10-dive-sites-in-egypt/",
       "https://scubadiverlife.com/dive-site-yolanda-reef-shark-reef-2/",
       "https://www.cameldive.com/best-time-to-dive-sharm-el-sheikh/",
       "https://en.wikipedia.org/wiki/Ras_Muhammad_National_Park"
@@ -800,7 +790,6 @@
       "https://www.naturalworldheritagesites.org/sites/sanganeb-marine-national-park-and-dungonab-bay-mukkawar-island-marine-national-park/",
       "https://www.dive-the-world.com/liveaboards-red-sea-sudan.php",
       "https://www.bluewaterdivetravel.com/sudan-scuba-diving-travel-guide",
-      "https://travel.padi.com/liveaboard-diving/sudan",
       "https://liveaboard.dune-world.com/trip/deep-south-sudan/"
     ],
     "verified": true,
@@ -956,7 +945,6 @@
     "sources": [
       "https://dive-the-world.com/diving-sites-egypt-straits-of-tiran.php",
       "https://www.liveaboard.com/diving/egypt/straits-of-tiran",
-      "https://www.padi.com/dive-site/egypt/jackson-reef/",
       "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-the-red-sea"
     ],
     "verified": true,
@@ -1022,7 +1010,6 @@
     "sources": [
       "https://www.dive-the-world.com/diving-sites-egypt-thistlegorm.php",
       "https://www.blueforcefleet.com/?p=12252",
-      "https://blog.padi.com/?p=669746",
       "https://www.liveaboard.com/diving/egypt/thistlegorm/scuba",
       "https://en.wikipedia.org/wiki/SS_Thistlegorm"
     ],
@@ -1094,7 +1081,6 @@
     ],
     "sources": [
       "https://www.southafrica.net/gl/en/travel/article/sharks-turtles-and-wrecks-aliwal-shoal-kwazulu-natal",
-      "https://blog.padi.com/diving-on-aliwal-shoal-south-africa/",
       "https://www.southafrica.net/gl/en/travel/article/tiger-shark-diving-in-south-africa"
     ],
     "verified": true,
@@ -1169,8 +1155,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/oman/",
-      "https://www.padi.com/diving-in/muscat/",
       "https://www.liveaboard.com/cruise/oman/muscat",
       "https://www.liveaboard.com/diving/oman",
       "https://www.scubatravel.co.uk/arabian-sea/oman-diving.html",
@@ -1243,7 +1227,6 @@
     ],
     "sources": [
       "https://www.scubatravel.co.uk/redsea/djibouti-diving.html",
-      "https://blog.padi.com/the-best-locations-to-swim-dive-with-whale-sharks-by-month/",
       "https://divemagazine.com/scuba-diving-travel/10-best-places-to-dive-with-whale-sharks",
       "https://www.liveaboard.com/diving/djibouti"
     ],
@@ -1316,7 +1299,6 @@
     ],
     "sources": [
       "https://www.dive-the-world.com/diving-sites-maldives-deep-south-fuvahmulah.php",
-      "https://www.padi.com/diving-in/fuvahmulah-gnaviyani-atoll/",
       "https://visitmaldives.com/en/experience/fantastic-gentle-giants-and-where-to-find-them"
     ],
     "verified": true,
@@ -1388,8 +1370,7 @@
     ],
     "sources": [
       "https://visitmaldives.com/en/experience/fantastic-gentle-giants-and-where-to-find-them",
-      "https://www.dive-the-world.com/posts/northern/exploring-maldives-hanifaru-bay-underwater-wonders.php",
-      "https://www.padi.com/dive-site/maldives/hanifaru-bay/"
+      "https://www.dive-the-world.com/posts/northern/exploring-maldives-hanifaru-bay-underwater-wonders.php"
     ],
     "verified": true,
     "notes": "季节：Visit Maldives（旅游局）最佳 5–11 月，西南季风把浮游生物困在湾里；Dive The World 西南季风 5–11 月、蝠鲼高峰 8–11 月；PADI 站点页 6–11 月为蝠鲼高峰、鲸鲨 4–10 月。按旅游局取 5–11 月。湾内禁止水肺、只许浮潜（三个来源一致）；Visit Maldives 写有进湾船只数量限制，具体人数 / 时长各来源说法不一，未写进页面。能见度为参考值：浮游生物多时偏浑，PADI 写的 20–30 m 偏乐观，取 5–20。水温 27–30°C 来自 Dive The World。坐标沿用种子（Dhonfanu 与 Dharavandhoo 之间），精度约 1 km。level 取 OW 只表示门槛最低，实际活动是浮潜。",
@@ -1460,8 +1441,7 @@
     ],
     "sources": [
       "https://marinemegafauna.org/news/theres-no-place-like-home-for-whale-sharks-in-tanzania",
-      "https://www.scubatravel.co.uk/africa/tanzania-diving-zanzibar.html",
-      "https://blog.padi.com/the-best-locations-to-swim-dive-with-whale-sharks-by-month/"
+      "https://www.scubatravel.co.uk/africa/tanzania-diving-zanzibar.html"
     ],
     "verified": true,
     "notes": "鲸鲨季：MMF 研究者称 11–2 月水面进食最多、凉季移到稍外海且少上水面；Scuba Travel 一处写 11–1 月、另一处写全年在、10–2 月为旺季，所引 Big Blu 写 11–2 月；PADI 按月清单为 10–3 月。取 11–2 月，10 月和 3 月为肩季。MMF：51 条被追踪个体中很多五年都留在湾内，是未成年鲸鲨的觅食场；威胁是船只撞击和刺网。鲸鲨活动以浮潜为主。Chole Bay 几乎任何天气可潜、Kinasi Pass 为按潮汐的顺流潜、最好的潜点多在 30 m 以内（Scuba Travel）；西侧部分礁曾受炸鱼破坏。物种：石斑写 potato-cod（来源写 potato grouper），玳瑁在乔莱湾东侧（Scuba Travel）。水温、能见度来源未给数字，为参考值。坐标指向基林多尼湾（鲸鲨区）；潜店多在东岸 Utende / 乔莱湾，约 [39.78, -7.93]。",
@@ -1529,10 +1509,7 @@
       }
     ],
     "sources": [
-      "https://www.scubatravel.co.uk/pacific/seychelles-diving.html",
-      "https://travel.padi.com/liveaboard-diving/seychelles/",
-      "https://www.padi.com/diving-in/mahe/",
-      "https://blog.padi.com/the-best-locations-to-swim-dive-with-whale-sharks-by-month/"
+      "https://www.scubatravel.co.uk/pacific/seychelles-diving.html"
     ],
     "verified": true,
     "notes": "任务要求'塞舌尔'一个点，取潜店集中的主岛马埃岛。季节：Scuba Travel 4 月与 10–11 月；PADI Travel 4–5 月与 10–11 月；搜索摘要中 LiveAboard.com 为 3–5 月与 9–11 月。取 4–5、10–11 月。东南季风约 5 月下旬–9 月风浪大、能见度低，7–8 月水温降到约 25°C（PADI Travel）。鲸鲨：PADI 马埃页 9–11 月，PADI 按月清单 8–11 月，Scuba Travel 说 11 月记录最多、4 月和 12 月也有。塞舌尔旅游局潜水页（seychelles.travel）两次返回 522，未能打开。来源里的'海龟'未写种类，填玳瑁（内岛常见种）待核。Shark Bank 在马埃岛西北约 8 km（Scuba Travel）；Ennerdale 30 m 适合 AOW。坐标为 Beau Vallon（潜店集中处）。",
@@ -1605,7 +1582,6 @@
     ],
     "sources": [
       "https://www.scubatravel.co.uk/pacific/mauritius-diving.html",
-      "https://www.padi.com/diving-in/republic-of-mauritius/trou-aux-biches-grand-baie/",
       "https://mauritiusnow.com/blog/things-to-do/scuba-diving-in-mauritius/",
       "https://mauritiusnow.com/blog/things-to-do/cathederal/"
     ],
@@ -1677,8 +1653,6 @@
     ],
     "sources": [
       "https://srilanka.travel/attraction?attraction_id=6",
-      "https://blog.padi.com/why-sri-lanka-is-good-for-diving-all-year-round/",
-      "https://www.padi.com/dive-site/sri-lanka/yala-rock/",
       "https://www.sltda.gov.lk/storage/common_media/GuidelineForWhaleandDolphinWatching.pdf"
     ],
     "verified": true,
@@ -1745,9 +1719,7 @@
     ],
     "sources": [
       "https://www.tanzaniatourism.com/destination/mnemba-island-conservation-area",
-      "https://www.padi.com/diving-in/zanzibar/",
-      "https://www.scubatravel.co.uk/africa/tanzania-diving-zanzibar.html",
-      "https://blog.padi.com/diving-zanzibar-review/"
+      "https://www.scubatravel.co.uk/africa/tanzania-diving-zanzibar.html"
     ],
     "verified": true,
     "notes": "季节：坦桑尼亚旅游局称全年可潜、几乎任何天气都有不错条件，能见度 20–40 m 为常态；PADI 桑给巴尔页称全年可潜，9–12 月常见海龟、海豚、鲸鲨；Scuba Travel 说 1–3 月好、10 月最平静、5–6 月多风，7–9 月和 12–1 月是旺季人多；PADI 博客（2022）推荐 2、3、7、8 月避开人潮；维基称 11 月和 3 月最常风平浪静。bestMonths 按旅游局与 PADI 留空表示全年。旅游局页面指出它其实不是环礁，但潜水圈普遍叫 Mnemba Atoll。登岛：私人岛屿，非住客不能登岛；Scuba Travel 说可在离岛 200 m 外潜水，维基写非住客 500 m 禁入区，以现场规定为准。潜点（旅游局）：Kichwani 20–40 m 放流，30 m 以下可见礁鲨、鹰鳐、蝠鲼；Aquarium 20 m 有海龟和白顶礁鲨；Big Wall 30–50 m 峭壁；Wattambomi、West Gardens 12 m 适合新手。海豚：旅游局称条纹海豚大半年可见，另有宽吻、飞旋、真海豚。能见度：旅游局 20–40 m、PADI 博客 20–60 m、Scuba Travel 读者 11 月 30 m 以上，取保守的 15–30 m；水温 23–30°C（PADI 博客）。中文名没有通行译名，取'姆纳巴'，前面加上潜水员熟悉的桑给巴尔。出发多在北部 Nungwi、Kendwa 或东北 Matemwe。坐标为姆纳巴岛（维基 5.8206S, 39.3837E）。",
@@ -1814,7 +1786,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/musandam/",
       "https://www.scubatravel.co.uk/arabian-sea/oman-diving.html",
       "https://divernet.com/world-dives/middle-east/dive-trip-musandam-to-muscat/"
     ],
@@ -2032,10 +2003,8 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/mozambique/ponta-do-ouro/",
       "https://www.anac.gov.mz/en/parques/ponta-do-ouro",
-      "https://www.dansa.org/blog/2022/04/25/scuba-diving-in-mozambique",
-      "https://blog.padi.com/ponta-do-ouro-diving/"
+      "https://www.dansa.org/blog/2022/04/25/scuba-diving-in-mozambique"
     ],
     "verified": true,
     "notes": "季节：PADI 目的地页'礁区全年都好'，鲨鱼季 10 月初–5 月初（夏季最多可见 8 种鲨鱼）、座头鲸 7 月下旬–11 月初、海龟产卵 11 月–2 月下旬、宽吻和飞旋海豚全年；莫桑比克国家保护区管理局（ANAC）称没有北半球那样的冷季、任何时候都适合，11–4 月最热；DAN Southern Africa 称潜店全年营业，水温 2 月约 28°C、8 月约 23°C。bestMonths 留空表示全年，鲨鱼季写进文案。PADI 博客（2025-11）引当地潜店称 Pinnacles 的鲨鱼全年都在、不投饵、不撒饵；DAN 称 Pinnacle 为进阶潜点，Checkers 15–18 m 适合所有级别；PADI 博客称 Atlantis 需深潜专长。整条按招牌 Pinnacles 取 AOW。保护区：ANAC 写 Ponta do Ouro Partial Marine Reserve，678 km²，2009 年设立，属跨境保护区；有来源称现已并入马普托国家公园（未核实）。公牛鲨即南部非洲所说的 Zambezi shark。能见度来源无数字，为参考值。交通：ANAC 写从南非走 Kosi Bay 口岸（8–17 点开放）、从马普托约 3–4 小时，建议四驱。中文名无通行译名，按音译。坐标为镇中心（维基 26.849S, 32.888E）。",
@@ -2109,9 +2078,7 @@
     ],
     "sources": [
       "https://www.dive-the-world.com/diving-sites-maldives-ari-atoll-rasdhoo.php",
-      "https://www.liveaboard.com/diving/maldives/rasdhoo-atoll/scuba",
-      "https://blog.padi.com/diving-with-hammerhead-sharks-best-destinations/",
-      "https://www.padi.com/dive-site/maldives/madivaru-corner/"
+      "https://www.liveaboard.com/diving/maldives/rasdhoo-atoll/scuba"
     ],
     "verified": true,
     "notes": "季节：PADI 双髻鲨目的地文章写 1–4 月东北季风海况最平、能见度最好；LiveAboard.com 写 10–3 月旱季最佳、4 月底–10 月能见度下降但流较缓；Dive The World 称双髻鲨常驻、全年都有，浅水蝠鲼清洁站 11–4 月；Resort Life（未列入来源）12–4 月。取东北季风 12–4 月（与 north-male-atoll 一致），其他月份照样有机会看到双髻鲨。双髻鲨点为清晨蓝水下降、30 m 以下、海流可很强（DTW、LiveAboard），DTW 难度写中级到高级，LiveAboard 说 Hammerhead Point 的清晨深潜需要进阶证书，取 AOW。DTW 还提到偶见无沟双髻鲨、银鳍鲨、海豚。水温 26–29°C（DTW、LiveAboard），能见度 10–30 m（DTW）。行政上属北阿里环礁（Alif Alif）。中文名用 LiveAboard 中文站的'拉斯杜环礁'（同站也有'拉斯度'）。坐标为 PADI 站点页 Madivaru Corner（4.26386N, 73.00033E）；拉斯杜岛本身约在 4.29N, 72.98E（维基）。",
@@ -2182,10 +2149,8 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/sodwana-bay/",
       "https://divernet.com/world-dives/africa/discovering-sodwana-bay/",
-      "https://www.scubatravel.co.uk/africa/diving-south-africa.html",
-      "https://blog.padi.com/the-best-locations-to-swim-dive-with-whale-sharks-by-month/"
+      "https://www.scubatravel.co.uk/africa/diving-south-africa.html"
     ],
     "verified": true,
     "notes": "季节：PADI 称 10–5 月最佳、水温 23–28°C；Divernet（2026-05）一处写 1–5 月水最暖最好，另一处写 11–4 月水最暖、4–9 月能见度最好（可到 30 m）；Scuba Travel 称全年可潜、看想看什么，鲸鲨 10–2 月（另一处 12–2 月），沙虎鲨 12–2 月在二英里礁（怀孕早期的雌性），座头鲸 6–10 月，水温 7–8 月约 22°C、3 月约 27°C；PADI 鲸鲨按月清单 11–4 月。取 11–5 月。分歧：Divernet 称鲸鲨和蝠鲼全年可见、'冬季约 6–11 月'更常见，与其他来源相反，未采用。礁名 Quarter Mile、Two Mile、Five Mile、Seven Mile、Nine Mile 等按离 Jesser Point 的距离命名（Divernet、Scuba Travel）。Divernet：iSimangaliso 海洋保护区 10,700 km²，湿地公园 1999 年成为南非第一处世界遗产；棱皮龟、红海龟 11–2 月上岸产卵。维基：在南非海洋保护区潜水需许可证（潜店可代办月票）；二英里礁是最热门的礁区；2000 年在海底峡谷发现腔棘鱼，下潜需特别许可和三混气资质（技术潜，未写进页面）。物种第一个用 hard-coral 代表珊瑚礁，避免与阿利瓦尔浅滩的沙虎鲨贴纸在地图上重复；沙虎鲨 id 用 grey-nurse-shark。坐标为索德瓦纳湾（维基 27.533S, 32.683E），出海点 Jesser Point 在湾南端。",
@@ -2258,8 +2223,7 @@
       "https://visitmaldives.com/en/places/whale-sharks-south-ari-atoll",
       "https://visitmaldives.com/en/experience/fantastic-gentle-giants-and-where-to-find-them",
       "https://visitmaldives.com/en/experience/qa-with-mwsrp",
-      "https://divemagazine.com/scuba-diving-travel/10-best-places-to-dive-with-whale-sharks",
-      "https://www.padi.com/diving-in/south-ari-atoll/"
+      "https://divemagazine.com/scuba-diving-travel/10-best-places-to-dive-with-whale-sharks"
     ],
     "verified": true,
     "notes": "季节：Visit Maldives 全年可见、8–11 月数量最多（Fantastic Gentle Giants 页）；DIVE Magazine 8–12 月高峰、全年常见；PADI 全年可见、1–3 月海况与能见度最好；Scuba Diving 杂志（搜索摘要，页面 403 未打开）称 12–3 月聚集最大。按旅游局取 8–11 月，其他月份照样有机会。三个 visitmaldives 页面算同一来源，独立来源是 DIVE 与 PADI。91% 雄性、以未成年为主、3 m / 4 m 距离守则来自 Visit Maldives 对 MWSRP 的访谈；MWSRP 还提到游客增多后船伤增加、目击下降。礁蝠鲼、海龟据 PADI 页面（礁蝠鲼为马尔代夫常见种，页面未写种名）。坐标取马米吉利—迪古拉之间外礁中点，精度约 2 km（Visit Maldives 地图钉在 3.68N 72.70E，偏向环礁西侧，未采用）。",
@@ -2325,7 +2289,6 @@
     "sources": [
       "https://www.scubatravel.co.uk/africa/diving-mozambique.html",
       "https://www.dansa.org/blog/2022/04/25/scuba-diving-in-mozambique",
-      "https://blog.padi.com/the-best-locations-to-swim-dive-with-whale-sharks-by-month/",
       "https://marinemegafauna.org/news/manta-rays-and-whale-sharks-now-protected-in-mozambique"
     ],
     "verified": true,
@@ -2397,11 +2360,9 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/sri-lanka/trincomalee/",
       "https://divingsrilanka.com/diving-centres/trincomalee-diving-centre/",
       "https://www.srilanka.travel/attraction?attraction_id=159",
-      "https://divinguru.com/best-time-to-visit-pigeon-island/",
-      "https://blog.padi.com/why-sri-lanka-is-good-for-diving-all-year-round/"
+      "https://divinguru.com/best-time-to-visit-pigeon-island/"
     ],
     "verified": true,
     "notes": "任务给的是'亭可马里 / 卡尔皮蒂耶'二选一，取潜水更成熟的亭可马里（卡尔皮蒂耶以 11–4 月看海豚、抹香鲸为主，可在第二波补）。季节：PADI 2 月–10 月中、3–4 月最佳（能见度 30 m 以上、水温 29–30°C、无流）；Poseidon（斯里兰卡老牌潜店）4–10 月；Divinguru（尼拉维利潜店）3–10 月，2 月与 11 月视海况；PADI 另一篇说东北岸潜店 2–11 月营业。取多数来源覆盖的 3–10 月。东北季风约 11–2 月影响东岸（Divinguru）。鸽子岛国家公园概况来自斯里兰卡旅游局页面（无季节信息，开放 9–17 点）；'鲨鱼区只许浮潜、背面和周边礁石可水肺'来自 Divinguru，未找到野生动物保护部原文。Poseidon 页列出的 SS British Sergeant 沉船通常从更南的帕西库达出发，未写进页面。新增物种 blacktip-reef-shark（黑鳍礁鲨），地图贴纸待画。坐标为鸽子岛。",
@@ -2467,7 +2428,6 @@
     ],
     "sources": [
       "https://www.dive-the-world.com/diving-sites-maldives-southern-atolls-vaavu-atoll.php",
-      "https://www.padi.com/dive-site/maldives/alimatha-jetty/",
       "https://visitmaldives.com/en/experience/keyodhoo-shipwreck-the-sunken-treasure-at-vaavu",
       "https://www.liveaboard.com/zh/diving/maldives/vaavu-atoll"
     ],
@@ -2541,8 +2501,7 @@
     ],
     "sources": [
       "https://www.scubatravel.co.uk/africa/diving-kenya.html",
-      "https://webmail.magicalkenya.com/default.nsf/features1/91356077768277D943256C63002F066E?opendocument=&l=1&p=y",
-      "https://www.padi.com/dive-center/kenya/turtle-dive-center/"
+      "https://webmail.magicalkenya.com/default.nsf/features1/91356077768277D943256C63002F066E?opendocument=&l=1&p=y"
     ],
     "verified": true,
     "notes": "季节：Scuba Travel 称 10–3 月海最平静、全年可潜，Canyon 的鲸鲨 11–1 月（另一处写全国 11–2 月）；肯尼亚旅游局（Magical Kenya 旧站潜水页）称全年大体可潜、7–8 月因泥沙和大浪能见度下降，鲸鲨每年 10–2 月经过 Canyon 一带；PADI 页上的 Turtle Dive Center 旺季 11–3 月，淡季不保证能去外礁。取 10–3 月。Magical Kenya 新站页面 403、肯尼亚野生动物局（KWS）页面证书错误，均未能打开，所引为 webmail.magicalkenya.com 旧站页面。公园：PADI 潜店页称'非洲最古老的海洋公园之一'、园内禁渔，约 15 个潜点、船程 10–25 分钟；维基称 1968 年设立、1979 年列入生物圈保护区，绿海龟、玳瑁、太平洋丽龟在海滩产卵。Moray Reef 28 m 有大海鳝、偶见石斑（Magical Kenya）。水温 25–30°C、能见度 10–30 m 为 Scuba Travel 的全国数字。物种第一个放绿海龟（公园标志物种，全年可见），鲸鲨为季节性。坐标为海洋国家公园（维基 3.3678S, 40.0164E）。",
@@ -2609,8 +2568,7 @@
     ],
     "sources": [
       "https://www.southafrica.net/gl/en/travel/article/wild-coast-diving-at-cathedral-rock-eastern-cape",
-      "https://visiteasterncape.co.za/sardine-run/",
-      "https://blog.padi.com/south-africas-sardine-run/"
+      "https://visiteasterncape.co.za/sardine-run/"
     ],
     "verified": true,
     "notes": "季节：南非旅游局'通常 6–7 月'；东开普旅游局 5–7 月（4–5 月在更南的 Gqeberha / East London 机会更大）；PADI 5–7 月，5–6 月在 Gqeberha / East London、6–7 月往北到圣约翰斯港和 Mbotyi。取 6–7 月。每年时间、地点与规模都不确定（东开普旅游局、南非旅游局都强调）。PADI：多数运营商要求 AOW + 50 次以上、需有放流潜经验，水温通常低于 21°C（全身湿衣或干衣），能见度 5–30 m；鲨鱼有铜鲨、暗色真鲨、沙虎鲨、公牛鲨等，鲸有座头鲸、小须鲸、布氏鲸。南非旅游局还提到这段海岸平时也有公牛鲨、铜鲨、虎鲨。site id 用 wild-coast，避免与物种 id sardine-run 混淆。坐标为圣约翰斯港（运营商临时基地之一）。",
@@ -2687,7 +2645,6 @@
       }
     ],
     "sources": [
-      "https://blog.padi.com/diving-in-asias-fourth-smallest-country-brunei/",
       "https://www.nst.com.my/amp/news/2016/09/175169/wreck-and-roll-amazing-wreck-diving-sites-brunei",
       "https://scubadiverlife.com/best-scuba-diving-brunei",
       "https://www.divephotoguide.com/underwater-photography-travel/article/brunei-wrecks-sunken-treasures"
@@ -2844,10 +2801,8 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/india/havelock-island-swaraj-dweep/",
       "https://www.liveaboard.com/diving/india/andaman-islands",
       "https://roughguides.com/article/a-guide-to-diving-the-andaman-islands",
-      "https://blog.padi.com/top-dive-sites-in-india-not-to-be-missed/",
       "https://divernet.com/world-dives/barren-erupts/"
     ],
     "verified": true,
@@ -3003,7 +2958,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/koh-chang/",
       "https://www.roughguides.com/thailand/east-coast/ko-chang/",
       "https://www.thainationalparks.com/mu-ko-chang-national-park",
       "https://bbdivers.com/koh-chang/dive-sites/",
@@ -3084,7 +3038,6 @@
     ],
     "sources": [
       "https://www.dive-the-world.com/diving-sites-thailand-phi-phi-islands.php",
-      "https://www.padi.com/diving-in/koh-phi-phi/",
       "https://www.thainationalparks.com/hat-noppharat-thara-mu-ko-phi-phi-national-park"
     ],
     "verified": true,
@@ -3161,7 +3114,6 @@
       }
     ],
     "sources": [
-      "https://www.divessi.com/en/blog/koh-tao-diving-10011.html",
       "https://www.dive-the-world.com/diving-sites-thailand-koh-tao.php",
       "https://www.bigbluediving.com/blog/when-is-the-best-weather-on-koh-tao-discover-the-best-diving-months/"
     ],
@@ -3390,7 +3342,6 @@
     ],
     "sources": [
       "https://divernet.com/world-dives/scuba-diving-perhentian-islands-and-lang-tengah/",
-      "https://travel.padi.com/diving-in/malaysia/perhentian-islands/",
       "https://www.diveplanit.com/destination/tioman-island"
     ],
     "verified": true,
@@ -3463,7 +3414,6 @@
     "sources": [
       "https://www.vietnam.travel/things-to-do/ideal-places-scuba-diving-vietnam",
       "https://www.roughguides.com/articles/where-to-go-diving-in-vietnam/",
-      "https://www.padi.com/diving-in/phu-quoc/",
       "https://e.vnexpress.net/news/places/four-best-diving-spots-in-vietnam-4617678.html"
     ],
     "verified": true,
@@ -3540,10 +3490,7 @@
       }
     ],
     "sources": [
-      "https://www.dive-the-world.com/diving-sites-thailand-phuket.php",
-      "https://www.padi.com/diving-in/phuket/",
-      "https://www.divessi.com/en/blog/scuba-diving-in-phuket-guide-2154",
-      "https://blog.padi.com/cn/dive-in-phuket/"
+      "https://www.dive-the-world.com/diving-sites-thailand-phuket.php"
     ],
     "verified": true,
     "notes": "季节：DTW 写全年可潜、高季 11–4 月且越往后越好，6–9 月低季多雨浪大，普吉船宿 10 月底–5 月中；PADI Travel 普吉页写最佳 11–4 月、2–3 月尤佳。取 11–4。PADI 中文博客称岸潜只在 11–4 月可行（岸潜未收入本条）。距离：SSI 写大皇帝岛在普吉以南 12 海里、小皇帝岛 20 海里；DTW 写 Shark Point 在查龙湾以东约 25 km；PADI 中文博客写去大小皇帝岛船程约 2 小时。深度：SSI 写大皇帝岛最深 21 m、小皇帝岛 30 m 以上、King Cruiser 16–30 m（1997 年沉没的汽车渡轮）；DTW 写大皇帝岛 3–30 m、小皇帝岛常从 18 m 起潜、King Cruiser 约 30 m 且'不适合完全新手'。PADI 中文博客称 Shark Point 自 1992 年起为海洋生态保护区。物种出处：蝠鲼、偶见鲸鲨、鲹鱼群在小皇帝岛（DTW）；豹纹鲨在 Shark Point（DTW、SSI、PADI 中文）；玳瑁在 Anemone Reef 与 King Cruiser（DTW）。水温 26°C（1–2 月）–30°C（5–6 月，DTW）；能见度 DTW 汇总 5–40 m，取 10–30。中文名：PADI 中文博客写'大小皇帝岛'、'鲨鱼角/鲨鱼点'、'海葵礁'，King Cruiser 被译作'宋神号沉船'，不通行，正文保留英文。等级：大皇帝岛 OW 即可，小皇帝岛南角与 King Cruiser 要进阶，整体按 OW 标。与 koh-phi-phi 的 Hin Bida（皮皮岛鲨鱼点）不是同一处。坐标为 Ko Racha 群岛（Wikipedia 7.6106, 98.3632），查龙码头约在 [98.34, 7.82]。",
@@ -3619,7 +3566,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/malaysia/redang-island-pulau-redang/",
       "https://www.wonderfulmalaysia.com/redang-island-malaysia.htm",
       "https://www.thestar.com.my/lifestyle/travel/2026/08/15/redang-the-paradise-we-never-had-to-search-for"
     ],
@@ -3700,8 +3646,7 @@
     "sources": [
       "https://www.dive-the-world.com/diving-sites-thailand-richelieu-rock.php",
       "https://www.liveaboard.com/diving/thailand/richelieu-rock",
-      "https://www.thainationalparks.com/mu-ko-surin-national-park",
-      "https://www.divessi.com/cn/blog/best-similan-islands-diving-1543"
+      "https://www.thainationalparks.com/mu-ko-surin-national-park"
     ],
     "verified": true,
     "notes": "季节：thainationalparks（素林国家公园页）写公园 10/15–5/15 开放、天气差可能提前关闭；DTW 写 10 月–5 月初、5 月–10 月初海况差关闭；liveaboard.com 写 10–5 月以外禁潜。bestMonths 与 similan 条目一致取 11–4，10 月下半月与 5 月上半月为肩季。鲸鲨/蝠鲼 2–4 月（DTW、liveaboard.com 一致），3–4 月浮游生物多、能见度下降。坐标取 thainationalparks 页给出的 9.36277, 98.02194（该页称礁体约在素林群岛东南 18 km、离岸 45 km，最深约 28 m；DTW 写 5–35 m，liveaboard.com 写最大 35 m）。到达：DTW 写 Khao Lak 快艇 1–2 h、船宿 3–4 h、建议至少 3 天；liveaboard.com FAQ 写一日游单程 2.5–3 h、船宿通常 4 晚起；三处给的距离（40/70/80 km）互相矛盾，正文不写距离。等级：DTW intermediate–advanced，liveaboard.com 'more advanced'，thainationalparks 称新手也可，取 AOW。水温 26–29（DTW）；能见度 DTW 15–35、liveaboard.com 浮游生物爆发时约 9 m，PADI 中文潜点页写平日 10–15、晴天可到 35，取 10–30。frogfish 只有 liveaboard.com 提到，未写进 species。单独成条的理由：Khao Lak 有专跑黎塞留岩的快艇一日游，素林方向的船宿也以它为主卖点；similan 条目 highlights 第一条目前写的就是 Richelieu Rock，合并时建议把那条换掉以免重复。中文名：SSI 中文博客写'黎塞留岩'，PADI 中文页'黎塞留岩石'，liveaboard.com 中文页'瑞察硫岩'，网上也见'理查德岩'（误译）；取黎塞留岩，不加括号别名。素林国家公园门票成人 500 THB（thainationalparks）。",
@@ -3863,7 +3808,6 @@
     ],
     "sources": [
       "https://www.diveplanit.com/destination/tioman-island",
-      "https://www.padi.com/diving-in/malaysia/tioman-island/",
       "https://gs-diving.com/?p=6566"
     ],
     "verified": true,
@@ -4254,8 +4198,7 @@
     ],
     "sources": [
       "https://www.dive-the-world.com/diving-sites-philippines-apo-reef.php",
-      "https://www.liveaboard.com/diving/philippines/apo-reef",
-      "https://blog.padi.com/best-dive-sites-in-the-philippines/"
+      "https://www.liveaboard.com/diving/philippines/apo-reef"
     ],
     "verified": true,
     "notes": "新增潜点。季节：DTW 写旱季 1–4 月最推荐（雨季 5–12 月、台风 7–10 月；蝠鲼 11–5 月、锤头鲨 11–3 月更常见）；liveaboard.com 写 12–5 月旱季最佳。取两者重叠的 1–4 月，12 月与 5 月为肩季。访问：DTW 写只能随船宿（3 晚只去阿波礁，或 5–7 晚加科隆沉船）；liveaboard.com 写船宿从八打雁或公主港出发、礁区距西民都洛 Sablayan 约 40 km、1996 年起受保护、面积 40 km²、门票外国人约 45 USD / 菲律宾人约 35 USD，并提到 Pandan 岛适合新手；PADI 博客（2025-02 更新）写船宿常把阿波礁和科隆排在一起。从 Sablayan 出发的一日 / 过夜船潜没找到能打开的权威页面（搜索摘要里 Inquirer 旧文提到每日限 105 人、最多停留两天），access 保留 boat，请复核。liveaboard 与 PADI 都写'世界第二大 / 第二长的连续珊瑚礁'，属有争议的最高级说法，文案未用。水温：DTW 26–30（正文）/ 26–29（摘要），liveaboard 26–31，取 26–30；能见度 15–40 取 DTW。等级 AOW：DTW 写中级到进阶、流强多变，Apo 29 只适合进阶。DTW 阿波礁页把'Manta Bowl（大洋蝠鲼 11–5 月）'列为潜点，疑与蒂考海峡的 Manta Bowl 混淆，未采用。species：锤头鲨为偶遇，排最后。坐标为礁区中心（约 12°40′N 120°29′E），±5 km；阿波岛（灯塔、管护站）在礁区西南部。",
@@ -4557,7 +4500,6 @@
     "sources": [
       "https://www.dive-the-world.com/diving-sites-indonesia-cenderawasih-bay.php",
       "https://www.bluewaterdivetravel.com/destination/cenderawasih-bay-diving",
-      "https://blog.padi.com/whale-shark-diving-the-10-best-dive-sites-in-the-world/",
       "https://www.liveaboard.com/diving/indonesia/cenderawasih-bay"
     ],
     "verified": true,
@@ -4634,8 +4576,7 @@
     "sources": [
       "https://www.dive-the-world.com/diving-sites-philippines-coron.php",
       "https://www.liveaboard.com/diving/philippines/coron",
-      "https://divernet.com/world-dives/philippines-diving-hotspots-anda-anilao-malapascua-dumaguete-coron/",
-      "https://blog.padi.com/best-dive-sites-in-the-philippines/"
+      "https://divernet.com/world-dives/philippines-diving-hotspots-anda-anilao-malapascua-dumaguete-coron/"
     ],
     "verified": true,
     "notes": "新增潜点。季节：DTW 写 12–4 月旱季最好（5–11 月雨季，7–8 月很湿）；liveaboard.com 写全年可潜，11–5 月最佳、12–3 月尤好。取重叠的 12–4 月；11 月、5 月为肩季。沉船：DTW 写至少 12 艘，深度从 Lusong 炮艇最深 14 m、Japanese Freighter 12–25 m 到 Irako 最深 43 m；liveaboard 写超过 10 艘、平均潜深约 25 m；PADI 博客写约 11 艘、多数休闲潜水可达；Divernet（2025-10）写 1944 年美军空袭击沉、长满珊瑚。日期：DTW 只写 1944 年 9 月，搜索摘要写 9 月 24 日（未打开权威页），文案只写 9 月。梭鱼湖：liveaboard 写上层淡水约 28°C、深处海水约 38°C，鱼很少，据说因一条大梭鱼得名；DTW 写约 15 m 处温差明显、底部约 32 m、33 m 处有洞口（DTW 对上下层淡 / 咸水的说法与 liveaboard 相反，采用 liveaboard：淡水在上）。儒艮：DTW 写布桑加北岸 Calauit 的 Dugong Watch 项目约 30 头，Conception、Bulalacao 岛也常见；离科隆镇较远，需专门行程。species：沉船没有贴纸，取这一带最有名的动物儒艮作贴纸；DTW 写个别沉船上有梭鱼，但不是成群的'梭鱼风暴'，所以没放 barracuda。等级 AOW：liveaboard 写 AOW + 深潜 / 沉船专长更好，OW 只能潜少数几艘；DTW 写整体中级到进阶。水温：DTW 27–30、liveaboard 25–31，合并 25–31；能见度 5–20 取 DTW。中文名写'科隆（巴拉望）'，避免与德国科隆混淆。坐标为科隆镇码头（12°00′N 120°12′E）；多数沉船在镇西南 Tangat 岛一带，±10 km。",
@@ -4858,10 +4799,8 @@
     ],
     "sources": [
       "https://www.dive-the-world.com/diving-sites-philippines.php",
-      "https://www.padi.com/diving-in/bicol/",
       "https://www.uwphotographyguide.com/?p=3284",
       "https://www.divephotoguide.com/underwater-photography-travel/article/donsol-philippines-whale-sharks-jeremy-cuff/",
-      "https://blog.padi.com/best-dive-sites-in-the-philippines/",
       "https://www.liveaboard.com/diving/philippines/donsol",
       "https://archive.wwf.org.ph/?p=7063"
     ],
@@ -4939,7 +4878,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/indonesia/gili-islands/",
       "https://manta-dive.com/diving-the-gilis/gili-dive-sites/",
       "https://www.liveaboard.com/diving/indonesia/gili-islands"
     ],
@@ -5505,8 +5443,7 @@
     ],
     "sources": [
       "https://www.dive-the-world.com/diving-sites-philippines-cebu.php",
-      "https://www.liveaboard.com/diving/philippines/cebu",
-      "https://blog.padi.com/best-dive-sites-in-the-philippines/"
+      "https://www.liveaboard.com/diving/philippines/cebu"
     ],
     "verified": true,
     "notes": "新增潜点。全年（bestMonths 为空）：DTW 宿务页写 2–5 月旱季、11–1 月晴但多雨可能有台风、6–10 月雨季约一半日子下雨，宿务全年可潜；liveaboard.com 宿务页写全年可潜，避开 11 月下旬–1 月台风多发期，区域雨季 7–12 月。潜点：DTW 写 Hilutungan 保护区（燕鱼、海龟、鹦嘴鱼、胡椒鲷）、Nalusuan 保护区（蓝点魟、大石斑、桌面珊瑚）、Kontiki 礁夜潜（虾蟹、海蛇）、Shangri-La 保护区（2007 年起，海蛞蝓、躄鱼）、Tambuli 飞机残骸（离岸约 1.6 km、最深 20 m，躄鱼）、Marigondon 洞（最深 37 m、入口 10 m 宽、穿行约 40 m、有灯眼鱼，不适合新手，建议高氧）、San Juan 渡轮沉船（180 m 长，37–48 m，仅限有资质者）、Olango 另一侧的 Kansantik 尖峰（流强）；liveaboard 写 Olango 有白鳍礁鲨、梭鱼甚至锤头鲨、流可强，新手也有珊瑚园、沉船、礁墙可选。PADI 博客写麦克坦岛有岸潜、礁墙和漂流，宿务机场就在岛上。等级 OW（多数礁坡与保护区）；洞穴和深沉船需更高资质。水温：DTW 26.5–29.5、liveaboard 多在 27–30（冬季深处约 24），取 26–30；能见度 DTW 15–20、旱季可超 30，取 15–30。中文名'麦克坦岛'与中文维基一致。坐标为东岸 Maribago 一带（约 10.29N, 124.00E），±2 km。",
@@ -5657,9 +5594,7 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/indonesia/menjangan-island/",
       "https://www.dive-the-world.com/diving-sites-indonesia-bali.php",
-      "https://www.padi.com/diving-in/indonesia/amed/",
       "https://en.wikipedia.org/wiki/Menjangan_Island"
     ],
     "verified": true,
@@ -6439,7 +6374,6 @@
     ],
     "sources": [
       "https://www.dive-the-world.com/diving-sites-philippines.php",
-      "https://www.padi.com/diving-in/southern-leyte/",
       "https://www.liveaboard.com/diving/philippines/leyte"
     ],
     "verified": true,
@@ -6995,8 +6929,7 @@
       "https://www.fijisharkdive.com/shark-species/",
       "https://www.bluewaterdivetravel.com/fiji-scuba-diving-travel",
       "https://diveadventures.com.au/?p=1907",
-      "https://www.dive-the-world.com/newsletter-200510-shark-diving-in-fiji.php",
-      "https://www.divessi.com/en/blog/best-diving-in-fiji-10046.html"
+      "https://www.dive-the-world.com/newsletter-200510-shark-diving-in-fiji.php"
     ],
     "verified": true,
     "notes": "季节：Bluewater 说 6–10 月是公牛鲨旺季；Dive Adventures 说多数鲨鱼全年都在，但 11–12 月交配季公牛鲨互动较少。搜索摘要里还有两种说法：一个运营商说 9–10 月起数量下降，斐济旅游局说 6–9 月最佳（fiji.travel 返回 403，未列入来源）。取 6–10 月，喂鲨全年都有。运营商 Beqa Adventure Divers（持有保护区潜水权）：必须持证，潜水少于 30 次的配专人潜导；第一潜在 30 m 停 10–12 分钟，再到 10 m 和 4 m；第二潜根据季节和海况在 25 m 或 15 m；每次最多 20 名客人，要穿深色全身防寒衣、戴黑手套。保护区 2004 年设立（来自搜索摘要，未逐页核实）。物种映射：lemon-shark 贴纸画的是大西洋柠檬鲨，这里是镰鳍柠檬鲨 Negaprion acutidens；nurse-shark 贴纸画的是铰口鲨，这里是茶色护士鲨 Nebrius ferrugineus，都按口语泛称。另有银鳍鲨、白顶礁鲨、黑鳍礁鲨。水温：SSI 旱季约 23°C、暖季 28°C；Bluewater 23–30°C；Dive Adventures 26–28°C。能见度：Dive Adventures 20–30 m，7–9 月最好；Bluewater 雨季常超 18 m。坐标为太平洋港（Pacific Harbour，出发点，OSM），鲨鱼礁在其外海。DTW 新闻稿是 2005 年的旧文，只用来核对物种清单。",
@@ -7073,8 +7006,7 @@
     "sources": [
       "https://www.bluewaterdivetravel.com/destination/bikini-atoll-diving",
       "https://www.masterliveaboards.com/bikini-atoll/",
-      "https://en.wikipedia.org/wiki/Bikini_Atoll",
-      "https://www.padi.com/diving-in/marshall-islands/"
+      "https://en.wikipedia.org/wiki/Bikini_Atoll"
     ],
     "verified": true,
     "notes": "季节：Bluewater 说船宿只在 5–10 月来比基尼（下半年回楚克），11–4 月是气旋季；Master Liveaboards 的 Pacific Master 航次全在 5–10 月（页面上能看到 2028–2029 年的排期，很多已满）；维基说潜水季 5–10 月。PADI 马绍尔群岛页写 12–4 月海况最平、能见度最好，是针对马绍尔群岛整体，和比基尼船宿季节相反，没采纳。现状：维基说 1996 年比基尼议会开放潜水，岛上的 Bikini Atoll Divers 2008 年 8 月停办（2007 年航空公司停飞），2010 年 10 月起改由自给式船宿前往、2011 年发牌，Master Liveaboards 2018 年 5 月开始跑、2022 年起换第二艘船；Master Liveaboards 页面现在列 Pacific Master，从夸贾林出发，10–13 晚，最多 16 名潜水员，有技术潜设备。Bluewater：夸贾林是美军基地，要凭船宿确认函入境，再坐军方交通到埃贝耶岛上船；去程航行 24–30 小时；每船通常 10–12 名潜水员。规则（维基）：须事先批准，要付钱让一名潜导和两名地方议会代表随船，确认不带走沉船物品。辐射：维基说经大量研究，潟湖辐射已低到可以开展旅游，没给剂量数字，文案没写。等级 Tech：Bluewater 写只适合有技术潜证书的潜水员，要求 TDI Advanced Nitrox & Decompression Procedures、PADI Tec 50 或同级，平均深度约 50 m、底时最长约 100 分钟，每天两潜、水面间隔至少 4 小时，第二潜通常较浅、常在萨拉托加号。沉船（Bluewater）：萨拉托加号 18–50 m 正立、飞行甲板 270 m 以上；长门号倒扣，长 221 m，没写深度；阿肯色号 54 m 倒扣；Bluewater 还列了 38 m 倒扣的欧根亲王号，据所知该舰沉在夸贾林，未核实，文案没写。维基列 10 艘沉船。核试验与 UNESCO：维基写 1946–1958 年 23 次核试验，2010-08-03 列入世界遗产；UNESCO 页面 403 没打开。物种：Bluewater 记潟湖内灰礁鲨、银鳍鲨、黑鳍礁鲨、白顶礁鲨、印太柠檬鲨、加拉帕戈斯鲨，外礁有丝鲨、远洋白鳍鲨，偶见双髻鲨；Master Liveaboards 列虎鲨。species 里没有银鳍鲨。能见度 Bluewater 24–50 m，Master 40–60 m；水温 Bluewater 27–29°C，Master 平均 27°C。坐标为萨拉托加号沉没处（维基 USS Saratoga 条目 11.58°N, 165.50°E）。任务清单里单独列的“马绍尔群岛”没另做一条：首都马朱罗只有 PADI 一页泛泛提到潟湖和珊瑚，马绍尔群岛旅游局网站域名已停用，找不到第二个来源，所以并进这一条。",
@@ -7360,7 +7292,6 @@
     ],
     "sources": [
       "https://diveadventures.com.au/region/micronesia-guam/",
-      "https://www.padi.com/diving-in/guam/",
       "https://www.visitguam.com/blog/post/2135/",
       "https://guam.stripes.com/travel/best-dives-on-guam.html",
       "https://en.wikipedia.org/wiki/Apra_Harbor"
@@ -7439,7 +7370,6 @@
     "sources": [
       "https://www.kiribatitourism.gov.ki/dive-with-us",
       "https://www.kiribatitourism.gov.ki/in-kiritimati-island",
-      "https://www.padi.com/diving-in/kiribati/",
       "https://en.wikipedia.org/wiki/Kiritimati"
     ],
     "verified": false,
@@ -7503,10 +7433,7 @@
     ],
     "sources": [
       "https://jacksdivinglocker.com/charters/manta-ray-night-dive-and-snorkel",
-      "https://www.padi.com/diving-in/big-island/",
-      "https://www.divessi.com/blog/the-iconic-Kona-manta-dive-9717.html",
-      "https://en.wikipedia.org/wiki/Manta_ray_night_dive",
-      "https://blog.padi.com/close-focus-manta-ray-world-night/"
+      "https://en.wikipedia.org/wiki/Manta_ray_night_dive"
     ],
     "verified": true,
     "notes": "季节：PADI 说全年都常见蝠鲼，夏季海况最稳，最佳潜水月份 5–10 月；SSI 说 5–9 月是旺季；Jack's Diving Locker 全年开班（4–9 月与 10–3 月只是集合时间不同）；维基说全年都有，不受季节限制。取全年。冬季偶有涌浪影响部分潜点（PADI）。观鲼点有两处：机场旁的 Garden Eel Cove（Manta Heaven，Jack's 的行程去这里）和 Keauhou 湾的 Manta Village；坐标取 Garden Eel Cove（维基 19.733°N, 156.057°W）。规则：只看不摸，潜水员留在海底围成半圈，浮潜者在水面保持水平（Jack's）；十几家运营商共用同一处灯阵（DIVE Magazine 编辑在 PADI 博客上写的）。州政府 2022 年开始推动商业观鲼许可规则（来自搜索结果，最终是否生效未核实，文案没写）。物种：科纳的蝠鲼主要是礁蝠鲼 Mobula alfredi（PADI 博客、Jack's）；PADI 列了海龟、海豚、礁鲨，Jack's 页面提到出海途中常见海豚。水温 PADI 26–28°C；冬季下限 24°C 是估计（SSI 只说冬季穿 5 mm）。等级 OW：持证就能参加，打开的来源都没写更高要求。",
@@ -7582,7 +7509,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/maui/",
       "https://undercurrent.org/UCnow/diveGuides/Hawaii.php",
       "https://www.bluewaterdivetravel.com/destination/maui-diving",
       "https://en.wikipedia.org/wiki/Molokini",
@@ -7816,7 +7742,6 @@
       "https://www.niueisland.com/see-and-do/whale-experiences",
       "https://www.niueisland.com/see-and-do/diving-and-snorkeling",
       "https://diveadventures.com.au/region/niue/",
-      "https://www.padi.com/diving-in/niue/",
       "https://en.wikipedia.org/wiki/Laticauda_schistorhynchus"
     ],
     "verified": true,
@@ -7979,7 +7904,6 @@
     "sources": [
       "https://dive-the-world.com/resort-travel-fiji-taveuni.php",
       "https://diveadventures.com.au/region/fiji-taveuni/",
-      "https://www.padi.com/dive-site/fiji/the-great-white-wall-4/",
       "https://divemagazine.com/destination-guides/fiji/taveuni-somosomo-strait",
       "https://www.bluewaterdivetravel.com/fiji-scuba-diving-travel",
       "https://en.wikipedia.org/wiki/Rainbow_Reef"
@@ -8131,8 +8055,7 @@
       "https://www.adventurecookislands.com/whale-season/",
       "https://www.diverarotonga.com/diveinformation",
       "https://www.diverarotonga.com/dive-sites",
-      "https://www.pacificdivers.co.ck/",
-      "https://www.padi.com/diving-in/cook-islands/"
+      "https://www.pacificdivers.co.ck/"
     ],
     "verified": false,
     "notes": "未核实的原因：只有当地潜店 Adventure Cook Islands 给出了月份：座头鲸 7–10 月，多数在 9 月，潜水时常能听到鲸歌，水下也有机会遇到；该店不专门出海追鲸，岸上就常能看到。Dive Rarotonga 只说座头鲸带着幼鲸在这里休息，没写月份；库克群岛旅游局 cookislands.travel 对 WebFetch 返回 403，没能核对；这一轮网络搜索额度用完，没找到第二个来源。潜水本身全年都有（Dive Rarotonga 每周 7 天出船；Adventure Cook Islands 风雨无阻，只在全岛都浪大时取消），bestMonths 取鲸季 7–10 月；只看潜水的话可改成空数组。维基说库克群岛 3–12 月处在气旋路径上（原文如此，未核对）。Dive Rarotonga：约 35 个潜点、四个下水点，按风向和涌浪每天选点；OW 最深 18 m，AOW 下断崖到 30 m，不做减压潜水；每组最多 6 名持证潜水员；水温 23–28°C；能见度 20 m 以上（FAQ 写常超 30 m）。潜点（Dive Rarotonga 潜点页）：Mataora 沉船（汤加货船，长 44 m，沉在约 18 m）、Maritime Reefer（1981 年凿沉的渔船，26 m，被气旋断成两截）、Avaavaroa Drop-Off（白顶礁鲨和鹰鳐常见）、Rutaki Drop-Off（梭鱼群）、Rarotongan（西南角两面来流，偶见远洋白鳍鲨）；Croc Caverns 要 50 潜以上。Pacific Divers：玳瑁和绿海龟、白顶礁鲨与灰礁鲨、苏眉、多种海鳝，流少。Adventure Cook Islands：有黑水夜潜（外海水深 1000–2000 m）、技术潜和 CCR，45–60 m 的 Peppermint Reef 超出休闲深度。PADI 只泛泛说适合新手和有经验者，有沉船和断崖。中国潜水员去得不多，收进来是按任务清单（判断）。坐标为阿瓦鲁阿（维基 21.21°S, 159.77°W），主港阿瓦蒂乌在这里；Adventure Cook Islands 在西南的 Aroa，Pacific Divers 在东南的 Muri。",
@@ -8211,7 +8134,6 @@
     "sources": [
       "https://mva.mymarianas.com/dive-spots/",
       "https://www.uw360.asia/the-marvel-of-the-marianas/",
-      "https://www.padi.com/diving-in/northern-mariana-islands/",
       "https://en.wikivoyage.org/wiki/Diving_in_Saipan"
     ],
     "verified": false,
@@ -8293,7 +8215,6 @@
     ],
     "sources": [
       "https://www.dive-the-world.com/faqs-diving-solomon-islands.php",
-      "https://www.padi.com/diving-in/solomon-islands/",
       "https://dan.org/alert-diver/article/solomons-sojourn/",
       "https://divernet.com/world-dives/solomon-islands-a-scuba-divers-dream-destination/",
       "https://liveaboard.com/diving/solomon-islands/scuba"
@@ -8362,10 +8283,8 @@
     ],
     "sources": [
       "https://divernet.com/world-dives/appointment-with-the-president/",
-      "https://www.divessi.com/en/blog/vanuatu-diving-essential-guide-2149",
       "https://www.vanuatu.travel/things-to-do/diving",
       "https://www.diveplanit.com/dive-site/ss-president-coolidge",
-      "https://www.padi.com/dive-site/vanuatu/the-coolidge-ltd/",
       "https://en.wikipedia.org/wiki/SS_President_Coolidge"
     ],
     "verified": true,
@@ -8444,7 +8363,6 @@
     "sources": [
       "https://diveadventures.com.au/?p=696768",
       "https://www.manawa.com/en-GB/activity/french-polynesia/tikehau/scuba-diving/exploration-diving-with-manta-rays-tikehau/26087",
-      "https://www.divessi.com/en/blog/french-polynesia-liveaboard-diving-all-you-need-to-know-8233.html",
       "https://www.tahititourisme.com/activities/diving/tikehau/",
       "https://www.tahititourisme.com/service/tuamotu-plongee-tikehau-diving/"
     ],
@@ -8519,7 +8437,6 @@
     ],
     "sources": [
       "https://oceanicsociety.org/travel-ideas/swimming-with-whales-in-tonga-common-questions",
-      "https://www.divessi.com/en/blog/swimming-with-humpbacks-in-Tonga-1440",
       "https://diveadventures.com.au/region/tonga-vavau/"
     ],
     "verified": true,
@@ -8595,7 +8512,6 @@
     ],
     "sources": [
       "https://mantaray.com/experiences/manta-diving/",
-      "https://www.padi.com/diving-in/yap/",
       "https://www.bluewaterdivetravel.com/yap-diving",
       "https://visityap.com/dive_yap.php",
       "https://dan.org/alert-diver/article/yap-island-of-pure-magic/",
@@ -8837,7 +8753,6 @@
       "https://www.australiascoralcoast.com/destination/navy-pier",
       "https://www.wavisitorcentre.com.au/dive-ningaloo",
       "https://50greatdives.com/50gtdives/entry/61/",
-      "https://travel.padi.com/diving-in/australia/exmouth/",
       "https://www.ningaloowhalesharks.com/exmouth-diving/navy-pier/"
     ],
     "verified": true,
@@ -9641,8 +9556,7 @@
       "https://divernet.com/world-dives/explore-tasmanias-underwater-wonders-diving-into-the-hidden-gems-of-australias-apple-isle/",
       "https://eaglehawkdive.com.au/faq/",
       "https://eaglehawkdive.com.au/fur-seals-colony/",
-      "https://eaglehawkdive.com.au/seadragons/",
-      "https://blog.padi.com/scuba-diving-in-tasmania-australia/"
+      "https://eaglehawkdive.com.au/seadragons/"
     ],
     "verified": true,
     "notes": "新增潜点，用户清单里的'Tasmania kelp / Eaglehawk Neck'。季节：鹰颈当地潜店 FAQ 写'全年都能舒适地潜'、仲冬最低水温 12°C，草海龙页写全年都有、夏季可见雄性抱卵；塔斯马尼亚旅游局写能见度可超 30 m、冬季最好，建议 7 mm 湿衣或干衣；Divernet 写潜点按当天天气选（咆哮西风带，锋面多）。bestMonths 留空（全年）；严格说'全年'只有潜店明说，旅游局与 Divernet 是不矛盾的佐证，若要更严可改 verified=false。水温上限 18 来自搜索摘要里的 surf-forecast 卫星海温（3 月峰值 14–18），未打开页面核实，为参考；能见度下限 10 来自搜索摘要中的德国潜水员点评，为参考。物种映射：贴纸用 sea-lion（海狮泛称）代表澳洲海狗（Arctocephalus pusillus，潜店写在浅水海藻 0–5 m、Beginner 级）；Divernet 另写 North Wall 可遇新西兰海狗。巨型海藻林：潜店在做 Reviving Giants 复育项目，原生巨藻林已大幅减少，文案只写'浅水海藻'。Cathedral Cave'澳大利亚最大海蚀洞系统'出自旅游局与 Divernet（主通道最深约 21 m）；潜店把 Cathedral Cave、SS Nord（1915 年沉没，约 42 m，旅游局）、海绵花园列为'Go Deeper'经验潜水员项目，Divernet 写洞内深处需潜导或洞穴潜水资格，Sisters 30 m 以下最精彩、常因天气关闭。PADI 博客写 Waterfall Bay 礁墙至 18 m、各级别都适合。中文名用'塔斯曼半岛'；'鹰颈地峡'是 Eaglehawk Neck 的常见译名，但未能在中文来源核对，文案保留英文。坐标为 Eaglehawk Neck（Wikipedia -43.017, 147.926）。",
@@ -9713,8 +9627,7 @@
       }
     ],
     "sources": [
-      "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/parna-marinho-dos-abrolhos/guia-do-visitante/informacoes-sobre-visitacao",
-      "https://www.padi.com/diving-in/bahia/"
+      "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/unidade-de-conservacao/unidades-de-biomas/marinho/lista-de-ucs/parna-marinho-dos-abrolhos/guia-do-visitante/informacoes-sobre-visitacao"
     ],
     "verified": false,
     "notes": "只有公园管理方 ICMBio 一个直接来源（WebSearch 配额用完）；PADI 巴伊亚页没提阿布罗柳斯，只给出北边约 200 km 的塞古罗港 11–4 月最佳，作为区域旁证，所以 verified 留 false。季节：ICMBio 写全年开放，12–4 月水暖、能见度好、是最佳潜水期；座头鲸季 6–11 月（同页一处写 7–10 月为峰，另一处写 8–9 月最多）。按庆良间群岛条目的做法，船上看鲸的季节不放进 bestMonths，取 12–4 月，座头鲸排第二；若要突出看鲸，可改为 7–10 月并把座头鲸放第一。规则（ICMBio）：只能跟公园授权的 11 家运营商，从卡拉韦拉斯出发，约 70 km、2.5–5 小时；当天往返约 7:00–18:00，或船宿 2–4 天；水肺潜水只能跟授权水下向导、在指定潜点，须带潜水证；3 处沉船开放参观；Santa Bárbara 附近的 Chapeirão Mau-Mau 有带导引绳的夜潜步道；与鲸豚保持 50 m、禁止同游；风力超过 20 节不建议出海；门票 R$20（周边市镇居民免费）。公园 1983 年 4 月 6 日设立（第 88218 号联邦令）、87,943 公顷、约 1,300 种生物；chapeirões 是高达 30 m 的蘑菇状礁体，页面称脑珊瑚 Mussismilia braziliensis 只在这一区域能见到；海龟有蠵龟、绿海龟、玳瑁和棱皮龟，Redonda 岛 9–3 月有蠵龟产卵。水温、能见度为参考值，ICMBio 只写「水温温和、12–4 月更清」。hard-coral 贴纸画的是桌面状鹿角珊瑚，与这里的脑珊瑚柱不同，只作泛指。坐标为圣巴巴拉岛一带。",
@@ -9777,7 +9690,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/aruba/",
       "https://www.bluewaterdivetravel.com/aruba-diving"
     ],
     "verified": true,
@@ -9919,7 +9831,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/bermuda/",
       "https://www.gotobermuda.com/plan/inspiration/article/dive-into-bermuda-shipwrecks",
       "https://www.gotobermuda.com/plan/inspiration/article/what-you-need-to-know-about-snorkelling-scuba-diving-in-bermuda",
       "https://www.gotobermuda.com/plan/inspiration/article/where-to-go-diving-in-bermuda-the-best-locations-for-all-skill-levels",
@@ -10065,7 +9976,6 @@
       }
     ],
     "sources": [
-      "https://blog.padi.com/your-guide-to-bonaire-diving/",
       "https://www.bluewaterdivetravel.com/bonaire-diving"
     ],
     "verified": true,
@@ -10137,7 +10047,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/mexico/cozumel/",
       "https://www.bluewaterdivetravel.com/cozumel-diving"
     ],
     "verified": true,
@@ -10203,7 +10112,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/curacao/",
       "https://www.bluewaterdivetravel.com/curacao-diving"
     ],
     "verified": true,
@@ -10271,7 +10179,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/dominica/",
       "https://www.bluewaterdivetravel.com/dominica-diving",
       "https://divernet.com/scuba-news/marine-biology/whales-arctic-melt-threat-but-promise-in-dominica/"
     ],
@@ -10345,8 +10252,7 @@
       "https://www.parnanoronha.com.br/atrativos",
       "https://www.parnanoronha.com.br/visitante",
       "https://www.noronha.pe.gov.br/turismo/informacoes-turisticas/mergulho-em-fernando-de-noronha/",
-      "https://divernet.com/world-dives/noronha-an-atlantic-diving-hotspot/",
-      "https://www.padi.com/diving-in/brazil/"
+      "https://divernet.com/world-dives/noronha-an-atlantic-diving-hotspot/"
     ],
     "verified": false,
     "notes": "季节未能用两个来源核实（WebSearch 配额用完，只能抓已知的官方页面）：ICMBio 公园官网写 3–7 月雨季、步道泥泞；Divernet（2025-01）写北侧「内海」4–11 月平静，其余时间东北信风控制，南侧「外海」常年浪大但更清，潜店按季节挑点，作者 12 月下水。两者都不直接给最佳月份；取干季与内海平静的重叠段 8–11 月，补到一个直接写季节的来源后再改 verified。规则：ICMBio 写公园内水肺潜水只能跟 ICMBio 授权的潜店，水温约 26°C，推荐点 Pedras Secas、Ilha do Meio、Cagarras、Ressurreta，禁止采集、触摸、投喂；海豚湾 6:30–18:30 开放，清晨看海豚，禁止下到湾里、游泳或行船；Praia do Leão 是绿海龟主要产卵海滩（约 12–5 月）。诺罗尼亚行政区官网写 20 个潜点、能见度可达 50 m、约 26°C，跟持牌向导潜水须出示 OW 或以上证书，体验潜最深 12 m；另一页写海洋国家公园 1988 年设立、占群岛 70%。费用：ICMBio 两页的公园门票分别写 R$373 和 R$384（巴西人半价），10 天有效；Divernet 写外国人 R$222 与每晚 76 雷亚尔的环境保护税（TPA，越住越贵），金额已过时，文案未写费用。Divernet：能见度 25–40 m、28°C；常见玳瑁、偶见绿海龟，Caverna da Sapata 有美洲魟，多处见护士鲨，Trinta Reis 见过加勒比礁鲨；Ilha do Meio 有浅水洞穴与穿越；离累西腓 525 km、纳塔尔 350 km，从累西腓飞约 1 小时，岛上有三家潜店。世界遗产依据 PADI 巴西页（UNESCO 官网 403 未能打开）。海豚是飞旋海豚（行政区官网写 Stenella longirostris），按命名规则用泛称；能在船上和崖上看，下潜时偶遇，排第一是因为它是这里最出名的动物。Corveta Ipiranga 沉船（约 60 m、技术潜）未查证，未写入。坐标为圣安东尼奥港（Porto de Santo Antônio），潜店集中在这里。",
@@ -10482,7 +10388,6 @@
       }
     ],
     "sources": [
-      "https://blog.padi.com/the-best-locations-to-swim-dive-with-whale-sharks-by-month/",
       "https://www.bluewaterdivetravel.com/isla-mujeres-scuba-dive-travel-guide",
       "https://divemagazine.com/destination-guides/mexico/cozumel-riviera-maya-isla-mujeres",
       "https://divemagazine.com/scuba-diving-travel/mexico-isla-holbox-whale-sharks",
@@ -10557,8 +10462,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/jardines-de-la-reina/",
-      "https://blog.padi.com/explore-jardines-de-la-reina-cubas-off-the-beaten-path-diving-destination/",
       "https://www.dive-the-world.com/diving-sites-cuba.php",
       "https://cubandivingcenters.com/diving-jardines-de-la-reina.php",
       "https://divemagazine.com/scuba-diving-news/best-places-in-the-world-to-dive-with-sharks"
@@ -10636,8 +10539,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/united-states-of-america-usa/jupiter/",
-      "https://www.padi.com/diving-in/united-states-of-america-usa/west-palm-beach/",
       "https://divemagazine.com/scuba-diving-news/best-places-in-the-world-to-dive-with-sharks",
       "https://www.bluewaterdivetravel.com/destination/florida-diving",
       "https://www.floridamuseum.ufl.edu/discover-fish/species-profiles/epinephelus-itajara/",
@@ -10709,7 +10610,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/united-states-of-america-usa/florida-keys-key-largo/",
       "https://www.bluewaterdivetravel.com/destination/florida-diving",
       "https://visitfloridakeys.com/experiences/what-were-famous-for/diving-snorkeling/scuba-diving-key-largo-florida",
       "https://visitfloridakeys.com/experiences/what-were-famous-for/diving-snorkeling/shipwrecks/spiegel-grove"
@@ -10922,7 +10822,6 @@
       }
     ],
     "sources": [
-      "https://blog.padi.com/a-guide-to-diving-roatan/",
       "https://www.bluewaterdivetravel.com/roatan-diving",
       "https://www.roatanmarinepark.org/"
     ],
@@ -10990,7 +10889,6 @@
     ],
     "sources": [
       "https://www.sabatourism.com/diving/",
-      "https://www.padi.com/diving-in/saba/",
       "https://www.dive-the-world.com/diving-sites-saba.php",
       "https://sabapark.org/saba-national-marine-park/dive-sites-dive-operators/"
     ],
@@ -11133,8 +11031,7 @@
     "sources": [
       "https://www.dive-the-world.com/liveaboards-turks-and-caicos.php",
       "https://www.bluewaterdivetravel.com/turks-caicos-dive-travel",
-      "https://dan.org/alert-diver/article/diving-in-the-turks-and-caicos-islands/",
-      "https://www.padi.com/diving-in/turks-and-caicos-islands/"
+      "https://dan.org/alert-diver/article/diving-in-the-turks-and-caicos-islands/"
     ],
     "verified": true,
     "notes": "季节：DTW 写全年能见度都好、冬季偶有涌浪；Bluewater 写全年可潜、11–5 月凉爽干燥；PADI 写全年可潜、12–5 月海况最平能见度最好；DAN Alert Diver（2023-08）写 6–11 月飓风季、12–4 月旅游旺季。主流是全年，bestMonths 留空，12–5 月最佳。座头鲸：DAN 写 1 月下旬–4 月上旬经过大特克岛与 Salt Cay 以西的水道、可浮潜同游；DTW 与 Bluewater 写 1–3 月；PADI 写 1–4 月。DTW 另写 2–3 月船宿船转去多米尼加共和国带客看座头鲸，期间本地不跑船宿。墙深：DAN 写西北角墙顶 35–40 ft（约 11–12 m），西凯科斯墙顶 35–55 ft（约 11–17 m）、落差超过 6,000 ft；French Cay 是无人小环礁，从普罗维登西亚莱斯单程 60–90 分钟或坐船宿去。物种：DAN 列加勒比礁鲨、鹰鳐、海龟、护士鲨，并说特克斯一侧礁鲨较少；DTW 写 French Cay 有双髻鲨、公牛鲨、虎鲨、柠檬鲨和交配的护士鲨；Bluewater 写 French Cay 有蝠鲼或鹰鳐。水温：DAN 冬 74–78°F、夏 82–84°F，DTW 26–29°C，取 24–29。能见度：Bluewater 15–45 m，DAN 常超 30 m，取 20–40。等级：DTW 说各级持证都适合。坐标为普罗维登西亚莱斯西北角（Northwest Point）墙区，码头多在 Turtle Cove。",
@@ -11202,9 +11099,7 @@
       }
     ],
     "sources": [
-      "https://www.dive-the-world.com/diving-sites-honduras-utila.php",
-      "https://blog.padi.com/best-time-of-year-to-dive-honduras/",
-      "https://blog.padi.com/5-reasons-to-book-a-one-way-ticket-to-utila/"
+      "https://www.dive-the-world.com/diving-sites-honduras-utila.php"
     ],
     "verified": true,
     "notes": "季节：鲸鲨月份说法不一——PADI（洪都拉斯最佳季节文）写全年可见、3–4 月为峰，推荐 4 月；PADI 2019 客座文写 2 月中–4 月与 8–9 月；Dive The World 写 2–4 月与 10–12 月最稳、3–5 月旱季能见度最好且鲸鲨最可靠；搜索摘要里 Scuba Diving 与 Zublu 写 3–5 月（另有 8–10 月），页面未能打开。取 3–5 月（DTW 明写 3–5 月最佳，PADI 写 3–5 月海况平、能见度可达 36 m）；秋季窗口各家不一致，未放进 bestMonths。遇鲸方式：搜索摘要里 Zublu 写只许浮潜，未在已开页面核实，文案没写。DTW：饵球在岛北面形成时鲸鲨出现，北侧海丘 The Pinnacle 春秋常有鲸鲨经过，南侧 Black Hills（底在 40 m 以下）有时流强、限进阶；Halliburton 1998 年沉放作人工礁；CJ's Drop-off 为垂直墙；岛在拉塞瓦西北约 32 km（约 50 分钟）；以便宜的潜水套餐出名。水温：PADI 写 1–4 月 24–27°C、7–9 月最高 29°C，1 月可低到 22°C；DTW 26–29°C。能见度 PADI 18–30 m（旱季可达 36 m）。海龟来源未分种，按加勒比礁区常见的玳瑁列。邻岛罗阿坦已有条目。坐标为东港（Utila Town）。",
@@ -11268,7 +11163,6 @@
     "sources": [
       "https://www.bluewaterdivetravel.com/cenotes-diving",
       "https://www.mares.com/the-cenotes-of-tulum",
-      "https://blog.padi.com/must-dive-cenotes-for-open-water-divers/",
       "https://alertdiver.eu/en_US/articles/cult-dive-cenote-dos-ojos",
       "https://divemagazine.com/destination-guides/mexico/cenotes",
       "https://divernet.com/scuba-diving/best-diving-cenotes-in-riviera-maya/"
@@ -11343,8 +11237,7 @@
     ],
     "sources": [
       "https://scubadiverlife.com/scuba-diving-costa-rica-bats-cats/",
-      "https://www.scuba-dive-costa-rica.com/?p=168",
-      "https://www.padi.com/diving-in/costa-rica/"
+      "https://www.scuba-dive-costa-rica.com/?p=168"
     ],
     "verified": true,
     "notes": "季节：Scuba Diver Life（2017）写公牛鲨 5–11 月到访蝙蝠群岛；当地潜店 scuba-dive-costa-rica 写 5–11 月风浪较小、能见度较好、水更暖，往返要横穿帕帕加约湾，每天出海前看海况；PADI 哥斯达黎加页写 5–11 月雨季营养盐吸引公牛鲨到蝙蝠群岛。三者一致取 5–11 月。搜索摘要里另有运营商说公牛鲨全年都有、6–10 月最多，12–3 月风大常改去卡塔利娜群岛（未打开）。深度：Scuba Diver Life 写 Big Scare 约 70 ft、Black Rock 约 80 ft；潜店写'有时超过 30 m'、属进阶潜水、不建议新手；level 取 AOW。能见度：潜店写 9–30 m、同一潜次内也会变，Scuba Diver Life 遇到的是浑浊；取 8–25。水温：来源只有'5–11 月较暖'的定性说法，另有强温跃层，20–28°C 为估计值。离可可海滩约 30 英里（潜店）、船程约 1 小时（Scuba Diver Life）。附近的卡塔利娜群岛（Islas Catalinas）11–5 月有大洋蝠鲼（Scuba Diver Life），季节与公牛鲨相反，所以没有合并成一条。蝠鲼群与大洋蝠鲼来自潜店页；白顶礁鲨、鹰鳐来自 Scuba Diver Life。群岛属圣罗莎国家公园，coords 来自西语维基。中文名'蝙蝠群岛'为意译；任务里列的卡尼奥岛（Isla del Caño，PADI 写 12–6 月为季）未做，见总备注。",
@@ -11412,7 +11305,6 @@
       }
     ],
     "sources": [
-      "https://www.divessi.com/en/blog/scuba-diving-in-cabo-pulmo-2230",
       "https://www.bluewaterdivetravel.com/cabo-san-lucas-diving",
       "https://www.dive-the-world.com/posts/cortez/sea-of-cortez-diving-liveaboard-guide.php"
     ],
@@ -11638,9 +11530,7 @@
       }
     ],
     "sources": [
-      "https://blog.padi.com/best-time-to-dive-panama/",
       "https://www.theglobeandmail.com/life/travel/article-panama-pacific-coast-travel-wildlife",
-      "https://www.padi.com/diving-in/panama/santa-catalina-isla-coiba/",
       "https://www.tourismpanama.com/places-to-visit/veraguas/coiba-island/",
       "https://scubadiverlife.com/scuba-diving-coiba-national-park/"
     ],
@@ -11858,7 +11748,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/united-states-of-america-usa/san-diego/",
       "https://www.everydaycalifornia.com/pages/resources-complete-guide-to-seeing-leopard-sharks-in-la-jolla",
       "https://www.sdcoastkeeper.org/blog/snorkel-with-the-leopard-sharks-in-la-jolla-shores/"
     ],
@@ -11928,7 +11817,6 @@
       }
     ],
     "sources": [
-      "https://blog.padi.com/what-its-like-to-dive-in-la-paz-and-cabo-san-lucas-mexico-right-now/",
       "https://www.bluewaterdivetravel.com/la-paz-diving",
       "https://www.golapaz.com/things-to-do/attractions-tours/swimming-with-whale-sharks/",
       "https://www.dive-the-world.com/posts/cortez/sea-of-cortez-diving-liveaboard-guide.php"
@@ -12072,7 +11960,6 @@
       }
     ],
     "sources": [
-      "https://blog.padi.com/dive-malpelo-island/",
       "https://diveplanit.com/malpelo"
     ],
     "verified": true,
@@ -12147,7 +12034,6 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/united-states-of-america-usa/monterey/",
       "https://cadivingnews.com/?p=1772",
       "https://www.parks.ca.gov/?page_id=571",
       "https://dan.org/alert-diver/article/a-tale-of-two-bays-monterey-carmel/",
@@ -12224,9 +12110,7 @@
       }
     ],
     "sources": [
-      "https://www.padi.com/diving-in/united-states-of-america-usa/santa-catalina-island/",
-      "https://dan.org/alert-diver/article/santa-catalina-island/",
-      "https://blog.padi.com/top-5-dive-sites-in-los-angeles-california/"
+      "https://dan.org/alert-diver/article/santa-catalina-island/"
     ],
     "verified": true,
     "notes": "季节：PADI Catalina 页写 5–10 月最好、7–10 月水最暖能见度最好（夏末可到 74°F）；DAN Alert Diver（2020）写'夏末到初冬'条件最好，秋冬能见度超过 80 ft；PADI 博客（洛杉矶五大潜点）写夏末和秋季水最暖、能见度最好。三者重叠取 8–10 月。水温：冬季 55–60°F（PADI），冬季温跃层下约 52°F（DAN），夏季表层约 70–74°F；取 12–23。能见度：Casino Point 常为 30–50 ft、秋季可达 100 ft（PADI），春季约 30 ft（DAN）；取 9–25。交通：渡轮从长滩、圣佩德罗、达纳角出发 1–1.5 小时到阿瓦隆或双港（PADI；DAN 另列纽波特海滩），岛距大陆约 22 英里（DAN）。Casino Point 1962 年设立，PADI 博客称是全美第一个非营利水下公园；周末考证课程多、人挤（PADI 博客）。巨型黑鲈'尤其在夏季成群聚集产卵'（DAN）；搜索摘要里 Scuba Diving 写 4 月到初秋（scubadiving.com 返回 403，未打开）。沉船：SueJac 船尾约 60 ft、船头约 90 ft；园区外的 Valiant 约 110 ft，须港务长许可（DAN）。中文名：通行叫法'卡特琳娜岛'，正式译名'圣卡塔利娜岛'。id 用 santa-catalina-island，避免与多米尼加的卡塔利娜岛（Isla Catalina）及哥斯达黎加的卡塔利娜群岛重名。garibaldi（Hypsypops rubicundus，中文维基名'红尾高欢雀鲷'，没有通行叫法）只在文案里写作'亮橙色的加州雀鲷'，未建物种；若想让卡特琳娜 / 拉霍亚有不同于巨藻的贴纸，可新增它。coords 为 Casino Point（阿瓦隆港北端）。",
@@ -12599,8 +12483,7 @@
       "https://divernet.com/world-dives/dive-scapa-flow/",
       "https://xray-mag.com/content/new-legal-protections-granted-scottish",
       "https://scapaflowwrecks.com/wildlife/",
-      "https://www.stromnessmuseum.org.uk/node/4998",
-      "https://www.padi.com/diving-in/united-kingdom/orkney/"
+      "https://www.stromnessmuseum.org.uk/node/4998"
     ],
     "verified": false,
     "notes": "未核实原因：明确写季节且能打开的只有 PADI Orkney 页（最佳 4–10 月，'传统上 4 月到 11 月初'）；奥克尼旅游局 orkney.com 的潜水页（搜索摘要：复活节到 11 月初、9 月中水温约 13°C、秋季浮游生物消退后能见度变好）对 WebFetch 返回 403，未能打开；Divernet 2017 factfile 反而说约 10 条潜水船全年运营。按旅游局 / PADI 取 4–10 月；Undercurrent 读者报告（2013）写 4–9 月，未列为来源。深度：Divernet 称巡洋舰 25–35 m（Karlsruhe 最深 27 m）、战列舰 35–45 m，全部 <46 m。level 取 AOW：Divernet 2022 称主沉船需 AOW + 干衣 + 深潜专长、高氧推荐，OW 可潜其他点（丘吉尔屏障的阻塞船岸潜很浅，伯拉海峡阻塞船须平潮）。能见度：Divernet 3–10 m / 3–9 m，factfile 平均 10–15 m；春季与初秋藻华时可低于 5 m（scapaflowwrecks）。HMS Royal Oak 与 HMS Vanguard 是战争坟墓，禁止潜水。保护：苏格兰政府 2025-11-01 起设斯卡帕湾历史海洋保护区（X-Ray Mag；DIVE Magazine 2025-08 报道公告），移走、改动、扰动沉船属刑事犯罪，可以观赏潜水。物种：scapaflowwrecks 记录灰海豹与港海豹偶尔造访沉船，Stromness Museum 记录 Dresden 等沉船上的海蛞蝓（Jorunna tomentosa、海柠檬等）；seal 为新增物种。坐标指向德国舰队沉船区（Cava 以东、Barrel of Butter 附近），出发港为 Stromness（约 -3.30, 58.96）。",
@@ -12972,9 +12855,7 @@
     ],
     "sources": [
       "https://en.marinediving.com/area/osezaki/",
-      "https://www.japan.travel/en/sports/diving/guides/shizuoka/",
-      "https://blog.padi.com/diving-in-west-izu-peninsula/",
-      "https://blog.padi.com/jp/scuba-diving-in-autumn/"
+      "https://www.japan.travel/en/sports/diving/guides/shizuoka/"
     ],
     "verified": true,
     "notes": "季节：Marine Diving 大濑崎页（数据截至 2024-10）写秋季（9 月下旬–12 月）水清鱼多、是一年中最好的时候，湾内向导另称冬季（雪富士、人少）是「隐藏的最佳季节」；PADI 日文博客（2017-09）写多数潜水员认为秋季是最佳季节，伊豆、纪伊半岛近海秋季随黑潮和台风来热带鱼；JNTO 静冈潜水指南写冬季能见度极好、秋季伊东有鰤鱼群、大川有热带鱼。取秋季 9–11 月，Marine Diving 的秋季延到 12 月。全年可潜：Marine Diving 写大濑崎几乎不受天气影响，湾内除台风和大型活动外很少关闭；PADI 英文博客（2025-09）写湾内入水点长 200 多米、通常平静少流、四季都有看点；JNTO 写湾内几乎全年平静、适合新手和老手。水温取 Marine Diving：冬（1–3 月）14–16°C、春 16–18°C、夏 18–24°C、秋最高约 26°C 最低约 18°C，冬春建议干衣或 6.5 mm 以上带帽两件式。能见度 5–20 m 为估计（来源无数字；Marine Diving 写秋冬更清，人多时被扬起的泥沙让能见度变差）。物种（Marine Diving）：常驻躄鱼、虾虎鱼、海蛞蝓、剃刀鱼、天竺鲷；春季一本松偶见翻车鲀、佛岩有鹰鳐；夏季岬角偶有双髻鲨、鲸鲨、蝠鲼；冬季海蛞蝓一潜可见几十种、有鮟鱇。规则：在大濑崎自潜需有两名有当地经验者或一名专业级证书持有者在场；岬角（Misaki no Sentan）在大濑神社范围内，只在周末和节假日开放（Marine Diving）。交通：东京乘新干线约 40–55 分钟到三岛，转到沼津站坐公交 1 小时多（每天 2 往返）；夏季有沼津港 30 分钟渡船；自驾约 2 小时 10 分（PADI）。神子元岛双髻鲨（南伊豆，初夏到秋）是另一个独立目的地，未并入。坐标为大濑崎（日文维基百科 35.029°N, 138.788°E）。",
@@ -13273,7 +13154,6 @@
       "https://visitokinawajapan.com/discover/dive-sites-okinawa/miyako-diving/",
       "https://en.marinediving.com/area/okinawa/miyako/",
       "https://www.japan.travel/en/sports/diving/guides/miyakojima",
-      "https://blog.padi.com/jp/diving-in-okinawa-1/",
       "https://visitokinawajapan.com/travel-inspiration/okinawa-diving-guide/"
     ],
     "verified": true,
@@ -13348,7 +13228,6 @@
       }
     ],
     "sources": [
-      "https://blog.padi.com/diving-in-ogasawara-islands/",
       "https://www.japan.travel/en/sports/diving/guides/tokyo/",
       "https://xray-mag.com/content/ogasawara-islands-japans-galapagos",
       "https://www.gotokyo.org/en/destinations/izu-and-ogasawara-islands/chichijima-island/",
