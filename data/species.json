@@ -713,5 +713,19 @@
       "coldwater"
     ],
     "lengthM": 1.8
+  },
+  {
+    "id": "glassfish",
+    "name": {
+      "zh": "玻璃鱼群",
+      "en": "Glassfish school"
+    },
+    "sci": "Parapriacanthus ransonneti",
+    "sprite": "glassfish",
+    "sizeClass": "m",
+    "lengthM": 1,
+    "tags": [
+      "school"
+    ]
   }
 ]

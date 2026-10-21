@@ -64,6 +64,144 @@
     "pinyin": "abudababuwan abdbbw"
   },
   {
+    "id": "abu-nuhas",
+    "name": {
+      "zh": "阿布努哈斯沉船群",
+      "en": "Abu Nuhas Wrecks"
+    },
+    "country": {
+      "zh": "埃及",
+      "en": "Egypt"
+    },
+    "region": "red-sea",
+    "coords": [
+      33.93,
+      27.58
+    ],
+    "bestMonths": [],
+    "species": [
+      "glassfish",
+      "dolphin",
+      "nudibranch"
+    ],
+    "level": "AOW",
+    "types": [
+      "wreck",
+      "reef"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      22,
+      28
+    ],
+    "visibilityM": [
+      20,
+      30
+    ],
+    "summary": {
+      "zh": "沙德万岛西北的浅礁，紧贴进出苏伊士运河的航道，礁的迎风面沉着四艘船，最深处在 24–32 米。最老的 Carnatic 沉于 1869 年，船身爬满珊瑚，舱里聚着玻璃鱼。风浪大时可能下不了水。",
+      "en": "A shallow reef northwest of Shadwan Island, right beside the shipping lane to and from Suez. Four wrecks lie along its exposed side: the Carnatic of 1869, the timber carrier Giannis D, the Chrisoula K with its cargo of floor tiles, and the lentil-laden Kimon M, their deepest points between 24 and 32 m. Rough seas can rule the site out."
+    },
+    "highlights": [
+      {
+        "zh": "倾斜的 Giannis D 船尾与机舱",
+        "en": "The tilted stern and engine room of the Giannis D"
+      },
+      {
+        "zh": "爬满珊瑚的 Carnatic，舱里成群的玻璃鱼",
+        "en": "The coral-crusted Carnatic, its hull full of glassfish"
+      },
+      {
+        "zh": "Chrisoula K 货舱里成摞的瓷砖",
+        "en": "Stacks of floor tiles in the holds of the Chrisoula K"
+      }
+    ],
+    "sources": [
+      "https://masterliveaboards.com/abu-nuhas-the-red-seas-shipwreck-hub/",
+      "https://www.liveaboard.com/diving/egypt/abu-nuhas",
+      "https://www.dive-the-world.com/diving-sites-egypt-abu-nuhas.php",
+      "https://divernet.com/scuba-diving/egypts-graveyard-diving-in-the-deep-sea-shipwrecks/",
+      "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-the-red-sea",
+      "https://en.wikipedia.org/wiki/SS_Carnatic"
+    ],
+    "verified": true,
+    "notes": "季节：Master Liveaboards（运营商）称全年可潜、没有固定最佳季；Liveaboard.com FAQ 称全年可潜，4–11 月海况最稳，12–2 月受风影响大。bestMonths 留空。Liveaboard.com 季节页另称 Giannis D 春秋光线最好。船程各说不一：DTW 写胡尔加达以北 40 km、约 2.5 小时（沙姆 3.5 小时），Liveaboard.com 写约 2 小时，Master 写约 65 km。各沉船最深处：Giannis D 24 m，Carnatic 24–27 m，Chrisoula K 26–28 m，Kimon M 30–32 m（各来源略有出入）；Chrisoula K 的身份有争议，Divernet 认为更可能是 Marcus。Master 与 Liveaboard.com 建议 AOW，舱内穿越需沉船训练。坐标为 Carnatic 位置（维基 27°34′53″N 33°55′32″E）。物种首位 glassfish 是新增提议（DTW、Liveaboard.com、Divernet 都写到 Carnatic / Giannis D 舱内的玻璃鱼群）；若不新增物种，可改为 [\"nudibranch\", \"dolphin\"]。海豚据 DTW 偶尔经过 Chrisoula K。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "abunuhasichenchuanqun abnhsccq"
+  },
+  {
+    "id": "aqaba",
+    "name": {
+      "zh": "亚喀巴（Cedar Pride 沉船）",
+      "en": "Aqaba – Cedar Pride"
+    },
+    "country": {
+      "zh": "约旦",
+      "en": "Jordan"
+    },
+    "region": "red-sea",
+    "coords": [
+      34.97,
+      29.43
+    ],
+    "bestMonths": [],
+    "species": [
+      "hawksbill",
+      "frogfish",
+      "nudibranch"
+    ],
+    "level": "OW",
+    "types": [
+      "wreck",
+      "reef"
+    ],
+    "access": [
+      "shore",
+      "boat"
+    ],
+    "waterTempC": [
+      20,
+      28
+    ],
+    "visibilityM": [
+      20,
+      30
+    ],
+    "summary": {
+      "zh": "约旦红海海岸仅约 26 公里，二十多个潜点多在海洋保护区内，岸潜船潜皆可。招牌是 1985 年沉下造礁的货船 Cedar Pride，侧卧在 10–27 米；附近还沉放了坦克和飞机。流弱，全年可潜。",
+      "en": "Jordan's 26 km of Red Sea coast holds twenty-odd sites, most inside the marine reserve and reachable from shore or by boat. The signature dive is the Cedar Pride, a 74 m Lebanese freighter scuttled in 1985 as an artificial reef, lying on its side at about 10–27 m. Tanks, helicopters and a transport plane have been sunk along the same coast. Currents are mild and diving runs all year."
+    },
+    "highlights": [
+      {
+        "zh": "侧卧的 Cedar Pride，桅杆上长满软珊瑚",
+        "en": "The Cedar Pride on its side, its mast thick with soft coral"
+      },
+      {
+        "zh": "水下军事博物馆里的坦克与直升机",
+        "en": "Tanks and helicopters of the underwater military museum"
+      },
+      {
+        "zh": "沿礁巡游的玳瑁",
+        "en": "Hawksbill turtles along the reefs"
+      }
+    ],
+    "sources": [
+      "https://visitaqaba.com.jo/EN/Pages/DivingEn",
+      "https://www.padi.com/diving-in/jordan/aqaba-governorate/",
+      "https://www.padi.com/dive-site/jordan/wreck-of-the-cedar-pride/",
+      "https://divemagazine.com/scuba-diving-travel/wreck-diving-aqaba",
+      "https://divernet.com/world-dives/in-deep-in-aqaba/",
+      "https://divernet.com/scuba-diving/scuba-diving-in-jordan-and-aqaba-wrecks/"
+    ],
+    "verified": true,
+    "notes": "季节：Visit Aqaba（亚喀巴经济特区局旅游网站）称全年适合潜水；PADI 称全年可潜、春秋（3/4–6 月、9–11 月）最舒适；Divernet 称全年可潜、5–6 月能见度最好。按旅游局取全年，bestMonths 留空。水温：旅游局写平均 22.5°C、冬季 20°C，PADI 写冬 20–22°C、夏 26–28°C。Cedar Pride：74 m，1982 年在亚喀巴港起火，在码头停了三年后于 1985 年沉下造礁（Divernet、DIVE、PADI）；最深各说 26–28 m，浅处约 10 m，DIVE 称左舷着底、位于 Rainbow Reef 与 Japanese Gardens 之间；系泊浮标距岸约 200 m（Divernet），岸潜、船潜都可（PADI、旅游局）。潜点数各说 20 多（旅游局：保护区内 21 个）到 25 个以上（PADI、Divernet）。水下军事博物馆共 19 件，多在 15–20 m（Divernet）；C-130 运输机 2017 年沉放、最深 18 m（DIVE）。物种：DIVE 写礁上有玳瑁，Divernet 写 Cedar Pride 上有大型躄鱼，PADI 列海蛞蝓。交通：可直飞亚喀巴，或经安曼陆路约 4 小时；也有渡轮往返埃及努韦巴与塔巴（PADI）。坐标为 PADI 的 Cedar Pride 坐标（29.43078, 34.97317）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "yakaba cedar pride chenchuan ykb cedar pride cc"
+  },
+  {
     "id": "brothers-islands",
     "name": {
       "zh": "兄弟岛",
@@ -361,6 +499,78 @@
     "pinyin": "aierfensitongjiao aefstj"
   },
   {
+    "id": "fury-shoals",
+    "name": {
+      "zh": "愤怒浅滩",
+      "en": "Fury Shoals"
+    },
+    "country": {
+      "zh": "埃及",
+      "en": "Egypt"
+    },
+    "region": "red-sea",
+    "coords": [
+      35.62,
+      24.21
+    ],
+    "bestMonths": [],
+    "species": [
+      "dolphin",
+      "hard-coral",
+      "napoleon-wrasse",
+      "whitetip-reef-shark"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "cave",
+      "wreck"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      23,
+      30
+    ],
+    "visibilityM": [
+      20,
+      40
+    ],
+    "summary": {
+      "zh": "哈马塔外海约 20 座礁，东西绵延约 30 公里，哈马塔有日潜船，南线船宿也常停。多数潜点浅、流弱，Sha'ab Claudio 有透光的礁洞；最南端萨塔亚礁的潟湖里住着一大群海豚。",
+      "en": "A chain of about twenty reefs stretching some 30 km off Hamata, reached by day boat from Hamata and a regular stop on southern liveaboard routes. Most sites are shallow with little current. Sha'ab Claudio has sunlit caverns, and the lagoon of Sataya, the southernmost reef, is home to a large pod of spinner dolphins."
+    },
+    "highlights": [
+      {
+        "zh": "萨塔亚礁潟湖里的海豚群",
+        "en": "The dolphin pod in Sataya's lagoon"
+      },
+      {
+        "zh": "Sha'ab Claudio 礁洞里的光柱",
+        "en": "Light beams in the caverns of Sha'ab Claudio"
+      },
+      {
+        "zh": "Abu Galawa 礁旁的小拖船残骸",
+        "en": "A small tug wreck at Abu Galawa"
+      }
+    ],
+    "sources": [
+      "https://www.liveaboard.com/diving/egypt/fury-shoal",
+      "https://www.emperordivers.com/liveaboard-itinerary/south-st-johns",
+      "https://cloudfront.masterliveaboards.com/website-docs/Egypt/Itineraries/Rocky-Zabargad-and-St-Johns-Itinerary.pdf",
+      "https://liveaboard.dune-world.com/?p=53396",
+      "https://www.duikersgids.nl/en/shaab-sataya",
+      "https://de.wikivoyage.org/wiki/Fury_Shoal",
+      "https://de.wikivoyage.org/wiki/Berenike"
+    ],
+    "verified": true,
+    "notes": "季节：Liveaboard.com FAQ 称全年可潜，6–9 月水最暖、南下海况最稳，冬季偶有大风；Emperor Divers 含愤怒浅滩的 South & St Johns 行程标「All Year」。bestMonths 留空。海豚：Liveaboard.com、Dune、Master 都写萨塔亚礁有飞旋海豚，来源未给季节；duikersgids 称群体超过 120 头、清晨最好。与海豚同游的规矩来源未写，出发前问运营方。日潜：Wikivoyage 称从哈马塔出发 1–2 小时；Liveaboard.com 正文说只能船宿，FAQ 又说哈马塔 / 马萨阿拉姆 / 贝雷尼斯有日潜船，取后者。Liveaboard.com 写「哈马塔在马萨阿拉姆以南约 180 km」，与 Wikivoyage「约 110 km」不符，文案不写距离。级别：Liveaboard.com FAQ 称多数潜点 OW 即可，Sha'ab Maksur 流强、拖船穿越需经验。拖船残骸据 Master 为 Tien Hsing 号。坐标取 Wikivoyage（Berenike 条目）的礁群代表点（24.213, 35.618），萨塔亚礁在其东南约 9 km（24.16, 35.69）。中文名按 Liveaboard.com 中文页「愤怒浅滩」（正文也用「福瑞浅滩」）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "fennuqiantan fnqt"
+  },
+  {
     "id": "ras-mohammed",
     "name": {
       "zh": "拉斯穆罕默德",
@@ -439,6 +649,89 @@
     "pinyin": "lasimuhanmode lsmhmd"
   },
   {
+    "id": "rocky-island-zabargad",
+    "name": {
+      "zh": "洛基岛与扎巴尔加德岛",
+      "en": "Rocky Island & Zabargad"
+    },
+    "country": {
+      "zh": "埃及",
+      "en": "Egypt"
+    },
+    "region": "red-sea",
+    "coords": [
+      36.25,
+      23.56
+    ],
+    "bestMonths": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "species": [
+      "oceanic-whitetip",
+      "hammerhead",
+      "grey-reef-shark",
+      "green-turtle"
+    ],
+    "level": "AOW",
+    "types": [
+      "wall",
+      "drift",
+      "pelagic",
+      "wreck"
+    ],
+    "access": [
+      "liveaboard"
+    ],
+    "waterTempC": [
+      23,
+      30
+    ],
+    "visibilityM": [
+      20,
+      30
+    ],
+    "summary": {
+      "zh": "埃及南部离岸 60–70 公里的两座孤岛，相距约 6 公里。洛基岛礁壁直落深海，流向多变，常有鲨鱼和梭鱼出没；扎巴尔加德岛南侧海湾避风，有珊瑚坡和一艘 24 米深的苏联时期沉船。能否停靠看天气和许可。",
+      "en": "Two islands 60–70 km off Egypt's southern coast, about 6 km apart. Rocky Island's fringing reef drops straight into deep water, and shifting currents draw sharks and barracuda. Zabargad's sheltered south side has coral slopes and the wreck of a Soviet-era vessel at about 24 m. Whether boats can stop here depends on weather and permits."
+    },
+    "highlights": [
+      {
+        "zh": "洛基岛东侧放流时的远洋白鳍鲨与双髻鲨",
+        "en": "Oceanic whitetips and hammerheads on the Rocky Island east drift"
+      },
+      {
+        "zh": "扎巴尔加德岛的「俄罗斯沉船」",
+        "en": "The 'Russian wreck' at Zabargad"
+      },
+      {
+        "zh": "8 月上岛产卵的海龟",
+        "en": "Turtles nesting on Zabargad in August"
+      }
+    ],
+    "sources": [
+      "https://www.liveaboard.com/diving/egypt/rocky",
+      "https://www.liveaboard.com/diving/egypt/zabargad",
+      "https://masterliveaboards.com/egypt/rocky-zabargad-st-johns/",
+      "https://liveaboard.dune-world.com/?p=53396",
+      "https://www.emperordivers.com/liveaboard-itinerary/south-st-johns",
+      "https://www.scubatravel.com/itineraries/liveaboards/egypt/SSJ/south.html",
+      "https://en.wikipedia.org/wiki/Rocky_Island_(Egypt)",
+      "https://en.wikipedia.org/wiki/Zabargad_Island",
+      "https://de.wikivoyage.org/wiki/Zabargad"
+    ],
+    "verified": true,
+    "notes": "两岛常与圣约翰礁同一航次，单列一条是因为看点（远洋鲨、深墙）与圣约翰礁的礁洞地形不同。季节：Liveaboard.com 洛基岛页 FAQ 写 4–11 月为一般窗口，3–5、9–11 月更受欢迎，12–2 月航渡浪大、少有人去；同站扎巴尔加德页称多数运营商 6–9 月跑这条线；Master Liveaboards 的 Rocky, Zabargad & St Johns 行程只在 5 月底至 9 月发船；Dune 也有 9 月、12 月和 3–5 月含两岛的航次。取一般窗口 4–11 月。停靠需军方与公园许可（Wikivoyage），Emperor、Scuba Travel、Dune 都写视天气与许可而定；海洋公园内禁夜潜（Master；Wikivoyage 称洛基岛不能夜潜）。级别：Liveaboard.com 称多数运营商要 AOW + 约 50 支，Master 要求 OW + 30 支；洛基岛北侧流快，只适合有经验者。两岛距离：维基 6 km，Liveaboard.com 5 km。沉船：Liveaboard.com 称疑为 Khanka 号、身份未确认，Master 直接称 Khanka；Wikivoyage 称约 70 m 长、约 1970 年沉没、最深 24 m。洛基岛旁的 Maidan 号沉船在 90 m 以下，不适合休闲潜水。海龟：Liveaboard.com 称绿海龟与玳瑁 8 月上岛产卵，维基称扎巴尔加德是产卵后绿海龟的栖息地。坐标为洛基岛（维基 23°33′50″N 36°14′43″E）；扎巴尔加德在其西北约 6 km（23.61, 36.20）。两岛属 Elba 国家公园（维基、Wikivoyage）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "luojidaoyuzhabaerjiadedao ljdyzbejdd"
+  },
+  {
     "id": "sanganeb",
     "name": {
       "zh": "桑加奈布环礁",
@@ -514,6 +807,162 @@
     "notes": "双髻鲨季：Dive The World 与 Bluewater 均写 1–4 月；PADI Travel 写 12–2 月。取 1–4 月。Dive The World 页面注明因苏丹局势目前不提供行程；IUCN 2025 评估称公园管理因战乱几近停摆。UNESCO 官网（whc.unesco.org/en/list/262）WebFetch 被拒（403），改用 IUCN 世界遗产展望页面；「25 km 离岸」「2016 年」「唯一环礁」来自该页。坐标为灯塔位置，来源页面未给出，按公开海图常识填写，精度 0.01°。",
     "updatedAt": "2026-10-20",
     "pinyin": "sangjianaibuhuanjiao sjnbhj"
+  },
+  {
+    "id": "st-johns-reefs",
+    "name": {
+      "zh": "圣约翰礁",
+      "en": "St. John's Reefs"
+    },
+    "country": {
+      "zh": "埃及",
+      "en": "Egypt"
+    },
+    "region": "red-sea",
+    "coords": [
+      35.84,
+      23.49
+    ],
+    "bestMonths": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "species": [
+      "grey-reef-shark",
+      "hammerhead",
+      "oceanic-whitetip",
+      "soft-coral",
+      "dolphin"
+    ],
+    "level": "AOW",
+    "types": [
+      "reef",
+      "wall",
+      "cave",
+      "drift"
+    ],
+    "access": [
+      "liveaboard"
+    ],
+    "waterTempC": [
+      22,
+      30
+    ],
+    "visibilityM": [
+      20,
+      35
+    ],
+    "summary": {
+      "zh": "埃及最南端、近苏丹边境的礁区，约 20 个潜点，船宿南下要 12–14 小时。礁体多隧道和礁洞，软珊瑚浓艳；最东边的 Habili Ali 流强，常见灰礁鲨，5–6 月远洋白鳍鲨和双髻鲨较多。",
+      "en": "A cluster of about twenty dive sites in Egypt's far south, near the Sudanese border and 12–14 hours by liveaboard from Port Ghalib. Reefs such as Gota Kebir are cut through with tunnels and caverns and hung with soft coral. Habili Ali, the easternmost, has strong current and regular grey reef sharks; May and June give the best odds of oceanic whitetips and hammerheads."
+    },
+    "highlights": [
+      {
+        "zh": "Gota Kebir 的隧道与礁缝",
+        "en": "Tunnels and fissures at Gota Kebir"
+      },
+      {
+        "zh": "Habili Ali 深墙外的灰礁鲨与双髻鲨",
+        "en": "Grey reef sharks and hammerheads off the walls of Habili Ali"
+      },
+      {
+        "zh": "Umm Khararim 礁洞里透下的光",
+        "en": "Light filtering into the caves of Umm Khararim"
+      }
+    ],
+    "sources": [
+      "https://liveaboard.dune-world.com/?p=53396",
+      "https://www.liveaboard.com/diving/egypt/st-johns",
+      "https://www.dive-the-world.com/diving-sites-egypt-st-johns.php",
+      "https://www.emperordivers.com/liveaboard-itinerary/south-st-johns",
+      "https://www.scubatravel.com/itineraries/liveaboards/egypt/SSJ/south.html",
+      "https://cloudfront.masterliveaboards.com/website-docs/Egypt/Itineraries/Rocky-Zabargad-and-St-Johns-Itinerary.pdf",
+      "https://de.wikivoyage.org/wiki/Berenike"
+    ],
+    "verified": true,
+    "notes": "季节：Dune（船宿运营商）写 4–11 月最佳，5–6 月与 10–11 月大型动物最活跃，冬季可去但水凉、动物少；Liveaboard.com FAQ 称全年可潜，5–6 月是远洋白鳍鲨和双髻鲨的高峰，冬季水凉浪大、多数人选肩季和夏季；DTW 写 Habili Ali 的远洋白鳍鲨 5–6 月最好；Emperor 的南线行程全年发船。取 4–11 月。级别：Liveaboard.com 称多数运营商要 AOW + 约 50 支，Dune、Emperor、Scuba Travel 建议 AOW，Master 要求 OW + 30 支；取 AOW。Liveaboard.com FAQ 称 Habili Ali 只适合技术潜水，与其正文「仅限进阶潜水员」矛盾，未采用。只能船宿（Liveaboard.com 称没有日潜设施），从加利卜港出发，常与愤怒浅滩、洛基岛 / 扎巴尔加德岛同一航次。礁区约 290 km²（DTW、Master），Liveaboard.com 称在 Elba 国家公园范围。注意：「圣约翰礁」是礁区名，扎巴尔加德岛的旧英文名 St. John's Island 指的是另一处。坐标取 Wikivoyage（Berenike 条目）给的礁区代表点（23.4878, 35.8439），与 DTW「拉斯巴纳斯以南、北回归线上」一致；各单个潜点坐标未找到。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "shengyuehanjiao syhj"
+  },
+  {
+    "id": "straits-of-tiran",
+    "name": {
+      "zh": "蒂朗海峡",
+      "en": "Straits of Tiran"
+    },
+    "country": {
+      "zh": "埃及",
+      "en": "Egypt"
+    },
+    "region": "red-sea",
+    "coords": [
+      34.47,
+      28.01
+    ],
+    "bestMonths": [
+      7,
+      8,
+      9
+    ],
+    "species": [
+      "hammerhead",
+      "grey-reef-shark",
+      "eagle-ray",
+      "napoleon-wrasse"
+    ],
+    "level": "AOW",
+    "types": [
+      "wall",
+      "drift",
+      "reef",
+      "pelagic"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      22,
+      28
+    ],
+    "visibilityM": [
+      20,
+      30
+    ],
+    "summary": {
+      "zh": "亚喀巴湾口一字排开的四座礁，由北往南是杰克逊、伍德豪斯、托马斯、戈登，沙姆沙伊赫日潜船 1.5–2 小时可达。礁壁珊瑚茂密，礁间水道流强；7–9 月杰克逊礁北侧常见双髻鲨，那里只在海况平静时下水。",
+      "en": "Four reefs strung across the mouth of the Gulf of Aqaba — Jackson, Woodhouse, Thomas and Gordon from north to south — 90 minutes to two hours by day boat from Sharm el-Sheikh. The walls carry dense coral and the channels between them can run strong. From July to September hammerheads are regularly seen off Jackson's north side, which is dived only in calm seas."
+    },
+    "highlights": [
+      {
+        "zh": "7–9 月杰克逊礁北侧的双髻鲨",
+        "en": "Hammerheads off Jackson Reef's north side, July to September"
+      },
+      {
+        "zh": "沿伍德豪斯礁放流，常遇海龟和鲹鱼群",
+        "en": "Drifting along Woodhouse Reef with turtles and trevally"
+      },
+      {
+        "zh": "戈登礁北端搁浅锈蚀的 Loullia 号",
+        "en": "The rusting Loullia stranded on Gordon Reef"
+      }
+    ],
+    "sources": [
+      "https://dive-the-world.com/diving-sites-egypt-straits-of-tiran.php",
+      "https://www.liveaboard.com/diving/egypt/straits-of-tiran",
+      "https://www.padi.com/dive-site/egypt/jackson-reef/",
+      "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-the-red-sea"
+    ],
+    "verified": true,
+    "notes": "季节：Dive The World 写双髻鲨 7–9 月最常见，Liveaboard.com FAQ 写 7–9 月为高峰，PADI 杰克逊礁页写 8–10 月；三者都说珊瑚礁全年可潜。bestMonths 取双髻鲨季 7–9 月，与贴纸一致；Liveaboard.com 季节页称冬季风大时日潜船可能去不了蒂朗。DTW 称杰克逊礁北侧只在平静的（多为夏季）海况下潜。船程：DTW 写 14 km、1.5 小时，Liveaboard.com 写 6 点出发约 8 点到。Lara 沉船深度两来源不一（48 m+ / 90 m），托马斯礁 90 m 峡谷，均为技术潜水；Loullia 在戈登礁顶、不下潜。坐标为 PADI 杰克逊礁坐标（28.006, 34.472）。PADI 潜点页把杰克逊礁列在沙特阿拉伯塔布克省名下；行程都从沙姆沙伊赫出发，DTW 与 Liveaboard.com 按埃及目的地归类，country 按出发地记为埃及，如需调整请统一处理。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "dilanghaixia dlhx"
   },
   {
     "id": "thistlegorm",
@@ -1303,6 +1752,244 @@
     "pinyin": "kuangyehaian shadingyufengbao kyha sdyfb"
   },
   {
+    "id": "brunei-wrecks",
+    "name": {
+      "zh": "文莱沉船",
+      "en": "Brunei Wrecks"
+    },
+    "country": {
+      "zh": "文莱",
+      "en": "Brunei"
+    },
+    "region": "southeast-asia",
+    "coords": [
+      115.07,
+      5.03
+    ],
+    "bestMonths": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "species": [
+      "barracuda",
+      "jack-school",
+      "nudibranch"
+    ],
+    "level": "AOW",
+    "types": [
+      "wreck",
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      25,
+      30
+    ],
+    "visibilityM": [
+      5,
+      30
+    ],
+    "summary": {
+      "zh": "文莱湾口外的几艘沉船：澳大利亚沉船是 85 米的荷兰轮船，1944 年触雷；美国沉船是 1945 年触雷断成两截的扫雷舰，躺在 30 多米沙底；蓝水沉船较远，水更清。多在 20 米以下，建议 AOW。",
+      "en": "Wartime and later wrecks lie off Muara at the mouth of Brunei Bay. The Australian Wreck is an 85 m Dutch steamer mined in 1944; the American Wreck, a US minesweeper mined in 1945, lies in two halves on sand at about 30–34 m. The Blue Water Wreck, an hour out, has clearer water and schooling fish. Most dives are below 20 m, so plan on Advanced certification."
+    },
+    "highlights": [
+      {
+        "zh": "澳大利亚沉船：85 米长，上层甲板与货舱可入",
+        "en": "Australian Wreck: 85 m, upper decks and holds open to penetration"
+      },
+      {
+        "zh": "美国沉船：断成两截的二战扫雷舰，仍散落弹药",
+        "en": "American Wreck: a WWII minesweeper in two halves, ammunition still scattered"
+      },
+      {
+        "zh": "蓝水沉船：离岸约 35 公里，鲹鱼与梭鱼",
+        "en": "Blue Water Wreck: 35 km out, trevally and barracuda"
+      },
+      {
+        "zh": "Pelong Rocks 浅礁适合新手与浮潜",
+        "en": "Shallow Pelong Rocks reef for beginners and snorkellers"
+      }
+    ],
+    "sources": [
+      "https://blog.padi.com/diving-in-asias-fourth-smallest-country-brunei/",
+      "https://www.nst.com.my/amp/news/2016/09/175169/wreck-and-roll-amazing-wreck-diving-sites-brunei",
+      "https://scubadiverlife.com/best-scuba-diving-brunei",
+      "https://www.divephotoguide.com/underwater-photography-travel/article/brunei-wrecks-sunken-treasures"
+    ],
+    "verified": true,
+    "notes": "季节：PADI 博客（2021）与 New Straits Times（2016）都写 3–11 月最佳，NST 称不受季风影响、全年可潜，其余月份浪大、偏冷、能见度差；Scuba Diver Life（2018）写旱季 3–10 月、5–6 月能见度最好、常超 30 m。取 3–11。来源都在 2016–2021 年，偏旧。沉船资料分歧：Australian Wreck 即 SS De Klerk（PADI：1909 年荷兰造，1942 年自沉，被日军打捞改用，1944 年触雷），NST 写船名 Imbari Maru、DivePhotoGuide 写 Imaji Maru（日方改名，拼法不一）；长度 PADI/NST 85 m、DPG 94 m；深度 SDL 22–34 m、NST 下潜到 30 m。American Wreck 为 USS Salute (AM-294)，PADI 写 34 m、SDL 22–32 m、NST 30 m，PADI 建议不入舱，NST 写仍可见弹药。Blue Water Wreck 为菲律宾渔船 Mabini Padre/Fadri（NST/DPG 拼法不同），约 80 m，NST 写船程约 1 小时、能见度很好、有梭鱼和鲹鱼，DPG 写离岸约 35 km；深度未查到。Cement Wreck（MV Tung Hwang，90 m，正立，DPG）未写进正文。另有 Dolphin Wreck（2013）、Bolkiah Wreck（1992 年凿沉的客渡，18–24 m）、48 m 的 Petani Mistral（入门技术潜，PADI）。物种：PADI 写 American Wreck 有黄尾鱼、梭鱼、鲹鱼，SDL 写有鲹鱼、梅鲷与小梭鱼群，NST 写有海蛞蝓。水温 SDL 25–30（20 m 温跃层下约 24）、NST 27–28、PADI 年均 27，取 25–30。能见度：SDL 写 Australian Wreck 最多约 10 m、American Wreck 可到 15 m，旺季常超 30 m，取 5–30。出发：SDL 写从 Muara 港约 25 分钟到 Australian Wreck，两艘沉船相距 5 分钟船程；NST 提到的潜店 Poni Divers 在 Muara。坐标取 Muara（Wikipedia 5.0268, 115.0693），沉船在其外海，没找到可靠 GPS。中文沉船名为直译，中文潜水圈多直接用英文名。本轮 WebSearch 额度用尽，未能核对文莱旅游局的潜水页。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "wenlaichenchuan wlcc"
+  },
+  {
+    "id": "con-dao",
+    "name": {
+      "zh": "昆岛",
+      "en": "Con Dao"
+    },
+    "country": {
+      "zh": "越南",
+      "en": "Vietnam"
+    },
+    "region": "southeast-asia",
+    "coords": [
+      106.61,
+      8.68
+    ],
+    "bestMonths": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "species": [
+      "green-turtle",
+      "hawksbill",
+      "barracuda",
+      "dugong"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "wreck"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      27,
+      30
+    ],
+    "visibilityM": [
+      15,
+      30
+    ],
+    "summary": {
+      "zh": "越南南部外海群岛，大部分属昆岛国家公园，二三十个潜点，珊瑚记录 340 多种。绿海龟和玳瑁常见，6–8 月上岸产卵；约 35 米处有一艘 60 米长的泰国货轮沉船，适合进阶。海草床里有儒艮，极少遇到。",
+      "en": "An archipelago off southern Vietnam, largely protected as Con Dao National Park, with 20 to 30 dive sites and more than 340 recorded coral species. Green and hawksbill turtles are common and nest from June to August, and a 60 m Thai freighter rests at about 35 m for advanced divers. Dugongs live in the seagrass beds but are rarely seen. Seas are calmest from March to September."
+    },
+    "highlights": [
+      {
+        "zh": "绿海龟与玳瑁，6–8 月有夜间护龟观察",
+        "en": "Green and hawksbill turtles; night nesting tours June–August"
+      },
+      {
+        "zh": "Hon Tai、Hon Trac 浅礁平静，适合新手",
+        "en": "Calm, shallow reefs at Hon Tai and Hon Trac for new divers"
+      },
+      {
+        "zh": "约 35 米的泰国货轮沉船",
+        "en": "A Thai freighter wreck at about 35 m"
+      },
+      {
+        "zh": "Hon Cau、Bay Canh 较进阶，有魟鱼与竹鲨",
+        "en": "More advanced dives at Hon Cau and Bay Canh, with rays and bamboo sharks"
+      }
+    ],
+    "sources": [
+      "https://www.vietnam.travel/things-to-do/con-dao-sanctuary-sea-solitude-and-slow-travel",
+      "https://www.roughguides.com/articles/where-to-go-diving-in-vietnam/",
+      "https://www.vietnam.travel/things-to-do/ideal-places-scuba-diving-vietnam",
+      "https://e.vnexpress.net/news/places/four-best-diving-spots-in-vietnam-4617678.html"
+    ],
+    "verified": true,
+    "notes": "季节：越南国家旅游局（vietnam.travel）昆岛专页与潜水合集页都写 3–9 月；Rough Guides 写 3–9 月海况平静、10–2 月风浪大常取消；VnExpress（2023）写 3–9 月、水温 27–30。三方一致。Rough Guides 文章开头把南部潜点笼统写成 11–5 月，与其昆岛小节矛盾，以小节为准。搜索摘要里一家当地潜店写 4–10 月旺季、11–3 月西岸背风仍可潜，未打开核实，未采用。潜点数：官方 20+，Rough Guides 30+。沉船：Rough Guides 写 60 m 泰国钢壳货轮、约 35 m、鱼群多、适合进阶，并称是越南唯一可潜沉船（未写进正文）。海龟：官方写 6–8 月产卵季有夜间护龟观察；VnExpress 写 Hon Tai 是数百只海龟的繁殖地、4–9 月幼龟入海。儒艮：官方写海草床偶见，Rough Guides 写可能但罕见，Wikipedia 列为国家公园保护物种，放在 species 末位。梭鱼：Rough Guides（成群大梭鱼）与官方潜水合集页（schools of barracudas）。能见度：官方写平静时常 20–30 m，其他来源未给数字，取 15–30。交通：胡志明市、芹苴有航班，胡志明市与芹苴有高速船（官方）；潜水船从昆山镇主码头出发，到潜点 30–60 分钟（Rough Guides）。中文名'昆岛'取自越南旅游局中文站，旧称'昆仑岛'。坐标为昆山镇码头附近（约值；Wikipedia 群岛坐标 8.69, 106.58）。距胡志明市约 230 km、头顿约 185 km（Wikipedia）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "kundao kd"
+  },
+  {
+    "id": "havelock",
+    "name": {
+      "zh": "哈夫洛克岛（安达曼群岛）",
+      "en": "Havelock Island, Andamans"
+    },
+    "country": {
+      "zh": "印度",
+      "en": "India"
+    },
+    "region": "southeast-asia",
+    "coords": [
+      93,
+      11.96
+    ],
+    "bestMonths": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "species": [
+      "napoleon-wrasse",
+      "barracuda",
+      "jack-school",
+      "whitetip-reef-shark",
+      "eagle-ray"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "wall"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      26,
+      29
+    ],
+    "visibilityM": [
+      15,
+      30
+    ],
+    "summary": {
+      "zh": "安达曼群岛的潜水中心，布莱尔港快船约 2 小时。Dixon's Pinnacle 三座岩峰有鲹鱼、梭鱼和苏眉；外海 Johnny's Gorge 有流，见白顶礁鲨与鹰鳐，适合 AOW；近岸浅礁可考证。",
+      "en": "The dive centre of India's Andaman Islands, about two hours by fast ferry from Port Blair, with more than 20 sites. Trevally, barracuda and Napoleon wrasse gather around the three rocks of Dixon's Pinnacle, while open-water Johnny's Gorge, often with current, has whitetip reef sharks and eagle rays and suits advanced divers. Shallow inshore reefs host courses. The island is officially Swaraj Dweep."
+    },
+    "highlights": [
+      {
+        "zh": "Dixon's Pinnacle：鲹鱼、梭鱼与苏眉",
+        "en": "Dixon's Pinnacle: trevally, barracuda and Napoleon wrasse"
+      },
+      {
+        "zh": "Johnny's Gorge：白顶礁鲨、鹰鳐，偶有蝠鲼",
+        "en": "Johnny's Gorge: whitetip reef sharks, eagle rays, sometimes mantas"
+      },
+      {
+        "zh": "Jackson's Bar 平台上成群的魟鱼",
+        "en": "Groups of Kuhl's stingrays on the Jackson's Bar plateau"
+      },
+      {
+        "zh": "微距潜点：海蛞蝓、叶鱼、蝎子鱼",
+        "en": "Macro sites with nudibranchs, leaf fish and scorpionfish"
+      }
+    ],
+    "sources": [
+      "https://www.padi.com/diving-in/india/havelock-island-swaraj-dweep/",
+      "https://www.liveaboard.com/diving/india/andaman-islands",
+      "https://roughguides.com/article/a-guide-to-diving-the-andaman-islands",
+      "https://blog.padi.com/top-dive-sites-in-india-not-to-be-missed/",
+      "https://divernet.com/world-dives/barren-erupts/"
+    ],
+    "verified": true,
+    "notes": "季节：PADI Travel 写 10–5 月、高峰 12–3 月、6–9 月季风；liveaboard.com 写 1–4 月最佳（水温 28°C、能见度 25 m+）；Rough Guides 写 2–5 月最佳、7–9 月季风；Divernet（2016 年 Barren Island 船宿报道）写 2–4 月海况最稳。取 12–4，10–11 月与 5 月为肩季。安达曼-尼科巴旅游局网站的 Barren 火山游船页写 10–5 月天气好（非潜水专页）；官方潜水 PDF 超过抓取大小上限未能读取，andamantourism.gov.in 连接被拒。潜点与生物：PADI 博客写 Dixon's Pinnacle 外有鲹鱼、梭鱼、金枪鱼，岩峰边有海龟、苏眉；Johnny's Gorge 适合 AOW 且熟悉水流的潜水员，见白顶礁鲨、鹰鳐、鬼蝠鲼、偶有蝠鲼；The Wall 中到强流；Jackson's Bar 有成群的 Kuhl 魟。Rough Guides 写 25 个潜点、白顶礁鲨、巨型海鳗与微距。PADI Travel 列出鲨鱼、蝠鲼、海龟、儒艮、梭鱼，PADI 博客写儒艮'偶见'，未放进 species；海龟种类各来源未写，未加。水温 26–29、能见度 15–30（PADI Travel）。交通：Wikipedia 写政府渡轮每天 2–3 班，另有多家私营快船，停 Govind Nagar 码头；布莱尔港已改名 Sri Vijaya Puram（官方旅游网站已用新名），2018 年 12 月 Havelock 改名 Swaraj Dweep（Wikipedia）。liveaboard.com 页面仍写'与驻岛大象同潜'，已过时，未采用。坐标为岛中心（Wikipedia 11.96, 93.00），码头在岛东北岸。region 按分派写 southeast-asia；地理上在安达曼海西缘/孟加拉湾，若要归 indian-ocean 请合并时决定。外国游客入境与许可规定未核实，出行前要查。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "hafuluokedao andamanqundao hflkd admqd"
+  },
+  {
     "id": "hin-daeng",
     "name": {
       "zh": "兰塔岛（红石·紫石）",
@@ -1382,6 +2069,162 @@
     "notes": "季节 11–4 月三源一致（Divernet、liveaboard.com、DTW），5–10 月季风停潜。蝠鲼/鲸鲨 2–4 月（liveaboard.com、DTW）。到达方式有分歧：liveaboard.com 写兰塔岛快艇日潜约 1.5 小时单程或普吉出发，DTW 写其自己只做船宿、不提供日潜；两种都保留。水温 27–30 来自 DTW；能见度 liveaboard 15–30、DTW 20–30（摘要 15–40）。坐标取自 Aussie Divers Phuket 潜点页列出的 GPS（7.0908, 98.4914），仅此一源，与 DTW'普吉东南约 100 km / Phi Phi 以南 90 km'大致吻合，精度按 ±10 km 看待；兰塔岛 Saladan 码头约在 [99.05, 7.63]。属 Mu Ko Lanta 国家公园。",
     "updatedAt": "2026-10-20",
     "pinyin": "lantadao hongshi·zishi ltd hs·zs"
+  },
+  {
+    "id": "koh-chang",
+    "name": {
+      "zh": "象岛",
+      "en": "Koh Chang"
+    },
+    "country": {
+      "zh": "泰国",
+      "en": "Thailand"
+    },
+    "region": "southeast-asia",
+    "coords": [
+      102.32,
+      11.97
+    ],
+    "bestMonths": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "species": [
+      "barracuda",
+      "hard-coral",
+      "whale-shark"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "wreck"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      28,
+      30
+    ],
+    "visibilityM": [
+      5,
+      25
+    ],
+    "summary": {
+      "zh": "泰国湾东部的大岛，潜点多在南边的 Koh Rang 海洋国家公园，礁浅流小，适合考证。另一看点是 2012 年沉作人工礁的退役军舰 HTMS Chang，长约 100 米，坐底 30 米，偶有鲸鲨。",
+      "en": "A large island in the eastern Gulf of Thailand. Most diving is around Koh Rang in the marine national park to the south: shallow, gentle reefs suited to courses and easy dives. The other draw is HTMS Chang, a 100 m navy ship scuttled as an artificial reef in 2012, sitting on sand at 30 m with its top deck at 20 m. Whale sharks pass now and then."
+    },
+    "highlights": [
+      {
+        "zh": "HTMS Chang 沉船：顶层甲板 20 米、坐底 30 米",
+        "en": "HTMS Chang wreck: top deck at 20 m, seabed at 30 m"
+      },
+      {
+        "zh": "Koh Rang 一带浅礁，多数不超过 16 米",
+        "en": "Koh Rang's shallow reefs, mostly under 16 m"
+      },
+      {
+        "zh": "Hin Luk Bat 等岩礁有梭鱼群",
+        "en": "Barracuda shoals on pinnacles such as Hin Luk Bat"
+      },
+      {
+        "zh": "雨季可去背风的 Koh Wai",
+        "en": "Sheltered Koh Wai for rainy-season days"
+      }
+    ],
+    "sources": [
+      "https://www.padi.com/diving-in/koh-chang/",
+      "https://www.roughguides.com/thailand/east-coast/ko-chang/",
+      "https://www.thainationalparks.com/mu-ko-chang-national-park",
+      "https://bbdivers.com/koh-chang/dive-sites/",
+      "https://scubadiverlife.com/htms-chang-koh-changs-new-ship-wreck/"
+    ],
+    "verified": true,
+    "notes": "季节：PADI Travel 写 11–4 月旱季最佳、5–10 月季风期仍可潜背风点；Rough Guides 写约 11 月到 5 月有专门的浮潜船、6–10 月暴雨多；thainationalparks 写雨季 5–10 月、6–9 月雨最多。取 11–4，5 月为肩季。三个来源里只有 PADI 是潜水专页，另两个是旅游指南/公园页，季节一致但证据偏弱。HTMS Chang：BB Divers 与 Scuba Diver Life 都写 2012-11-22 沉下；BB Divers 写 100 m、坐底 30 m、顶层甲板 20 m、船长室与桅杆 12 m、离象岛约 30 分钟船程；Scuba Diver Life 写距象岛约 4 英里、各级别可潜，但坐底 30 m，按 AOW 看待。鲸鲨：BB Divers 只写沉船与 Hin Raab'偶尔'出现，未给月份；个人网站 iamkohchang 写 1–4 月，未采用。梭鱼：PADI 与 BB Divers（Hin Luk Bat、沉船）。来源只写'turtles'不分种类，未加海龟。水温 28–30（PADI）。能见度：PADI 写旱季常 20–30 m，BB Divers 各潜点 2–30 m 不等（近岸常 2–20 m），取 5–25。Rough Guides 提醒湾内一天只有一次主潮，珊瑚不如安达曼海一侧丰富。公园门票成人 200 THB（thainationalparks，2026-06），是否另收潜水费未查到。坐标为岛南端 Bang Bao 渔村码头（约值；Wikipedia 只给了全区坐标 12.10, 102.35），Koh Rang 约在 [102.39, 11.80]。中文名'象岛'为通行译名（拉廊府另有一个同名小岛，不是这里）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "xiangdao xd"
+  },
+  {
+    "id": "koh-phi-phi",
+    "name": {
+      "zh": "皮皮岛",
+      "en": "Koh Phi Phi"
+    },
+    "country": {
+      "zh": "泰国",
+      "en": "Thailand"
+    },
+    "region": "southeast-asia",
+    "coords": [
+      98.78,
+      7.75
+    ],
+    "bestMonths": [
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "species": [
+      "blacktip-reef-shark",
+      "leopard-shark",
+      "hawksbill",
+      "whale-shark"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "wall",
+      "wreck"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      27,
+      30
+    ],
+    "visibilityM": [
+      10,
+      25
+    ],
+    "summary": {
+      "zh": "安达曼海上的石灰岩群岛，可住大皮皮岛通赛村就近出海，也可从普吉或甲米一日往返。Bida Nok、Bida Nai 的峭壁和浅潟湖常见黑鳍礁鲨、豹纹鲨与玳瑁，流多半温和，适合新手。",
+      "en": "Limestone islands in the Andaman Sea, dived either from Ton Sai village on Phi Phi Don, with most sites a short ride away, or on day boats from Phuket and Krabi. The walls and shallow lagoon of Bida Nok and Bida Nai to the south turn up blacktip reef sharks, leopard sharks and hawksbill turtles, and currents are mostly gentle."
+    },
+    "highlights": [
+      {
+        "zh": "Bida Nok 峭壁与浅潟湖：黑鳍礁鲨、玳瑁",
+        "en": "Bida Nok's wall and lagoon: blacktip reef sharks and hawksbills"
+      },
+      {
+        "zh": "Hin Bida（皮皮岛的鲨鱼点）常见豹纹鲨",
+        "en": "Leopard sharks at Hin Bida, Phi Phi's own Shark Point"
+      },
+      {
+        "zh": "Bida Nai 的穿越洞、玻璃鱼群与海马",
+        "en": "Swim-through, glassfish and seahorses at Bida Nai"
+      },
+      {
+        "zh": "背风的 Palong Wall 适合新手与夜潜",
+        "en": "Sheltered Palong Wall for beginners and night dives"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-thailand-phi-phi-islands.php",
+      "https://www.padi.com/diving-in/koh-phi-phi/",
+      "https://www.thainationalparks.com/hat-noppharat-thara-mu-ko-phi-phi-national-park"
+    ],
+    "verified": true,
+    "notes": "季节：DTW 与 PADI Travel 都写全年可潜、最佳 2–5 月（两页措辞几乎一样，疑似同源，不算两个独立来源）；thainationalparks 写潜水浮潜宜在 11 或 12 月至 5 月、雨季 5–12 月船班减少。取 12–5；11 月西北风，多在西侧背风面潜。DTW：12–1 月最冷约 27°C、2–5 月 29–30°C；5 月底–10 月西南季风涌浪，能见度降约 25%，但很少因天气取消。能见度 DTW 摘要 5–20 m、季节段写 10–30 m，PADI 低季 10–15 m，取 10–25。物种：黑鳍礁鲨（Bida Nok、Maya Wall）、豹纹鲨（Hin Bida、Bida Nai/Nok）、玳瑁（Bida Nok、Maya Wall）均出自 DTW；鲸鲨与蝠鲼'某些季节经过 Bida Nok'（DTW），PADI 称浮游生物多时更可能见到，放末位。另有 Kled Gaeow 沉船（DTW 列为潜点）。DTW 写本岛最远潜点 35 分钟，但又写 Hin Bida 约 45 分钟，正文只写'就近出海'。门票（thainationalparks，2026-06）：外国成人 200 THB，潜水员另加 200 THB；Maya Bay 每年 8/1–9/30 关闭。坐标为大皮皮岛（Wikipedia 7.7529, 98.7786），通赛码头在其西南约 1 km，Bida 两岛在其南约 10 km。普吉东边的 Shark Point / Anemone Reef / King Cruiser 有时也被写进'皮皮潜水'，本条只收皮皮群岛本身，那几处归 phuket-racha。属 Hat Noppharat Thara–Mu Ko Phi Phi 国家公园。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "pipidao ppd"
   },
   {
     "id": "koh-tao",
@@ -1690,6 +2533,158 @@
     "pinyin": "tingbodao tbd"
   },
   {
+    "id": "phu-quoc",
+    "name": {
+      "zh": "富国岛",
+      "en": "Phu Quoc"
+    },
+    "country": {
+      "zh": "越南",
+      "en": "Vietnam"
+    },
+    "region": "southeast-asia",
+    "coords": [
+      104.01,
+      10.02
+    ],
+    "bestMonths": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "species": [
+      "nudibranch",
+      "hard-coral",
+      "soft-coral"
+    ],
+    "level": "OW",
+    "types": [
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      26,
+      31
+    ],
+    "visibilityM": [
+      5,
+      15
+    ],
+    "summary": {
+      "zh": "越南西南端的度假大岛，潜水以考证和轻松潜为主。南端 An Thoi 群岛的十几座小岛潜点最多，水深 5–25 米，看软硬珊瑚和海蛞蝓，偶有蓝点魟和竹鲨；西北的海龟岛水浅不过 10 米，适合新手和浮潜。",
+      "en": "A large resort island off Vietnam's southwest coast, where diving is mostly courses and easy reef dives. The better sites are around the 15 islets of the An Thoi archipelago off the southern tip, at 5–25 m, with hard and soft corals and nudibranchs, plus the odd blue-spotted ray or bamboo shark. Turtle Island in the northwest is rarely deeper than 10 m and suits beginners and snorkellers."
+    },
+    "highlights": [
+      {
+        "zh": "An Thoi 群岛的珊瑚礁，水深 5–25 米",
+        "en": "Coral reefs of the An Thoi islets, 5–25 m"
+      },
+      {
+        "zh": "海蛞蝓、乌贼、章鱼等小型生物",
+        "en": "Small life: nudibranchs, cuttlefish, octopus"
+      },
+      {
+        "zh": "西北的海龟岛水浅，适合新手与浮潜",
+        "en": "Shallow Turtle Island in the northwest for beginners and snorkellers"
+      }
+    ],
+    "sources": [
+      "https://www.vietnam.travel/things-to-do/ideal-places-scuba-diving-vietnam",
+      "https://www.roughguides.com/articles/where-to-go-diving-in-vietnam/",
+      "https://www.padi.com/diving-in/phu-quoc/",
+      "https://e.vnexpress.net/news/places/four-best-diving-spots-in-vietnam-4617678.html"
+    ],
+    "verified": true,
+    "notes": "季节：越南国家旅游局潜水合集页、Rough Guides（An Thoi 与 Turtle Island 两节都写 11–5 月、6–10 月避开）、VnExpress（2023）均写 11–5 月；PADI Travel 写旱季 10–5 月、最佳 10–4 月。按旅游局取 11–5。水温 VnExpress 26–29、PADI 28–31，取 26–31。能见度：打开的来源都没给数字；搜索摘要里 localvietnam 写平静时 10–20 m（12–3 月）、phuquocislandguide 写'最多 4 m'，按 5–15 估，待补。潜店会按海况在西北岸与南端之间选（搜索摘要）。物种：PADI 列软硬珊瑚、海蛞蝓、乌贼、章鱼、蝎子鱼，偶见竹鲨、海蛇、蓝点魟；Rough Guides 写 An Thoi 有脑珊瑚和柳珊瑚、偶有蓝点魟与竹鲨；旅游局与 VnExpress 提到海马，物种表没有对应条目，未新增；VnExpress 写西岸 Doi Moi 岛可见海龟（未写种类），未加。没有招牌大货，species 只放珊瑚与海蛞蝓。交通：经胡志明市转机或少数国际直飞，迪石（Rach Gia）快船 1.5–2.5 h（PADI）；潜水船从 An Thoi 港出发，到主要潜点约 45 分钟（Rough Guides）；Turtle Island 从 Ganh Dau 或 Dinh Cau 码头出发 30–45 分钟。坐标为南端 An Thoi 港（约值；Wikipedia 只给了全岛坐标 10.23, 103.95）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "fuguodao fgd"
+  },
+  {
+    "id": "phuket-racha",
+    "name": {
+      "zh": "普吉岛（皇帝岛）",
+      "en": "Phuket – Racha Islands"
+    },
+    "country": {
+      "zh": "泰国",
+      "en": "Thailand"
+    },
+    "region": "southeast-asia",
+    "coords": [
+      98.36,
+      7.61
+    ],
+    "bestMonths": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "species": [
+      "leopard-shark",
+      "reef-manta",
+      "hawksbill",
+      "jack-school"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "wreck",
+      "drift"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      26,
+      30
+    ],
+    "visibilityM": [
+      10,
+      30
+    ],
+    "summary": {
+      "zh": "普吉日潜从查龙湾出发，分两条线。往南是大小皇帝岛：大皇帝岛坡缓水浅，是考证主场；小皇帝岛更深、流更强，偶有蝠鲼。往东是鲨鱼点、海葵礁和 1997 年沉没的 King Cruiser 渡轮，常一天潜完。",
+      "en": "Phuket's day boats leave Chalong Bay on two main routes. South are the Racha islands: Racha Yai's gentle slopes host much of the island's training, while deeper, current-swept Racha Noi gets occasional mantas. East, Shark Point, Anemone Reef and the King Cruiser, a car ferry that sank in 1997 and lies at up to 30 m, are usually combined in one day."
+    },
+    "highlights": [
+      {
+        "zh": "大皇帝岛的缓坡浅礁，考证与复习潜的主场",
+        "en": "Racha Yai's gentle reefs, the main training ground"
+      },
+      {
+        "zh": "小皇帝岛南角放流，偶有蝠鲼与鲸鲨",
+        "en": "Drift dives off Racha Noi's south point, with occasional mantas and whale sharks"
+      },
+      {
+        "zh": "鲨鱼点沙地上休息的豹纹鲨",
+        "en": "Leopard sharks resting on the sand at Shark Point"
+      },
+      {
+        "zh": "King Cruiser 渡轮沉船，16–30 米，常有流",
+        "en": "King Cruiser ferry wreck, 16–30 m, often with current"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-thailand-phuket.php",
+      "https://www.padi.com/diving-in/phuket/",
+      "https://www.divessi.com/en/blog/scuba-diving-in-phuket-guide-2154",
+      "https://blog.padi.com/cn/dive-in-phuket/"
+    ],
+    "verified": true,
+    "notes": "季节：DTW 写全年可潜、高季 11–4 月且越往后越好，6–9 月低季多雨浪大，普吉船宿 10 月底–5 月中；PADI Travel 普吉页写最佳 11–4 月、2–3 月尤佳。取 11–4。PADI 中文博客称岸潜只在 11–4 月可行（岸潜未收入本条）。距离：SSI 写大皇帝岛在普吉以南 12 海里、小皇帝岛 20 海里；DTW 写 Shark Point 在查龙湾以东约 25 km；PADI 中文博客写去大小皇帝岛船程约 2 小时。深度：SSI 写大皇帝岛最深 21 m、小皇帝岛 30 m 以上、King Cruiser 16–30 m（1997 年沉没的汽车渡轮）；DTW 写大皇帝岛 3–30 m、小皇帝岛常从 18 m 起潜、King Cruiser 约 30 m 且'不适合完全新手'。PADI 中文博客称 Shark Point 自 1992 年起为海洋生态保护区。物种出处：蝠鲼、偶见鲸鲨、鲹鱼群在小皇帝岛（DTW）；豹纹鲨在 Shark Point（DTW、SSI、PADI 中文）；玳瑁在 Anemone Reef 与 King Cruiser（DTW）。水温 26°C（1–2 月）–30°C（5–6 月，DTW）；能见度 DTW 汇总 5–40 m，取 10–30。中文名：PADI 中文博客写'大小皇帝岛'、'鲨鱼角/鲨鱼点'、'海葵礁'，King Cruiser 被译作'宋神号沉船'，不通行，正文保留英文。等级：大皇帝岛 OW 即可，小皇帝岛南角与 King Cruiser 要进阶，整体按 OW 标。与 koh-phi-phi 的 Hin Bida（皮皮岛鲨鱼点）不是同一处。坐标为 Ko Racha 群岛（Wikipedia 7.6106, 98.3632），查龙码头约在 [98.34, 7.82]。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "pujidao huangdidao pjd hdd"
+  },
+  {
     "id": "redang",
     "name": {
       "zh": "热浪岛",
@@ -1766,6 +2761,86 @@
     "notes": "季节：PADI Travel 写 3–10 月、旺季 6–8 月、11–2 月关闭；Wonderful Malaysia 写 4–10 月最佳、'10 月可能已太晚'、季风 11–3 月（仅 Taaras 一家度假村不关）。取 4–9 作为稳妥月份，3 月与 10 月为肩季。官方海洋公园网站（marinepark.dof.gov.my）维护中打不开，搜索摘要称其写东北季风 11–3 月。海龟：The Star 写 Chagar Hutang 由 UMT 海龟研究组（SEATRU）自 1993 年研究、2005 年设保护区，年产卵约 1,000–1,500 窝；产卵 5–9 月、高峰 5–7 月来自搜索摘要，保护区禁止一般旅游活动，只能参加度假村安排的教育行程。水温无直接来源，参照同海岸停泊岛 28–31 取 28–30。能见度 PADI 20–30、搜索摘要 18–20，取 15–30。坐标为 Pasir Panjang 海滩一带。",
     "updatedAt": "2026-10-20",
     "pinyin": "relangdao rld"
+  },
+  {
+    "id": "richelieu-rock",
+    "name": {
+      "zh": "黎塞留岩",
+      "en": "Richelieu Rock"
+    },
+    "country": {
+      "zh": "泰国",
+      "en": "Thailand"
+    },
+    "region": "southeast-asia",
+    "coords": [
+      98.02,
+      9.36
+    ],
+    "bestMonths": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "species": [
+      "whale-shark",
+      "barracuda",
+      "jack-school",
+      "reef-manta",
+      "nudibranch"
+    ],
+    "level": "AOW",
+    "types": [
+      "reef",
+      "pelagic"
+    ],
+    "access": [
+      "liveaboard",
+      "boat"
+    ],
+    "waterTempC": [
+      26,
+      29
+    ],
+    "visibilityM": [
+      10,
+      30
+    ],
+    "summary": {
+      "zh": "素林国家公园里一座孤立的马蹄形石灰岩礁，岩顶贴近水面，底部约 35 米。2–4 月浮游生物多时常有鲸鲨来访，但不保证；没有鲸鲨的日子，海马、小丑虾、剃刀鱼和成群的梭鱼也够潜好几次。",
+      "en": "A lone horseshoe of limestone in Mu Ko Surin National Park, its top just under the surface and its base near 35 m. When plankton peaks from February to April whale sharks visit often, though never reliably; on other days seahorses, harlequin shrimp, ghost pipefish and chevron barracuda fill several dives. Currents vary, and most divers come on Khao Lak liveaboards or long speedboat day trips."
+    },
+    "highlights": [
+      {
+        "zh": "2–4 月鲸鲨机会最高，蝠鲼偶尔来清洁站",
+        "en": "Best whale shark odds Feb–Apr; mantas visit the cleaning stations"
+      },
+      {
+        "zh": "海马、小丑虾、剃刀鱼等微距",
+        "en": "Macro: seahorses, harlequin shrimp, ghost pipefish"
+      },
+      {
+        "zh": "岩顶周围的梭鱼与鲹鱼群",
+        "en": "Chevron barracuda and trevally schools around the top"
+      },
+      {
+        "zh": "可从 Khao Lak 坐快艇一日往返",
+        "en": "Doable as a speedboat day trip from Khao Lak"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-thailand-richelieu-rock.php",
+      "https://www.liveaboard.com/diving/thailand/richelieu-rock",
+      "https://www.thainationalparks.com/mu-ko-surin-national-park",
+      "https://www.divessi.com/cn/blog/best-similan-islands-diving-1543"
+    ],
+    "verified": true,
+    "notes": "季节：thainationalparks（素林国家公园页）写公园 10/15–5/15 开放、天气差可能提前关闭；DTW 写 10 月–5 月初、5 月–10 月初海况差关闭；liveaboard.com 写 10–5 月以外禁潜。bestMonths 与 similan 条目一致取 11–4，10 月下半月与 5 月上半月为肩季。鲸鲨/蝠鲼 2–4 月（DTW、liveaboard.com 一致），3–4 月浮游生物多、能见度下降。坐标取 thainationalparks 页给出的 9.36277, 98.02194（该页称礁体约在素林群岛东南 18 km、离岸 45 km，最深约 28 m；DTW 写 5–35 m，liveaboard.com 写最大 35 m）。到达：DTW 写 Khao Lak 快艇 1–2 h、船宿 3–4 h、建议至少 3 天；liveaboard.com FAQ 写一日游单程 2.5–3 h、船宿通常 4 晚起；三处给的距离（40/70/80 km）互相矛盾，正文不写距离。等级：DTW intermediate–advanced，liveaboard.com 'more advanced'，thainationalparks 称新手也可，取 AOW。水温 26–29（DTW）；能见度 DTW 15–35、liveaboard.com 浮游生物爆发时约 9 m，PADI 中文潜点页写平日 10–15、晴天可到 35，取 10–30。frogfish 只有 liveaboard.com 提到，未写进 species。单独成条的理由：Khao Lak 有专跑黎塞留岩的快艇一日游，素林方向的船宿也以它为主卖点；similan 条目 highlights 第一条目前写的就是 Richelieu Rock，合并时建议把那条换掉以免重复。中文名：SSI 中文博客写'黎塞留岩'，PADI 中文页'黎塞留岩石'，liveaboard.com 中文页'瑞察硫岩'，网上也见'理查德岩'（误译）；取黎塞留岩，不加括号别名。素林国家公园门票成人 500 THB（thainationalparks）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "lisailiuyan lsly"
   },
   {
     "id": "similan",
