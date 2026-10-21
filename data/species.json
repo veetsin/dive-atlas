@@ -883,5 +883,329 @@
     "tags": [
       "big"
     ]
+  },
+  {
+    "id": "seahorse",
+    "name": {
+      "zh": "海马",
+      "en": "Seahorse"
+    },
+    "sci": "Hippocampus spp.",
+    "sprite": "seahorse",
+    "sizeClass": "s",
+    "lengthM": 0.15,
+    "tags": [
+      "macro"
+    ]
+  },
+  {
+    "id": "clownfish",
+    "name": {
+      "zh": "小丑鱼",
+      "en": "Clownfish"
+    },
+    "sci": "Amphiprion clarkii",
+    "sprite": "clownfish",
+    "sizeClass": "s",
+    "lengthM": 0.12,
+    "tags": [
+      "reef",
+      "macro"
+    ]
+  },
+  {
+    "id": "white-spotted-pufferfish",
+    "name": {
+      "zh": "星空河豚（麦田圈河豚）",
+      "en": "White-spotted pufferfish"
+    },
+    "sci": "Torquigener albomaculosus",
+    "sprite": "white-spotted-pufferfish",
+    "sizeClass": "s",
+    "lengthM": 0.12,
+    "tags": [
+      "sand",
+      "behaviour"
+    ]
+  },
+  {
+    "id": "clione",
+    "name": {
+      "zh": "海天使（裸海蝶）",
+      "en": "Sea angel"
+    },
+    "sci": "Clione limacina",
+    "sprite": "clione",
+    "sizeClass": "s",
+    "lengthM": 0.03,
+    "tags": [
+      "coldwater",
+      "macro"
+    ]
+  },
+  {
+    "id": "black-coral",
+    "name": {
+      "zh": "黑珊瑚",
+      "en": "Black coral"
+    },
+    "sci": "Antipathella fiordensis",
+    "sprite": "black-coral",
+    "sizeClass": "m",
+    "lengthM": 2,
+    "tags": [
+      "coral",
+      "coldwater"
+    ]
+  },
+  {
+    "id": "jewel-anemone",
+    "name": {
+      "zh": "宝石海葵",
+      "en": "Jewel anemone"
+    },
+    "sci": "Corynactis australis",
+    "sprite": "jewel-anemone",
+    "sizeClass": "s",
+    "lengthM": 0.02,
+    "tags": [
+      "macro",
+      "coldwater"
+    ]
+  },
+  {
+    "id": "leafy-seadragon",
+    "name": {
+      "zh": "叶海龙",
+      "en": "Leafy seadragon"
+    },
+    "sci": "Phycodurus eques",
+    "sprite": "leafy-seadragon",
+    "sizeClass": "s",
+    "lengthM": 0.35,
+    "tags": [
+      "coldwater"
+    ]
+  },
+  {
+    "id": "giant-cuttlefish",
+    "name": {
+      "zh": "澳洲巨型乌贼",
+      "en": "Giant Australian cuttlefish"
+    },
+    "sci": "Sepia apama",
+    "sprite": "giant-cuttlefish",
+    "sizeClass": "s",
+    "lengthM": 0.6,
+    "tags": [
+      "coldwater"
+    ]
+  },
+  {
+    "id": "southern-right-whale",
+    "name": {
+      "zh": "南露脊鲸",
+      "en": "Southern right whale"
+    },
+    "sci": "Eubalaena australis",
+    "sprite": "southern-right-whale",
+    "sizeClass": "xl",
+    "lengthM": 15,
+    "tags": [
+      "whale",
+      "big",
+      "coldwater"
+    ]
+  },
+  {
+    "id": "dourado",
+    "name": {
+      "zh": "黄金河虎",
+      "en": "Golden dorado"
+    },
+    "sci": "Salminus brasiliensis",
+    "sprite": "dourado",
+    "sizeClass": "s",
+    "lengthM": 0.8,
+    "tags": [
+      "freshwater"
+    ]
+  },
+  {
+    "id": "broadnose-sevengill-shark",
+    "name": {
+      "zh": "七鳃鲨（扁头哈那鲨）",
+      "en": "Broadnose sevengill shark"
+    },
+    "sci": "Notorynchus cepedianus",
+    "sprite": "broadnose-sevengill-shark",
+    "sizeClass": "l",
+    "lengthM": 2.5,
+    "tags": [
+      "shark",
+      "coldwater"
+    ]
+  },
+  {
+    "id": "loggerhead-turtle",
+    "name": {
+      "zh": "红海龟",
+      "en": "Loggerhead turtle"
+    },
+    "sci": "Caretta caretta",
+    "sprite": "loggerhead-turtle",
+    "sizeClass": "m",
+    "lengthM": 0.9,
+    "tags": [
+      "turtle"
+    ]
+  },
+  {
+    "id": "basking-shark",
+    "name": {
+      "zh": "姥鲨",
+      "en": "Basking shark"
+    },
+    "sci": "Cetorhinus maximus",
+    "sprite": "basking-shark",
+    "sizeClass": "xl",
+    "lengthM": 8,
+    "tags": [
+      "pelagic",
+      "big",
+      "coldwater"
+    ]
+  },
+  {
+    "id": "manatee",
+    "name": {
+      "zh": "海牛",
+      "en": "West Indian manatee"
+    },
+    "sci": "Trichechus manatus",
+    "sprite": "manatee",
+    "sizeClass": "l",
+    "lengthM": 3,
+    "tags": [
+      "big"
+    ]
+  },
+  {
+    "id": "angel-shark",
+    "name": {
+      "zh": "扁鲨（天使鲨）",
+      "en": "Angelshark"
+    },
+    "sci": "Squatina squatina",
+    "sprite": "angel-shark",
+    "sizeClass": "m",
+    "lengthM": 1.5,
+    "tags": [
+      "shark"
+    ]
+  },
+  {
+    "id": "red-coral",
+    "name": {
+      "zh": "红珊瑚",
+      "en": "Red coral"
+    },
+    "sci": "Corallium rubrum",
+    "sprite": "red-coral",
+    "sizeClass": "s",
+    "lengthM": 0.2,
+    "tags": [
+      "coral"
+    ]
+  },
+  {
+    "id": "red-gorgonian",
+    "name": {
+      "zh": "红柳珊瑚",
+      "en": "Red gorgonian"
+    },
+    "sci": "Paramuricea clavata",
+    "sprite": "red-gorgonian",
+    "sizeClass": "m",
+    "lengthM": 1,
+    "tags": [
+      "coral"
+    ]
+  },
+  {
+    "id": "wolf-eel",
+    "name": {
+      "zh": "狼鳗",
+      "en": "Wolf eel"
+    },
+    "sci": "Anarrhichthys ocellatus",
+    "sprite": "wolf-eel",
+    "sizeClass": "m",
+    "lengthM": 2,
+    "tags": [
+      "coldwater"
+    ]
+  },
+  {
+    "id": "giant-pacific-octopus",
+    "name": {
+      "zh": "巨型太平洋章鱼",
+      "en": "Giant Pacific octopus"
+    },
+    "sci": "Enteroctopus dofleini",
+    "sprite": "giant-pacific-octopus",
+    "sizeClass": "m",
+    "lengthM": 3,
+    "tags": [
+      "coldwater"
+    ]
+  },
+  {
+    "id": "walrus",
+    "name": {
+      "zh": "海象",
+      "en": "Walrus"
+    },
+    "sci": "Odobenus rosmarus",
+    "sprite": "walrus",
+    "sizeClass": "l",
+    "lengthM": 3,
+    "tags": []
+  },
+  {
+    "id": "wolffish",
+    "name": {
+      "zh": "狼鱼",
+      "en": "Atlantic wolffish"
+    },
+    "sci": "Anarhichas lupus",
+    "sprite": "wolffish",
+    "sizeClass": "m",
+    "lengthM": 1.2,
+    "tags": []
+  },
+  {
+    "id": "atlantic-cod",
+    "name": {
+      "zh": "大西洋鳕",
+      "en": "Atlantic cod"
+    },
+    "sci": "Gadus morhua",
+    "sprite": "atlantic-cod",
+    "sizeClass": "m",
+    "lengthM": 1,
+    "tags": []
+  },
+  {
+    "id": "penguin",
+    "name": {
+      "zh": "企鹅",
+      "en": "Penguin"
+    },
+    "sci": "Pygoscelis papua",
+    "sprite": "penguin",
+    "sizeClass": "s",
+    "lengthM": 0.8,
+    "tags": []
   }
 ]

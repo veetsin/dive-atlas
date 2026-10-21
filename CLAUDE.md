@@ -35,7 +35,8 @@
 - `npm run dev` 开发 · `npm run build` 构建 · `npm run check` 类型检查 · `npm run preview` 预览构建产物
 - `npm run geo` 下载 Natural Earth 数据并生成 `public/geo/countries.topo.json`（需要网络，幂等；`-- --detail` 多出放大用的版本）
 - `npm run preview:map [宽 高]` 无浏览器渲染底图到 `preview/map-<宽>.svg|png`，改投影 / 底图后用它看效果
-- `npm run data:validate` 校验 `data/*.json`（字段、坐标范围、物种引用、来源）
+- `npm run data:validate` 校验 `data/*.json`（字段、坐标范围、物种引用、来源）+ `data:geo` 地理校验（离岸距离、国家、重复；首次先 `npm run geo` 缓存 10m 原始数据）
+- 扩充潜点：枚举 workflow（清单型来源）→ `node scripts/select-candidates.mjs <enum.json>`（去重、自动入选、分批）→ 补全 workflow（每潜点 ≤ 2 次搜索）→ 合并、`data:pinyin`、`data:validate`；品牌域名（padi / ssi / 小红书）只做对照，`check:dist` 会扫出任何品牌字样
 - 贴纸处理：`uv run --python 3.13 --with 'rembg[cpu]' --with pillow python scripts/process-sprites.py <grid.png> --grid 2x2 --ids a,b,c,d`
   （本机 `python3` 是 3.14 且 pyexpat 损坏，`npm run sprites` 会失败；详见 `docs/ILLUSTRATION_GUIDE.md` §6）
 - 改完代码的收尾动作固定为：`npm run check && npm run data:validate && npm run build && npm run check:dist`（最后一步扫描 dist 里的运行时外链与 gzip 总量）
@@ -93,7 +94,7 @@ art/raw/                  ← GPT 原始出图（gitignore，体积大）
 - [x] 贴纸 B1–B13：52 个物种中 51 个已有贴纸（玻璃鱼群待第二波数据后凑 B14），全部 `--outline 2.5`、体积达标；B12 布氏鲸、B13 硬珊瑚、B09 护士鲨建议局部重画（指令在 `art/prompts/出图教程-B8-B13.md`）；D1–D2 装饰未画
 - [x] 底图风格重设计落地：日 / 夜主题、海域名、图框罗盘；1280 与 375、日夜四种组合已在浏览器确认；顺带修了 zoom 重建弹回、深链接被抽屉遮挡、`role="img"`、`color-mix` 等缺陷
 - [x] 足迹 + 分享图 + 二维码（SPEC §6.1 #10–#12）：`stores.ts` 的 `footprint` / `viewing` 与位图编解码、`share-image.ts`（Canvas2D + lean-qr）、`FootprintPanel.svelte`、`data/footprint-index.json`；浏览器里已验证标记、分享图、`?d=&w=` 查看模式不落盘、导入覆盖。**真机未测**：微信长按保存 / 识别二维码、低端安卓渲染耗时
-- [ ] v1 潜点数据：**目标 ≥ 200 个**（用户要求不少于参考图）。2026-10-21 第一波（4 区域）+ 1b（5 区域）已合并 **79 个**潜点、51 个物种、11 个区域（含新加的 east-asia），每条带来源与维护 notes；第二波（11 个区域、约 115 个）用 Opus 5.5 在跑。研究类 agent 一律用 `claude-opus-5-5` / `max`（用户要求）。物种中文名策略见 ILLUSTRATION_GUIDE §3.4
+- [x] v1 潜点数据（2026-10-21）：**320 个潜点**、86 个物种、11 个区域。前两波按区域手写 brief 做深度研究（慢、漏点）；第三波 136 个改为"枚举清单型来源 → `scripts/select-candidates.mjs` 自动入选 → 每潜点 ≤ 2 次搜索的补全 → `data:validate` 内的脚本地理校验"，23 分钟 + 15 分钟跑完。`verified:false` 的在 UI 显示"待核实"；研究 agent 一律 Opus 5.5（研究 max、代码 xhigh）
 - [x] 区域聚合气泡（SPEC §6.1 #13）：桌面 < 1.6x、窄屏 < 2.6x 且区域可见潜点 ≥ 3 时折叠为"区域色外环 + 当季数 + 区域名"的气泡，点击缩放到该区域；稀疏区域仍显示单个贴纸
 - [x] 地球模式（2026-10-21，SPEC §5.5、§6.1 #14）：工具栏地球按钮、`?view=globe` + `localStorage dive-atlas:view`、MapView 内切模式（d3-zoom 事件改读为旋转 / 中心缩放）、大圆飞行、运动 LOD（旋转中隐藏 s1–s3，飞行中再隐藏 s4 与海名，抽稀陆地 `landLo`）；无头自检 `npm run preview:map 375 700 night globe` 会在有潜点落在圆盘外时报错。6× 慢 CPU 模拟：拖动达标，搜索飞行因开卡那一帧 83 ms 略超，**真机 / 微信未测**
 - [x] 搜索（中文 / 英文 / 拼音 / 国家）：工具栏放大镜 → `SearchPanel.svelte`，选中后 `openSite()` 飞到潜点；`pinyin` 字段由 `npm run data:pinyin` 生成并被校验脚本要求；`?sp=` 物种筛选现在有可关闭的芯片
