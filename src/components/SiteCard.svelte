@@ -151,7 +151,7 @@
     <button class="primary" onclick={copyLink}>{copied ? $t('card.copied') : $t('card.copyLink')}</button>
     {#if copyFailed}
       <p class="muted">{$t('card.longPressCopy')}</p>
-      <input class="url" readonly value={shareUrl()} onfocus={(e) => e.currentTarget.select()} />
+      <input class="url" readonly value={shareUrl()} onclick={(e) => e.currentTarget.setSelectionRange(0, 9999)} />
     {/if}
   </footer>
 </aside>
@@ -291,6 +291,10 @@
     margin: 0;
     padding-left: 18px;
     font-size: 12px;
+  }
+  .sources a {
+    display: inline-block;
+    padding: 9px 0; /* ≥ 40 px tap rows: a mis-tap here leaves the app for an external site */
   }
   .muted {
     color: var(--ink-soft);

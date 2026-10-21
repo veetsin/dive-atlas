@@ -9,7 +9,7 @@
 
 <style>
   .theme {
-    height: 36px;
+    height: 40px;
     padding: 0 14px;
     border-radius: 999px;
     background: var(--glass);

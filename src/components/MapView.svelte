@@ -263,7 +263,8 @@
 
   // ---- interaction ----
   function select_(id: string) {
-    selectedSiteId.set($selectedSiteId === id ? null : id);
+    // Never toggle: a double-tap (which d3-zoom also treats as zoom) must not close the card again.
+    selectedSiteId.set(id);
   }
 
   function refreshEquator() {
@@ -319,6 +320,7 @@
     if (!el) return;
     const zb = d3zoom<SVGSVGElement, unknown>()
       .scaleExtent(ZOOM_EXTENT)
+      .duration(matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 250)
       .on('zoom', (e) => {
         zoomT = e.transform;
       })
@@ -338,13 +340,22 @@
     };
   });
 
-  // Viewport changes only move the pan limits; they never rebuild the behaviour.
+  // Viewport changes only move the pan limits; they never rebuild the behaviour. A height change
+  // (keyboard, WeChat toolbar, rotation) re-fits the projection vertically by Δh/2, so shift the
+  // view by the same amount to keep what the user is looking at in place.
+  let prevHeight = 0;
   $effect(() => {
     if (!width || !height) return;
-    zoomBehavior?.translateExtent([
+    const zb = zoomBehavior;
+    const el = svgEl;
+    if (!zb || !el) return;
+    zb.translateExtent([
       [0, 0],
       [width, height],
     ]);
+    const dh = prevHeight ? height - prevHeight : 0;
+    prevHeight = height;
+    if (dh) untrack(() => zb.translateBy(select(el), 0, -dh / 2));
   });
 
   // Search results and other "take me there" requests.
@@ -769,6 +780,7 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
+    will-change: transform; /* own compositor layer: WebKit would otherwise repaint the tile every zoom frame */
     opacity: 0.16;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0.6 0.6 0 -0.5'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E")
       0 0 / 200px 200px;

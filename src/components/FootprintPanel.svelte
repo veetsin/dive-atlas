@@ -20,15 +20,15 @@
 
   // Move focus into the share sheet when it opens and back to the trigger when it closes.
   $effect(() => {
-    if (img) sheetClose?.focus();
-    else shareBtn?.focus();
+    if (img) sheetClose?.focus({ preventScroll: true });
+    else shareBtn?.focus({ preventScroll: true });
   });
 
   async function share() {
     busy = true;
     failed = false;
     // let the "rendering…" label paint before the canvas work blocks the thread
-    await new Promise((r) => requestAnimationFrame(() => r(null)));
+    await new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0)));
     try {
       img = await renderShareImage(fp, $lang, {
         title: $t('footprint.shareTitle'),
@@ -102,7 +102,7 @@
     <button class="secondary wide" onclick={copy}>{copied ? $t('card.copied') : $t('footprint.copyLink')}</button>
     {#if copyFailed}
       <p class="muted">{$t('card.longPressCopy')}</p>
-      <input class="url" readonly value={url} onfocus={(e) => e.currentTarget.select()} />
+      <input class="url" readonly value={url} onclick={(e) => e.currentTarget.setSelectionRange(0, 9999)} />
     {/if}
     {#if failed}<p class="muted">{$t('footprint.shareFailed')}</p>{/if}
     <p class="muted">{$t('footprint.privacy')}</p>

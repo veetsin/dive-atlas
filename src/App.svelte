@@ -29,17 +29,32 @@
   function closePanel() {
     const opener = panel ? openers[panel] : undefined;
     panel = null;
-    opener?.focus();
+    opener?.focus({ preventScroll: true });
+  }
+
+  // The Android back button / iOS edge swipe should close the open layer, not leave the page:
+  // push one history entry while something is open and close on popstate.
+  const overlayOpen = $derived(!!$selectedSiteId || panel !== null);
+  $effect(() => {
+    if (overlayOpen && !history.state?.overlay) {
+      try {
+        history.pushState({ overlay: true }, '', location.href);
+      } catch {
+        /* ignore */
+      }
+    }
+  });
+  function closeAll() {
+    selectedSiteId.set(null);
+    panel = null;
   }
 </script>
 
 <svelte:window
   onkeydown={(e) => {
-    if (e.key === 'Escape') {
-      selectedSiteId.set(null);
-      panel = null;
-    }
+    if (e.key === 'Escape') closeAll();
   }}
+  onpopstate={closeAll}
 />
 
 <div class="app">
@@ -159,8 +174,10 @@
   .banner {
     position: absolute;
     top: 112px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 8px;
+    right: 8px;
+    margin: 0 auto;
+    width: fit-content;
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
@@ -175,7 +192,7 @@
     font-size: 13px;
   }
   .banner button {
-    height: 30px;
+    height: 40px;
     padding: 0 12px;
     border-radius: 999px;
     background: var(--coral);
@@ -277,6 +294,12 @@
       max-height: 70vh;
       max-height: 70dvh;
       padding: 0 8px calc(8px + env(safe-area-inset-bottom));
+      /* definite height for the card's max-height:100%, otherwise the drawer never scrolls */
+      display: flex;
+      flex-direction: column;
+    }
+    .panel :global(.card) {
+      overscroll-behavior: contain;
     }
     .panel :global(.card) {
       border-radius: 18px 18px var(--radius) var(--radius);

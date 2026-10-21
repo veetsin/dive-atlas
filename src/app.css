@@ -68,6 +68,8 @@ html,
 body {
   margin: 0;
   height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none; /* no rubber-band / "网页由…提供" pull-down inside WeChat */
   background: var(--ocean-deep);
   color: var(--ink);
   font-family: var(--font-sans);
@@ -94,7 +96,7 @@ a {
 
 /* Floating control over the map (language / theme / footprint buttons). */
 .pill {
-  height: 36px;
+  height: 40px;
   padding: 0 14px;
   border-radius: 999px;
   background: var(--glass);
