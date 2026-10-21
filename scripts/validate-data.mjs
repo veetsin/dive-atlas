@@ -40,6 +40,11 @@ for (const s of species) {
   if (!SIZES.has(s.sizeClass)) err(ctx, `sizeClass must be one of ${[...SIZES].join('|')}`);
   if (s.lengthM !== undefined && !(typeof s.lengthM === 'number' && s.lengthM > 0 && s.lengthM <= 40)) err(ctx, 'lengthM must be a number in (0, 40]');
   if (s.lengthM === undefined) warn(ctx, 'no lengthM — sprite falls back to sizeClass');
+  if (!hasText(s.blurb)) err(ctx, 'blurb needs zh and en');
+  else {
+    if (cjkLen(s.blurb.zh) > 60) err(ctx, `blurb.zh is ${cjkLen(s.blurb.zh)} chars (limit 60)`);
+    if (wordLen(s.blurb.en) > 45) err(ctx, `blurb.en is ${wordLen(s.blurb.en)} words (limit 45)`);
+  }
 }
 
 // ---- regions ----

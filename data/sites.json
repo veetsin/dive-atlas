@@ -2070,7 +2070,7 @@
     "species": [
       "broadnose-sevengill-shark",
       "giant-kelp",
-      "seal"
+      "sea-lion"
     ],
     "level": "OW",
     "types": [
@@ -2284,7 +2284,7 @@
     ],
     "species": [
       "great-white-shark",
-      "seal",
+      "sea-lion",
       "dolphin"
     ],
     "level": "OW",
@@ -14355,7 +14355,7 @@
     ],
     "species": [
       "black-coral",
-      "seal",
+      "sea-lion",
       "nudibranch"
     ],
     "level": "AOW",

@@ -56,6 +56,8 @@ export interface Species {
   /** Typical adult length in metres (for schools: the size of the school as seen); drives sprite size on the map. */
   lengthM?: number;
   tags?: string[];
+  /** One- or two-sentence intro shown in the species panel: looks + where divers usually meet it. */
+  blurb: LocalizedText;
 }
 
 export interface Region {

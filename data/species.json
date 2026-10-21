@@ -12,7 +12,11 @@
       "pelagic",
       "big"
     ],
-    "lengthM": 10
+    "lengthM": 10,
+    "blurb": {
+      "zh": "世界上最大的鱼，灰蓝背上布满白点。滤食浮游生物，常在近水面慢游，对人无害。",
+      "en": "The world's largest fish, blue-grey with white spots. A harmless plankton feeder, often cruising slowly near the surface."
+    }
   },
   {
     "id": "reef-manta",
@@ -26,7 +30,11 @@
     "tags": [
       "big"
     ],
-    "lengthM": 3.5
+    "lengthM": 3.5,
+    "blurb": {
+      "zh": "菱形大“翅膀”，头前有两片卷起的头鳍。常在礁区清洁站盘旋，静候即可，不要追赶。",
+      "en": "A diamond-shaped ray with wide wings and two rolled head fins. Often circles reef cleaning stations; wait quietly, never chase."
+    }
   },
   {
     "id": "oceanic-manta",
@@ -41,7 +49,11 @@
       "pelagic",
       "big"
     ],
-    "lengthM": 5
+    "lengthM": 5,
+    "blurb": {
+      "zh": "白色肩斑呈 T 字形，嘴部发黑。多见于远海岛屿和海山，有时主动靠近潜水员。",
+      "en": "Black back with T-shaped white shoulder patches and a dark mouth. Found around offshore islands and seamounts, sometimes approaching divers."
+    }
   },
   {
     "id": "hammerhead",
@@ -56,7 +68,11 @@
       "pelagic",
       "shark"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "锤形头部前缘中央有凹口，两眼长在锤头两端。常在远海海山成群巡游，怕气泡。",
+      "en": "A hammer-shaped head, notched at the centre, with eyes at the tips. Schools around offshore seamounts; shy of bubbles."
+    }
   },
   {
     "id": "thresher-shark",
@@ -70,7 +86,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 3.3
+    "lengthM": 3.3,
+    "blurb": {
+      "zh": "尾鳍上叶几乎和身体一样长，眼睛很大。常在清晨到浅滩清洁站，多在黎明下水等候。",
+      "en": "An upper tail lobe almost as long as its body, and huge eyes. Visits shallow cleaning stations at dawn, so dives start early."
+    }
   },
   {
     "id": "grey-reef-shark",
@@ -84,7 +104,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 1.8
+    "lengthM": 1.8,
+    "blurb": {
+      "zh": "灰背白腹，尾鳍后缘有一道宽黑边。常在外礁墙和水道口迎流巡游，弓背是警告。",
+      "en": "Grey with a broad black rear edge on the tail. Patrols outer walls and channels in current; a hunched back is a warning."
+    }
   },
   {
     "id": "whitetip-reef-shark",
@@ -98,7 +122,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 1.6
+    "lengthM": 1.6,
+    "blurb": {
+      "zh": "身材细长，背鳍和尾鳍上叶尖端雪白。白天常趴在沙底或礁洞里休息，性情温和。",
+      "en": "Slender, with bright white tips on the dorsal fin and upper tail. Often rests on sand or in caves by day; calm."
+    }
   },
   {
     "id": "tiger-shark",
@@ -113,7 +141,11 @@
       "shark",
       "big"
     ],
-    "lengthM": 4
+    "lengthM": 4,
+    "blurb": {
+      "zh": "吻部宽钝近方形，体侧有深色竖纹。多在向导带领的鲨鱼潜水中见到，须遵守简报。",
+      "en": "A broad, square snout and dark vertical bars on the flanks. Mostly seen on guided shark dives; follow the briefing."
+    }
   },
   {
     "id": "galapagos-shark",
@@ -127,7 +159,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "粗壮的灰色鲨鱼，没有明显斑纹，和其他灰鲨不易区分。多见于远洋海岛，常成群出现。",
+      "en": "A stout, plain grey shark that is hard to tell from other grey sharks. Lives around remote oceanic islands, often in curious groups."
+    }
   },
   {
     "id": "eagle-ray",
@@ -139,7 +175,11 @@
     "sprite": "eagle-ray",
     "sizeClass": "m",
     "tags": [],
-    "lengthM": 2
+    "lengthM": 2,
+    "blurb": {
+      "zh": "深色背上布满白点，吻部像鸭嘴，尾巴细长如鞭。常沿礁缘滑翔，有时成群，较害羞。",
+      "en": "A dark back covered in white spots, a duck-bill snout and a whip-like tail. Glides along reef edges, sometimes in groups; shy."
+    }
   },
   {
     "id": "green-turtle",
@@ -153,7 +193,11 @@
     "tags": [
       "turtle"
     ],
-    "lengthM": 1.1
+    "lengthM": 1.1,
+    "blurb": {
+      "zh": "小圆脑袋、短钝的喙，龟壳光滑。常在海草床进食或趴在礁上休息，不要触摸追赶。",
+      "en": "A small rounded head, a short blunt beak and a smooth shell. Grazes in seagrass beds or rests on reefs; never touch or chase."
+    }
   },
   {
     "id": "hawksbill",
@@ -167,7 +211,11 @@
     "tags": [
       "turtle"
     ],
-    "lengthM": 0.9
+    "lengthM": 0.9,
+    "blurb": {
+      "zh": "嘴尖带钩像鹰嘴，龟壳甲片像屋瓦层层叠盖。常在珊瑚礁缝里啃食海绵，属极危物种。",
+      "en": "A hooked, hawk-like beak and overlapping shell plates like roof tiles. Feeds on sponges in reef crevices; critically endangered."
+    }
   },
   {
     "id": "humpback-whale",
@@ -182,7 +230,11 @@
       "whale",
       "big"
     ],
-    "lengthM": 14
+    "lengthM": 14,
+    "blurb": {
+      "zh": "胸鳍极长、多带白色，头上布满疙瘩。冬季到暖水海域繁殖，通常只能跟持牌向导浮潜。",
+      "en": "Very long, often white flippers and a knobbly head. Breeds in warm waters in winter; swims are usually snorkel-only with licensed guides."
+    }
   },
   {
     "id": "sperm-whale",
@@ -197,7 +249,11 @@
       "whale",
       "big"
     ],
-    "lengthM": 16
+    "lengthM": 16,
+    "blurb": {
+      "zh": "方块状的大头约占身长三分之一，皮肤多皱。会深潜捕食乌贼，多从船上观看。",
+      "en": "A huge square head about a third of its body, and wrinkled skin. Dives deep for squid; usually watched from boats."
+    }
   },
   {
     "id": "orca",
@@ -213,7 +269,11 @@
       "big",
       "coldwater"
     ],
-    "lengthM": 7
+    "lengthM": 7,
+    "blurb": {
+      "zh": "黑白分明，眼后有白斑，雄性背鳍高直。挪威北部冬季常追鲱鱼进峡湾，可穿干衣浮潜。",
+      "en": "Black and white with a white eye patch; males have a tall dorsal fin. Follows herring into northern Norway's fjords in winter, watched by snorkellers."
+    }
   },
   {
     "id": "dolphin",
@@ -225,7 +285,11 @@
     "sprite": "dolphin",
     "sizeClass": "m",
     "tags": [],
-    "lengthM": 2
+    "lengthM": 2,
+    "blurb": {
+      "zh": "流线型灰色身体，有短喙和弯钩状背鳍。常跟船乘浪，水下相遇多半短暂，不要追赶。",
+      "en": "A streamlined grey body with a short beak and curved dorsal fin. Often rides boat bow waves; underwater meetings are brief, so never chase."
+    }
   },
   {
     "id": "dugong",
@@ -237,7 +301,11 @@
     "sprite": "dugong",
     "sizeClass": "l",
     "tags": [],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "圆胖的灰色身体，吻部宽大下弯，尾巴分叉。在浅水海草床吃草，胆小稀少，多为偶见。",
+      "en": "A plump grey body, a broad downturned snout and a fluked tail. Grazes in shallow seagrass beds; shy and scarce, seen only occasionally."
+    }
   },
   {
     "id": "sea-lion",
@@ -249,7 +317,11 @@
     "sprite": "sea-lion",
     "sizeClass": "m",
     "tags": [],
-    "lengthM": 2
+    "lengthM": 2,
+    "blurb": {
+      "zh": "有小外耳廓，靠长长的前鳍划水，脸像狗。幼崽好奇爱玩，常绕着潜水员转、咬脚蹼。",
+      "en": "Small ear flaps, long front flippers for swimming and a dog-like face. Young ones are playful, circling divers and nibbling fins."
+    }
   },
   {
     "id": "sunfish",
@@ -263,7 +335,11 @@
     "tags": [
       "pelagic"
     ],
-    "lengthM": 2.5
+    "lengthM": 2.5,
+    "blurb": {
+      "zh": "身体侧扁像圆盘，上下各有一片高鳍，没有真正的尾鳍。冷水上涌时会上到礁坡清洁站。",
+      "en": "A tall, flat, disc-like body with one high fin above and one below. Rises to reef cleaning stations during cold upwellings, so it is seasonal."
+    }
   },
   {
     "id": "barracuda",
@@ -277,7 +353,11 @@
     "tags": [
       "school"
     ],
-    "lengthM": 2.5
+    "lengthM": 2.5,
+    "blurb": {
+      "zh": "成百上千条细长银亮的梭鱼聚成缓慢旋转的鱼柱。多在有流的岬角和峭壁外出现。",
+      "en": "Hundreds of long, silver, sharp-jawed barracuda turning slowly in a column. Usually found off points and walls in current."
+    }
   },
   {
     "id": "jack-school",
@@ -291,7 +371,11 @@
     "tags": [
       "school"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "成百上千条银色大眼鲹聚成缓慢旋转的旋涡。常在有流的礁坡和海山外侧盘旋。",
+      "en": "Hundreds of silver, big-eyed trevally circling in a slow vortex. Usually hangs off current-swept reef slopes and seamounts."
+    }
   },
   {
     "id": "sardine-run",
@@ -305,7 +389,11 @@
     "tags": [
       "school"
     ],
-    "lengthM": 6
+    "lengthM": 6,
+    "blurb": {
+      "zh": "上百万条银色小鱼聚成不断变形的鱼团。南非 6–7 月常见；菲律宾墨宝全年都有。",
+      "en": "Millions of small silver fish swirling in a shifting cloud. Off South Africa in June–July, and all year at Moalboal in the Philippines."
+    }
   },
   {
     "id": "bumphead-parrotfish",
@@ -317,7 +405,11 @@
     "sprite": "bumphead-parrotfish",
     "sizeClass": "m",
     "tags": [],
-    "lengthM": 1.2
+    "lengthM": 1.2,
+    "blurb": {
+      "zh": "额头隆起大包，嘴前露出鸟喙般的板状牙。常成群啃食珊瑚，清晨较易遇到。",
+      "en": "A bulging forehead and beak-like teeth. Roams the reef in herds, crunching coral; easiest to meet at dawn."
+    }
   },
   {
     "id": "napoleon-wrasse",
@@ -329,7 +421,11 @@
     "sprite": "napoleon-wrasse",
     "sizeClass": "m",
     "tags": [],
-    "lengthM": 1.5
+    "lengthM": 1.5,
+    "blurb": {
+      "zh": "额头高高隆起、嘴唇厚，青绿色身上布满迷宫状细纹。好奇心强，常游近潜水员。",
+      "en": "A big forehead hump, thick lips and a blue-green body with maze-like lines. Curious and often swims up to divers."
+    }
   },
   {
     "id": "pygmy-seahorse",
@@ -343,7 +439,11 @@
     "tags": [
       "macro"
     ],
-    "lengthM": 0.02
+    "lengthM": 0.02,
+    "blurb": {
+      "zh": "身上长满圆疙瘩，颜色和寄居的柳珊瑚一样。要靠向导指点才找得到，拍照少用闪光。",
+      "en": "Covered in knobs that match the colour of its sea-fan host. You need a guide to find one; go easy on the flash."
+    }
   },
   {
     "id": "nudibranch",
@@ -357,7 +457,11 @@
     "tags": [
       "macro"
     ],
-    "lengthM": 0.05
+    "lengthM": 0.05,
+    "blurb": {
+      "zh": "没有壳的海洋软体动物，头上有一对触角，颜色鲜艳。种类上千，是微距摄影的常客。",
+      "en": "Shell-less, often brightly coloured sea slugs with two sensory horns. Thousands of species crawl over reefs; a macro favourite."
+    }
   },
   {
     "id": "mandarinfish",
@@ -371,7 +475,11 @@
     "tags": [
       "macro"
     ],
-    "lengthM": 0.06
+    "lengthM": 0.06,
+    "blurb": {
+      "zh": "身披橙蓝交织的漩涡花纹。白天躲在珊瑚碎块里，黄昏出来求偶，适合日落潜水观察。",
+      "en": "Swirling orange and electric-blue patterns. Hides in coral rubble by day and comes out at dusk to mate, so look for it on sunset dives."
+    }
   },
   {
     "id": "leopard-shark",
@@ -385,7 +493,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 2.5
+    "lengthM": 2.5,
+    "blurb": {
+      "zh": "尾巴约占全身一半，黄褐色身上布满深色斑点。白天常趴在沙底休息，性情温和。",
+      "en": "A very long tail and dark spots on tan skin; juveniles are striped. Usually rests on sand by day and is calm."
+    }
   },
   {
     "id": "frogfish",
@@ -399,7 +511,11 @@
     "tags": [
       "macro"
     ],
-    "lengthM": 0.15
+    "lengthM": 0.15,
+    "blurb": {
+      "zh": "身体圆胖、皮肤粗糙，头顶有钓竿状诱饵。常伪装成海绵、几天不动，多靠向导指认。",
+      "en": "Round and lumpy, with a fishing lure on its head. Mimics sponges and may sit still for days; guides know where to look."
+    }
   },
   {
     "id": "oceanic-whitetip",
@@ -414,7 +530,11 @@
       "pelagic",
       "shark"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "背鳍和胸鳍又大又圆，末端带斑驳白色。生活在外海，常在近水面好奇地靠近人。",
+      "en": "Huge rounded dorsal and pectoral fins with mottled white tips. An open-ocean shark, bold and curious near the surface."
+    }
   },
   {
     "id": "potato-cod",
@@ -428,7 +548,11 @@
     "tags": [
       "big"
     ],
-    "lengthM": 1.5
+    "lengthM": 1.5,
+    "blurb": {
+      "zh": "灰白色身体上布满土豆状的深色大斑块。常守着固定礁区，会游到潜水员面镜前。",
+      "en": "A big grouper with dark potato-shaped blotches on a pale body. Holds a home patch of reef and often swims right up to divers."
+    }
   },
   {
     "id": "dwarf-minke-whale",
@@ -443,7 +567,11 @@
       "whale",
       "big"
     ],
-    "lengthM": 7
+    "lengthM": 7,
+    "blurb": {
+      "zh": "吻部尖窄的须鲸，肩部有白斑。6–7 月常见于大堡礁北部，会好奇地靠近浮潜者。",
+      "en": "A sleek baleen whale with a pointed snout and pale shoulder patches. Visits the northern Great Barrier Reef in June–July, often approaching snorkellers."
+    }
   },
   {
     "id": "giant-grouper",
@@ -457,7 +585,11 @@
     "tags": [
       "big"
     ],
-    "lengthM": 2.5
+    "lengthM": 2.5,
+    "blurb": {
+      "zh": "珊瑚礁里最大的石斑，大嘴厚唇、灰褐斑驳。常在沉船和码头桩柱间缓慢悬停。",
+      "en": "The largest reef grouper, with a huge thick-lipped mouth and mottled grey-brown skin. Often hangs slowly around wrecks and jetty pilings."
+    }
   },
   {
     "id": "grey-nurse-shark",
@@ -471,7 +603,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "满嘴参差外露的尖牙，看着凶，其实温和。常在岩沟或沉船旁几乎静止地悬停。",
+      "en": "Ragged teeth jut from its mouth, yet it is placid. Often hovers almost motionless in rocky gutters or beside wrecks."
+    }
   },
   {
     "id": "great-white-shark",
@@ -488,7 +624,11 @@
       "pelagic",
       "coldwater"
     ],
-    "lengthM": 5
+    "lengthM": 5,
+    "blurb": {
+      "zh": "鱼雷形身体、圆锥形吻部，灰背白腹分界清晰。通常在防鲨笼里观看。",
+      "en": "A torpedo-shaped body, conical snout and sharp line between grey back and white belly. Usually viewed from shark cages."
+    }
   },
   {
     "id": "short-tail-stingray",
@@ -502,7 +642,11 @@
     "tags": [
       "coldwater"
     ],
-    "lengthM": 2
+    "lengthM": 2,
+    "blurb": {
+      "zh": "近圆形的宽体盘，尾巴短粗带毒刺。夏季在新西兰穷骑士群岛的岩拱下常成群聚集。",
+      "en": "An almost round grey disc with a short tail carrying a venomous spine. Gathers under rock arches at New Zealand's Poor Knights in summer."
+    }
   },
   {
     "id": "southern-stingray",
@@ -514,7 +658,11 @@
     "sprite": "southern-stingray",
     "sizeClass": "m",
     "tags": [],
-    "lengthM": 1.5
+    "lengthM": 1.5,
+    "blurb": {
+      "zh": "菱形扁平体盘，尾巴长如鞭、带毒刺。常埋在沙里只露眼睛，加勒比海浅沙地常见。",
+      "en": "A flat diamond-shaped disc with a long whip tail and venomous spine. Often lies buried in sand on Caribbean flats, eyes showing."
+    }
   },
   {
     "id": "caribbean-reef-shark",
@@ -528,7 +676,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 2.5
+    "lengthM": 2.5,
+    "blurb": {
+      "zh": "灰褐色背、白腹，没有明显斑纹。加勒比海最常见的礁鲨，常在礁墙外侧巡游。",
+      "en": "Grey-brown above and white below, with no bold markings. The commonest reef shark in the Caribbean, often patrolling outer walls."
+    }
   },
   {
     "id": "silky-shark",
@@ -543,7 +695,11 @@
       "shark",
       "pelagic"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "身形细长、皮肤光滑，胸鳍又长又窄。生活在外海，常成群在近水面绕船打转。",
+      "en": "Slim and smooth-skinned, with very long, narrow pectoral fins. An open-ocean shark that often circles boats near the surface in groups."
+    }
   },
   {
     "id": "lemon-shark",
@@ -557,7 +713,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "体色黄褐，两个背鳍几乎一样大。常在浅沙地、潟湖和红树林活动，喂鲨潜水中也常见。",
+      "en": "A yellowish-brown shark with two dorsal fins of nearly equal size. Favours sand flats, lagoons and mangroves; regular on shark-feed dives."
+    }
   },
   {
     "id": "bull-shark",
@@ -572,7 +732,11 @@
       "shark",
       "big"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "体形粗壮，吻部短而钝圆，通体灰色。能进河口和淡水，多在有向导的鲨鱼潜水中见到。",
+      "en": "Very thick-bodied, with a short, blunt snout and plain grey colouring. Can enter rivers; usually seen on guided shark dives."
+    }
   },
   {
     "id": "nurse-shark",
@@ -586,7 +750,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "头宽扁，小嘴旁有两根短须，体色黄褐。白天常趴在沙底或岩下休息，被骚扰会咬人。",
+      "en": "A broad flat head, two short barbels by the mouth and a tan body. Rests on sand or under ledges by day; bites if harassed."
+    }
   },
   {
     "id": "american-crocodile",
@@ -600,7 +768,11 @@
     "tags": [
       "big"
     ],
-    "lengthM": 4
+    "lengthM": 4,
+    "blurb": {
+      "zh": "吻部细长，背上有成排骨质鳞甲，尾巴有力。栖息在红树林，下水观看通常跟向导浮潜。",
+      "en": "A long narrow snout, bony plates along the back and a powerful tail. Lives in mangroves; viewing is usually a guided snorkel at a distance."
+    }
   },
   {
     "id": "hard-coral",
@@ -614,7 +786,11 @@
     "tags": [
       "coral"
     ],
-    "lengthM": 1
+    "lengthM": 1,
+    "blurb": {
+      "zh": "造礁的主角，有鹿角状、桌状、脑状等形态。生长缓慢、一碰就断，要控制好浮力。",
+      "en": "The reef builders, in branching, table and brain shapes. They grow slowly and break easily, so keep good buoyancy."
+    }
   },
   {
     "id": "soft-coral",
@@ -628,7 +804,11 @@
     "tags": [
       "coral"
     ],
-    "lengthM": 0.8
+    "lengthM": 0.8,
+    "blurb": {
+      "zh": "没有硬骨骼，像一丛丛半透明的彩色小树。有水流时膨胀张开，在有流的礁墙最茂盛。",
+      "en": "Corals without a stony skeleton, like small translucent trees in pink, red and orange. They open up in current, thriving on current-swept walls."
+    }
   },
   {
     "id": "brydes-whale",
@@ -643,7 +823,11 @@
       "whale",
       "big"
     ],
-    "lengthM": 14
+    "lengthM": 14,
+    "blurb": {
+      "zh": "修长的须鲸，头顶有三条平行纵脊。广西涠洲岛附近冬春可乘船观看。",
+      "en": "A slender baleen whale with three parallel ridges on top of the head. Watched from boats off China's Weizhou Island in winter and spring."
+    }
   },
   {
     "id": "blacktip-reef-shark",
@@ -657,7 +841,11 @@
     "tags": [
       "shark"
     ],
-    "lengthM": 1.6
+    "lengthM": 1.6,
+    "blurb": {
+      "zh": "背鳍和尾鳍尖端漆黑。常在潟湖和礁坪浅水活动，站在岸边常能看到露出水面的背鳍。",
+      "en": "Crisp black tips on the dorsal fin and tail. Patrols shallow lagoons and reef flats, its fin often visible from the beach."
+    }
   },
   {
     "id": "sicklefin-devil-ray",
@@ -672,7 +860,11 @@
       "pelagic",
       "big"
     ],
-    "lengthM": 3
+    "lengthM": 3,
+    "blurb": {
+      "zh": "胸鳍末端弯成镰刀状，背部橄榄褐色。夏季常在亚速尔群岛的外海浅滩成群出现。",
+      "en": "Sickle-shaped wingtips and an olive-brown back. In summer it gathers in groups over offshore banks in the Azores."
+    }
   },
   {
     "id": "dusky-grouper",
@@ -684,7 +876,11 @@
     "sprite": "dusky-grouper",
     "sizeClass": "m",
     "tags": [],
-    "lengthM": 1.2
+    "lengthM": 1.2,
+    "blurb": {
+      "zh": "深褐色身上有不规则的浅黄斑块，头大嘴阔。在地中海保护区里常大方地游近潜水员。",
+      "en": "Dark brown with irregular pale blotches and a big mouth. Bold inside Mediterranean marine reserves, where it often approaches divers."
+    }
   },
   {
     "id": "arctic-char",
@@ -698,7 +894,11 @@
     "tags": [
       "coldwater"
     ],
-    "lengthM": 0.6
+    "lengthM": 0.6,
+    "blurb": {
+      "zh": "形似鲑鱼，背部橄榄绿，繁殖期腹部变橙红。冰岛丝浮拉裂缝的淡水里偶见。",
+      "en": "A salmon-like fish with an olive back; breeding fish turn orange-red below. Occasionally seen in Iceland's freshwater Silfra fissure."
+    }
   },
   {
     "id": "seal",
@@ -712,7 +912,11 @@
     "tags": [
       "coldwater"
     ],
-    "lengthM": 1.8
+    "lengthM": 1.8,
+    "blurb": {
+      "zh": "身体圆滚，没有外耳廓，前鳍短小。多见于冷水海域，年轻个体好奇，常凑近潜水员。",
+      "en": "A plump body, no external ear flaps and short front flippers. Mostly in cold seas; young seals are curious and approach divers."
+    }
   },
   {
     "id": "glassfish",
@@ -726,7 +930,11 @@
     "lengthM": 1,
     "tags": [
       "school"
-    ]
+    ],
+    "blurb": {
+      "zh": "成千上万条半透明的金色小鱼，挤满礁洞和沉船舱，潜水员经过时像帘子般分开。",
+      "en": "Thousands of small, translucent golden fish packed into caves and wreck holds, parting like a curtain as divers pass."
+    }
   },
   {
     "id": "giant-kelp",
@@ -741,7 +949,11 @@
     "tags": [
       "kelp",
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "金褐色的巨藻从岩底长到水面，阳光从缝隙洒下。生长在冷水海岸，留意别被缠住。",
+      "en": "Golden-brown kelp rising from the rocks to the surface, with sunlight slanting through. Grows on cold coasts; watch for entanglement."
+    }
   },
   {
     "id": "giant-sea-bass",
@@ -755,7 +967,11 @@
     "lengthM": 2,
     "tags": [
       "big"
-    ]
+    ],
+    "blurb": {
+      "zh": "成鱼灰黑色带隐约斑点，幼鱼却是橙红色。夏季常聚到南加州巨藻林边缘产卵。",
+      "en": "Adults are dark grey with faint spots; juveniles are orange-red. Gathers at the edges of southern California's kelp forests in summer to spawn."
+    }
   },
   {
     "id": "california-leopard-shark",
@@ -769,7 +985,11 @@
     "lengthM": 1.4,
     "tags": [
       "shark"
-    ]
+    ],
+    "blurb": {
+      "zh": "身体细长，背上有一道道深色鞍斑。夏秋常聚在圣地亚哥拉霍亚的浅水，浮潜可见。",
+      "en": "A slim grey shark with dark saddle bars across its back. Gathers in the shallows at La Jolla, San Diego, in summer and autumn; snorkel-friendly."
+    }
   },
   {
     "id": "striped-marlin",
@@ -784,7 +1004,11 @@
     "tags": [
       "pelagic",
       "big"
-    ]
+    ],
+    "blurb": {
+      "zh": "上颌延长如长矛，体侧有钴蓝色竖纹。墨西哥下加州 10–11 月常冲进沙丁鱼群。",
+      "en": "A long spear-like bill and cobalt-blue stripes on the flanks. Off Baja California in October–November it slashes through sardine bait balls."
+    }
   },
   {
     "id": "blue-whale",
@@ -799,7 +1023,11 @@
     "tags": [
       "whale",
       "big"
-    ]
+    ],
+    "blurb": {
+      "zh": "地球上最大的动物，蓝灰色带斑驳。斯里兰卡南岸 11–4 月可乘船观看，不下水。",
+      "en": "The largest animal on Earth, mottled blue-grey. Watched from boats, not in the water, off southern Sri Lanka from November to April."
+    }
   },
   {
     "id": "weedy-seadragon",
@@ -813,7 +1041,11 @@
     "lengthM": 0.4,
     "tags": [
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "细长身体带小叶状突起，红橙底色点缀黄斑。只见于澳大利亚南部，常在浅水海藻旁漂游。",
+      "en": "A slender, red-orange body with yellow spots and small leafy tabs. Found only in southern Australia, drifting by shallow kelp and seagrass."
+    }
   },
   {
     "id": "giant-spider-crab",
@@ -827,7 +1059,11 @@
     "lengthM": 0.4,
     "tags": [
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "腿细长，背甲多刺、常沾满藻类。入冬前后常有上万只聚到墨尔本栈桥浅水蜕壳。",
+      "en": "Long spindly legs and a spiny, algae-covered shell. Around early winter, thousands mass under Melbourne's piers to moult together."
+    }
   },
   {
     "id": "sea-snake",
@@ -839,7 +1075,11 @@
     "sprite": "sea-snake",
     "sizeClass": "m",
     "lengthM": 1,
-    "tags": []
+    "tags": [],
+    "blurb": {
+      "zh": "黑与蓝灰相间的环纹，尾巴扁平像船桨。毒性强但性情温和，保持距离、不要触碰。",
+      "en": "Banded in black and blue-grey, with a paddle-like tail. Highly venomous but usually docile; keep your distance and never touch."
+    }
   },
   {
     "id": "walking-shark",
@@ -853,7 +1093,11 @@
     "lengthM": 0.7,
     "tags": [
       "shark"
-    ]
+    ],
+    "blurb": {
+      "zh": "细长的小鲨鱼，胸鳍后有像肩章的黑斑。会用鳍在礁上“走路”，夜潜时最易见到。",
+      "en": "A small spotted shark with a dark epaulette patch behind its fins. Walks over the reef on its fins; easiest to find on night dives."
+    }
   },
   {
     "id": "great-hammerhead",
@@ -868,7 +1112,11 @@
     "tags": [
       "shark",
       "big"
-    ]
+    ],
+    "blurb": {
+      "zh": "锤头前缘几乎平直，背鳍高耸如镰刀。巴哈马比米尼 12–3 月常到近岸浅沙地。",
+      "en": "A nearly straight-edged hammer and a very tall, sickle-shaped dorsal fin. Visits shallow sand at Bimini, Bahamas, from December to March."
+    }
   },
   {
     "id": "goliath-grouper",
@@ -882,7 +1130,11 @@
     "lengthM": 2,
     "tags": [
       "big"
-    ]
+    ],
+    "blurb": {
+      "zh": "黄褐色的大石斑，头宽扁、眼睛小。7–9 月常成群聚在佛罗里达沉船上产卵。",
+      "en": "A massive yellowish-brown grouper with a broad flat head and small eyes. Gathers on Florida wrecks to spawn in July–September."
+    }
   },
   {
     "id": "seahorse",
@@ -896,7 +1148,11 @@
     "lengthM": 0.15,
     "tags": [
       "macro"
-    ]
+    ],
+    "blurb": {
+      "zh": "头像马、嘴呈细管状，尾巴能卷住海草。常伪装在浅水海草或杂物旁，多靠向导发现。",
+      "en": "A horse-like head, a tube snout and a gripping tail. Well camouflaged in shallow seagrass or on silty bottoms; guides help spot them."
+    }
   },
   {
     "id": "clownfish",
@@ -911,7 +1167,11 @@
     "tags": [
       "reef",
       "macro"
-    ]
+    ],
+    "blurb": {
+      "zh": "橙黄到黑褐色，身上有两三道白色横带，住在海葵里。护家心强，会冲出来啄潜水员。",
+      "en": "Orange to dark brown with two or three white bands, living in a sea anemone. Defends its home boldly and may nip at divers."
+    }
   },
   {
     "id": "white-spotted-pufferfish",
@@ -926,7 +1186,11 @@
     "tags": [
       "sand",
       "behaviour"
-    ]
+    ],
+    "blurb": {
+      "zh": "褐底白点的小河豚。雄鱼在沙底筑出几何圆圈求偶，日本奄美大岛春夏可见。",
+      "en": "A brown pufferfish with white spots. Males sculpt circular patterns in the sand to court females; found off Amami Oshima, Japan, in spring–summer."
+    }
   },
   {
     "id": "clione",
@@ -941,7 +1205,11 @@
     "tags": [
       "coldwater",
       "macro"
-    ]
+    ],
+    "blurb": {
+      "zh": "身体透明、无壳，靠一对翅膀状小鳍游动。北海道知床 2–3 月的流冰下可见。",
+      "en": "A transparent, shell-less drifter that flaps a pair of wing-like fins. Seen under the drift ice off Shiretoko, Hokkaido, in February–March."
+    }
   },
   {
     "id": "black-coral",
@@ -956,7 +1224,11 @@
     "tags": [
       "coral",
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "活着时像一丛白色小树，“黑”指它的骨骼。新西兰峡湾约 10 米深就能见到。",
+      "en": "Alive it looks like a white bushy tree; 'black' is its skeleton. In New Zealand's fiords it grows as shallow as about 10 m."
+    }
   },
   {
     "id": "jewel-anemone",
@@ -971,7 +1243,11 @@
     "tags": [
       "macro",
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "小花般的个体，触手末端是圆球，粉紫橙红各色成片铺满岩壁。新西兰北部常见。",
+      "en": "Tiny flower-like polyps with knob-tipped tentacles, carpeting rock in patches of pink, purple, orange and red. Common in northern New Zealand."
+    }
   },
   {
     "id": "leafy-seadragon",
@@ -985,7 +1261,11 @@
     "lengthM": 0.35,
     "tags": [
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "全身长满海藻叶般的突起，黄褐带绿。只分布在澳大利亚南部，常藏在浅水海藻间。",
+      "en": "Covered in leafy, seaweed-like flaps in yellow-brown and green. Lives only in southern Australia, hiding among shallow kelp; hard to spot."
+    }
   },
   {
     "id": "giant-cuttlefish",
@@ -999,7 +1279,11 @@
     "lengthM": 0.6,
     "tags": [
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "能瞬间变换体色和纹理，身体一圈有波浪鳍。5–8 月常在南澳怀阿拉浅水聚集繁殖。",
+      "en": "Changes colour and texture in an instant, with a frilly fin around its body. Masses to breed in the shallows near Whyalla, South Australia, May–August."
+    }
   },
   {
     "id": "southern-right-whale",
@@ -1015,7 +1299,11 @@
       "whale",
       "big",
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "没有背鳍，通体黑色，头上有白色老茧。阿根廷瓦尔德斯半岛 6–12 月可乘船观看。",
+      "en": "No dorsal fin, a black body and rough white patches on the head. Watched from boats off Península Valdés, Argentina, from June to December."
+    }
   },
   {
     "id": "dourado",
@@ -1029,7 +1317,11 @@
     "lengthM": 0.8,
     "tags": [
       "freshwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "金黄色的淡水掠食鱼，尾鳍橙红带黑纹。巴西博尼图的清水河里常见，多为浮潜观看。",
+      "en": "A golden freshwater predator with an orange-red, black-striped tail. Common in the clear rivers of Bonito, Brazil, usually seen while snorkelling."
+    }
   },
   {
     "id": "broadnose-sevengill-shark",
@@ -1044,7 +1336,11 @@
     "tags": [
       "shark",
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "每侧七道鳃裂，只有一个靠后的背鳍，身上散布小黑点。开普敦福尔斯湾海带林里常见。",
+      "en": "Seven gill slits a side, a single dorsal fin far back and small dark spots. Common in the kelp forests of False Bay, Cape Town."
+    }
   },
   {
     "id": "loggerhead-turtle",
@@ -1058,7 +1354,11 @@
     "lengthM": 0.9,
     "tags": [
       "turtle"
-    ]
+    ],
+    "blurb": {
+      "zh": "脑袋特别大、颌部粗壮，龟壳红褐。希腊扎金索斯岛 5–8 月上岸产卵，湾内常见。",
+      "en": "A big head with powerful jaws and a reddish-brown shell. Nests on Greece's Zakynthos in May–August and is often seen in the bay."
+    }
   },
   {
     "id": "basking-shark",
@@ -1074,7 +1374,11 @@
       "pelagic",
       "big",
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "进食时张开山洞般的大嘴，鳃裂几乎绕头一圈。滤食浮游生物，苏格兰夏季可浮潜观看。",
+      "en": "Feeds with a cavernous mouth wide open; its gill slits nearly circle the head. A harmless plankton feeder, met by snorkellers off Scotland in summer."
+    }
   },
   {
     "id": "manatee",
@@ -1088,7 +1392,11 @@
     "lengthM": 3,
     "tags": [
       "big"
-    ]
+    ],
+    "blurb": {
+      "zh": "灰色圆胖、嘴边长满胡须，尾巴呈圆桨形。冬季聚到佛罗里达泉水湾避寒，只能浮潜静观。",
+      "en": "Plump and grey, with a whiskery snout and a round paddle tail. Winters in Florida's spring-fed bays, where snorkellers may only watch quietly."
+    }
   },
   {
     "id": "angel-shark",
@@ -1102,7 +1410,11 @@
     "lengthM": 1.5,
     "tags": [
       "shark"
-    ]
+    ],
+    "blurb": {
+      "zh": "身体扁平像魟鱼，胸鳍宽如翅膀，常埋在沙里只露轮廓。如今主要见于加那利群岛。",
+      "en": "Flat like a ray, with wing-like fins, it lies buried in sand with only its outline showing. Now seen mainly in the Canary Islands."
+    }
   },
   {
     "id": "red-coral",
@@ -1116,7 +1428,11 @@
     "lengthM": 0.2,
     "tags": [
       "coral"
-    ]
+    ],
+    "blurb": {
+      "zh": "鲜红的小枝状珊瑚伸出白色珊瑚虫，常倒挂在地中海洞穴顶部。生长极慢，勿触碰。",
+      "en": "Small bright-red branches with white polyps, often hanging from the ceilings of Mediterranean caves. Grows very slowly; never touch."
+    }
   },
   {
     "id": "red-gorgonian",
@@ -1130,7 +1446,11 @@
     "lengthM": 1,
     "tags": [
       "coral"
-    ]
+    ],
+    "blurb": {
+      "zh": "扇形的大柳珊瑚，枝条紫红、有的末端带黄。在地中海有流的岩壁上密集成林。",
+      "en": "Large fan-shaped gorgonians, purple-red and sometimes yellow-tipped. Forms dense forests on current-swept Mediterranean walls."
+    }
   },
   {
     "id": "wolf-eel",
@@ -1144,7 +1464,11 @@
     "lengthM": 2,
     "tags": [
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "形似鳗鱼，其实是狼鱼；头大颌壮，身上有深色圆斑。常成对住在岩洞里，卑诗省常见。",
+      "en": "Eel-shaped but actually a wolffish, with a big head, strong jaws and dark spots. Pairs often share a rocky den in British Columbia."
+    }
   },
   {
     "id": "giant-pacific-octopus",
@@ -1158,7 +1482,11 @@
     "lengthM": 3,
     "tags": [
       "coldwater"
-    ]
+    ],
+    "blurb": {
+      "zh": "世界上最大的章鱼，皮肤红褐、能迅速变色。白天躲在岩洞里，洞口常堆着蟹壳。",
+      "en": "The largest octopus, reddish-brown and quick to change colour. Hides in rocky dens by day, often marked by piles of crab shells."
+    }
   },
   {
     "id": "walrus",
@@ -1170,7 +1498,11 @@
     "sprite": "walrus",
     "sizeClass": "l",
     "lengthM": 3,
-    "tags": []
+    "tags": [],
+    "blurb": {
+      "zh": "两根长象牙、满脸硬须，身体肥厚。北极斯瓦尔巴群岛夏季探险船偶有机会在附近下水。",
+      "en": "Long ivory tusks, a bristly moustache and a massive wrinkled body. Summer expedition ships around Svalbard occasionally let divers in nearby."
+    }
   },
   {
     "id": "wolffish",
@@ -1182,7 +1514,11 @@
     "sprite": "wolffish",
     "sizeClass": "m",
     "lengthM": 1.2,
-    "tags": []
+    "tags": [],
+    "blurb": {
+      "zh": "头大而钝，露出犬牙般的獠牙，身上有深色竖纹。常躲在岩缝里只露出头，白海冰潜可见。",
+      "en": "A big blunt head with fang-like teeth and dark vertical bars. Peers out of rocky crevices; seen on White Sea ice dives in Russia."
+    }
   },
   {
     "id": "atlantic-cod",
@@ -1194,7 +1530,11 @@
     "sprite": "atlantic-cod",
     "sizeClass": "m",
     "lengthM": 1,
-    "tags": []
+    "tags": [],
+    "blurb": {
+      "zh": "下巴有一根短须，背上三个背鳍，橄榄褐色带斑点。冰岛热泉烟囱旁常成群绕游。",
+      "en": "A chin barbel, three dorsal fins and a mottled olive-brown body. Often circles the hydrothermal chimneys of Strýtan, Iceland."
+    }
   },
   {
     "id": "penguin",
@@ -1206,6 +1546,10 @@
     "sprite": "penguin",
     "sizeClass": "s",
     "lengthM": 0.8,
-    "tags": []
+    "tags": [],
+    "blurb": {
+      "zh": "不会飞的海鸟，背黑腹白，在水下“飞”得很快。多分布在南半球冷水海域，常一闪而过。",
+      "en": "Flightless black-and-white seabirds that 'fly' fast underwater. Found mostly in cold southern seas; divers usually glimpse them darting past."
+    }
   }
 ]
