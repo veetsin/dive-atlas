@@ -1,0 +1,51 @@
+Generate ONE new image for this message, 1:1 square, 1024x1024 pixels. Do not edit or re-render any earlier image in this chat.
+
+STYLE — apply identically to every subject in every image of this set:
+Refined flat vector illustration, sticker-sheet quality, like shapes cut from matte paper.
+Clean geometric shapes with smooth curves. No outlines anywhere. Every form is built from
+exactly two flat tones: a base colour and one slightly darker shade on its lower-right side,
+because the light comes from the upper left. Colour fills are perfectly flat, smooth and
+grain-free, with crisp edges.
+Palette = the attached swatch sheet (input 1): deep navy, lagoon teal, pale seafoam green,
+warm coral orange-red, soft sun yellow, pale sand, shell pink, warm off-white. Paint each
+animal's real colours using the nearest swatch colours only.
+Anatomy is accurate and species-specific, the way a marine biologist would draw it: natural
+proportions, small eyes in natural proportion, closed neutral mouths, calm natural posture.
+Gently stylised, calm and elegant — a museum natural-history poster.
+Every subject's head points to the right edge of the image. Fish, sharks, whales, dolphins,
+turtles and mammals are shown in full side profile; rays are shown from directly above with
+the head to the right.
+Each subject floats alone with empty background around it: no water, no bubbles, no seabed,
+no cast shadow, no drop shadow, no frame, no border, no text, no letters, no numbers,
+no labels, no captions, no watermark.
+BACKGROUND: one single flat, uniform, untextured light grey (about #E6E6E6, a plain pale grey
+slightly lighter than a shark's belly) covering the whole canvas edge to edge, with no gradient,
+no vignette and no visible panel dividers.
+
+Input 1 is the palette swatch sheet. Input 2 is the approved style reference from this same
+sticker set: match its rendering style, shape language, shading depth and palette exactly,
+and draw the new animals listed below in that style. Do not copy the animals in input 2.
+
+LAYOUT: one image divided into an invisible 2x2 grid of four equal cells. One subject per cell,
+centred in its cell, filling about 70% of the cell's width or height, whichever is tighter.
+Keep at least 10% empty margin inside every cell; no part of any subject touches or crosses
+the invisible cell boundaries, and no subject overlaps another. Do not draw the grid lines.
+All four subjects share exactly the same rendering style, shading depth and level of detail.
+
+Top-left — Jewel anemone (Corynactis australis): a tight cluster of about seven tiny anemones packed
+side by side, each a short column topped by a ring of tentacles that each end in a round knob; mixed
+shell pink, warm coral orange-red and soft sun yellow, the knobs a paler tone of each colour;
+growing from one small rounded rock base.
+Top-right — Clownfish (Amphiprion clarkii, Clark's anemonefish): three bold warm off-white vertical
+bands, behind the eye, mid-body and at the tail base, each edged by a thin navy line; small oval
+body with rounded fins; deep navy-black body with a soft-sun-yellow snout, belly, fins and tail;
+hovering level.
+Bottom-left — Giant Pacific octopus (Enteroctopus dofleini): a large rounded wrinkled mantle swept
+up and back behind the head, with the eye facing right; eight long thick arms spreading outward
+below in loose curls, a few curled tips showing rows of shell-pink suckers; skin warm coral
+orange-red with a darker red-brown shade and small raised bumps; hovering.
+Bottom-right — Gentoo penguin (Pygoscelis papua): bright coral orange-red bill and orange feet; a
+warm off-white bonnet stripe over the top of the head from eye to eye; standing upright, turned
+three-quarters toward the viewer with the bill pointing right; deep navy-black head, back and
+flippers; solid warm off-white chest and belly with a faint cream tint; flippers held slightly away
+from the body; short stiff tail.

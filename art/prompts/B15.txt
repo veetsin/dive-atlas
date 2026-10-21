@@ -1,0 +1,50 @@
+Generate ONE new image for this message, 3:2 landscape, 1536x1024 pixels. Do not edit or re-render any earlier image in this chat.
+
+STYLE — apply identically to every subject in every image of this set:
+Refined flat vector illustration, sticker-sheet quality, like shapes cut from matte paper.
+Clean geometric shapes with smooth curves. No outlines anywhere. Every form is built from
+exactly two flat tones: a base colour and one slightly darker shade on its lower-right side,
+because the light comes from the upper left. Colour fills are perfectly flat, smooth and
+grain-free, with crisp edges.
+Palette = the attached swatch sheet (input 1): deep navy, lagoon teal, pale seafoam green,
+warm coral orange-red, soft sun yellow, pale sand, shell pink, warm off-white. Paint each
+animal's real colours using the nearest swatch colours only.
+Anatomy is accurate and species-specific, the way a marine biologist would draw it: natural
+proportions, small eyes in natural proportion, closed neutral mouths, calm natural posture.
+Gently stylised, calm and elegant — a museum natural-history poster.
+Every subject's head points to the right edge of the image. Fish, sharks, whales, dolphins,
+turtles and mammals are shown in full side profile; rays are shown from directly above with
+the head to the right.
+Each subject floats alone with empty background around it: no water, no bubbles, no seabed,
+no cast shadow, no drop shadow, no frame, no border, no text, no letters, no numbers,
+no labels, no captions, no watermark.
+BACKGROUND: one single flat, uniform, untextured light grey (about #E6E6E6, a plain pale grey
+slightly lighter than a shark's belly) covering the whole canvas edge to edge, with no gradient,
+no vignette and no visible panel dividers.
+
+Input 1 is the palette swatch sheet. Input 2 is the approved style reference from this same
+sticker set: match its rendering style, shape language, shading depth and palette exactly,
+and draw the new animals listed below in that style. Do not copy the animals in input 2.
+
+LAYOUT: one image divided into an invisible 2x2 grid of four equal cells. One subject per cell,
+centred in its cell, filling about 70% of the cell's width or height, whichever is tighter.
+Keep at least 10% empty margin inside every cell; no part of any subject touches or crosses
+the invisible cell boundaries, and no subject overlaps another. Do not draw the grid lines.
+All four subjects share exactly the same rendering style, shading depth and level of detail.
+
+Top-left — Nurse shark (Ginglymostoma cirratum): two rounded dorsal fins of similar size set far
+back near the tail; broad flattened head with tiny eyes and two short barbels at the small mouth;
+long tail with only a tiny lower lobe; broad rounded pectoral fins; plain tan-brown all over from
+the pale sand swatch with its slightly darker shade; lying flat and still.
+Top-right — Glassfish school (Parapriacanthus ransonneti, golden sweeper): one dense oval cloud of
+about twenty small fish packed closely together, the cloud wider than tall and reading as one
+rounded shape; each fish a short slim teardrop with a large eye and a forked tail, golden amber
+(soft sun yellow with its darker shade) and fully opaque; all heading right.
+Bottom-left — Sea snake (Laticauda colubrina, banded sea krait): long slim body ringed from head to
+tail with evenly spaced deep navy bands alternating with soft lagoon-teal blue-grey bands, clearly
+darker than the background; flattened paddle-shaped tail; small rounded head with a soft-sun-yellow
+snout and upper lip; the body laid out in one long gentle horizontal S-curve, head at the right end.
+Bottom-right — Goliath grouper (Epinephelus itajara): massive heavy body with a very broad flat head
+and a wide mouth whose jaw reaches past the small eye; rounded tail, pectoral and soft dorsal fins;
+yellowish olive-brown body (pale sand with its darker shade) with a few faint darker diagonal bands
+and small dark spots on the head and fins; hovering still.

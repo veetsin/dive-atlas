@@ -311,6 +311,214 @@ Bottom-right — Soft coral (Dendronephthya): a bouquet-like tree of translucent
 fluffy pink-and-orange polyps; gently swaying.
 ```
 
+#### 第三批物种（2026-10-21 数据第二、三波新增 35 种 + 3 格重画）
+
+流程同上：STYLE-G + ANCHOR + LAYOUT + 四行，成品在 `art/prompts/B14.txt`…`B23.txt`。批次按"作为潜点地图贴纸的次数"从高到低排（地图只画每个潜点 `species[0]` 的贴纸），同分再看引用总数，所以 B14 最值得先画：硬珊瑚一种就是 16 个潜点的地图贴纸。3 格重画（硬珊瑚、护士鲨、布氏鲸）用 B8–B13 验收时的改进描述，入库后覆盖旧贴纸。浅色部位（白肚、浅色枝条、半透明的玻璃鱼和海天使）一律写成"实色、明显比灰底深"，避免 rembg 抠成半透明；大锤头、扁鲨、蜘蛛蟹按俯视画（B3 的侧视锤头认不出，通过的是 B7 的俯视版）。
+
+**B14 — 珊瑚、巨藻与海马（1:1；硬珊瑚为重画）** · ids: `hard-coral,giant-kelp,red-gorgonian,seahorse`
+```
+Top-left — Hard coral garden (Acropora): a compact cluster of a few thick branching staghorn coral
+arms in solid lagoon teal beside a rounded dome of soft-sun-yellow boulder coral; a few small
+shell-pink coral heads at the base; the branch tips the same solid teal as the branches; every part
+in opaque flat colour clearly darker than the grey background; all growing from one small rounded
+base of coral rock in the darker teal shade.
+Top-right — Giant kelp forest (Macrocystis pyrifera): three tall slender kelp stalks rising side by
+side from one small root-like holdfast, each lined along its whole length with long ribbed leaf
+blades hanging from small round gas floats; stalks and blades golden amber (soft sun yellow with its
+darker shade, deepening toward brown at the base), opaque and clearly darker than the background;
+the stalks lean gently to the right as if in a light current.
+Bottom-left — Red gorgonian (Paramuricea clavata): a large upright sea fan, wider than tall, of
+thick candelabra-like branches that fork again and again in one flat plane; deep warm coral-red
+branches with soft-sun-yellow tips on the outer twigs; a short stout trunk at the base; seen face-on
+so the whole fan shows.
+Bottom-right — Seahorse (Hippocampus spp.): upright S-shaped body with a long tube snout pointing
+right; tail curled into a tight spiral below; bony ring segments across the belly and a small
+crown-like knob on top of the head; a small fan-shaped fin on the back; soft sun yellow body with a
+darker amber shade; floating upright and still.
+```
+
+**B15 — 护士鲨、玻璃鱼群、海蛇、巨石斑（3:2；护士鲨为重画）** · ids: `nurse-shark,glassfish,sea-snake,goliath-grouper`
+```
+Top-left — Nurse shark (Ginglymostoma cirratum): two rounded dorsal fins of similar size set far
+back near the tail; broad flattened head with tiny eyes and two short barbels at the small mouth;
+long tail with only a tiny lower lobe; broad rounded pectoral fins; plain tan-brown all over from
+the pale sand swatch with its slightly darker shade; lying flat and still.
+Top-right — Glassfish school (Parapriacanthus ransonneti, golden sweeper): one dense oval cloud of
+about twenty small fish packed closely together, the cloud wider than tall and reading as one
+rounded shape; each fish a short slim teardrop with a large eye and a forked tail, golden amber
+(soft sun yellow with its darker shade) and fully opaque; all heading right.
+Bottom-left — Sea snake (Laticauda colubrina, banded sea krait): long slim body ringed from head to
+tail with evenly spaced deep navy bands alternating with soft lagoon-teal blue-grey bands, clearly
+darker than the background; flattened paddle-shaped tail; small rounded head with a soft-sun-yellow
+snout and upper lip; the body laid out in one long gentle horizontal S-curve, head at the right end.
+Bottom-right — Goliath grouper (Epinephelus itajara): massive heavy body with a very broad flat head
+and a wide mouth whose jaw reaches past the small eye; rounded tail, pectoral and soft dorsal fins;
+yellowish olive-brown body (pale sand with its darker shade) with a few faint darker diagonal bands
+and small dark spots on the head and fins; hovering still.
+```
+
+**B16 — 海龙与冷水微距（1:1）** · ids: `weedy-seadragon,red-coral,clione,leafy-seadragon`
+```
+Top-left — Weedy seadragon (Phyllopteryx taeniolatus): long slender seahorse-like body held almost
+level with a long tube snout pointing right; a few small leaf-shaped flaps on the head, back and
+tail; warm coral-red body dotted with small soft-sun-yellow spots, with thin deep navy bars across
+the chest; thin tail curling gently downward; drifting calmly.
+Top-right — Red coral (Corallium rubrum): a small bushy colony of short thick branches that fork
+like a little tree; solid deep warm coral orange-red branches dotted with tiny warm off-white
+eight-armed polyps; a short trunk on a small rounded rock base; compact and upright.
+Bottom-left — Sea angel (Clione limacina): a small upright body with two wing-like fins spread wide
+at the sides of the head, like angel wings; a bright coral orange-red core in the head and a smaller
+one in the body; the body tapers to a pointed tail; solid opaque shell-pink body, clearly darker
+than the background; swimming upright, head at the top.
+Bottom-right — Leafy seadragon (Phycodurus eques): seahorse-like body covered in many large
+branching leaf-shaped lobes on the head, back, belly and tail, so it looks like a drifting piece of
+seaweed; long tube snout pointing right; golden-olive body and lobes (soft sun yellow with its
+darker amber shade) with thin pale bands on the body and lagoon-teal green lobe tips, all opaque;
+body held almost level, drifting calmly.
+```
+
+**B17 — 大锤头、蓝鲸、旗鱼、海牛（3:2；大锤头俯视）** · ids: `great-hammerhead,blue-whale,striped-marlin,manatee`
+```
+Top-left — Great hammerhead (Sphyrna mokarran), seen from directly above, head to the right: a very
+wide hammer-shaped head with an almost straight front edge and a small notch at its centre, eyes at
+the tips; a very tall curved sickle-shaped first dorsal fin; long sickle-shaped pectoral fins; plain
+bronze-grey back; swimming level.
+Top-right — Blue whale (Balaenoptera musculus): extremely long slender body with a broad flat
+U-shaped head; a tiny stubby dorsal fin set far back near the tail; mottled blue-grey skin all over
+with pale grey-blue speckles; belly a slightly paler blue-grey, still clearly darker than the
+background; long slim flippers; broad flukes; gliding level.
+Bottom-left — Striped marlin (Kajikia audax): long pointed spear-like bill; tall pointed first
+dorsal fin, as tall as the body is deep at its front and sloping down toward the tail; deeply forked
+crescent tail; long slim pectoral fins; deep navy back, silvery lagoon-blue flanks crossed by about
+ten vertical pale lagoon-teal stripes; pale silver-blue belly; swimming level, dorsal fin raised.
+Bottom-right — West Indian manatee (Trichechus manatus): a large round flat paddle-shaped tail,
+turned slightly toward the viewer so its round outline shows; plump wrinkled body with a broad blunt
+bristly snout and small eyes; short front flippers with tiny nails; smooth rounded back; plain warm
+grey-brown with a darker shade; swimming slowly, body level, flippers hanging down.
+```
+
+**B18 — 姥鲨、红海龟、七鳃鲨、扁鲨（3:2；扁鲨俯视）** · ids: `basking-shark,loggerhead-turtle,broadnose-sevengill-shark,angel-shark`
+```
+Top-left — Basking shark (Cetorhinus maximus): huge mouth held wide open in a round gape for filter
+feeding, dark navy inside, under a conical pointed snout; five very long gill slits that almost
+encircle the head; large triangular first dorsal fin; crescent tail; plain grey-brown body with a
+slightly paler belly, all clearly darker than the background; cruising slowly and calmly.
+Top-right — Loggerhead turtle (Caretta caretta): very large broad head with a heavy blunt beak;
+heart-shaped reddish-brown shell (warm coral orange-red deepened toward brown) with large plain
+scutes lying edge to edge; head and flippers yellow-tan (pale sand) with darker scale plates; pale
+sand underside; front flippers in mid-stroke; swimming.
+Bottom-left — Broadnose sevengill shark (Notorynchus cepedianus): a single small dorsal fin set far
+back near the tail; seven gill slits on each side of the head; broad, short, rounded snout with
+small eyes; long upper tail lobe; silvery grey-brown back and sides covered in small black spots and
+a few pale spots; pale sand belly; cruising level.
+Bottom-right — Angelshark (Squatina squatina), seen from directly above, head to the right: flat,
+wide ray-like body with broad rounded wing-like pectoral fins and smaller pelvic fins behind them; a
+broad flat rounded head with the eyes on top; a thick shark-like tail with two small dorsal fins and
+a small tail fin; sandy brown (the darker pale sand shade) with scattered small pale and dark spots;
+lying flat, fins spread.
+```
+
+**B19 — 巨型乌贼、海象、蜘蛛蟹、黑珊瑚（1:1；蜘蛛蟹俯视）** · ids: `giant-cuttlefish,walrus,giant-spider-crab,black-coral`
+```
+Top-left — Giant Australian cuttlefish (Sepia apama): broad oval body edged along its whole length
+by a thin wavy fin; a short cone of thick arms held together at the front, pointing right, with a
+large eye and W-shaped pupil just behind them; a few small skin flaps above the eye; mottled shell
+pink and pale sand with darker sand patches; hovering level.
+Top-right — Walrus (Odobenus rosmarus): two long ivory tusks hanging straight down from the upper
+jaw; a broad square muzzle with a thick bristly moustache; massive wrinkled body resting on its
+belly, the front propped up on its front flippers, head raised; small eyes; hind flippers trailing;
+warm pinkish-brown skin (shell pink deepened with the darker pale sand shade); tusks pale sand
+ivory, clearly darker than the background.
+Bottom-left — Giant spider crab (Leptomithrax gaimardii), seen from directly above, front to the
+right: a pear-shaped knobbly carapace covered in short blunt spines, narrow end toward the right;
+two slim arms with small claws reaching forward; four pairs of very long slender jointed legs spread
+wide and evenly; warm coral orange-red with shell-pink knobs; standing as if walking.
+Bottom-right — Black coral (Antipathella fiordensis): an upright bushy colony shaped like a small
+fir tree with dense feathery side branches; a short deep navy trunk and a few navy main stems where
+the black skeleton shows; the feathery branches covered in living polyps in solid pale sand with a
+darker sand shade, clearly darker and warmer than the background; growing from a small rounded rock
+base.
+```
+
+**B20 — 加州豹纹鲨、黄金河虎、鳕鱼、肩章鲨（3:2）** · ids: `california-leopard-shark,dourado,atlantic-cod,walking-shark`
+```
+Top-left — California leopard shark (Triakis semifasciata): bold dark saddle-shaped bars across the
+back and large dark oval spots along the flanks; slim houndshark body with a short rounded snout;
+two dorsal fins, the first larger; silvery bronze-grey body with deep navy saddles and spots; pale
+sand belly; cruising level.
+Top-right — Golden dorado (Salminus brasiliensis): heavy salmon-like river fish glowing golden
+orange all over; a big head with a large mouth and strong jaw; rows of fine dark dots running along
+the scale rows as thin stripes; a dark navy band across the middle of the forked tail; soft sun
+yellow body deepening to coral orange on the back; fins warm coral orange-red; swimming level.
+Bottom-left — Atlantic cod (Gadus morhua): three rounded dorsal fins in a row and a single barbel on
+the chin; a heavy head with the upper jaw slightly overhanging the lower; a thin pale curved line
+along the flank; olive-sand back densely covered in small darker spots, fading to a pale sand belly;
+square-cut tail; swimming level.
+Bottom-right — Walking shark (Hemiscyllium freycineti): a large dark eyespot just behind each
+pectoral fin; broad paddle-like pectoral and pelvic fins planted down as if walking; slender body
+and a long thick tail making up more than half its length; two small dorsal fins set far back; tan
+body (pale sand with its darker shade) covered in small dark brown spots and a few pale spots;
+mid-stride, body gently curved.
+```
+
+**B21 — 宝石海葵、小丑鱼、章鱼、企鹅（1:1）** · ids: `jewel-anemone,clownfish,giant-pacific-octopus,penguin`
+```
+Top-left — Jewel anemone (Corynactis australis): a tight cluster of about seven tiny anemones packed
+side by side, each a short column topped by a ring of tentacles that each end in a round knob; mixed
+shell pink, warm coral orange-red and soft sun yellow, the knobs a paler tone of each colour;
+growing from one small rounded rock base.
+Top-right — Clownfish (Amphiprion clarkii, Clark's anemonefish): three bold warm off-white vertical
+bands, behind the eye, mid-body and at the tail base, each edged by a thin navy line; small oval
+body with rounded fins; deep navy-black body with a soft-sun-yellow snout, belly, fins and tail;
+hovering level.
+Bottom-left — Giant Pacific octopus (Enteroctopus dofleini): a large rounded wrinkled mantle swept
+up and back behind the head, with the eye facing right; eight long thick arms spreading outward
+below in loose curls, a few curled tips showing rows of shell-pink suckers; skin warm coral
+orange-red with a darker red-brown shade and small raised bumps; hovering.
+Bottom-right — Gentoo penguin (Pygoscelis papua): bright coral orange-red bill and orange feet; a
+warm off-white bonnet stripe over the top of the head from eye to eye; standing upright, turned
+three-quarters toward the viewer with the bill pointing right; deep navy-black head, back and
+flippers; solid warm off-white chest and belly with a faint cream tint; flippers held slightly away
+from the body; short stiff tail.
+```
+
+**B22 — 巨型黑鲈、布氏鲸、南露脊鲸、星空河豚（3:2；布氏鲸为重画）** · ids: `giant-sea-bass,brydes-whale,southern-right-whale,white-spotted-pufferfish`
+```
+Top-left — Giant sea bass (Stereolepis gigas): massive deep body with a large mouth; a spiny front
+dorsal fin that drops into a taller soft rear dorsal fin; broad rounded pectoral fins and a nearly
+straight-edged tail; dark bronze-grey body scattered with large irregular darker spots; hovering
+still.
+Top-right — Bryde's whale (Balaenoptera edeni): three parallel ridges running along the top of the
+head to the blowholes; a small sickle-shaped dorsal fin set far back; slender streamlined baleen
+whale; dark slate-grey back and flanks; belly and throat one solid flat pale-sand tone, clearly
+darker and warmer than the background, with a few thin darker sand throat-groove lines; swimming
+level.
+Bottom-left — Southern right whale (Eubalaena australis): rough pale knobbly patches on the top of
+the head, the chin and above the eye; a strongly arched narrow upper jaw with a long curved mouth
+line; huge rotund body with a smooth broad finless back; broad paddle-shaped flippers; wide smooth
+flukes; deep navy-black body with the head patches in pale sand; swimming level.
+Bottom-right — White-spotted pufferfish (Torquigener albomaculosus): small rounded pufferfish body
+tapering to a slim tail; back densely covered in tiny round warm off-white dots; large eye and a
+small beak-like mouth; pale sand-brown back (the darker pale sand shade) fading to a pale sand
+belly; small fan-shaped fins; hovering level.
+```
+
+**B23 — 狼鳗、狼鱼（3:2；只有上排两格，下排留空）** · ids: `wolf-eel,wolffish,-,-`
+下排两格留空：LAYOUT 段末尾多一句 `In this image only the top two cells have subjects; the bottom-left and bottom-right cells stay as plain empty background.`。
+```
+Top-left — Wolf eel (Anarrhichthys ocellatus): very long eel-like body tapering to a fine point at
+the rear; a large blunt head with heavy jowls, thick lips and a lumpy forehead; a single long low
+fin running the whole length of the back; grey-brown body covered in dark round spots, each ringed
+with a paler tone; pale sand face; the body laid out in a long gentle horizontal S-curve, head at
+the right end.
+Top-right — Atlantic wolffish (Anarhichas lupus): big rounded blunt head with strong dog-like fangs
+showing at the front of the mouth; elongated body with one long dorsal fin running from head to tail
+and a small rounded tail fin; blue-grey body with about ten dark vertical bars along the front two
+thirds; pale sand face; resting level with the head slightly raised.
+Bottom-left — empty cell: plain background only.
+Bottom-right — empty cell: plain background only.
+```
+
 **D1 — 装饰（1:1；LAYOUT 里的 70% 改成 60%）** · ids: `deco-compass,deco-boat,deco-seafan,deco-lighthouse`
 ```
 Top-left — Compass rose: an eight-point star rose, four long points in deep navy alternating with
@@ -333,9 +541,9 @@ Bottom-left — Cloud B: one smaller soft rounded off-white cloud, three lobes.
 Bottom-right — Cloud C: one long low off-white cloud.
 ```
 
-**先不画**：潜水浮标、沉船、冰山、巨藻、珊瑚花园（当前没有潜点引用），海面波纹纹理（代码里用 SVG `<pattern>` 画正弦线，0 KB、可换主题）。
+**先不画**：潜水浮标、沉船、冰山（当前没有潜点引用；巨藻和珊瑚花园已在 B14），海面波纹纹理（代码里用 SVG `<pattern>` 画正弦线，0 KB、可换主题）。
 
-**进度**：B1–B7（27 种）已于 2026-10-21 全部出图并入库，B1 原图是后续所有批次的 ANCHOR。接下来按 B8–B13 画数据第一波新增的 24 种；第二波数据落地后再按同样格式追加批次。没有贴纸的物种在地图上显示为圆点，不阻塞上线。
+**进度**：B1–B7（27 种）与 B8–B13（24 种）已于 2026-10-21 全部出图并入库（51 个贴纸），B1 原图是后续所有批次的 ANCHOR。B8–B13 验收后有 3 格要重画（布氏鲸白肚子和硬珊瑚浅色枝条被抠成半透明、硬珊瑚底下多了沙地、护士鲨颜色和背鳍位置不对），出图对话已删，改为并入第三批整张新画。接下来按 B14–B23 画数据第二、三波新增的 35 种 + 这 3 格（38 格，B23 只有两格）。没有贴纸的物种在地图上显示为圆点（目前 317 个潜点里 35 个），不阻塞上线。
 
 ### 3.4 中文名规则（2026-10-20 已定）
 

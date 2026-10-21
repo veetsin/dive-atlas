@@ -1,0 +1,51 @@
+Generate ONE new image for this message, 3:2 landscape, 1536x1024 pixels. Do not edit or re-render any earlier image in this chat.
+
+STYLE — apply identically to every subject in every image of this set:
+Refined flat vector illustration, sticker-sheet quality, like shapes cut from matte paper.
+Clean geometric shapes with smooth curves. No outlines anywhere. Every form is built from
+exactly two flat tones: a base colour and one slightly darker shade on its lower-right side,
+because the light comes from the upper left. Colour fills are perfectly flat, smooth and
+grain-free, with crisp edges.
+Palette = the attached swatch sheet (input 1): deep navy, lagoon teal, pale seafoam green,
+warm coral orange-red, soft sun yellow, pale sand, shell pink, warm off-white. Paint each
+animal's real colours using the nearest swatch colours only.
+Anatomy is accurate and species-specific, the way a marine biologist would draw it: natural
+proportions, small eyes in natural proportion, closed neutral mouths, calm natural posture.
+Gently stylised, calm and elegant — a museum natural-history poster.
+Every subject's head points to the right edge of the image. Fish, sharks, whales, dolphins,
+turtles and mammals are shown in full side profile; rays are shown from directly above with
+the head to the right.
+Each subject floats alone with empty background around it: no water, no bubbles, no seabed,
+no cast shadow, no drop shadow, no frame, no border, no text, no letters, no numbers,
+no labels, no captions, no watermark.
+BACKGROUND: one single flat, uniform, untextured light grey (about #E6E6E6, a plain pale grey
+slightly lighter than a shark's belly) covering the whole canvas edge to edge, with no gradient,
+no vignette and no visible panel dividers.
+
+Input 1 is the palette swatch sheet. Input 2 is the approved style reference from this same
+sticker set: match its rendering style, shape language, shading depth and palette exactly,
+and draw the new animals listed below in that style. Do not copy the animals in input 2.
+
+LAYOUT: one image divided into an invisible 2x2 grid of four equal cells. One subject per cell,
+centred in its cell, filling about 70% of the cell's width or height, whichever is tighter.
+Keep at least 10% empty margin inside every cell; no part of any subject touches or crosses
+the invisible cell boundaries, and no subject overlaps another. Do not draw the grid lines.
+All four subjects share exactly the same rendering style, shading depth and level of detail.
+
+Top-left — California leopard shark (Triakis semifasciata): bold dark saddle-shaped bars across the
+back and large dark oval spots along the flanks; slim houndshark body with a short rounded snout;
+two dorsal fins, the first larger; silvery bronze-grey body with deep navy saddles and spots; pale
+sand belly; cruising level.
+Top-right — Golden dorado (Salminus brasiliensis): heavy salmon-like river fish glowing golden
+orange all over; a big head with a large mouth and strong jaw; rows of fine dark dots running along
+the scale rows as thin stripes; a dark navy band across the middle of the forked tail; soft sun
+yellow body deepening to coral orange on the back; fins warm coral orange-red; swimming level.
+Bottom-left — Atlantic cod (Gadus morhua): three rounded dorsal fins in a row and a single barbel on
+the chin; a heavy head with the upper jaw slightly overhanging the lower; a thin pale curved line
+along the flank; olive-sand back densely covered in small darker spots, fading to a pale sand belly;
+square-cut tail; swimming level.
+Bottom-right — Walking shark (Hemiscyllium freycineti): a large dark eyespot just behind each
+pectoral fin; broad paddle-like pectoral and pelvic fins planted down as if walking; slender body
+and a long thick tail making up more than half its length; two small dorsal fins set far back; tan
+body (pale sand with its darker shade) covered in small dark brown spots and a few pale spots;
+mid-stride, body gently curved.

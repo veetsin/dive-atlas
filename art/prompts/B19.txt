@@ -1,0 +1,52 @@
+Generate ONE new image for this message, 1:1 square, 1024x1024 pixels. Do not edit or re-render any earlier image in this chat.
+
+STYLE — apply identically to every subject in every image of this set:
+Refined flat vector illustration, sticker-sheet quality, like shapes cut from matte paper.
+Clean geometric shapes with smooth curves. No outlines anywhere. Every form is built from
+exactly two flat tones: a base colour and one slightly darker shade on its lower-right side,
+because the light comes from the upper left. Colour fills are perfectly flat, smooth and
+grain-free, with crisp edges.
+Palette = the attached swatch sheet (input 1): deep navy, lagoon teal, pale seafoam green,
+warm coral orange-red, soft sun yellow, pale sand, shell pink, warm off-white. Paint each
+animal's real colours using the nearest swatch colours only.
+Anatomy is accurate and species-specific, the way a marine biologist would draw it: natural
+proportions, small eyes in natural proportion, closed neutral mouths, calm natural posture.
+Gently stylised, calm and elegant — a museum natural-history poster.
+Every subject's head points to the right edge of the image. Fish, sharks, whales, dolphins,
+turtles and mammals are shown in full side profile; rays are shown from directly above with
+the head to the right.
+Each subject floats alone with empty background around it: no water, no bubbles, no seabed,
+no cast shadow, no drop shadow, no frame, no border, no text, no letters, no numbers,
+no labels, no captions, no watermark.
+BACKGROUND: one single flat, uniform, untextured light grey (about #E6E6E6, a plain pale grey
+slightly lighter than a shark's belly) covering the whole canvas edge to edge, with no gradient,
+no vignette and no visible panel dividers.
+
+Input 1 is the palette swatch sheet. Input 2 is the approved style reference from this same
+sticker set: match its rendering style, shape language, shading depth and palette exactly,
+and draw the new animals listed below in that style. Do not copy the animals in input 2.
+
+LAYOUT: one image divided into an invisible 2x2 grid of four equal cells. One subject per cell,
+centred in its cell, filling about 70% of the cell's width or height, whichever is tighter.
+Keep at least 10% empty margin inside every cell; no part of any subject touches or crosses
+the invisible cell boundaries, and no subject overlaps another. Do not draw the grid lines.
+All four subjects share exactly the same rendering style, shading depth and level of detail.
+
+Top-left — Giant Australian cuttlefish (Sepia apama): broad oval body edged along its whole length
+by a thin wavy fin; a short cone of thick arms held together at the front, pointing right, with a
+large eye and W-shaped pupil just behind them; a few small skin flaps above the eye; mottled shell
+pink and pale sand with darker sand patches; hovering level.
+Top-right — Walrus (Odobenus rosmarus): two long ivory tusks hanging straight down from the upper
+jaw; a broad square muzzle with a thick bristly moustache; massive wrinkled body resting on its
+belly, the front propped up on its front flippers, head raised; small eyes; hind flippers trailing;
+warm pinkish-brown skin (shell pink deepened with the darker pale sand shade); tusks pale sand
+ivory, clearly darker than the background.
+Bottom-left — Giant spider crab (Leptomithrax gaimardii), seen from directly above, front to the
+right: a pear-shaped knobbly carapace covered in short blunt spines, narrow end toward the right;
+two slim arms with small claws reaching forward; four pairs of very long slender jointed legs spread
+wide and evenly; warm coral orange-red with shell-pink knobs; standing as if walking.
+Bottom-right — Black coral (Antipathella fiordensis): an upright bushy colony shaped like a small
+fir tree with dense feathery side branches; a short deep navy trunk and a few navy main stems where
+the black skeleton shows; the feathery branches covered in living polyps in solid pale sand with a
+darker sand shade, clearly darker and warmer than the background; growing from a small rounded rock
+base.
