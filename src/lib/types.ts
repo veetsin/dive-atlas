@@ -33,12 +33,18 @@ export interface DiveSite {
   access: Access[];
   waterTempC: [number, number];
   visibilityM: [number, number];
-  summary: LocalizedText;
-  highlights?: LocalizedText[];
-  sources: string[];
   verified: boolean;
-  notes?: string;
   updatedAt?: string;
+}
+
+/**
+ * The text-heavy part of a site record. Lives in data/sites.json next to the fields above,
+ * but ships as a separate lazily imported chunk (`virtual:site-details`), loaded when a card opens.
+ */
+export interface SiteDetails {
+  summary: LocalizedText;
+  highlights: LocalizedText[];
+  sources: string[];
 }
 
 export interface Species {

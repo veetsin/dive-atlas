@@ -31,9 +31,14 @@ const RULES = {
   ],
 };
 
-// The budget is for the FIRST load: html + bundled js/css + the base map. Sprites and the
-// optional detail map are lazy-loaded and must not count against it.
-const firstLoad = (p) => /^(index\.html|assets\/[^/]+\.(?:js|css)|geo\/countries\.topo\.json)$/.test(relative(dist, p));
+// The budget is for the FIRST load: index.html, whatever it references directly (entry js/css)
+// and the base map. Lazy chunks (site details), sprites and the detail map must not count.
+const html = readFileSync(join(dist, 'index.html'), 'utf8');
+const referenced = new Set([...html.matchAll(/(?:src|href)="\.?\/?([^"]+)"/g)].map((m) => m[1].replace(/^\.?\//, '')));
+const firstLoad = (p) => {
+  const r = relative(dist, p);
+  return r === 'index.html' || r === 'geo/countries.topo.json' || [...referenced].some((ref) => ref.endsWith(r));
+};
 
 let problems = 0;
 let gzipTotal = 0;

@@ -1,9 +1,9 @@
 <script lang="ts">
   import { t, tx, MONTH_KEYS } from '../lib/i18n';
   import { month, shareUrl, footprint, viewing, setMark, markOf } from '../lib/stores';
-  import { speciesById, regionById, spriteUrl } from '../lib/data';
+  import { speciesById, regionById, spriteUrl, loadSiteDetails } from '../lib/data';
   import { copyText } from '../lib/clipboard';
-  import type { DiveSite } from '../lib/types';
+  import type { DiveSite, SiteDetails } from '../lib/types';
 
   // App.svelte wraps this in {#key site.id}, so transient state resets per site for free.
   let { site, onclose }: { site: DiveSite; onclose: () => void } = $props();
@@ -11,12 +11,28 @@
   let copied = $state(false);
   let copyFailed = $state(false);
   let heroBroken = $state(false);
+  /** Text block, loaded lazily (one shared chunk for all sites). */
+  let details: SiteDetails | undefined = $state();
+  $effect(() => {
+    const id = site.id;
+    loadSiteDetails().then((all) => {
+      if (id === site.id) details = all[id];
+    });
+  });
 
   const heroSprite = $derived.by(() => {
     const first = site.species[0];
     const sp = first ? speciesById.get(first) : undefined;
     return sp ? spriteUrl(sp.sprite, 512) : undefined;
   });
+
+  function hostOf(url: string): string {
+    try {
+      return new URL(url).hostname.replace(/^www\./, '');
+    } catch {
+      return url;
+    }
+  }
 
   async function copyLink() {
     const ok = await copyText(shareUrl());
@@ -84,27 +100,29 @@
     </div>
   </dl>
 
-  <section>
-    <p class="summary">{$tx(site.summary)}</p>
-    {#if site.highlights?.length}
-      <h3>{$t('card.highlights')}</h3>
-      <ul class="highlights">
-        {#each site.highlights as h}<li>{$tx(h)}</li>{/each}
-      </ul>
-    {/if}
-  </section>
+  {#if details}
+    <section>
+      <p class="summary">{$tx(details.summary)}</p>
+      {#if details.highlights.length}
+        <h3>{$t('card.highlights')}</h3>
+        <ul class="highlights">
+          {#each details.highlights as h}<li>{$tx(h)}</li>{/each}
+        </ul>
+      {/if}
+    </section>
 
-  <section class="sources">
-    <h3>{$t('card.sources')}</h3>
-    {#if site.sources.length}
-      <ul>
-        {#each site.sources as url}
-          <li><a href={url} target="_blank" rel="noopener noreferrer">{new URL(url).hostname}</a></li>
-        {/each}
-      </ul>
-    {/if}
-    <p class="muted">{$t('card.reference')}</p>
-  </section>
+    <section class="sources">
+      <h3>{$t('card.sources')}</h3>
+      {#if details.sources.length}
+        <ul>
+          {#each details.sources as url (url)}
+            <li><a href={url} target="_blank" rel="noopener noreferrer">{hostOf(url)}</a></li>
+          {/each}
+        </ul>
+      {/if}
+      <p class="muted">{$t('card.reference')}</p>
+    </section>
+  {/if}
 
   <footer>
     {#if $viewing}

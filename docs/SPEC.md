@@ -267,7 +267,7 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mas
 }
 ```
 
-体积提醒：潜点数据目前随 JS 打包（43 个潜点约 21 KB gzip，不含 notes）。超过约 120 个潜点时 JS 会逼近 150 KB 预算，届时把 `summary / highlights / sources` 拆成按需 `import()` 的 `data/site-details.json`，轻字段留在主包。
+体积：`data/sites.json` 仍是唯一手工维护的文件，但由 `vite.config.ts` 的 `siteData` 插件拆成两份发布——静态导入拿到轻字段（地图 / 搜索 / 足迹用），`summary / highlights / sources` 进入 `virtual:site-details` 虚拟模块，卡片首次打开时按需 `import()`（43 个潜点时主包 73 KB gzip，详情块 17 KB）；`notes` 不发布。
 
 ### 7.2 `data/species.json`
 

@@ -4,7 +4,7 @@ import regionsJson from '../../data/regions.json';
 import labelsJson from '../../data/labels.json';
 import footprintIndexJson from '../../data/footprint-index.json';
 import spriteManifest from '../../public/sprites/manifest.json';
-import type { DiveSite, Species, Region, SeaLabel, SizeClass } from './types';
+import type { DiveSite, SiteDetails, Species, Region, SeaLabel, SizeClass } from './types';
 
 /**
  * Single entry point for all content data. Components import from here,
@@ -23,6 +23,13 @@ export const footprintIndex: string[] = footprintIndexJson as string[];
 export const speciesById = new Map(species.map((s) => [s.id, s]));
 export const regionById = new Map(regions.map((r) => [r.id, r]));
 export const siteById = new Map(sites.map((s) => [s.id, s]));
+
+let detailsPromise: Promise<Record<string, SiteDetails>> | null = null;
+/** Summary / highlights / sources for every site, fetched as one chunk the first time a card opens. */
+export function loadSiteDetails(): Promise<Record<string, SiteDetails>> {
+  detailsPromise ??= import('virtual:site-details').then((m) => m.default);
+  return detailsPromise;
+}
 
 /** True when the site is in season for the given month (0 = any). */
 export function inSeason(site: DiveSite, m: number): boolean {
