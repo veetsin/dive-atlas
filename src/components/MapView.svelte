@@ -192,6 +192,40 @@
   const looseMarkers = $derived(markers.filter((m) => !clusteredRegions.has(m.site.region)));
 
   /**
+   * Sticker thinning, the second de-clutter level after bubbles: greedy in priority order (selected,
+   * in season, verified, has a sprite, bigger, id), a marker whose disc would sink more than 40 % of
+   * its radius into an already-placed sticker is drawn as a small dot without a label.
+   * Frozen while the globe turns, like labels: markers that turn into view meanwhile stay dots until it settles.
+   */
+  // ponytail: O(n²) over loose markers (n ≈ 320, ~50k distance checks, rerun every zoom frame on the
+  // flat map like the label pass); bucket the placed discs in a screen grid if sites grow past ~2000.
+  let settledStickers = new Set<string>();
+  const stickered = $derived.by(() => {
+    if (moving) return settledStickers;
+    const k = zoomT.k, sel = $selectedSiteId;
+    const order = [...looseMarkers].sort(
+      (a, b) =>
+        +(b.site.id === sel) - +(a.site.id === sel) ||
+        +b.season - +a.season ||
+        +b.site.verified - +a.site.verified ||
+        +!!b.sprite - +!!a.sprite ||
+        b.size - a.size ||
+        a.site.id.localeCompare(b.site.id),
+    );
+    const placed: { x: number; y: number; r: number }[] = [];
+    const out = new Set<string>();
+    for (const m of order) {
+      const x = m.x * k, y = m.y * k, r = m.sprite ? m.size / 2 : 6;
+      if (placed.some((p) => Math.hypot(p.x - x, p.y - y) < p.r + 0.6 * r)) continue;
+      placed.push({ x, y, r });
+      out.add(m.site.id);
+    }
+    return (settledStickers = out);
+  });
+  /** Stickers first, dots after them so a dot on top of a sticker stays tappable. */
+  const drawn = $derived([...looseMarkers].sort((a, b) => +!stickered.has(a.site.id) - +!stickered.has(b.site.id)));
+
+  /**
    * Greedy label thinning: labels sit to the right of the disc, so two labels collide when
    * their anchors are within ~one label width horizontally and one line vertically (screen px).
    * Top-to-bottom order keeps the result stable while panning; the selected site always wins.
@@ -211,7 +245,7 @@
     };
     const sel = looseMarkers.find((m) => m.site.id === $selectedSiteId);
     if (sel) take(sel);
-    for (const m of [...looseMarkers].filter((m) => m.season && m !== sel).sort((a, b) => a.y - b.y)) {
+    for (const m of [...looseMarkers].filter((m) => m.season && m !== sel && stickered.has(m.site.id)).sort((a, b) => a.y - b.y)) {
       const sx = m.x * k, sy = m.y * k;
       if (placed.some((p) => Math.abs(p.x - sx) < 120 && Math.abs(p.y - sy) < 16)) continue;
       take(m);
@@ -677,8 +711,9 @@
         </g>
 
         <g class="sites">
-          {#each looseMarkers as m (m.site.id)}
+          {#each drawn as m (m.site.id)}
             {@const selected = $selectedSiteId === m.site.id}
+            {@const dot = !selected && !stickered.has(m.site.id)}
             {@const mark = markOf(fpView, m.site.id)}
             <g
               class="site"
@@ -687,6 +722,7 @@
               class:wish={mark === 'wish'}
               class:unmarked={hasMarks && !mark}
               class:off={!m.season}
+              class:demoted={dot}
               transform={`translate(${m.x},${m.y}) scale(${1 / zoomT.k})`}
               role="button"
               tabindex="0"
@@ -699,9 +735,12 @@
                 }
               }}
             >
-              <circle class="hit" r="20" />
-              <circle class="glow" r="10" />
-              {#if m.sprite}
+              <circle class="hit" r={dot ? 14 : 20} />
+              {#if !dot}<circle class="glow" r="10" />{/if}
+              {#if dot}
+                <circle class="ring" r="3" />
+                <circle class="dot" r="1.8" />
+              {:else if m.sprite}
                 <image
                   href={m.sprite}
                   x={-m.size / 2}

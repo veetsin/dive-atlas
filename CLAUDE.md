@@ -96,6 +96,7 @@ art/raw/                  ← GPT 原始出图（gitignore，体积大）
 - [x] 足迹 + 分享图 + 二维码（SPEC §6.1 #10–#12）：`stores.ts` 的 `footprint` / `viewing` 与位图编解码、`share-image.ts`（Canvas2D + lean-qr）、`FootprintPanel.svelte`、`data/footprint-index.json`；浏览器里已验证标记、分享图、`?d=&w=` 查看模式不落盘、导入覆盖。**真机未测**：微信长按保存 / 识别二维码、低端安卓渲染耗时
 - [x] v1 潜点数据（2026-10-21）：**320 个潜点**、86 个物种、11 个区域。前两波按区域手写 brief 做深度研究（慢、漏点）；第三波 136 个改为"枚举清单型来源 → `scripts/select-candidates.mjs` 自动入选 → 每潜点 ≤ 2 次搜索的补全 → `data:validate` 内的脚本地理校验"，23 分钟 + 15 分钟跑完。`verified:false` 的在 UI 显示"待核实"；研究 agent 一律 Opus 5.5（研究 max、代码 xhigh）
 - [x] 区域聚合气泡（SPEC §6.1 #13）：桌面 < 1.6x、窄屏 < 2.6x 且区域可见潜点 ≥ 3 时折叠为"区域色外环 + 当季数 + 区域名"的气泡，点击缩放到该区域；稀疏区域仍显示单个贴纸
+- [x] 分级缩放第二层（2026-10-21）：气泡拆开后，互相压住超过 40% 半径的贴纸按"选中 > 当季 > 已核实 > 有贴纸 > 体型大"贪心保留，其余画成 6 px 圆点（仍可点、保留足迹色与月份变暗），地球转动中冻结；珊瑚三角 2.5× 从 173 张叠贴纸变 58 张 + 120 点。可选后续：同物种在近处重复时降权，避免一屏全是鲸鲨
 - [x] 地球模式（2026-10-21，SPEC §5.5、§6.1 #14）：工具栏地球按钮、`?view=globe` + `localStorage dive-atlas:view`、MapView 内切模式（d3-zoom 事件改读为旋转 / 中心缩放）、大圆飞行、运动 LOD（旋转中隐藏 s1–s3，飞行中再隐藏 s4 与海名，抽稀陆地 `landLo`）；无头自检 `npm run preview:map 375 700 night globe` 会在有潜点落在圆盘外时报错。6× 慢 CPU 模拟：拖动达标，搜索飞行因开卡那一帧 83 ms 略超，**真机 / 微信未测**
 - [x] 搜索（中文 / 英文 / 拼音 / 国家）：工具栏放大镜 → `SearchPanel.svelte`，选中后 `openSite()` 飞到潜点；`pinyin` 字段由 `npm run data:pinyin` 生成并被校验脚本要求；`?sp=` 物种筛选现在有可关闭的芯片
 - [x] 贴纸落地准备：`spriteUrl()` 只对 `public/sprites/manifest.json` 里有的贴纸返回地址（没画的不再 404），地图贴纸尺寸按 `sizeClass` 48/40/32/24 px
