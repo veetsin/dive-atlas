@@ -167,6 +167,30 @@
   /** Markers drawn individually: everything outside a bubble. */
   const looseMarkers = $derived(markers.filter((m) => !clusteredRegions.has(m.site.region)));
 
+  /**
+   * Greedy label thinning: labels sit to the right of the disc, so two labels collide when
+   * their anchors are within ~one label width horizontally and one line vertically (screen px).
+   * Top-to-bottom order keeps the result stable while panning; the selected site always wins.
+   */
+  const labelled = $derived.by(() => {
+    const out = new Set<string>();
+    if (!showLabels) return out;
+    const k = zoomT.k;
+    const placed: { x: number; y: number }[] = [];
+    const take = (m: Marker) => {
+      placed.push({ x: m.x * k, y: m.y * k });
+      out.add(m.site.id);
+    };
+    const sel = looseMarkers.find((m) => m.site.id === $selectedSiteId);
+    if (sel) take(sel);
+    for (const m of [...looseMarkers].filter((m) => m.season && m !== sel).sort((a, b) => a.y - b.y)) {
+      const sx = m.x * k, sy = m.y * k;
+      if (placed.some((p) => Math.abs(p.x - sx) < 120 && Math.abs(p.y - sy) < 16)) continue;
+      take(m);
+    }
+    return out;
+  });
+
   /** Zoom so the region's sites fill ~70 % of the viewport (and markers replace the bubble). */
   function openRegion(region: string) {
     if (!svgEl || !zoomBehavior) return;
@@ -471,7 +495,7 @@
                 <circle class="ring" r={selected ? 7 : 5.5} />
                 <circle class="dot" r={selected ? 5 : 4} />
               {/if}
-              {#if selected || (showLabels && m.season)}
+              {#if selected || labelled.has(m.site.id)}
                 <text class="label" x={m.sprite ? 0 : 11} y={m.sprite ? m.size / 2 + 12 : 4} text-anchor={m.sprite ? 'middle' : 'start'}>
                   {$tx(m.site.name)}
                 </text>
