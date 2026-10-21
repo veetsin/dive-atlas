@@ -84,9 +84,11 @@
 
 全局状态（`src/lib/stores.ts`）：`lang`、`month`（0 = 全年）、`selectedSiteId`、`speciesFilter`、
 `footprint`（我的足迹，`{v:1, dived:[id], wish:[id]}`，存 `localStorage['dive-atlas:footprint']`）、
-`viewing`（正在查看的朋友足迹，只读，**永不写入 localStorage**，除非用户点"导入为我的"）。
+`viewing`（正在查看的朋友足迹，只读，**永不写入 localStorage**，除非用户点"导入为我的"）、
+`mapView`（`atlas` 平面 | `globe` 地球，§4.3）。
 
-URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mask>`。
+URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=globe&d=<mask>&w=<mask>`。
+- `view=globe` 只在地球模式写入（平面是默认，不写）。枚举类键用单词（`lang=`、`site=`、`view=`），短键只给数字与位图。加载顺序：URL `view` → `localStorage['dive-atlas:view']` → 平面；只有工具栏切换按钮写 localStorage，通过链接进入不写。足迹链接 / 二维码（`footprintShareUrl`）不带 `view`，二维码尺寸不变。
 - `d` / `w`（潜过 / 想去）是 base64url 位图：第 i 位对应 `data/footprint-index.json` 的第 i 个 id（**只追加、不重排、不删除**，所以旧二维码永远可解；见 §7.3a）。80 个潜点各 14 个字符，整条分享 URL 在短域名下约 60 字符，二维码 V4–V5。
 - 打开页面：先读 URL，再读 `localStorage`（lang、footprint），最后按浏览器语言猜。URL 里有 `d`/`w` 即进入"查看朋友足迹"模式，顶部横幅可切回"我的"。
 - 状态变化：`history.replaceState`，不产生历史记录。查看模式下 `syncUrl` 必须保留 `d`/`w`，否则点一下月份就丢了朋友的链接。
@@ -127,6 +129,15 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mas
 - `d3.geoNaturalEarth1()`，`rotate([-150, 0])` → 中央经线 150°E，太平洋居中，亚洲在中、美洲在右、欧非在左。
 - 纬度范围裁到 **-60° ～ 85°**：不画南极，画面上下更紧凑。实现：用 raw 投影算出 y(85°) 与 y(-60°)、x(±180°) 的范围，再求 scale/translate（`fitWorld()`），不用 `fitSize(Sphere)`。
 - 海洋背景是全幅矩形，所以投影边缘外的空白也是"海"，不会露出球面轮廓。
+- **地球模式**（工具栏地球图标切换，§6.1 #14）：`geoOrthographic().rotate([-λ, -φ]).clipAngle(90)`，半径 `R = min(宽, 高)/2 − 24`，北永远朝上（无 roll）。
+  - 中心纬度夹在 `LAT_RANGE` [−60, 85] 内，永不翻极；经度回绕。南纬 60° 以南用一个 `geoCircle([0, −90], 30)` 以 `--ocean-deep` 半透明压暗，等于平面图纬度裁切的地球版；不加南极洲，`build-geo.sh` 与 `public/geo/` 不变。
+  - 没有切割线，格陵兰走普通正射路径，完整显示；平面图的 unwrap（§4.4）不变。
+  - d3-geo 只裁路径不裁点：背面潜点必须用 `geoDistance` 显式隐藏（`MapProjection.point()`，超过 85° 返回 null；海域名 70°）。
+  - 缩放仍是 `zoomT`，表达为以视口中心为原点的 scale(k)；所有平面缩放阈值（标签、气泡、海名分级）按 `toGlobeK = 平面每度像素 / (2R/180)` 换算，`effK = k / toGlobeK`。最大缩放 = 平面 8×（`8·toGlobeK`）。
+  - 手势只有 d3-zoom 一个识别器：有 `sourceEvent` 且 k 未变 → 旋转（每像素 `180/π/(R·k)` 度，中心处跟手）；k 变了（滚轮、双指、双击、程序调用）→ 以视口中心缩放；程序事件永不旋转。惯性关闭。
+  - 飞行：`geoInterpolate` 大圆 + smoothstep，手写 rAF，时长 `500 + 250·弧度距离` ms（≤ 1.3 s），每帧 `zb.scaleTo` 写回 k；用户手势取消飞行；`prefers-reduced-motion` 下为 0。
+  - 切换视图保留屏幕中心、缩放回该视图默认（平面：手机 1.9× / 桌面 1×；地球：1×）；有打开的卡片则直接对准该潜点。
+  - `npm run preview:map <宽> <高> [night] globe` 无浏览器渲染地球并自检（任何标记在圆盘外或来自背面即 exit 1）；取代 `docs/map-style-candidates/globe-preview.mjs`（保留作设计记录，它把背面潜点镜像到了正面）。
 
 ### 4.4 格陵兰 unwrap（为什么要单独画）
 
@@ -193,6 +204,10 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mas
 4. 晕影（日）、星点（夜）、桌面图框 + 刻度 + 罗盘：全部静态，`pointer-events: none`。
 5. v1.5：真实海底深度分层（§4.1）可替换第 2 条的伪等深带。
 
+### 5.5 地球模式图层
+
+同一套 SVG 结构与 token，无新 token：平面海面矩形隐藏（圆盘外就是 `.map` 的 `--ocean-deep`）；zoom 组内依次为大气边缘（`r = 1.08R`，`.st-shallow` 径向渐变）、海洋圆盘（class `sea`，复用 `#sea-night` 渐变，点它关卡片）、经纬网（30°，全球默认范围）+ 回归线、南极压暗帽、大陆架 ×4 与陆地（结构线宽不变）、海域名（中心 70° 内）、明暗（`globe-shade`：`.st-deep` 0 → .45，光源左上 .38 / .34）、外圈细线（`--map-line` .35）、气泡与标记。桌面保留图框、隐藏经纬刻度；罗盘、晕影、星点、颗粒不变。运动 LOD（§9）：旋转或飞行中 `svg.moving` 隐藏 s1–s3、不投影宽带几何、陆地改用抽稀版 `landLo`、标签冻结为上一次静止的集合；程序飞行（搜索、深链接、点气泡）中 `svg.flying` 另隐藏 s4 与海域名，用户拖动不隐藏。已知瑕疵：大陆在地平线被裁开的那条边也会被大陆架描边，夜间在圆盘边缘看得出一条亮带（只描真实海岸线需要每帧多算一份线几何，暂不做）。
+
 ---
 
 ## 6. 交互清单
@@ -214,6 +229,7 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mas
 | 11 | 分享图 + 二维码 | 面板点"生成分享图"：Canvas2D 画 1080×1920 JPEG（q 0.92；顶部 1/3 世界图 + 足迹点，下方计数与地名，右下二维码 8 px/模块、ECC M）；结果以 `<img src="data:image/jpeg…">` 弹层显示并提示"长按保存"（微信里 `download`、`navigator.share(files)` 都不可用）；二维码内容 = 足迹链接 |
 | 12 | 足迹查看模式 | 扫码 / 点链接打开 `?d=&w=` 时只读展示朋友足迹，横幅提供"看我的"与"导入为我的足迹"（二次确认）；复制链接在微信失败时回退到 `execCommand('copy')`，再失败显示可长按选中的链接框 |
 | 13 | 区域聚合气泡（从 v1.5 提前） | 缩放低于阈值（桌面 1.6x、窄屏 2.6x）且某区域可见潜点 ≥ 3 时，该区域折叠成一个气泡：区域色外环 + 当季潜点数 + 区域名；点气泡缩放到该区域范围（约占视口 70%）后散开为标记；不足 3 个的区域始终显示单个标记；月份 / 物种筛选影响气泡计数 |
+| 14 | 地球模式（2026-10-21） | 工具栏地球图标（`aria-pressed`）切换平面 / 地球；拖动旋转、内容跟手；滚轮 / 双指 / 双击以中心缩放；点标记开卡、点海面或圆盘外关卡、拖动不开卡；南北拖到 −60° / 85° 停住不翻转；背面潜点不画；深链接 `?site=&view=globe` 在手机上把潜点放在抽屉上方（南边被 −60° 夹住时提高缩放，如 Poor Knights）；搜索沿大圆飞行 ≤ 1.3 s；气泡点开缩放到散开；海名只画中心 70° 内；键盘：Tab 到地球（`role="application"`），方向键旋转 10°/k，+ / - 缩放，Escape 关卡；筛选 / 足迹颜色 / 计数与平面一致；分享图仍是平面图 |
 
 ### 6.2 v1.5（惊艳点）
 
@@ -399,3 +415,14 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&d=<mask>&w=<mas
 - **数据**：第一波合并 43 个潜点（东南亚 8、红海 8、澳新 6、美洲 13 + 8 个未重做的种子），34 个 `verified: true`，新增 16 个物种；每条带 `notes`（构建时剥离）。目标提高到 ≥ 200 个（用户要求不少于参考海报），第二波待续跑。
 - **体积**：43 个潜点时 JS 87 KB gzip（剥 notes 前 95 KB）。按每潜点约 0.5 KB gzip 估算，200 个潜点需要把 `summary / highlights / sources` 拆成按需 `import()`（§7.1 体积提醒）。
 - **评估**：地球模式（d3 `geoOrthographic`）可行、零新依赖，静态效果见 `preview/map-style-candidates/globe-preview.png`，渲染脚本 `docs/map-style-candidates/globe-preview.mjs`；建议做成"平面 / 地球"切换而不是替代平面图，排在区域聚合之后。
+
+### 2026-10-21 · 地球模式
+
+- **功能**：§6.1 #14、§4.3 地球段、§5.5 图层、§3.4 `view=globe` 与 `dive-atlas:view`。全部在 `MapView.svelte` 内做模式切换，不新增组件、不抽共享模块；`projection.ts` 新增 `createGlobeProjection` / `globeRadius` / `MapProjection.point()`（删去无人使用的 `project()`）；`stores.ts` 新增 `mapView` / `toggleMapView`；i18n 新增 `view.globe`、`view.globeKeys`；`preview:map` 支持 `globe` 参数与自检。零新依赖（只用 d3-geo 的 `geoOrthographic` / `geoInterpolate` / `geoDistance` / `geoCircle`）。
+- **体积**：主 JS 78.7 → 81.3 KB gzip，首屏 127 → 130 KB gzip。
+- **性能**（内置浏览器面板隐藏时 rAF 不跑，改用无头 Chrome + CDP 实测；rAF 帧间隔与每帧主线程耗时 = rAF 开始到绘制后的 message 任务）：
+  - 第 9 步运动 LOD 常开。第 10 步（旋转中陆地每 3 点取 1，`landLo`，9 320 → 4 428 点，`#coast path` 的 `d` 80 842 → 38 248 字符）**已启用**：启用前 375×812 无节流拖动每帧 p95 9.7 ms、飞行 p95 25.3 ms，超过 8 ms（= 50 ms ÷ 6× 减速）门槛。
+  - 启用后，375×812 无节流：拖动每帧 p50 4.9 / p95 7.1 ms，松手全质量帧 17.8 ms；飞行 p50 5.1 / p95 9.1 ms。1280×800 无节流：拖动与飞行帧间隔 p95 16.8 ms（≤ 20 ✓）。
+  - 375×812 + CDP 6× CPU 减速：拖动帧间隔 p50 33.3 / p95 50 ms、松手帧 102–108 ms（达标）。飞行每帧同时改缩放，比纯旋转贵：只有第 9、10 步时飞行 p50 33.4 / p95 83 ms（不开卡片 66.6 ms）。
+  - 于是按 §5 回退清单的下一步，**只在程序飞行中**再隐藏 s4 与海域名（`svg.flying`，飞行结束或被取消即清除；拖动不受影响）。之后 6×：不开卡片的飞行 p50 33.3 / p95 50 / max 50 ms（**达标**）；搜索飞行（同时打开卡片）两次实测 p50 33.3–33.4 / p95 66.6–83.3 ms（**仍未达 p95 ≤ 50**）。超标帧是卡片挂载那一帧（83 ms）和飞行中偶发的一帧 67–167 ms 尖峰，其余帧 33–50 ms。拖动数字不变。不再加回退，下一步是微信真机实测。
+- **未做 / 待定**：惯性；以指针为原点的缩放（现以视口中心）；双指拖动只在缩放到上下限时旋转（k 一变就按缩放处理）；大陆在地平线裁开的边被大陆架描边（§5.5）；低端安卓微信真机测试。

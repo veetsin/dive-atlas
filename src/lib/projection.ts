@@ -1,4 +1,4 @@
-import { geoNaturalEarth1, geoNaturalEarth1Raw, geoPath, geoTransform } from 'd3-geo';
+import { geoDistance, geoNaturalEarth1, geoNaturalEarth1Raw, geoOrthographic, geoPath, geoTransform } from 'd3-geo';
 import type { GeoPath, GeoProjection } from 'd3-geo';
 
 /**
@@ -11,6 +11,8 @@ import type { GeoPath, GeoProjection } from 'd3-geo';
  *   UNWRAP_LIST are drawn through `unwrappedPath`, which bypasses d3's
  *   antimeridian clipping and lets them spill a few degrees past the right edge.
  *   The ocean background is a full-bleed rectangle, so the overflow is invisible.
+ * - Globe mode (SPEC §4.3) is an orthographic projection about a movable centre; it has no
+ *   cut, so Greenland goes through the plain path there.
  */
 
 export const CENTRAL_MERIDIAN = 150;
@@ -27,6 +29,8 @@ export interface MapProjection {
   projection: GeoProjection;
   path: GeoPath;
   unwrappedPath: GeoPath;
+  /** Screen position of a [lon, lat]; on the globe null once it is more than maxDeg from the centre (the far side). */
+  point(p: [number, number], maxDeg?: number): [number, number] | null;
   width: number;
   height: number;
 }
@@ -78,12 +82,34 @@ export function createMapProjection(width: number, height: number, padding = 8):
     projection,
     path: geoPath(projection),
     unwrappedPath: geoPath(unwrapped),
+    point: (p) => projection(p),
     width,
     height,
   };
 }
 
-/** Project a [lon, lat] pair to screen coordinates (null if not projectable). */
-export function project(p: MapProjection, lonLat: [number, number]): [number, number] | null {
-  return p.projection(lonLat);
+/** Gap between the globe's edge and the shorter side of the viewport at zoom 1. */
+const GLOBE_PAD = 24;
+
+export function globeRadius(width: number, height: number): number {
+  return Math.min(width, height) / 2 - GLOBE_PAD;
+}
+
+/** Orthographic globe looking straight down at `centre` ([lon, lat]), north up. */
+export function createGlobeProjection(width: number, height: number, centre: [number, number]): MapProjection {
+  const projection = geoOrthographic()
+    .rotate([-centre[0], -centre[1]])
+    .translate([width / 2, height / 2])
+    .scale(globeRadius(width, height))
+    .clipAngle(90);
+  const path = geoPath(projection);
+  return {
+    projection,
+    path,
+    unwrappedPath: path, // no antimeridian cut on a globe: Greenland is drawn whole
+    // d3 clips paths, not points: the far side would be mirrored onto the near side.
+    point: (p, maxDeg = 85) => (geoDistance(p, centre) < maxDeg * RAD ? projection(p) : null),
+    width,
+    height,
+  };
 }

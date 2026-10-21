@@ -7,7 +7,7 @@
   import FootprintPanel from './components/FootprintPanel.svelte';
   import SearchPanel from './components/SearchPanel.svelte';
   import { t, tx } from './lib/i18n';
-  import { selectedSiteId, speciesFilter, footprint, viewing, adoptViewing } from './lib/stores';
+  import { selectedSiteId, speciesFilter, footprint, viewing, adoptViewing, mapView, toggleMapView } from './lib/stores';
   import { siteById, speciesById } from './lib/data';
 
   const site = $derived($selectedSiteId ? (siteById.get($selectedSiteId) ?? null) : null);
@@ -80,6 +80,13 @@
       <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
         <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2" />
         <path d="M15.5 15.5 L21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+      </svg>
+    </button>
+    <button class="pill round globe" onclick={toggleMapView} aria-pressed={$mapView === 'globe'} aria-label={$t('view.globe')}>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor">
+        <circle cx="12" cy="12" r="8.5" stroke-width="2" />
+        <ellipse cx="12" cy="12" rx="3.6" ry="8.5" stroke-width="1.6" />
+        <path d="M3.5 12 H20.5" stroke-width="1.6" />
       </svg>
     </button>
     <MonthPicker />
@@ -250,6 +257,9 @@
     align-items: center;
     justify-content: center;
     flex: none;
+  }
+  .pill.globe[aria-pressed='true'] {
+    box-shadow: inset 0 0 0 2px var(--coral);
   }
   .pill.chip {
     height: 40px;

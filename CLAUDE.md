@@ -20,6 +20,7 @@
    由 `scripts/build-geo.sh` 生成，不要手动改 `public/geo/` 里的文件，也不要换成其他来源的国界数据。
 4. **投影：Natural Earth I，中央经线 150°E（太平洋居中），纬度裁到 -60°～85°（不画南极）。**
    格陵兰用 `unwrapped` 图层单独绘制（见 `src/lib/projection.ts`），不要"修掉"这个逻辑。
+   地球模式（`?view=globe`）是附加视图：`geoOrthographic`、不用 unwrap、中心纬度夹在 -60°～85°、-60° 以南涂暗；平面图规则不变。
 5. **所有用户可见文案走 i18n**（`src/lib/i18n.ts` + 数据里的 `{zh, en}` 字段）。不得在组件里硬编码中文或英文。
 6. **数据必须带来源。** `data/sites.json` 每条记录都要有 `sources`；`verified: false` 的记录 UI 上显示"待核实"标记。
    季节、水温、能见度一律是"参考值"，文案里不要写成保证。
@@ -94,7 +95,7 @@ art/raw/                  ← GPT 原始出图（gitignore，体积大）
 - [x] 足迹 + 分享图 + 二维码（SPEC §6.1 #10–#12）：`stores.ts` 的 `footprint` / `viewing` 与位图编解码、`share-image.ts`（Canvas2D + lean-qr）、`FootprintPanel.svelte`、`data/footprint-index.json`；浏览器里已验证标记、分享图、`?d=&w=` 查看模式不落盘、导入覆盖。**真机未测**：微信长按保存 / 识别二维码、低端安卓渲染耗时
 - [ ] v1 潜点数据：**目标 ≥ 200 个**（用户要求不少于参考图）。2026-10-21 第一波（4 区域）+ 1b（5 区域）已合并 **79 个**潜点、51 个物种、11 个区域（含新加的 east-asia），每条带来源与维护 notes；第二波（11 个区域、约 115 个）用 Opus 5.5 在跑。研究类 agent 一律用 `claude-opus-5-5` / `max`（用户要求）。物种中文名策略见 ILLUSTRATION_GUIDE §3.4
 - [x] 区域聚合气泡（SPEC §6.1 #13）：桌面 < 1.6x、窄屏 < 2.6x 且区域可见潜点 ≥ 3 时折叠为"区域色外环 + 当季数 + 区域名"的气泡，点击缩放到该区域；稀疏区域仍显示单个贴纸
-- [ ] 地球模式（可拖动旋转的正射投影，日/夜）：已评估可行，d3-geo 自带、零新依赖；效果预览见 `preview/map-style-candidates/globe-preview.png`；排在聚合气泡之后
+- [x] 地球模式（2026-10-21，SPEC §5.5、§6.1 #14）：工具栏地球按钮、`?view=globe` + `localStorage dive-atlas:view`、MapView 内切模式（d3-zoom 事件改读为旋转 / 中心缩放）、大圆飞行、运动 LOD（旋转中隐藏 s1–s3，飞行中再隐藏 s4 与海名，抽稀陆地 `landLo`）；无头自检 `npm run preview:map 375 700 night globe` 会在有潜点落在圆盘外时报错。6× 慢 CPU 模拟：拖动达标，搜索飞行因开卡那一帧 83 ms 略超，**真机 / 微信未测**
 - [x] 搜索（中文 / 英文 / 拼音 / 国家）：工具栏放大镜 → `SearchPanel.svelte`，选中后 `openSite()` 飞到潜点；`pinyin` 字段由 `npm run data:pinyin` 生成并被校验脚本要求；`?sp=` 物种筛选现在有可关闭的芯片
 - [x] 贴纸落地准备：`spriteUrl()` 只对 `public/sprites/manifest.json` 里有的贴纸返回地址（没画的不再 404），地图贴纸尺寸按 `sizeClass` 48/40/32/24 px
 - [ ] 买域名 → 托管拍板 → 国内实测：三网测速 + 微信扫码打开

@@ -7,24 +7,30 @@
  *   node --experimental-strip-types scripts/preview-map.mts                 # 1280x720, day
  *   node --experimental-strip-types scripts/preview-map.mts 375 640         # phone start view (1.9x on SE Asia)
  *   node --experimental-strip-types scripts/preview-map.mts 1280 720 night  # night theme
+ *   node --experimental-strip-types scripts/preview-map.mts 375 700 night globe  # globe mode at zoom 1
  *
- * Output: preview/map-<width>[-night].svg (+ .png via rsvg-convert, ImageMagick or `npm i -D sharp`).
+ * Globe mode also self-checks: every drawn marker must be inside the disc and on the near side
+ * (d3 does not clip points, so a far-side site would otherwise be mirrored onto the near side); exit 1 if not.
+ *
+ * Output: preview/map-<width>[-night][-globe].svg (+ .png via rsvg-convert, ImageMagick or `npm i -D sharp`).
  * CSS variables are replaced by the token values from src/app.css; keep the two in step.
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { geoGraticule, geoArea } from 'd3-geo';
+import { geoGraticule, geoArea, geoCircle, geoDistance } from 'd3-geo';
 import { merge } from 'topojson-client';
 import type { Topology, GeometryCollection, Polygon as TopoPolygon, MultiPolygon as TopoMultiPolygon } from 'topojson-specification';
 import type { MultiPolygon, MultiLineString, Polygon, Position } from 'geojson';
-import { createMapProjection, UNWRAP_LIST, LAT_RANGE } from '../src/lib/projection.ts';
+import { createMapProjection, createGlobeProjection, globeRadius, UNWRAP_LIST, LAT_RANGE } from '../src/lib/projection.ts';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const width = Number(process.argv[2] ?? 1280);
 const height = Number(process.argv[3] ?? 720);
-const theme = process.argv[4] === 'night' ? 'night' : 'day';
+const flags = process.argv.slice(4);
+const theme = flags.includes('night') ? 'night' : 'day';
+const globe = flags.includes('globe');
 const narrow = width < 600;
 
 // ---- tokens (src/app.css) ----
@@ -70,11 +76,14 @@ const labels = JSON.parse(readFileSync(join(root, 'data/labels.json'), 'utf8')) 
   id: string; tier: 1 | 2 | 3; name: { zh: string; en: string }; at: [number, number]; along?: [[number, number], [number, number]];
 }[];
 
-// ---- projection + the app's start view ----
-const p = createMapProjection(width, height);
-const k = narrow ? 1.9 : 1;
+// ---- projection + the app's start view (globe: what the default flat view would hand over, zoom 1) ----
+const flat = createMapProjection(width, height);
+const centre: [number, number] = narrow ? [118, 8] : flat.projection.invert!([width / 2, height / 2])!;
+const p = globe ? createGlobeProjection(width, height, centre) : flat;
+const R = globeRadius(width, height);
+const k = narrow && !globe ? 1.9 : 1;
 let tx = 0, ty = 0;
-if (narrow) {
+if (narrow && !globe) {
   const c = p.projection([118, 8])!;
   tx = width / 2 - k * c[0];
   ty = height / 2 - k * c[1];
@@ -87,14 +96,15 @@ const sw = (px: number) => f1(px / k); // emulates vector-effect: non-scaling-st
 const landD = p.path(landGeom) ?? '';
 const bigD = p.path(bigGeom) ?? '';
 const grlD = grlGeom ? (p.unwrappedPath(grlGeom) ?? '') : '';
-const graticuleD = p.path(geoGraticule().extent([[-180, LAT_RANGE[0]], [180, LAT_RANGE[1]]]).step([30, 30])()) ?? '';
+const graticuleD = p.path((globe ? geoGraticule() : geoGraticule().extent([[-180, LAT_RANGE[0]], [180, LAT_RANGE[1]]])).step([30, 30])()) ?? '';
+const capD = globe ? (p.path(geoCircle().center([0, -90]).radius(90 + LAT_RANGE[0])()) ?? '') : '';
 const tropics: MultiLineString = {
   type: 'MultiLineString',
   coordinates: [23.436, -23.436].map((lat) => Array.from({ length: 181 }, (_, i): Position => [-180 + i * 2, lat])),
 };
 const tropicsD = p.path(tropics) ?? '';
 const eqY = Math.min(0.85, Math.max(0.15, toScreen(p.projection([150, 0])!)[1] / height));
-const pxPerDeg = (k * p.projection.scale() * 0.8707 * Math.PI) / 180;
+const pxPerDeg = globe ? (k * 2 * R) / 180 : (k * p.projection.scale() * 0.8707 * Math.PI) / 180;
 const TIER_PX = [0, 0, 2.2, 4.5];
 const TIER_STYLE = { 1: [18, 0.5, 0.5], 2: [11.5, 0.3, 0.55], 3: [9.5, 0.2, 0.55] } as const;
 const seaScale = Math.pow(k, -0.75);
@@ -106,11 +116,11 @@ const shelf = theme === 'night'
 const seas = labels
   .filter((l) => pxPerDeg >= TIER_PX[l.tier]!)
   .map((l) => {
-    const pt = p.projection(l.at);
+    const pt = p.point(l.at, 70);
     if (!pt) return '';
     let rot = 0;
     if (l.along) {
-      const a = p.projection(l.along[0]), b = p.projection(l.along[1]);
+      const a = p.point(l.along[0]), b = p.point(l.along[1]);
       if (a && b) rot = (Math.atan2(b[1] - a[1], b[0] - a[0]) * 180) / Math.PI;
     }
     const [size, sp, op] = TIER_STYLE[l.tier];
@@ -121,7 +131,7 @@ const seas = labels
 
 const markers = sites
   .map((s) => {
-    const pt = p.projection(s.coords);
+    const pt = p.point(s.coords);
     if (!pt) return '';
     const glow = theme === 'night' ? `<circle r="10" fill="none" stroke="${C.coral}" stroke-width="6" stroke-opacity=".25"/>` : `<circle r="6.5" cy="1.2" fill="${C.oceanDeep}" fill-opacity=".35"/>`;
     const ring = theme === 'night' ? C.shell : C.paper;
@@ -137,14 +147,14 @@ let frame = '';
 if (!narrow) {
   const o = 18;
   const lines: string[] = [], texts: string[] = [];
-  for (let L = -180; L < 180; L += 30) {
+  for (let L = -180; L < 180 && !globe; L += 30) {
     const x = toScreen(p.projection([L + 0.001, 0])!)[0];
     if (x < o + 24 || x > width - o - 24) continue;
     const label = L === 0 || L === -180 ? `${Math.abs(L)}°` : `${Math.abs(L)}°${L > 0 ? 'E' : 'W'}`;
     lines.push(`<line x1="${f1(x)}" y1="${o}" x2="${f1(x)}" y2="${o + 4}"/><line x1="${f1(x)}" y1="${height - o}" x2="${f1(x)}" y2="${height - o - 4}"/>`);
     texts.push(`<text x="${f1(x)}" y="${o + 13}" text-anchor="middle">${label}</text>`);
   }
-  for (let B = -60; B <= 80; B += 30) {
+  for (let B = -60; B <= 80 && !globe; B += 30) {
     const y = toScreen(p.projection([150, B])!)[1];
     if (y < o + 24 || y > height - o - 24) continue;
     const label = B === 0 ? '0°' : `${Math.abs(B)}°${B > 0 ? 'N' : 'S'}`;
@@ -176,9 +186,12 @@ if (theme === 'night') {
   for (let i = 0; i < 120; i++) speckle += `<circle cx="${f1(rnd() * width)}" cy="${f1(rnd() * height)}" r="${rnd() < 0.15 ? 1.3 : 0.8}"/>`;
 }
 const pct = (v: number) => `${(v * 100).toFixed(1)}%`;
-const ocean = theme === 'night'
-  ? `<rect width="${width}" height="${height}" fill="url(#sea-night)"/>`
-  : `<rect width="${width}" height="${height}" fill="url(#sea-v)"/><rect width="${width}" height="${height}" fill="url(#sea-r)"/>`;
+const disc = (r: number, attrs: string) => `<circle cx="${width / 2}" cy="${height / 2}" r="${f1(r)}" ${attrs}/>`;
+const ocean = globe
+  ? `<rect width="${width}" height="${height}" fill="${C.oceanDeep}"/>${disc(R * 1.08, 'fill="url(#globe-atmo)"')}${disc(R, 'fill="url(#sea-night)"')}`
+  : theme === 'night'
+    ? `<rect width="${width}" height="${height}" fill="url(#sea-night)"/>`
+    : `<rect width="${width}" height="${height}" fill="url(#sea-v)"/><rect width="${width}" height="${height}" fill="url(#sea-r)"/>`;
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
 <defs>
@@ -189,15 +202,19 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${
   <radialGradient id="sea-night" cx=".46" cy=".44" r=".72"><stop offset="0" stop-color="${C.ocean}"/><stop offset="1" stop-color="${C.oceanDeep}"/></radialGradient>
   <linearGradient id="land-grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="${width}" y2="${height}"><stop offset="0" stop-color="${C.landHi}"/><stop offset="1" stop-color="${C.landLo}"/></linearGradient>
   <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="${C.oceanDeep}" stop-opacity="0"/><stop offset="1" stop-color="${C.oceanDeep}" stop-opacity=".38"/></radialGradient>
+  <radialGradient id="globe-atmo" cx=".5" cy=".5" r=".5"><stop offset=".86" stop-color="${C.shallow}" stop-opacity="0"/><stop offset=".94" stop-color="${C.shallow}" stop-opacity=".35"/><stop offset="1" stop-color="${C.shallow}" stop-opacity="0"/></radialGradient>
+  <radialGradient id="globe-shade" cx=".38" cy=".34" r=".8"><stop offset="0" stop-color="${C.oceanDeep}" stop-opacity="0"/><stop offset="1" stop-color="${C.oceanDeep}" stop-opacity=".45"/></radialGradient>
   <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 .6 .6 0 -.5"/></filter>
 </defs>
 ${ocean}
 <g transform="translate(${f1(tx)},${f1(ty)}) scale(${k})">
   <path d="${graticuleD}" fill="none" stroke="${C.mapLine}" stroke-opacity=".1" stroke-width="${sw(0.75)}"/>
   <path d="${tropicsD}" fill="none" stroke="${C.mapLine}" stroke-opacity=".2" stroke-width="${sw(0.75)}" stroke-dasharray="${sw(3)} ${sw(5)}"/>
+  ${globe ? `<path d="${capD}" fill="${C.oceanDeep}" fill-opacity=".5"/>` : ''}
   <g fill="none" stroke-linejoin="round" stroke-linecap="round">${shelf.map(([w, o, col, ref]) => `<use href="${ref}" stroke="${col}" stroke-width="${sw(w)}" stroke-opacity="${o}"/>`).join('')}</g>
   <use href="#coast" fill="url(#land-grad)" stroke="${C.landEdge}" stroke-width="${sw(1)}" stroke-opacity=".8" stroke-linejoin="round"/>
   <g font-family="${SERIF}" fill="${C.mapLine}" text-anchor="middle">${seas}</g>
+  ${globe ? disc(R, 'fill="url(#globe-shade)"') + disc(R, `fill="none" stroke="${C.mapLine}" stroke-opacity=".35"`) : ''}
   <g>${markers}</g>
 </g>
 ${theme === 'night' ? `<g fill="${C.mapLine}" fill-opacity=".25">${speckle}</g>` : `<rect width="${width}" height="${height}" fill="url(#vignette)"/>`}
@@ -208,7 +225,7 @@ ${compass}
 
 const outDir = join(root, 'preview');
 mkdirSync(outDir, { recursive: true });
-const svgFile = join(outDir, `map-${width}${theme === 'night' ? '-night' : ''}.svg`);
+const svgFile = join(outDir, `map-${width}${theme === 'night' ? '-night' : ''}${globe ? '-globe' : ''}.svg`);
 writeFileSync(svgFile, svg);
 console.log(`wrote ${svgFile} (${(svg.length / 1024).toFixed(0)} KB)`);
 // Rasterise if a converter is around: rsvg-convert, ImageMagick (with the rsvg delegate), or sharp.
@@ -229,3 +246,23 @@ for (const cmd of attempts) {
   }
 }
 console.log(done ? `wrote ${png}` : '(no SVG rasteriser found: install rsvg-convert, or `npm i -D sharp` — the SVG opens in any browser)');
+
+// ---- globe self-check: nothing outside the disc, nothing from the far side ----
+if (globe) {
+  const bad: string[] = [];
+  let near = 0;
+  for (const s of sites) {
+    const pt = p.point(s.coords);
+    if (!pt) continue;
+    near++;
+    if (Math.hypot(pt[0] - width / 2, pt[1] - height / 2) > R + 0.5 || geoDistance(s.coords, centre) > Math.PI / 2) bad.push(s.id);
+  }
+  console.log(`centre [${centre.map((v) => v.toFixed(1)).join(', ')}]: ${near}/${sites.length} sites on the near side`);
+  const gal = sites.find((s) => s.id === 'galapagos');
+  if (gal) console.log(`galapagos ${(geoDistance(gal.coords, centre) * 180 / Math.PI).toFixed(0)}° from the centre: ${p.point(gal.coords) ? 'drawn' : 'hidden'}`);
+  if (bad.length) {
+    console.error(`FAIL: markers outside the disc or from the far side: ${bad.join(', ')}`);
+    process.exit(1);
+  }
+  console.log('globe self-check OK');
+}

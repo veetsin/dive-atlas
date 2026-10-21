@@ -17,6 +17,8 @@ const dict = {
   'nav.lang': { zh: 'EN', en: '中文' },
   'theme.day': { zh: '日间', en: 'Day' },
   'theme.night': { zh: '夜潜', en: 'Night' },
+  'view.globe': { zh: '地球视图', en: 'Globe view' },
+  'view.globeKeys': { zh: '地球：方向键旋转，+ / - 缩放', en: 'Globe: arrow keys rotate, + / - zoom' },
   'compass.n': { zh: '北', en: 'N' },
   'tick.n': { zh: '北', en: 'N' },
   'tick.s': { zh: '南', en: 'S' },

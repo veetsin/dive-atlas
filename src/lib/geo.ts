@@ -17,6 +17,8 @@ import { UNWRAP_LIST } from './projection';
 export interface Coast {
   /** Every country except the unwrapped ones, merged. */
   land: MultiPolygon;
+  /** `land` with every 3rd vertex of rings ≥ 16 points: drawn while the globe turns (SPEC §9). */
+  landLo: MultiPolygon;
   /** Only polygons ≥ ~4 000 km²: the wide shelf bands skip specks so atolls do not become targets. */
   big: MultiPolygon;
   greenland: MultiPolygon | null;
@@ -56,5 +58,13 @@ async function fetchCoast(): Promise<Coast> {
       return Math.min(a, 4 * Math.PI - a) >= SMALL_SR;
     }),
   };
-  return { land, big, greenland: unwrapped.length ? (merge(topo, unwrapped) as MultiPolygon) : null };
+  const landLo: MultiPolygon = {
+    type: 'MultiPolygon',
+    coordinates: land.coordinates.map((poly) => {
+      const lo = poly.map((ring) => (ring.length < 16 ? ring : ring.filter((_, i) => i % 3 === 0 || i === ring.length - 1)));
+      // thinning can flip a ring's winding, and d3 would then fill the rest of the sphere
+      return geoArea({ type: 'Polygon', coordinates: lo }) >= 2 * Math.PI ? poly : lo;
+    }),
+  };
+  return { land, landLo, big, greenland: unwrapped.length ? (merge(topo, unwrapped) as MultiPolygon) : null };
 }

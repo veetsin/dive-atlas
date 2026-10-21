@@ -5,8 +5,8 @@ import type { Lang } from './types';
 /**
  * Global UI state + URL synchronisation.
  *
- * URL contract (shareable): ?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>
- * Priority on load: URL > localStorage (lang only) > browser language.
+ * URL contract (shareable): ?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=globe
+ * Priority on load: URL > localStorage (lang, view) > browser language.
  */
 
 const LANG_KEY = 'dive-atlas:lang';
@@ -85,6 +85,36 @@ theme.subscribe((th) => {
   else delete root.dataset.theme;
   document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_COLOR[th]);
 });
+
+// ---- flat atlas / globe (SPEC §3.4): `view=globe` in the URL, else the last explicit toggle ----
+
+export type MapView = 'atlas' | 'globe';
+const VIEW_KEY = 'dive-atlas:view';
+
+function initialMapView(): MapView {
+  if (initialParam('view') === 'globe') return 'globe';
+  try {
+    if (localStorage.getItem(VIEW_KEY) === 'globe') return 'globe';
+  } catch {
+    /* ignore */
+  }
+  return 'atlas';
+}
+
+export const mapView = writable<MapView>(initialMapView());
+
+/** Only the toolbar toggle is remembered; arriving through a link is not. */
+export function toggleMapView(): void {
+  mapView.update((v) => {
+    const next: MapView = v === 'globe' ? 'atlas' : 'globe';
+    try {
+      localStorage.setItem(VIEW_KEY, next);
+    } catch {
+      /* ignore */
+    }
+    return next;
+  });
+}
 
 // ---- side effects: persist lang, mirror state into the URL ----
 
@@ -218,12 +248,13 @@ export function footprintShareUrl(fp: Footprint, l: Lang = get(lang)): string {
 // ---- URL sync ----
 
 /** One subscription for all URL-bearing state: builds the query once per change, never pushes history. */
-derived([lang, month, selectedSiteId, speciesFilter, viewing], ([$lang, $month, $site, $sp, $view]) => {
+derived([lang, month, selectedSiteId, speciesFilter, viewing, mapView], ([$lang, $month, $site, $sp, $view, $mapView]) => {
   const params = new URLSearchParams();
   params.set('lang', $lang);
   if ($month) params.set('m', String($month));
   if ($site) params.set('site', $site);
   if ($sp) params.set('sp', $sp);
+  if ($mapView === 'globe') params.set('view', 'globe');
   if ($view) {
     if (rawD) params.set('d', rawD);
     if (rawW) params.set('w', rawW);

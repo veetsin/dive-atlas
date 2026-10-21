@@ -2,14 +2,14 @@
   import { onMount, untrack } from 'svelte';
   import { get } from 'svelte/store';
   import { select } from 'd3-selection';
-  import { zoom as d3zoom, zoomIdentity, type ZoomTransform, type ZoomBehavior } from 'd3-zoom';
-  import { geoGraticule } from 'd3-geo';
+  import { zoom as d3zoom, zoomIdentity, type ZoomTransform, type ZoomBehavior, type D3ZoomEvent } from 'd3-zoom';
+  import { geoCircle, geoDistance, geoGraticule, geoInterpolate } from 'd3-geo';
   import type { MultiPolygon, MultiLineString, Position } from 'geojson';
 
-  import { createMapProjection, LAT_RANGE, type MapProjection } from '../lib/projection';
+  import { createMapProjection, createGlobeProjection, globeRadius, LAT_RANGE, type MapProjection } from '../lib/projection';
   import { loadCoast } from '../lib/geo';
   import { sites, siteById, labels, regionById, inSeason, speciesById, spriteUrl, spritePx, SPRITE_PX } from '../lib/data';
-  import { month, selectedSiteId, speciesFilter, lang, footprint, viewing, markOf, flyTo } from '../lib/stores';
+  import { month, selectedSiteId, speciesFilter, lang, footprint, viewing, markOf, flyTo, mapView } from '../lib/stores';
   import { t, tx } from '../lib/i18n';
   import type { DiveSite, SeaLabel } from '../lib/types';
 
@@ -20,6 +20,9 @@
    *    (<use> ×4), the land fill, sea names, site markers
    *  - static overlays: vignette, speckle, frame + ticks (desktop), compass; paper grain as a CSS tile
    * The day/night difference is CSS only (tokens in app.css, a few display toggles below).
+   *
+   * Globe mode (SPEC §4.3) reuses all of it: the projection becomes an orthographic globe about
+   * `centre`, zoom stays in `zoomT` as a scale about the viewport centre, and drags rotate.
    */
 
   const ZOOM_EXTENT: [number, number] = [1, 8];
@@ -41,15 +44,31 @@
   let eqY = $state(0.5);
 
   let landGeom: MultiPolygon | null = $state(null);
+  let landLoGeom: MultiPolygon | null = $state(null);
   let bigGeom: MultiPolygon | null = $state(null);
   let grlGeom: MultiPolygon | null = $state(null);
   let geoStatus: 'loading' | 'ready' | 'missing' = $state('loading');
   let brokenSprites = $state(new Set<string>());
 
   const narrow = $derived(width > 0 && width < 600);
-  const proj: MapProjection | null = $derived(
+  const globe = $derived($mapView === 'globe');
+  /** The point the globe looks at, [lon, lat]; latitude kept inside LAT_RANGE so it never flips over a pole. */
+  let centre: [number, number] = $state.raw(PHONE_START.center);
+  /** The globe is turning (drag or flight): cheaper frames, frozen labels. */
+  let moving = $state(false);
+  /** A programmatic flight is running: it also zooms every frame, so the near shelf band and sea names go too. */
+  let flying = $state(false);
+  const flat: MapProjection | null = $derived(
     width > 0 && height > 0 ? createMapProjection(width, height) : null,
   );
+  const proj: MapProjection | null = $derived(flat && globe ? createGlobeProjection(width, height, centre) : flat);
+  const R = $derived(globeRadius(width, height));
+  /** Pixels per degree of longitude at the flat map's equator, zoom 1. */
+  const flatPx = $derived(flat ? (flat.projection.scale() * 0.8707 * Math.PI) / 180 : 0);
+  /** Globe zoom that shows as many px per degree as flat zoom 1; flat zoom thresholds × this on the globe. */
+  const toGlobeK = $derived(flatPx ? flatPx / ((2 * R) / 180) : 1);
+  /** Zoom in flat-map terms, so label / bubble / sea-name thresholds hold in both views. */
+  const effK = $derived(globe ? zoomT.k / toGlobeK : zoomT.k);
 
   // ---- geometry → path strings ----
   const GRATICULE = geoGraticule()
@@ -58,32 +77,37 @@
       [180, LAT_RANGE[1]],
     ])
     .step([30, 30])();
+  const GRATICULE_GLOBE = geoGraticule().step([30, 30])();
+  /** The globe's version of the flat map's latitude crop: everything south of LAT_RANGE[0] is shaded. */
+  const POLAR_CAP = geoCircle().center([0, -90]).radius(90 + LAT_RANGE[0])();
   const TROPICS: MultiLineString = {
     type: 'MultiLineString',
     coordinates: [23.436, -23.436].map((lat) =>
       Array.from({ length: 181 }, (_, i): Position => [-180 + i * 2, lat]),
     ),
   };
-  const landD = $derived(proj && landGeom ? (proj.path(landGeom) ?? '') : '');
-  const bigD = $derived(proj && bigGeom ? (proj.path(bigGeom) ?? '') : '');
+  const landD = $derived(proj && landGeom ? (proj.path((moving && landLoGeom) || landGeom) ?? '') : '');
+  // Motion LOD: the wide shelf bands (hidden by svg.moving anyway) are not re-projected while the globe turns.
+  const bigD = $derived(proj && bigGeom && !moving ? (proj.path(bigGeom) ?? '') : '');
   const grlD = $derived(proj && grlGeom ? (proj.unwrappedPath(grlGeom) ?? '') : '');
-  const graticuleD = $derived(proj ? (proj.path(GRATICULE) ?? '') : '');
+  const graticuleD = $derived(proj ? (proj.path(globe ? GRATICULE_GLOBE : GRATICULE) ?? '') : '');
   const tropicsD = $derived(proj ? (proj.path(TROPICS) ?? '') : '');
+  const capD = $derived(proj && globe ? (proj.path(POLAR_CAP) ?? '') : '');
 
   // ---- sea names ----
-  const pxPerDeg = $derived(proj ? (zoomT.k * proj.projection.scale() * 0.8707 * Math.PI) / 180 : 0);
+  const pxPerDeg = $derived(effK * flatPx);
   type Sea = { l: SeaLabel; x: number; y: number; rot: number };
   const seaNames: Sea[] = $derived.by(() => {
     if (!proj) return [];
     const out: Sea[] = [];
     for (const l of labels) {
       if (pxPerDeg < (TIER_PX_PER_DEG[l.tier] ?? 0)) continue;
-      const p = proj.projection(l.at);
+      const p = proj.point(l.at, 70); // on the globe, only names that face the viewer
       if (!p) continue;
       let rot = 0;
       if (l.along) {
-        const a = proj.projection(l.along[0]);
-        const b = proj.projection(l.along[1]);
+        const a = proj.point(l.along[0]);
+        const b = proj.point(l.along[1]);
         if (a && b) rot = (Math.atan2(b[1] - a[1], b[0] - a[0]) * 180) / Math.PI;
       }
       out.push({ l, x: p[0], y: p[1], rot });
@@ -102,7 +126,7 @@
     if (!proj) return [];
     const out: Marker[] = [];
     for (const site of visibleSites) {
-      const p = proj.projection(site.coords);
+      const p = proj.point(site.coords);
       if (!p) continue;
       const first = site.species[0];
       const sp = first ? speciesById.get(first) : undefined;
@@ -118,13 +142,13 @@
     }
     return out;
   });
-  const showLabels = $derived(zoomT.k >= (narrow ? LABEL_ZOOM.narrow : LABEL_ZOOM.wide));
+  const showLabels = $derived(effK >= (narrow ? LABEL_ZOOM.narrow : LABEL_ZOOM.wide));
 
   // ---- region bubbles: dense regions collapse until the user zooms in ----
   type Bubble = { region: string; x: number; y: number; count: number; season: number; color: string };
   const clusterZoom = $derived(narrow ? CLUSTER_K.narrow : CLUSTER_K.wide);
   const bubbles: Bubble[] = $derived.by(() => {
-    if (zoomT.k >= clusterZoom) return [];
+    if (effK >= clusterZoom) return [];
     const groups = new Map<string, Marker[]>();
     for (const m of markers) {
       const g = groups.get(m.site.region);
@@ -171,9 +195,13 @@
    * Greedy label thinning: labels sit to the right of the disc, so two labels collide when
    * their anchors are within ~one label width horizontally and one line vertically (screen px).
    * Top-to-bottom order keeps the result stable while panning; the selected site always wins.
+   * While the globe turns the last settled set is kept: re-thinning every frame makes labels flicker.
    */
+  let settledLabels = new Set<string>();
   const labelled = $derived.by(() => {
+    if (moving) return settledLabels;
     const out = new Set<string>();
+    settledLabels = out;
     if (!showLabels) return out;
     const k = zoomT.k;
     const placed: { x: number; y: number }[] = [];
@@ -196,6 +224,14 @@
     if (!svgEl || !zoomBehavior) return;
     const ms = markers.filter((m) => m.site.region === region);
     if (!ms.length) return;
+    if (globe) {
+      // Turn to the region and zoom until its farthest site sits ~35 % of the short side out, past the split.
+      const c = regionById.get(region)?.center ?? ms[0]!.site.coords;
+      const delta = Math.max(...ms.map((m) => geoDistance(c, m.site.coords)));
+      const fit = (0.35 * Math.min(width, height)) / (R * Math.sin(delta));
+      flyGlobe(c, Math.max((clusterZoom + 0.2) * toGlobeK, Math.min(8 * toGlobeK, fit)));
+      return;
+    }
     const xs = ms.map((m) => m.x), ys = ms.map((m) => m.y);
     const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
     const k = Math.max(clusterZoom + 0.2, Math.min(8, 0.7 * Math.min(width / Math.max(1, x1 - x0), height / Math.max(1, y1 - y0))));
@@ -226,7 +262,7 @@
   const ticks = $derived.by(() => {
     const lon: { x: number; text: string }[] = [];
     const lat: { y: number; text: string }[] = [];
-    if (!proj || narrow) return { lon, lat };
+    if (!proj || narrow || globe) return { lon, lat };
     const o = FRAME_INSET;
     for (let L = -180; L < 180; L += 30) {
       const p = proj.projection([L + 0.001, 0]);
@@ -253,6 +289,7 @@
     try {
       const coast = await loadCoast();
       landGeom = coast.land;
+      landLoGeom = coast.landLo;
       bigGeom = coast.big;
       grlGeom = coast.greenland;
       geoStatus = 'ready';
@@ -268,20 +305,98 @@
   }
 
   function refreshEquator() {
-    if (!proj) return;
-    const p = proj.projection([150, 0]);
+    if (!flat || globe) return;
+    const p = flat.projection([150, 0]);
     if (p) eqY = Math.min(0.85, Math.max(0.15, zoomT.applyY(p[1]) / height));
+  }
+
+  // ---- globe: rotation and flights ----
+  const REDUCED_MOTION = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /** d3-zoom's own transform at the previous event: drag deltas on the globe are read from it. */
+  let lastT: ZoomTransform = zoomIdentity;
+  let flight = 0;
+
+  const clampCentre = ([lon, lat]: [number, number]): [number, number] => [
+    ((((lon + 180) % 360) + 360) % 360) - 180,
+    Math.max(LAT_RANGE[0], Math.min(LAT_RANGE[1], lat)),
+  ];
+  // ponytail: the globe always zooms about the viewport centre, not the pointer / pinch midpoint;
+  // zooming toward the pointer would mean rotating towards it too (≈ 10 lines in the zoom handler).
+  const aboutCentre = (k: number) =>
+    zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-width / 2, -height / 2);
+
+  /** Drag by (dx, dy) screen px: the point under the pointer follows it (exact at the centre). */
+  function rotateBy(dx: number, dy: number) {
+    const deg = 180 / Math.PI / (R * zoomT.k);
+    centre = clampCentre([centre[0] - dx * deg, centre[1] + dy * deg]);
+    moving = true;
+  }
+
+  function cancelFlight() {
+    cancelAnimationFrame(flight);
+    flight = 0;
+    moving = false;
+    flying = false;
+  }
+
+  /** Turn the globe along the great circle to `to` while zooming to k; instant under reduced motion. */
+  function flyGlobe(to: [number, number], k: number, instant = false) {
+    const zb = zoomBehavior, el = svgEl;
+    if (!zb || !el) return;
+    cancelFlight();
+    const target = clampCentre(to);
+    const from = centre, k0 = zoomT.k;
+    const ms = instant || REDUCED_MOTION ? 0 : 500 + 250 * geoDistance(from, target);
+    if (!ms) {
+      centre = target;
+      zb.scaleTo(select(el), k);
+      return;
+    }
+    const along = geoInterpolate(from, target);
+    const t0 = performance.now();
+    moving = flying = true;
+    const frame = (now: number) => {
+      const u = Math.min(1, (now - t0) / ms);
+      const e = u * u * (3 - 2 * u);
+      centre = clampCentre(along(e));
+      zb.scaleTo(select(el), k0 * Math.pow(k / k0, e)); // through d3 every frame, so its k is never stale
+      if (u < 1) flight = requestAnimationFrame(frame);
+      else {
+        flight = 0;
+        moving = flying = false;
+      }
+    };
+    flight = requestAnimationFrame(frame);
   }
 
   /**
    * Zoom to a site. On phones the header + month bar cover the top ~100 px and the card
    * drawer the bottom 70 %, so the marker is placed in the strip between them.
    */
-  function focusSite(id: string): boolean {
-    if (!proj || !svgEl || !zoomBehavior) return false;
+  function focusSite(id: string, instant = false): boolean {
+    if (!flat || !svgEl || !zoomBehavior) return false;
     const site = siteById.get(id);
     if (!site) return false;
-    const p = proj.projection(site.coords);
+    if (globe) {
+      let k = 4 * toGlobeK;
+      const [lon, lat] = site.coords;
+      if (width >= 600) {
+        flyGlobe([lon, lat], k, instant);
+        return true;
+      }
+      // Look at a point south of the site so the site sits dy above the middle, above the drawer.
+      const dy = height / 2 - Math.max(height * 0.23, 140);
+      let lift = Math.asin(Math.min(1, dy / (R * k)));
+      const room = (lat - LAT_RANGE[0]) * (Math.PI / 180);
+      if (lift > room) {
+        // The centre cannot go below LAT_RANGE[0] (Poor Knights): zoom in until R·k·sin(room) = dy.
+        lift = room;
+        k = Math.min(8 * toGlobeK, dy / (R * Math.sin(room)));
+      }
+      flyGlobe([lon, lat - (lift * 180) / Math.PI], k, instant);
+      return true;
+    }
+    const p = flat.projection(site.coords);
     if (!p) return false;
     const cy = width < 600 ? Math.max(height * 0.23, 140) : height / 2;
     const wanted = zoomIdentity.translate(width / 2, cy).scale(4).translate(-p[0], -p[1]);
@@ -295,16 +410,43 @@
     return true;
   }
 
-  function initialView() {
-    if (!proj || !svgEl || !zoomBehavior) return;
+  /** Pan / zoom limits of the current view. The globe pans by rotating, so d3 must not bound it. */
+  function setExtents() {
+    if (!zoomBehavior) return;
+    if (globe) zoomBehavior.translateExtent([[-Infinity, -Infinity], [Infinity, Infinity]]).scaleExtent([1, 8 * toGlobeK]);
+    else
+      zoomBehavior
+        .translateExtent([
+          [0, 0],
+          [width, height],
+        ])
+        .scaleExtent(ZOOM_EXTENT);
+  }
+
+  /** Which view the current zoom state belongs to (set once the first view is placed). */
+  let shownGlobe: boolean | undefined;
+
+  /** Default view for the current mode, looking at `c` when given (a mode switch keeps the centre). */
+  function initialView(c?: [number, number]) {
+    if (!flat || !svgEl || !zoomBehavior) return;
+    shownGlobe = globe;
+    setExtents();
     const id = get(selectedSiteId);
-    if (id && focusSite(id)) return;
+    if (id && focusSite(id, true)) return;
+    const sel = select(svgEl);
+    if (globe) {
+      centre = clampCentre(c ?? (width < 600 ? PHONE_START.center : (flat.projection.invert?.([width / 2, height / 2]) ?? PHONE_START.center)));
+      zoomBehavior.transform(sel, zoomIdentity); // k = 1; the zoom handler places it about the centre
+      return;
+    }
     // Narrow screens: the whole world is too small to read, so start on Southeast Asia.
-    if (width < 600) {
-      const c = proj.projection(PHONE_START.center);
-      if (c) {
-        const k = PHONE_START.k;
-        zoomBehavior.transform(select(svgEl), zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-c[0], -c[1]));
+    if (c || width < 600) {
+      const p = flat.projection(c ?? PHONE_START.center);
+      if (p) {
+        const k = width < 600 ? PHONE_START.k : 1;
+        const t = zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-p[0], -p[1]);
+        const extent: [[number, number], [number, number]] = [[0, 0], [width, height]];
+        zoomBehavior.transform(sel, c ? zoomBehavior.constrain()(t, extent, extent) : t);
       }
     }
     refreshEquator();
@@ -320,21 +462,28 @@
     if (!el) return;
     const zb = d3zoom<SVGSVGElement, unknown>()
       .scaleExtent(ZOOM_EXTENT)
-      .duration(matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 250)
-      .on('zoom', (e) => {
-        zoomT = e.transform;
+      .duration(REDUCED_MOTION ? 0 : 250)
+      .on('start', (e: D3ZoomEvent<SVGSVGElement, unknown>) => {
+        if (e.sourceEvent) cancelFlight(); // a touch / click / wheel takes over from a flight
       })
-      .on('end', refreshEquator);
+      .on('zoom', (e: D3ZoomEvent<SVGSVGElement, unknown>) => {
+        const tr = e.transform;
+        if (!globe) zoomT = tr;
+        // On the globe d3's transform is only read: a user pan at constant k rotates, any zoom
+        // (wheel, pinch, double-click, scaleTo / transform calls) scales about the centre.
+        else if (e.sourceEvent && tr.k === lastT.k) rotateBy(tr.x - lastT.x, tr.y - lastT.y);
+        else zoomT = aboutCentre(tr.k);
+        lastT = tr;
+      })
+      .on('end', () => {
+        if (!flight) moving = false;
+        refreshEquator();
+      });
     zoomBehavior = zb;
     select(el).call(zb);
-    untrack(() => {
-      zb.translateExtent([
-        [0, 0],
-        [width, height],
-      ]);
-      initialView();
-    });
+    untrack(() => initialView());
     return () => {
+      cancelFlight();
       select(el).on('.zoom', null);
       zoomBehavior = undefined;
     };
@@ -342,20 +491,31 @@
 
   // Viewport changes only move the pan limits; they never rebuild the behaviour. A height change
   // (keyboard, WeChat toolbar, rotation) re-fits the projection vertically by Δh/2, so shift the
-  // view by the same amount to keep what the user is looking at in place.
+  // view by the same amount to keep what the user is looking at in place. The globe re-centres.
   let prevHeight = 0;
   $effect(() => {
     if (!width || !height) return;
     const zb = zoomBehavior;
     const el = svgEl;
     if (!zb || !el) return;
-    zb.translateExtent([
-      [0, 0],
-      [width, height],
-    ]);
-    const dh = prevHeight ? height - prevHeight : 0;
-    prevHeight = height;
-    if (dh) untrack(() => zb.translateBy(select(el), 0, -dh / 2));
+    untrack(() => {
+      setExtents();
+      const dh = prevHeight ? height - prevHeight : 0;
+      prevHeight = height;
+      if (globe) zoomT = aboutCentre(zoomT.k);
+      else if (dh) zb.translateBy(select(el), 0, -dh / 2);
+    });
+  });
+
+  // Atlas ⇄ globe: keep what is in the middle of the screen, reset the zoom to that view's default.
+  $effect(() => {
+    const g = globe;
+    untrack(() => {
+      if (shownGlobe === undefined || g === shownGlobe || !flat) return;
+      cancelFlight();
+      const c = g ? flat.projection.invert?.(zoomT.invert([width / 2, height / 2])) : centre;
+      initialView(c ?? undefined);
+    });
   });
 
   // Search results and other "take me there" requests.
@@ -369,15 +529,43 @@
   });
 
   function onMapClick(e: MouseEvent) {
-    if ((e.target as Element).classList.contains('sea')) selectedSiteId.set(null);
+    // open water, or the space around the globe
+    if ((e.target as Element).classList.contains('sea') || e.target === svgEl) selectedSiteId.set(null);
+  }
+
+  /** Globe keyboard: arrows rotate 10° / zoom, + / - zoom. Keys from a focused marker move focus to the globe. */
+  function onKey(e: KeyboardEvent) {
+    if (!globe || !svgEl || !zoomBehavior) return;
+    const s = 10 / zoomT.k;
+    const turn: Record<string, [number, number]> = { ArrowLeft: [-s, 0], ArrowRight: [s, 0], ArrowUp: [0, s], ArrowDown: [0, -s] };
+    const d = turn[e.key];
+    const zoom = e.key === '+' || e.key === '=' ? 2 : e.key === '-' ? 0.5 : 0;
+    if (!d && !zoom) return;
+    e.preventDefault();
+    cancelFlight();
+    if (d) centre = clampCentre([centre[0] + d[0], centre[1] + d[1]]);
+    else zoomBehavior.scaleBy(select(svgEl), zoom);
+    if (e.target !== svgEl) svgEl.focus();
   }
 </script>
 
 <div class="map" bind:clientWidth={width} bind:clientHeight={height}>
   {#if width > 0 && height > 0}
-    <!-- The svg is a plain canvas (no img role, so the markers stay reachable); a tap on open water closes the card. -->
-    <!-- svelte-ignore a11y_click_events_have_key_events -->
-    <svg bind:this={svgEl} {width} {height} role="presentation" onclick={onMapClick}>
+    <!-- The svg is a plain canvas (no img role, so the markers stay reachable); a tap on open water closes the card.
+         On the globe it is a focusable role=application (tabindex only then): arrows rotate, + / - zoom. -->
+    <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_tabindex -->
+    <svg
+      bind:this={svgEl}
+      {width}
+      {height}
+      class:moving
+      class:flying
+      role={globe ? 'application' : 'presentation'}
+      tabindex={globe ? 0 : undefined}
+      aria-label={globe ? $t('view.globeKeys') : undefined}
+      onclick={onMapClick}
+      onkeydown={onKey}
+    >
       <defs>
         <!-- one merged coastline (+ Greenland through the unwrapped projection), referenced 5× -->
         <g id="coast"><path class="vs" d={landD} /><path class="vs" d={grlD} /></g>
@@ -406,16 +594,35 @@
           <stop offset="0.6" class="st-deep" stop-opacity="0" />
           <stop offset="1" class="st-deep" stop-opacity="0.38" />
         </radialGradient>
+        {#if globe}
+          <radialGradient id="globe-atmo" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0.86" class="st-shallow" stop-opacity="0" />
+            <stop offset="0.94" class="st-shallow" stop-opacity="0.35" />
+            <stop offset="1" class="st-shallow" stop-opacity="0" />
+          </radialGradient>
+          <!-- light from the top left -->
+          <radialGradient id="globe-shade" cx="0.38" cy="0.34" r="0.8">
+            <stop offset="0" class="st-deep" stop-opacity="0" />
+            <stop offset="1" class="st-deep" stop-opacity="0.45" />
+          </radialGradient>
+        {/if}
       </defs>
 
-      <!-- ocean: static, full frame -->
-      <rect class="sea sea-v" {width} {height} fill="url(#sea-v)" />
-      <rect class="sea sea-r" {width} {height} fill="url(#sea-r)" />
-      <rect class="sea sea-night" {width} {height} fill="url(#sea-night)" />
+      <!-- ocean: static, full frame (the globe's sea is a disc in the zoom group; around it is .map's background) -->
+      {#if !globe}
+        <rect class="sea sea-v" {width} {height} fill="url(#sea-v)" />
+        <rect class="sea sea-r" {width} {height} fill="url(#sea-r)" />
+        <rect class="sea sea-night" {width} {height} fill="url(#sea-night)" />
+      {/if}
 
       <g transform={zoomT.toString()}>
+        {#if globe}
+          <circle class="atmo" cx={width / 2} cy={height / 2} r={R * 1.08} fill="url(#globe-atmo)" />
+          <circle class="sea" cx={width / 2} cy={height / 2} r={R} fill="url(#sea-night)" />
+        {/if}
         <path class="graticule" d={graticuleD} />
         <path class="tropics" d={tropicsD} />
+        {#if globe}<path class="cap" d={capD} />{/if}
 
         <!-- continental shelf: four pixel-constant bands, widest first, under the land -->
         <g class="shelf">
@@ -438,6 +645,11 @@
             </g>
           {/each}
         </g>
+
+        {#if globe}
+          <circle class="shade" cx={width / 2} cy={height / 2} r={R} fill="url(#globe-shade)" />
+          <circle class="rim" cx={width / 2} cy={height / 2} r={R} />
+        {/if}
 
         <g class="bubbles">
           {#each bubbles as b (b.region)}
@@ -559,8 +771,9 @@
     </div>
   {/if}
 
+  <!-- counts the filter, not what is on screen: the same in both views, and silent while the globe turns -->
   <div class="count" aria-live="polite">
-    {markers.filter((m) => m.season).length} {$t('map.sitesShown')}
+    {visibleSites.filter((s) => inSeason(s, $month)).length} {$t('map.sitesShown')}
   </div>
 </div>
 
@@ -580,6 +793,30 @@
   svg:active {
     cursor: grabbing;
   }
+  svg:focus-visible {
+    outline: 2px solid var(--sun);
+    outline-offset: -2px;
+  }
+
+  /* ---- globe ---- */
+  .atmo,
+  .cap,
+  .shade,
+  .rim { pointer-events: none; }
+  .cap { fill: var(--ocean-deep); fill-opacity: 0.5; }
+  .rim {
+    fill: none;
+    stroke: var(--map-line);
+    stroke-opacity: 0.35;
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+  }
+  /* motion LOD while the globe turns: only the land, its near band, graticule and markers */
+  svg.moving .s1,
+  svg.moving .s2,
+  svg.moving .s3 { display: none; }
+  svg.flying .s4,
+  svg.flying .seas { display: none; }
 
   /* ---- ocean ---- */
   .st-deep { stop-color: var(--ocean-deep); }
