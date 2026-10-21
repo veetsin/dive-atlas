@@ -217,6 +217,100 @@ spots; the ball reads as one rounded shape; the swirl flows to the right.
 Bottom-right — <把前面哪一格没通过验收的描述贴在这里；都通过了就写 "empty cell, plain background">
 ```
 
+#### 第二批物种（2026-10-21 数据第一波新增的 24 种；流程同上：STYLE-G + ANCHOR + LAYOUT + 四行）
+
+**B8 — 礁鲨与大洋鲨（3:2）** · ids: `blacktip-reef-shark,caribbean-reef-shark,silky-shark,oceanic-whitetip`
+```
+Top-left — Blacktip reef shark (Carcharhinus melanopterus): small slender reef shark; short rounded
+snout; tall first dorsal fin with a crisp black tip above a pale band; black tips on the pectorals and
+the lower tail lobe; tan-grey back, white belly; cruising in shallow water.
+Top-right — Caribbean reef shark (Carcharhinus perezi): stocky grey requiem shark; short, broadly
+rounded snout; dusky undersides on the fins; a low ridge between the dorsal fins; grey-brown back,
+white belly; cruising level.
+Bottom-left — Silky shark (Carcharhinus falciformis): slim streamlined shark with a long rounded
+snout; a small first dorsal fin set well behind the pectorals; very long sickle-shaped pectoral fins;
+smooth bronze-grey back, white belly; mid-water swimming.
+Bottom-right — Oceanic whitetip shark (Carcharhinus longimanus): robust shark with a short blunt
+snout; a huge rounded paddle-like first dorsal fin and very long rounded pectorals, each tipped with
+a mottled white patch; bronze-grey back, white belly; slow deliberate swimming.
+```
+
+**B9 — 大鲨与底栖鲨（3:2）** · ids: `great-white-shark,bull-shark,lemon-shark,nurse-shark`
+```
+Top-left — Great white shark (Carcharodon carcharias): heavy torpedo body; conical pointed snout;
+large triangular first dorsal fin; crescent tail with lobes of nearly equal size; crisp two-tone
+pattern, slate grey above and white below with a jagged dividing line; black eye; powerful cruising.
+Top-right — Bull shark (Carcharhinus leucas): very stout thick body; short, blunt, broad snout; small
+eyes; tall first dorsal fin; plain grey back, white belly; heavy cruising close to the bottom.
+Bottom-left — Lemon shark (Negaprion brevirostris): stocky shark with a flat broad head and rounded
+snout; two dorsal fins of nearly equal size; yellow-brown back shading to a pale cream belly; slowly
+cruising over sand.
+Bottom-right — Nurse shark (Ginglymostoma cirratum): broad flattened head with a small mouth and two
+short barbels; tiny eyes; long tail with a small lower lobe; rounded dorsal fins set far back; plain
+tan-brown body; resting flat on the sand.
+```
+
+**B10 — 石斑与躄鱼（1:1）** · ids: `giant-grouper,potato-cod,dusky-grouper,frogfish`
+```
+Top-left — Giant grouper (Epinephelus lanceolatus): enormous deep-bodied grouper; huge mouth with
+thick lips; broad rounded fins; mottled olive-brown with faint pale blotches and small dark spots on
+the fins; hanging still in the water.
+Top-right — Potato cod (Epinephelus tukula): large grouper with a pale grey body covered in big dark
+potato-shaped blotches; broad head with a wide mouth; rounded tail; calm, slightly turned toward the
+viewer.
+Bottom-left — Dusky grouper (Epinephelus marginatus): stout grouper with a big head and mouth; dark
+brown body with irregular pale yellowish blotches; fins edged in a fine pale line; hovering by a rock.
+Bottom-right — Frogfish (Antennarius commerson): round lumpy globe-shaped fish; wide upturned mouth;
+hand-like pectoral fins used as feet; a tiny lure on a thin spine over the snout; warty skin in bright
+orange; squatting on a rock.
+```
+
+**B11 — 魟与豹纹鲨（3:2）** · ids: `sicklefin-devil-ray,short-tail-stingray,southern-stingray,leopard-shark`
+```
+Top-left — Sicklefin devil ray (Mobula tarapacana), seen from directly above, head to the right: wide
+diamond with swept sickle-curved wingtips; two small head fins; olive-brown back with a slightly paler
+band behind the head; short tail; wings fully spread.
+Top-right — Short-tail stingray (Bathytoshia brevicaudata), seen from directly above, head to the
+right: a huge rounded disc nearly as wide as long; rounded snout; short thick tail with a small barb;
+smooth grey-brown back with a paler disc edge; gliding.
+Bottom-left — Southern stingray (Hypanus americanus), seen from directly above, head to the right:
+diamond-shaped disc with slightly concave front edges and pointed corners; long whip tail; smooth dark
+grey-brown back; gliding over sand.
+Bottom-right — Leopard shark, also called zebra shark (Stegostoma tigrinum): long slender shark with
+a very long upper tail lobe nearly as long as the body; low ridges along the back; small barbels at
+the mouth; tan body covered in dark brown leopard spots; resting on sand.
+```
+
+**B12 — 鲸与冷水（3:2）** · ids: `brydes-whale,dwarf-minke-whale,seal,arctic-char`
+```
+Top-left — Bryde's whale (Balaenoptera edeni): slender streamlined baleen whale; three parallel
+ridges running along the top of the head to the blowholes; a small sickle-shaped dorsal fin set far
+back; dark grey back, pale belly; swimming level.
+Top-right — Dwarf minke whale (Balaenoptera acutorostrata): small sleek whale with a sharply pointed
+snout; tall curved dorsal fin; dark grey back with a pale shoulder blaze and a white band across each
+pectoral fin; approaching with slight curiosity.
+Bottom-left — Seal (Phoca vitulina, harbour seal): plump spindle-shaped body; rounded dog-like head
+with large dark eyes, long whiskers and no visible ears; short front flippers, hind flippers trailing;
+mottled grey coat; swimming with a gentle twist.
+Bottom-right — Arctic char (Salvelinus alpinus): slender salmon-like fish; small head; forked tail;
+olive-green back fading to an orange-red belly dotted with pale pink spots; white leading edges on the
+lower fins; swimming level.
+```
+
+**B13 — 鳄鱼、沙虎鲨、珊瑚（3:2）** · ids: `american-crocodile,grey-nurse-shark,hard-coral,soft-coral`
+```
+Top-left — American crocodile (Crocodylus acutus): long low reptile swimming at the surface, side view;
+narrow tapering snout with teeth showing along the jaw line; ridged armoured back; long muscular tail
+trailing; olive-grey with a pale belly.
+Top-right — Grey nurse shark, also called sand tiger (Carcharias taurus): bulky shark with a pointed
+snout and a mouth full of long narrow protruding teeth; two large dorsal fins of similar size set well
+back; brownish-grey back with faint rusty spots, pale belly; hovering almost motionless.
+Bottom-left — Hard coral garden: a cluster of branching staghorn coral beside a dome of boulder coral;
+pale sand, shell pink and seafoam tones; no fish.
+Bottom-right — Soft coral (Dendronephthya): a bouquet-like tree of translucent branches tipped with
+fluffy pink-and-orange polyps; gently swaying.
+```
+
 **D1 — 装饰（1:1；LAYOUT 里的 70% 改成 60%）** · ids: `deco-compass,deco-boat,deco-seafan,deco-lighthouse`
 ```
 Top-left — Compass rose: an eight-point star rose, four long points in deep navy alternating with
@@ -241,7 +335,7 @@ Bottom-right — Cloud C: one long low off-white cloud.
 
 **先不画**：潜水浮标、沉船、冰山、巨藻、珊瑚花园（当前没有潜点引用），海面波纹纹理（代码里用 SVG `<pattern>` 画正弦线，0 KB、可换主题）。
 
-**顺序建议**：B1 定风格 → B2、B3（当前 14 个潜点的"主图物种"全在 B1–B3 里，三张图就能让每个标记有贴纸）→ 其余按需要。`species.json` 里 sperm-whale / orca / dugong / sardine-run 目前没有潜点引用，可以等数据定稿再画。
+**进度**：B1–B7（27 种）已于 2026-10-21 全部出图并入库，B1 原图是后续所有批次的 ANCHOR。接下来按 B8–B13 画数据第一波新增的 24 种；第二波数据落地后再按同样格式追加批次。没有贴纸的物种在地图上显示为圆点，不阻塞上线。
 
 ### 3.4 中文名规则（2026-10-20 已定）
 
