@@ -601,5 +601,117 @@
       "big"
     ],
     "lengthM": 4
+  },
+  {
+    "id": "hard-coral",
+    "name": {
+      "zh": "硬珊瑚",
+      "en": "Hard coral"
+    },
+    "sci": "Acropora hyacinthus",
+    "sprite": "hard-coral",
+    "sizeClass": "m",
+    "tags": [
+      "coral"
+    ],
+    "lengthM": 1
+  },
+  {
+    "id": "soft-coral",
+    "name": {
+      "zh": "软珊瑚",
+      "en": "Soft coral"
+    },
+    "sci": "Dendronephthya sp.",
+    "sprite": "soft-coral",
+    "sizeClass": "m",
+    "tags": [
+      "coral"
+    ],
+    "lengthM": 0.8
+  },
+  {
+    "id": "brydes-whale",
+    "name": {
+      "zh": "布氏鲸",
+      "en": "Bryde's whale"
+    },
+    "sci": "Balaenoptera edeni",
+    "sprite": "brydes-whale",
+    "sizeClass": "xl",
+    "tags": [
+      "whale",
+      "big"
+    ],
+    "lengthM": 14
+  },
+  {
+    "id": "blacktip-reef-shark",
+    "name": {
+      "zh": "黑鳍礁鲨",
+      "en": "Blacktip reef shark"
+    },
+    "sci": "Carcharhinus melanopterus",
+    "sprite": "blacktip-reef-shark",
+    "sizeClass": "m",
+    "tags": [
+      "shark"
+    ],
+    "lengthM": 1.6
+  },
+  {
+    "id": "sicklefin-devil-ray",
+    "name": {
+      "zh": "褐背蝠鲼",
+      "en": "Sicklefin devil ray"
+    },
+    "sci": "Mobula tarapacana",
+    "sprite": "sicklefin-devil-ray",
+    "sizeClass": "l",
+    "tags": [
+      "pelagic",
+      "big"
+    ],
+    "lengthM": 3
+  },
+  {
+    "id": "dusky-grouper",
+    "name": {
+      "zh": "乌鳍石斑",
+      "en": "Dusky grouper"
+    },
+    "sci": "Epinephelus marginatus",
+    "sprite": "dusky-grouper",
+    "sizeClass": "m",
+    "tags": [],
+    "lengthM": 1.2
+  },
+  {
+    "id": "arctic-char",
+    "name": {
+      "zh": "北极红点鲑",
+      "en": "Arctic char"
+    },
+    "sci": "Salvelinus alpinus",
+    "sprite": "arctic-char",
+    "sizeClass": "s",
+    "tags": [
+      "coldwater"
+    ],
+    "lengthM": 0.6
+  },
+  {
+    "id": "seal",
+    "name": {
+      "zh": "海豹",
+      "en": "Seal"
+    },
+    "sci": "Halichoerus grypus",
+    "sprite": "seal",
+    "sizeClass": "m",
+    "tags": [
+      "coldwater"
+    ],
+    "lengthM": 1.8
   }
 ]

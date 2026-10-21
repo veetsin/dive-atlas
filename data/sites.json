@@ -583,6 +583,149 @@
     "pinyin": "disiteergemuhaochenchuan thistlegorm dstegmhcc thistlegorm"
   },
   {
+    "id": "aliwal-shoal",
+    "name": {
+      "zh": "阿利瓦尔浅滩",
+      "en": "Aliwal Shoal"
+    },
+    "country": {
+      "zh": "南非",
+      "en": "South Africa"
+    },
+    "region": "indian-ocean",
+    "coords": [
+      30.83,
+      -30.26
+    ],
+    "bestMonths": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "species": [
+      "grey-nurse-shark",
+      "tiger-shark",
+      "dolphin"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "wreck"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      18,
+      26
+    ],
+    "visibilityM": [
+      8,
+      25
+    ],
+    "summary": {
+      "zh": "德班以南、乌姆科马斯外约 5 公里，是一段石化的古沙丘，不是珊瑚礁。7–11 月沙虎鲨来此交配，一次潜水常见几十条；夏季（约 11–5 月）有无笼虎鲨潜水。附近两艘沉船深约 27–32 米。",
+      "en": "Lying about 5 km off Umkomaas, south of Durban, the shoal is a fossilised ancient dune rather than a coral reef. From July to November ragged-tooth sharks gather here to mate, often dozens on one dive, and in summer operators run cage-free tiger shark dives. Two nearby wrecks, the Nebo and the Produce, bottom out at about 27 m and 32 m."
+    },
+    "highlights": [
+      {
+        "zh": "7–11 月沙虎鲨聚集，一次可见五六十条",
+        "en": "Ragged-tooth sharks from July to November, sometimes 50–60 at once"
+      },
+      {
+        "zh": "夏季无笼虎鲨潜水，深度约 8–10 米",
+        "en": "Cage-free tiger shark dives at 8–10 m in summer"
+      },
+      {
+        "zh": "两艘沉船：Produce 号与 Nebo 号",
+        "en": "Two wrecks: the Produce and the Nebo"
+      }
+    ],
+    "sources": [
+      "https://www.southafrica.net/gl/en/travel/article/sharks-turtles-and-wrecks-aliwal-shoal-kwazulu-natal",
+      "https://blog.padi.com/diving-on-aliwal-shoal-south-africa/",
+      "https://www.southafrica.net/gl/en/travel/article/tiger-shark-diving-in-south-africa"
+    ],
+    "verified": true,
+    "notes": "任务给的是'阿利瓦尔浅滩或索德瓦纳湾'二选一，取阿利瓦尔（沙虎鲨、虎鲨都有现成物种；索德瓦纳可在第二波补，PADI 按月清单把它的鲸鲨列在 11–4 月）。季节：南非旅游局 7–11 月（同页另一处写 7–12 月）；PADI 博客 7–11 月；搜索摘要中其他 PADI 页面写 6–11 月或 5 月下旬–11 月。取 7–11 月。沙虎鲨即 grey nurse shark / ragged-tooth（当地叫 raggie），物种 id 用 grey-nurse-shark。虎鲨：南非旅游局称阿利瓦尔全年有运营商做无笼虎鲨潜水、夏季（11–5 月）最好，水温最高 28°C、很少低于 18°C、能见度平均 15 m；页面未说明是否投饵（所开来源未确认）。PADI 说温暖月份还有大洋黑边鳍鲨（未建物种）。南非旅游局要求 OW 证书；浅滩 5–25 m，沉船 Produce 约 32 m、Nebo 约 27 m（PADI），Griqualand 约 60 m 为技术潜。阿古拉斯暖流流经，海流明显。坐标为浅滩中部，离岸约 5 km。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "aliwaerqiantan alweqt"
+  },
+  {
+    "id": "fuvahmulah",
+    "name": {
+      "zh": "富瓦穆拉",
+      "en": "Fuvahmulah"
+    },
+    "country": {
+      "zh": "马尔代夫",
+      "en": "Maldives"
+    },
+    "region": "indian-ocean",
+    "coords": [
+      73.42,
+      -0.3
+    ],
+    "bestMonths": [],
+    "species": [
+      "tiger-shark",
+      "thresher-shark",
+      "hammerhead",
+      "oceanic-manta",
+      "whale-shark"
+    ],
+    "level": "AOW",
+    "types": [
+      "pelagic",
+      "drift"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      25,
+      30
+    ],
+    "visibilityM": [
+      20,
+      35
+    ],
+    "summary": {
+      "zh": "马尔代夫南部一座孤立的岛，离岸不远就是深海。港口外的虎鲨点常年聚着多条虎鲨，是被鱼市丢弃的下脚料引来的；按季节还能遇到长尾鲨、路氏双髻鲨和大洋蝠鲼。多为蓝水下降、带流，适合有经验的潜水员。",
+      "en": "A lone island in the southern Maldives with deep water close to shore. Tiger sharks gather off the harbour all year, drawn by scraps from the fish market, and thresher sharks, scalloped hammerheads and oceanic mantas appear in their seasons. Most dives are blue-water descents in current, better suited to experienced divers."
+    },
+    "highlights": [
+      {
+        "zh": "虎鲨点（Tiger Zoo）全年近距离看虎鲨",
+        "en": "Close-range tiger sharks year-round at Tiger Zoo"
+      },
+      {
+        "zh": "1–3 月路氏双髻鲨成群出现",
+        "en": "Schools of scalloped hammerheads, January–March"
+      },
+      {
+        "zh": "3–5 月大洋蝠鲼聚集",
+        "en": "Oceanic mantas gather from March to May"
+      },
+      {
+        "zh": "12–15 米深的清洁站可见长尾鲨",
+        "en": "Thresher sharks at a cleaning station at 12–15 m"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-maldives-deep-south-fuvahmulah.php",
+      "https://www.padi.com/diving-in/fuvahmulah-gnaviyani-atoll/",
+      "https://visitmaldives.com/en/experience/fantastic-gentle-giants-and-where-to-find-them"
+    ],
+    "verified": true,
+    "notes": "虎鲨全年可见（Dive The World、PADI 一致），bestMonths 留空表示全年。其他物种季节有分歧：长尾鲨 DTW 写 4–11 月、PADI 写 1–4 月（PADI 把长尾鲨和双髻鲨都放在 1–4 月）；路氏双髻鲨全年、1–3 月成群（DTW）；大洋蝠鲼 3–5 月（DTW）；鲸鲨 Visit Maldives 写 12–3 月、8 月概率最高，多为约 8 米的大型雌性，DTW 写全年、1–5 月多见幼体。虎鲨聚集与鱼市废料有关（DTW）。难度：DTW 中级到高级、PADI 说面向有经验的潜水员，取 AOW。交通：马累国内航班约 1.5 小时（PADI），离马累约 500 km（DTW）。水温 DTW 25–30°C、PADI 27–29°C；能见度 DTW 20–30 m、PADI 常超 30 m。坐标为岛中部，精度约 2 km。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "fuwamula fwml"
+  },
+  {
     "id": "hanifaru-bay",
     "name": {
       "zh": "哈尼法鲁湾",
@@ -623,17 +766,541 @@
       30
     ],
     "visibilityM": [
+      5,
+      20
+    ],
+    "summary": {
+      "zh": "芭环礁里一处漏斗形的浅湾。西南季风期潮水把浮游生物推进湾底，礁蝠鲼成群在水面附近绕圈进食，高峰时可达上百条，偶尔有鲸鲨加入。湾内只许浮潜、禁止水肺，进湾船只有数量限制。",
+      "en": "A shallow, funnel-shaped bay in Baa Atoll. During the southwest monsoon the tide pushes plankton into its dead end, and reef mantas gather to feed in loops near the surface, sometimes hundreds at once, occasionally joined by a whale shark. The bay is snorkel-only: scuba is banned and the number of boats is limited."
+    },
+    "highlights": [
+      {
+        "zh": "高峰期上百条礁蝠鲼在水面附近旋转进食",
+        "en": "At peak times, hundreds of reef mantas feed in loops near the surface"
+      },
+      {
+        "zh": "8–11 月蝠鲼通常最集中",
+        "en": "Manta numbers usually peak from August to November"
+      },
+      {
+        "zh": "只许浮潜，湾内禁止水肺潜水",
+        "en": "Snorkel only: scuba is banned inside the bay"
+      }
+    ],
+    "sources": [
+      "https://visitmaldives.com/en/experience/fantastic-gentle-giants-and-where-to-find-them",
+      "https://www.dive-the-world.com/posts/northern/exploring-maldives-hanifaru-bay-underwater-wonders.php",
+      "https://www.padi.com/dive-site/maldives/hanifaru-bay/"
+    ],
+    "verified": true,
+    "notes": "季节：Visit Maldives（旅游局）最佳 5–11 月，西南季风把浮游生物困在湾里；Dive The World 西南季风 5–11 月、蝠鲼高峰 8–11 月；PADI 站点页 6–11 月为蝠鲼高峰、鲸鲨 4–10 月。按旅游局取 5–11 月。湾内禁止水肺、只许浮潜（三个来源一致）；Visit Maldives 写有进湾船只数量限制，具体人数 / 时长各来源说法不一，未写进页面。能见度为参考值：浮游生物多时偏浑，PADI 写的 20–30 m 偏乐观，取 5–20。水温 27–30°C 来自 Dive The World。坐标沿用种子（Dhonfanu 与 Dharavandhoo 之间），精度约 1 km。level 取 OW 只表示门槛最低，实际活动是浮潜。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "hanifaluwan hnflw"
+  },
+  {
+    "id": "mafia-island",
+    "name": {
+      "zh": "马菲亚岛",
+      "en": "Mafia Island"
+    },
+    "country": {
+      "zh": "坦桑尼亚",
+      "en": "Tanzania"
+    },
+    "region": "indian-ocean",
+    "coords": [
+      39.65,
+      -7.91
+    ],
+    "bestMonths": [
+      11,
+      12,
+      1,
+      2
+    ],
+    "species": [
+      "whale-shark",
+      "napoleon-wrasse",
+      "potato-cod",
+      "hawksbill"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "drift",
+      "pelagic"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      25,
+      30
+    ],
+    "visibilityM": [
       10,
       25
     ],
     "summary": {
-      "zh": "芭环礁的一处小海湾，西南季风把浮游生物推进湾里，蝠鲼成群进食。这里是浮潜观赏区，不允许水肺。",
-      "en": "A small bay in Baa Atoll where the southwest monsoon pushes plankton in and mantas gather to feed. Snorkel-only — scuba is not permitted inside the bay."
+      "zh": "坦桑尼亚外海的岛。西岸基林多尼湾有一群未成年鲸鲨，不少个体多年留在湾内，11 月到次年 2 月浮上水面吃小虾，浮潜就能看。东边的乔莱湾属于坦桑尼亚第一个海洋公园，礁上石斑、苏眉多，潜水按潮汐安排。",
+      "en": "An island off the Tanzanian coast. In Kilindoni Bay on the west side, juvenile whale sharks stay for years and feed on tiny shrimp at the surface from November to February, close enough for snorkellers. Chole Bay in the east lies inside Tanzania's first marine park, with big groupers and Napoleon wrasse; dives are timed to the tides."
     },
-    "sources": [],
-    "verified": false,
+    "highlights": [
+      {
+        "zh": "11–2 月在基林多尼湾浮潜看鲸鲨",
+        "en": "Snorkel with whale sharks in Kilindoni Bay, November–February"
+      },
+      {
+        "zh": "乔莱湾几乎任何天气都能潜",
+        "en": "Chole Bay can be dived in almost any weather"
+      },
+      {
+        "zh": "基纳西水道顺流潜，按潮汐下水",
+        "en": "Drift dives through Kinasi Pass, timed to the tide"
+      }
+    ],
+    "sources": [
+      "https://marinemegafauna.org/news/theres-no-place-like-home-for-whale-sharks-in-tanzania",
+      "https://www.scubatravel.co.uk/africa/tanzania-diving-zanzibar.html",
+      "https://blog.padi.com/the-best-locations-to-swim-dive-with-whale-sharks-by-month/"
+    ],
+    "verified": true,
+    "notes": "鲸鲨季：MMF 研究者称 11–2 月水面进食最多、凉季移到稍外海且少上水面；Scuba Travel 一处写 11–1 月、另一处写全年在、10–2 月为旺季，所引 Big Blu 写 11–2 月；PADI 按月清单为 10–3 月。取 11–2 月，10 月和 3 月为肩季。MMF：51 条被追踪个体中很多五年都留在湾内，是未成年鲸鲨的觅食场；威胁是船只撞击和刺网。鲸鲨活动以浮潜为主。Chole Bay 几乎任何天气可潜、Kinasi Pass 为按潮汐的顺流潜、最好的潜点多在 30 m 以内（Scuba Travel）；西侧部分礁曾受炸鱼破坏。物种：石斑写 potato-cod（来源写 potato grouper），玳瑁在乔莱湾东侧（Scuba Travel）。水温、能见度来源未给数字，为参考值。坐标指向基林多尼湾（鲸鲨区）；潜店多在东岸 Utende / 乔莱湾，约 [39.78, -7.93]。",
     "updatedAt": "2026-10-20",
-    "pinyin": "hanifaluwan hnflw"
+    "pinyin": "mafeiyadao mfyd"
+  },
+  {
+    "id": "mahe",
+    "name": {
+      "zh": "马埃岛",
+      "en": "Mahé"
+    },
+    "country": {
+      "zh": "塞舌尔",
+      "en": "Seychelles"
+    },
+    "region": "indian-ocean",
+    "coords": [
+      55.43,
+      -4.62
+    ],
+    "bestMonths": [
+      4,
+      5,
+      10,
+      11
+    ],
+    "species": [
+      "whale-shark",
+      "whitetip-reef-shark",
+      "hawksbill"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "wreck"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      25,
+      30
+    ],
+    "visibilityM": [
+      10,
+      30
+    ],
+    "summary": {
+      "zh": "塞舌尔主岛，潜点多在西北岸外，水下地形以巨大的花岗岩石块为骨架。两季风之间的 4–5 月和 10–11 月海面最平，能见度可到 30 米左右；约 8–11 月有机会遇到经过的鲸鲨，但不保证。",
+      "en": "Seychelles' main island, with most dive sites off the northwest coast, where reefs are built around huge granite boulders. The calm months between the monsoons, April–May and October–November, bring the flattest seas and visibility of up to about 30 m. Whale sharks pass through from roughly August to November, though sightings are never guaranteed."
+    },
+    "highlights": [
+      {
+        "zh": "鲨鱼浅滩（Shark Bank）：花岗岩高台上的魟鱼和白顶礁鲨",
+        "en": "Shark Bank: stingrays and whitetip reef sharks on a granite plateau"
+      },
+      {
+        "zh": "恩纳代尔号沉船断成三截，躺在 30 米",
+        "en": "The Ennerdale wreck lies in three sections at 30 m"
+      },
+      {
+        "zh": "约 8–11 月有机会遇到鲸鲨",
+        "en": "A chance of whale sharks from about August to November"
+      }
+    ],
+    "sources": [
+      "https://www.scubatravel.co.uk/pacific/seychelles-diving.html",
+      "https://travel.padi.com/liveaboard-diving/seychelles/",
+      "https://www.padi.com/diving-in/mahe/",
+      "https://blog.padi.com/the-best-locations-to-swim-dive-with-whale-sharks-by-month/"
+    ],
+    "verified": true,
+    "notes": "任务要求'塞舌尔'一个点，取潜店集中的主岛马埃岛。季节：Scuba Travel 4 月与 10–11 月；PADI Travel 4–5 月与 10–11 月；搜索摘要中 LiveAboard.com 为 3–5 月与 9–11 月。取 4–5、10–11 月。东南季风约 5 月下旬–9 月风浪大、能见度低，7–8 月水温降到约 25°C（PADI Travel）。鲸鲨：PADI 马埃页 9–11 月，PADI 按月清单 8–11 月，Scuba Travel 说 11 月记录最多、4 月和 12 月也有。塞舌尔旅游局潜水页（seychelles.travel）两次返回 522，未能打开。来源里的'海龟'未写种类，填玳瑁（内岛常见种）待核。Shark Bank 在马埃岛西北约 8 km（Scuba Travel）；Ennerdale 30 m 适合 AOW。坐标为 Beau Vallon（潜店集中处）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "maaidao mad"
+  },
+  {
+    "id": "north-male-atoll",
+    "name": {
+      "zh": "北马累环礁",
+      "en": "North Malé Atoll"
+    },
+    "country": {
+      "zh": "马尔代夫",
+      "en": "Maldives"
+    },
+    "region": "indian-ocean",
+    "coords": [
+      73.56,
+      4.3
+    ],
+    "bestMonths": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "species": [
+      "grey-reef-shark",
+      "reef-manta",
+      "eagle-ray",
+      "napoleon-wrasse"
+    ],
+    "level": "AOW",
+    "types": [
+      "drift",
+      "reef",
+      "wreck"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      26,
+      30
+    ],
+    "visibilityM": [
+      15,
+      30
+    ],
+    "summary": {
+      "zh": "首都马累所在的环礁，也是马尔代夫最早开发旅游的地方，三十多个潜点多在通道口和水下礁丘上。东北季风期海流从外海涌入，水最清，灰礁鲨、鹰鳐和梭鱼在礁丘边巡游；5–10 月礁蝠鲼会到东南部的清洁站。",
+      "en": "The atoll around Malé, and the first in the Maldives to open to tourism, with about 35 dive sites, many on channel mouths and submerged pinnacles (thilas). In the northeast monsoon, incoming currents bring the clearest water while grey reef sharks, eagle rays and barracuda patrol the thilas; from May to October reef mantas visit a cleaning station in the southeast."
+    },
+    "highlights": [
+      {
+        "zh": "吉里富希礁丘（HP Reef）：软珊瑚、鹰鳐和灰礁鲨，海流强",
+        "en": "Girifushi Thila (HP Reef): soft corals, eagle rays and grey reef sharks in strong current"
+      },
+      {
+        "zh": "蝠鲼点：5–10 月礁蝠鲼来做清洁",
+        "en": "Manta Point: reef mantas at a cleaning station, May–October"
+      },
+      {
+        "zh": "奥科贝礁丘有一家苏眉常驻",
+        "en": "Okobe Thila is home to a family of Napoleon wrasse"
+      },
+      {
+        "zh": "马尔代夫胜利号沉船，坐底约 35 米",
+        "en": "The Maldives Victory wreck, sitting at about 35 m"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-maldives-north-male-atoll.php",
+      "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-the-maldives",
+      "https://visitmaldives.com/en/places/male-dive-highlights"
+    ],
+    "verified": true,
+    "notes": "季节：Dive The World 东北季风 12–5 月干燥、11 月起海流增强带来好能见度和大鱼、5 月下旬到 7 月最不理想；LiveAboard.com 12–5 月最佳、东侧尤佳。取两者重叠的 12–4 月，11 月与 5 月为肩季。蝠鲼点月份：Visit Maldives 写西南季风 5–10 月；DTW 说蝠鲼和鲨鱼全年都有；搜索摘要里其他来源写 5–11 月或 6–12 月。Girifushi 一带是军营靶场，岸上挂红旗时封闭（DTW）。DTW 认为难度从初级到高级都有（35 个潜点，5 m 到 40 m 以上），本条按通道放流潜取 AOW，内侧礁区 OW 也能潜。马尔代夫胜利号 35 m 属进阶深度。梭鱼只写进文案，没放进 species（梭鱼风暴贴纸代表大群）。坐标在 Lankanfinolhu–Himmafushi 一带东缘，精度约 3 km。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "beimaleihuanjiao bmlhj"
+  },
+  {
+    "id": "south-ari-atoll",
+    "name": {
+      "zh": "南阿里环礁",
+      "en": "South Ari Atoll"
+    },
+    "country": {
+      "zh": "马尔代夫",
+      "en": "Maldives"
+    },
+    "region": "indian-ocean",
+    "coords": [
+      72.88,
+      3.49
+    ],
+    "bestMonths": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "species": [
+      "whale-shark",
+      "reef-manta",
+      "green-turtle",
+      "hawksbill"
+    ],
+    "level": "OW",
+    "types": [
+      "pelagic",
+      "reef"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      27,
+      30
+    ],
+    "visibilityM": [
+      15,
+      30
+    ],
+    "summary": {
+      "zh": "南阿里环礁南缘，从马米吉利到迪古拉一带是海洋保护区，鲸鲨一年四季沿外礁巡游。这里的鲸鲨约九成是雄性，以未成年个体为主，同一批个体常被反复记录。多数人浮潜看，8–11 月数量最多。",
+      "en": "The southern rim of Ari Atoll, from Maamigili to Dhigurah, is a marine protected area where whale sharks cruise the outer reef in every month. About nine in ten are males, mostly juveniles, and the same individuals turn up again and again. Most encounters are on snorkel; numbers tend to peak from August to November."
+    },
+    "highlights": [
+      {
+        "zh": "任何月份都有机会遇到鲸鲨",
+        "en": "Whale sharks possible in any month"
+      },
+      {
+        "zh": "约九成为雄性，以未成年个体为主",
+        "en": "About 90% males, mostly juveniles"
+      },
+      {
+        "zh": "守则：离身体 3 米、离尾鳍 4 米，不触摸、不用闪光灯",
+        "en": "Code of conduct: 3 m from the body, 4 m from the tail, no touching, no flash"
+      }
+    ],
+    "sources": [
+      "https://visitmaldives.com/en/places/whale-sharks-south-ari-atoll",
+      "https://visitmaldives.com/en/experience/fantastic-gentle-giants-and-where-to-find-them",
+      "https://visitmaldives.com/en/experience/qa-with-mwsrp",
+      "https://divemagazine.com/scuba-diving-travel/10-best-places-to-dive-with-whale-sharks",
+      "https://www.padi.com/diving-in/south-ari-atoll/"
+    ],
+    "verified": true,
+    "notes": "季节：Visit Maldives 全年可见、8–11 月数量最多（Fantastic Gentle Giants 页）；DIVE Magazine 8–12 月高峰、全年常见；PADI 全年可见、1–3 月海况与能见度最好；Scuba Diving 杂志（搜索摘要，页面 403 未打开）称 12–3 月聚集最大。按旅游局取 8–11 月，其他月份照样有机会。三个 visitmaldives 页面算同一来源，独立来源是 DIVE 与 PADI。91% 雄性、以未成年为主、3 m / 4 m 距离守则来自 Visit Maldives 对 MWSRP 的访谈；MWSRP 还提到游客增多后船伤增加、目击下降。礁蝠鲼、海龟据 PADI 页面（礁蝠鲼为马尔代夫常见种，页面未写种名）。坐标取马米吉利—迪古拉之间外礁中点，精度约 2 km（Visit Maldives 地图钉在 3.68N 72.70E，偏向环礁西侧，未采用）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "nanalihuanjiao nalhj"
+  },
+  {
+    "id": "tofo",
+    "name": {
+      "zh": "托福",
+      "en": "Tofo"
+    },
+    "country": {
+      "zh": "莫桑比克",
+      "en": "Mozambique"
+    },
+    "region": "indian-ocean",
+    "coords": [
+      35.55,
+      -23.85
+    ],
+    "bestMonths": [],
+    "species": [
+      "whale-shark",
+      "oceanic-manta",
+      "reef-manta",
+      "humpback-whale"
+    ],
+    "level": "AOW",
+    "types": [
+      "reef",
+      "pelagic"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      23,
+      28
+    ],
+    "visibilityM": [
+      10,
+      25
+    ],
+    "summary": {
+      "zh": "莫桑比克南部的海滩小镇，充气艇从沙滩冲浪出海。蝠鲼礁有多个清洁站，大洋蝠鲼和礁蝠鲼都会来；鲸鲨多在出海途中浮潜遇到，6–10 月有座头鲸经过。研究者记录到这里鲸鲨和蝠鲼的目击比 2000 年代大减。",
+      "en": "A beach town in southern Mozambique where RIBs launch through the surf. Manta Reef has several cleaning stations visited by both giant and reef mantas, whale sharks are usually met on snorkel during the ride out, and humpbacks pass from June to October. Researchers have recorded steep drops in whale shark and manta sightings here since the 2000s."
+    },
+    "highlights": [
+      {
+        "zh": "蝠鲼礁：尖礁和洞穴间有多个清洁站",
+        "en": "Manta Reef: several cleaning stations among pinnacles and caves"
+      },
+      {
+        "zh": "出海途中浮潜看鲸鲨，10–3 月机会较大",
+        "en": "Snorkel with whale sharks on the ride out; best odds October–March"
+      },
+      {
+        "zh": "6–10 月座头鲸沿岸经过",
+        "en": "Humpback whales pass from June to October"
+      }
+    ],
+    "sources": [
+      "https://www.scubatravel.co.uk/africa/diving-mozambique.html",
+      "https://www.dansa.org/blog/2022/04/25/scuba-diving-in-mozambique",
+      "https://blog.padi.com/the-best-locations-to-swim-dive-with-whale-sharks-by-month/",
+      "https://marinemegafauna.org/news/manta-rays-and-whale-sharks-now-protected-in-mozambique"
+    ],
+    "verified": true,
+    "notes": "季节：Scuba Travel 说鲸鲨与蝠鲼全年可见、蝠鲼礁 10–11 月为旺季、全国 5–9 月能见度最好（2 月和 8 月多风）；DAN Southern Africa 说全年可见、潜店全年营业、座头鲸 6–10 月；PADI 按月清单把托福列在 6–1 月，搜索摘要里另一篇 PADI 说鲸鲨 10–3 月机会最大。两个主要来源都说全年，bestMonths 留空。下降：MMF 页面引 2013 年研究，鲸鲨目击降 79%、礁蝠鲼降 88%，南部海域大洋蝠鲼、礁蝠鲼等后续降幅超 90%；2021 年 1 月起莫桑比克立法保护鲸鲨和蝠鲼。int-res 上的 Rohner 等 2013 摘要页返回 429 未能打开。水温 23–28°C 来自 DAN SA；能见度来源未给数字，为参考值。level 取 AOW：蝠鲼礁较深、外海涌浪、冲浪出海（深度来源未给，常见说法 20 多米，待核）；DAN SA 提到 Mike's Cupboard 适合新手。坐标为托福海滩。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "tuofu tf"
+  },
+  {
+    "id": "trincomalee",
+    "name": {
+      "zh": "亭可马里",
+      "en": "Trincomalee"
+    },
+    "country": {
+      "zh": "斯里兰卡",
+      "en": "Sri Lanka"
+    },
+    "region": "indian-ocean",
+    "coords": [
+      81.21,
+      8.72
+    ],
+    "bestMonths": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "blacktip-reef-shark",
+      "green-turtle",
+      "hawksbill"
+    ],
+    "level": "OW",
+    "types": [
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      27,
+      30
+    ],
+    "visibilityM": [
+      10,
+      30
+    ],
+    "summary": {
+      "zh": "斯里兰卡东北岸的港口城市，潜水季和西南海岸错开，大约是 3 到 10 月。尼拉维利外的鸽子岛国家公园有斯里兰卡现存最好的珊瑚礁之一，浅水里常见黑鳍礁鲨和海龟；鲨鱼区只许浮潜，周边礁石可以水肺。",
+      "en": "A harbour town on Sri Lanka's northeast coast, whose dive season runs opposite to the southwest coast, roughly March to October. Pigeon Island National Park, off Nilaveli, protects some of the country's best remaining coral, with blacktip reef sharks and turtles in the shallows. The shark area is snorkel-only; scuba dives go around the surrounding rocks."
+    },
+    "highlights": [
+      {
+        "zh": "鸽子岛浅水区浮潜看黑鳍礁鲨",
+        "en": "Snorkel with blacktip reef sharks in Pigeon Island's shallows"
+      },
+      {
+        "zh": "3–4 月常有平静海面和 30 米以上能见度",
+        "en": "March–April often brings flat seas and 30 m+ visibility"
+      },
+      {
+        "zh": "斯瓦米岩可见梭鱼和礁鲨",
+        "en": "Swami Rock draws barracuda and reef sharks"
+      }
+    ],
+    "sources": [
+      "https://www.padi.com/diving-in/sri-lanka/trincomalee/",
+      "https://divingsrilanka.com/diving-centres/trincomalee-diving-centre/",
+      "https://www.srilanka.travel/attraction?attraction_id=159",
+      "https://divinguru.com/best-time-to-visit-pigeon-island/",
+      "https://blog.padi.com/why-sri-lanka-is-good-for-diving-all-year-round/"
+    ],
+    "verified": true,
+    "notes": "任务给的是'亭可马里 / 卡尔皮蒂耶'二选一，取潜水更成熟的亭可马里（卡尔皮蒂耶以 11–4 月看海豚、抹香鲸为主，可在第二波补）。季节：PADI 2 月–10 月中、3–4 月最佳（能见度 30 m 以上、水温 29–30°C、无流）；Poseidon（斯里兰卡老牌潜店）4–10 月；Divinguru（尼拉维利潜店）3–10 月，2 月与 11 月视海况；PADI 另一篇说东北岸潜店 2–11 月营业。取多数来源覆盖的 3–10 月。东北季风约 11–2 月影响东岸（Divinguru）。鸽子岛国家公园概况来自斯里兰卡旅游局页面（无季节信息，开放 9–17 点）；'鲨鱼区只许浮潜、背面和周边礁石可水肺'来自 Divinguru，未找到野生动物保护部原文。Poseidon 页列出的 SS British Sergeant 沉船通常从更南的帕西库达出发，未写进页面。新增物种 blacktip-reef-shark（黑鳍礁鲨），地图贴纸待画。坐标为鸽子岛。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "tingkemali tkml"
+  },
+  {
+    "id": "wild-coast",
+    "name": {
+      "zh": "狂野海岸（沙丁鱼风暴）",
+      "en": "Wild Coast (Sardine Run)"
+    },
+    "country": {
+      "zh": "南非",
+      "en": "South Africa"
+    },
+    "region": "indian-ocean",
+    "coords": [
+      29.55,
+      -31.63
+    ],
+    "bestMonths": [
+      6,
+      7
+    ],
+    "species": [
+      "sardine-run",
+      "dolphin",
+      "humpback-whale"
+    ],
+    "level": "AOW",
+    "types": [
+      "pelagic",
+      "drift"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      17,
+      21
+    ],
+    "visibilityM": [
+      5,
+      30
+    ],
+    "summary": {
+      "zh": "每年冬季沙丁鱼沿南非东岸北上，6–7 月经过圣约翰斯港一带的狂野海岸。海豚把鱼群围成饵球，塘鹅从空中扎下，鲨鱼和鲸跟着进食。充气艇冲浪出海、在开阔海面找饵球，能否遇到每年都不一样，最好多留几天。",
+      "en": "Each winter, sardines move north along South Africa's east coast and pass the Wild Coast around Port St Johns in June and July. Dolphins herd them into bait balls, gannets plunge from above, and sharks and whales join the feed. RIBs launch through the surf to search open water; the action varies from year to year, so allow several days."
+    },
+    "highlights": [
+      {
+        "zh": "海豚围出饵球，塘鹅从空中俯冲入水",
+        "en": "Dolphins herd bait balls while gannets plunge in from above"
+      },
+      {
+        "zh": "多种鲨鱼，以及布氏鲸、座头鲸跟着进食",
+        "en": "Several shark species, plus Bryde's and humpback whales, join in"
+      },
+      {
+        "zh": "多数运营商要求 AOW 和 50 次以上潜水记录",
+        "en": "Most operators ask for Advanced Open Water and 50+ logged dives"
+      }
+    ],
+    "sources": [
+      "https://www.southafrica.net/gl/en/travel/article/wild-coast-diving-at-cathedral-rock-eastern-cape",
+      "https://visiteasterncape.co.za/sardine-run/",
+      "https://blog.padi.com/south-africas-sardine-run/"
+    ],
+    "verified": true,
+    "notes": "季节：南非旅游局'通常 6–7 月'；东开普旅游局 5–7 月（4–5 月在更南的 Gqeberha / East London 机会更大）；PADI 5–7 月，5–6 月在 Gqeberha / East London、6–7 月往北到圣约翰斯港和 Mbotyi。取 6–7 月。每年时间、地点与规模都不确定（东开普旅游局、南非旅游局都强调）。PADI：多数运营商要求 AOW + 50 次以上、需有放流潜经验，水温通常低于 21°C（全身湿衣或干衣），能见度 5–30 m；鲨鱼有铜鲨、暗色真鲨、沙虎鲨、公牛鲨等，鲸有座头鲸、小须鲸、布氏鲸。南非旅游局还提到这段海岸平时也有公牛鲨、铜鲨、虎鲨。site id 用 wild-coast，避免与物种 id sardine-run 混淆。坐标为圣约翰斯港（运营商临时基地之一）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "kuangyehaian shadingyufengbao kyha sdyfb"
   },
   {
     "id": "hin-daeng",
@@ -1264,6 +1931,157 @@
     "pinyin": "diaomandao dmd"
   },
   {
+    "id": "anilao",
+    "name": {
+      "zh": "阿尼洛",
+      "en": "Anilao"
+    },
+    "country": {
+      "zh": "菲律宾",
+      "en": "Philippines"
+    },
+    "region": "coral-triangle",
+    "coords": [
+      120.89,
+      13.69
+    ],
+    "bestMonths": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "species": [
+      "nudibranch",
+      "frogfish",
+      "pygmy-seahorse",
+      "mandarinfish"
+    ],
+    "level": "OW",
+    "types": [
+      "muck",
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      24,
+      28
+    ],
+    "visibilityM": [
+      10,
+      25
+    ],
+    "summary": {
+      "zh": "马尼拉以南约 3 小时车程的微距重镇，已记录的海蛞蝓近 600 种。礁石、沙坡和泥底里藏着躄鱼、拟态章鱼、蓝环章鱼和豆丁海马。多数潜点船程 10–20 分钟，1–2 月水温会降到 25°C 左右。",
+      "en": "A macro hub about three hours' drive south of Manila, with close to 600 nudibranch species recorded. Reefs, sandy slopes and muck sites hide frogfish, mimic and blue-ringed octopus and pygmy seahorses. Most sites are 10–20 minutes by boat, and the water cools to around 25°C in January and February."
+    },
+    "highlights": [
+      {
+        "zh": "近 600 种海蛞蝓",
+        "en": "Close to 600 nudibranch species"
+      },
+      {
+        "zh": "Secret Bay 泥底的拟态章鱼与蓝环章鱼",
+        "en": "Mimic and blue-ringed octopus in the muck at Secret Bay"
+      },
+      {
+        "zh": "Kirby's Rock 的金色豆丁海马",
+        "en": "Golden pygmy seahorses at Kirby's Rock"
+      },
+      {
+        "zh": "夜里的黑水潜，看漂浮的幼体生物",
+        "en": "Blackwater night dives for drifting larval critters"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-philippines-batangas-anilao.php",
+      "https://www.dive-the-world.com/diving-sites-philippines.php",
+      "https://www.bluewaterdivetravel.com/anilao-diving",
+      "https://divernet.com/world-dives/philippines-diving-hotspots-anda-anilao-malapascua-dumaguete-coron/"
+    ],
+    "verified": true,
+    "notes": "新增潜点。季节：DTW 菲律宾总页写全年可潜、12–4 月条件最好；Bluewater Dive Travel 写 10 月至 6 月初为主季、11–12 月和 4–5 月最好（4–5 月度假村最满）、7–8 月季风但潜点仍可去。取两者重叠的 12–4 月；10–11 月、5 月为肩季。DTW 阿尼洛潜点页没写季节。海蛞蝓：Divernet（2025-10）写近 600 种、DTW 写已鉴定 560 多种。水温：DTW 25–28；Bluewater 写通常 27.5°C、1–2 月约 25°C，有评价写 11–4 月低到 24°C，取 24–28。能见度：DTW 10–20 m、Bluewater 9–27 m，取 10–25。车程：Bluewater 写从马尼拉机场约 3 小时；DTW 写在马尼拉以南 130 km。船程 10–20 分钟（Bluewater）。流：Mainit Point、Beatrice 流明显（DTW、Bluewater）。Bluewater 是潜水旅行社，与 DTW 同类，没找到旅游局 / 主流潜水媒体的季节说法。坐标为 Twin Rocks 保护区（联合国地名培训文件 13.69088, 120.88910，学生作业，按 ±1 km 看待），位于 Mabini 半岛潜区中部。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "aniluo anl"
+  },
+  {
+    "id": "bunaken",
+    "name": {
+      "zh": "布纳肯（美娜多）",
+      "en": "Bunaken (Manado)"
+    },
+    "country": {
+      "zh": "印度尼西亚",
+      "en": "Indonesia"
+    },
+    "region": "coral-triangle",
+    "coords": [
+      124.76,
+      1.61
+    ],
+    "bestMonths": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "green-turtle",
+      "napoleon-wrasse",
+      "whitetip-reef-shark",
+      "eagle-ray"
+    ],
+    "level": "OW",
+    "types": [
+      "wall",
+      "reef"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      27,
+      30
+    ],
+    "visibilityM": [
+      20,
+      35
+    ],
+    "summary": {
+      "zh": "美娜多外海的国家海洋公园，以垂直峭壁出名，壁上挂满扇珊瑚和海绵。绿海龟在壁边休息，苏眉与鹰鳐不时游过。离市区约 40 分钟船程，流通常温和，多数潜点新手也能潜。",
+      "en": "A national marine park off Manado known for sheer walls hung with sea fans and sponges. Green turtles rest along the ledges while Napoleon wrasse and eagle rays pass by. The reef is about 40 minutes from town by boat, currents are usually mild, and most sites suit newer divers."
+    },
+    "highlights": [
+      {
+        "zh": "Lekuan 峭壁的绿海龟，一潜常见多只",
+        "en": "Several green turtles per dive on the Lekuan walls"
+      },
+      {
+        "zh": "峭壁上的扇珊瑚、海绵与软珊瑚",
+        "en": "Sea fans, sponges and soft corals on the walls"
+      },
+      {
+        "zh": "可与车程约 1.5 小时的蓝碧海峡组合",
+        "en": "Easy to pair with Lembeh, about 1.5 hours away by road"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-indonesia-manado-bunaken.php",
+      "https://www.liveaboard.com/diving/indonesia/bunaken",
+      "https://www.dive-the-world.com/faqs-diving-indonesia.php"
+    ],
+    "verified": true,
+    "notes": "新增潜点；名称括号用美娜多，因为国内潜水员多以'美娜多'称呼这一行程（与'朱利安岩（拜伦湾）'同一做法）。季节：liveaboard.com 写 5–10 月旱季最佳；DTW 潜点页写 4–10 月、11 月至 2 月底可能有风雨和 1–2 m 涌浪；DTW FAQ 写北苏拉威西 3–10 月最佳、11–1 月较难预测。按'优先运营商'取 5–10 月，4 月为肩季。水温：DTW 27–30、liveaboard 28–30。能见度 20–35 取 DTW（下雨时美娜多湾潜点降得更多）；liveaboard 只写'常超 20 m'。船程：DTW 约 40 分钟（北距美娜多湾 18 km），liveaboard 30–60 / 30–45 分钟。等级：DTW 写新手到进阶都可，Bunaken Timur 一般给中级、Tanjung Kopi 需有经验潜导；liveaboard 提醒部分潜点流会突然反向、建议带 SMB。公园费：liveaboard.com 写每人每天 IDR 50,000、每年封顶 IDR 150,000，保留防水牌备查，未见官方原文。liveaboard 列出的'远洋白鳍鲨'可疑，没采用。坐标为布纳肯岛南岸 Lekuan 峭壁一带，按地图常识取，±2 km。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "bunaken meinaduo bnk mnd"
+  },
+  {
     "id": "komodo",
     "name": {
       "zh": "科莫多",
@@ -1275,8 +2093,8 @@
     },
     "region": "coral-triangle",
     "coords": [
-      119.49,
-      -8.55
+      119.61,
+      -8.54
     ],
     "bestMonths": [
       4,
@@ -1291,6 +2109,7 @@
     "species": [
       "reef-manta",
       "grey-reef-shark",
+      "whitetip-reef-shark",
       "pygmy-seahorse",
       "nudibranch"
     ],
@@ -1298,28 +2117,215 @@
     "types": [
       "drift",
       "reef",
-      "muck"
+      "pelagic"
+    ],
+    "access": [
+      "liveaboard",
+      "boat"
+    ],
+    "waterTempC": [
+      20,
+      29
+    ],
+    "visibilityM": [
+      5,
+      30
+    ],
+    "summary": {
+      "zh": "潮汐强流塑造的国家公园。北部 Batu Bolong、Castle Rock 鱼群密集、礁鲨常见；南部水温可低至 20°C，Manta Alley 等清洁站常有多条蝠鲼。大多是放流，流况听潜导判断。",
+      "en": "A national park shaped by tidal currents. In the north, Batu Bolong and Castle Rock are thick with fish and reef sharks; in the south the water can drop to around 20°C, and cleaning stations such as Manta Alley often hold several mantas at once. Most dives are drifts, so follow your guide's read of the current."
+    },
+    "highlights": [
+      {
+        "zh": "Manta Alley、Manta Point 的蝠鲼清洁站",
+        "en": "Manta cleaning stations at Manta Alley and Manta Point"
+      },
+      {
+        "zh": "Batu Bolong 的鱼群与礁鲨",
+        "en": "Fish-packed walls and reef sharks at Batu Bolong"
+      },
+      {
+        "zh": "豆丁海马、躄鱼、鬼龙等微距也很多",
+        "en": "Plenty of macro too: pygmy seahorses, frogfish, ghost pipefish"
+      },
+      {
+        "zh": "可顺路上岸看科莫多巨蜥",
+        "en": "Shore visits to see Komodo dragons"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-indonesia-komodo.php",
+      "https://www.liveaboard.com/diving/indonesia/komodo",
+      "https://www.dive-the-world.com/faqs-diving-indonesia.php",
+      "https://divernet.com/world-dives/asia/diving-indonesia-an-overview-of-the-worlds-largest-archipelago/"
+    ],
+    "verified": true,
+    "notes": "季节：DTW 与 liveaboard.com 一致写 4–11 月旱季（北部 / 中部海况最好、能见度最高），保留种子的 4–11 月。分歧：Divernet（2025-10，FAQ）写 5–9 月；liveaboard.com 写南部 10–4 月更好（冷水上涌但海面较乱）；DTW 写全年都有船宿、4 月常被认为最好、11–1 月能见度最好（常超 30 m）、蝠鲼 12–2 月最多、翻车鲀 8 月；1–3 月北部、7–8 月南部海面较乱。水温：DTW 20–28（北 25–28、南 20–25），liveaboard 北 27–29、南 22–24，合并 20–29。能见度 5–30 取 DTW。等级：liveaboard.com 写强烈建议 AOW、不少行程要求 30–50 潜、流可达 8 节。liveaboard.com 写入园须带日期的电子票，并称 2026 年 9–12 月在每日 1,000 人基础上至少再加 500 个名额、2027 年配额未公布，未见官方原文，待核实。坐标由种子的科莫多岛陆地改为 Batu Bolong（Dive Against Debris 记录 -8.536, 119.614，单一来源），北部 / 中部潜区中心；纳闽巴焦码头约在 [119.88, -8.49]。types 把种子的 muck 换成 pelagic（大货是招牌，泥底不是）；species 加白顶礁鲨（DTW、liveaboard 都列出）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "kemoduo kmd"
+  },
+  {
+    "id": "lembeh",
+    "name": {
+      "zh": "蓝碧海峡",
+      "en": "Lembeh Strait"
+    },
+    "country": {
+      "zh": "印度尼西亚",
+      "en": "Indonesia"
+    },
+    "region": "coral-triangle",
+    "coords": [
+      125.23,
+      1.46
+    ],
+    "bestMonths": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "species": [
+      "frogfish",
+      "nudibranch",
+      "pygmy-seahorse",
+      "mandarinfish"
+    ],
+    "level": "OW",
+    "types": [
+      "muck",
+      "wreck"
+    ],
+    "access": [
+      "boat",
+      "shore",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      25,
+      29
+    ],
+    "visibilityM": [
+      10,
+      25
+    ],
+    "summary": {
+      "zh": "火山黑沙铺底的狭窄海峡，几乎就是泥底微距潜水的代名词。拟态章鱼、毛躄鱼、火焰乌贼和豆丁海马，一潜里都可能遇到。水浅流缓，靠的是慢慢找和潜导的眼力，而不是游得远。",
+      "en": "A narrow strait floored with volcanic black sand and a byword for muck diving. Mimic octopus, hairy frogfish, flamboyant cuttlefish and pygmy seahorses can all turn up on a single dive. Sites are shallow with gentle current; success depends on slow searching and a sharp-eyed guide rather than distance covered."
+    },
+    "highlights": [
+      {
+        "zh": "黑沙上的拟态章鱼与毛躄鱼",
+        "en": "Mimic octopus and hairy frogfish on black sand"
+      },
+      {
+        "zh": "Police Pier 的火焰乌贼与躄鱼",
+        "en": "Flamboyant cuttlefish and frogfish at Police Pier"
+      },
+      {
+        "zh": "TK1 的麒麟鱼",
+        "en": "Mandarinfish at TK1"
+      },
+      {
+        "zh": "7–8 月小生物最多，水温降到 25–26°C",
+        "en": "Peak critter season in July–August, with water down to 25–26°C"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-indonesia-lembeh.php",
+      "https://www.liveaboard.com/diving/indonesia/lembeh-strait",
+      "https://www.dive-the-world.com/faqs-diving-indonesia.php"
+    ],
+    "verified": true,
+    "notes": "新增潜点。季节：liveaboard.com 写全年可潜、11–2 月为雨季、约 4–11 月较干、海况和能见度更好；DTW FAQ 写北苏拉威西 3–10 月最佳、7–8 月是蓝碧看小生物的高峰；DTW 潜点页写 10–12 月能见度最好、1–2 月最差且北端外露潜点可能停潜、6–9 月东南季风海面会起浪。按'优先运营商'取 liveaboard.com 的 4–11 月；3 月按 DTW FAQ 算肩季。水温 25–29 取 DTW（liveaboard 正文 25–29、FAQ 26–30）；能见度 10–25 取 DTW（liveaboard：通常约 20 m，大雨后可降到 4 m）。access：住蓝碧岛 / 比通一侧的度假村坐船潜为主，DTW 写 Lembeh Resort 有岸潜，也有船宿经过。DTW 写入境需缴一年一次的潜水许可费（金额未写）。距美娜多约 45 km、车程 1.5–2 小时（DTW、liveaboard）。wreck 来自 DTW 列出的 Mawali Wreck。招牌拟态章鱼 / 火焰乌贼在 species.json 里没有对应 id，贴纸先用躄鱼。坐标为海峡中段，按地图常识取，±2 km。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "lanbihaixia lbhx"
+  },
+  {
+    "id": "mabul-kapalai",
+    "name": {
+      "zh": "马布岛与卡帕莱",
+      "en": "Mabul & Kapalai"
+    },
+    "country": {
+      "zh": "马来西亚",
+      "en": "Malaysia"
+    },
+    "region": "coral-triangle",
+    "coords": [
+      118.63,
+      4.25
+    ],
+    "bestMonths": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "frogfish",
+      "nudibranch",
+      "mandarinfish",
+      "pygmy-seahorse",
+      "green-turtle"
+    ],
+    "level": "OW",
+    "types": [
+      "muck",
+      "reef"
     ],
     "access": [
       "boat",
       "liveaboard"
     ],
     "waterTempC": [
-      24,
-      29
-    ],
-    "visibilityM": [
-      10,
+      26,
       30
     ],
+    "visibilityM": [
+      5,
+      15
+    ],
     "summary": {
-      "zh": "强流塑造的国家公园：北部是放流与大货，南部冷水里是软珊瑚与微距。潮汐决定一切，跟着潜导的流况判断走。",
-      "en": "A national park shaped by current: drift dives and big fish in the north, cooler water with soft corals and macro in the south. Tides rule — follow your guide's call."
+      "zh": "诗巴丹北边的两处浅礁：马布岛的沙坡与旧钻井平台、卡帕莱高脚屋下的礁坡，藏着躄鱼、火焰乌贼、海蛞蝓和麒麟鱼。水浅流缓，适合慢慢找微距，也是等诗巴丹许可时的落脚点。",
+      "en": "Two shallow reefs north of Sipadan. Mabul's sandy slopes and old oil-rig platform, and the reef around Kapalai's stilt resort, hide frogfish, flamboyant cuttlefish, nudibranchs and mandarinfish. Gentle current and modest depths make for unhurried macro diving, and most divers base here while waiting for a Sipadan permit."
     },
-    "sources": [],
-    "verified": false,
+    "highlights": [
+      {
+        "zh": "旧钻井平台下的彩色躄鱼与夜潜",
+        "en": "Colourful frogfish and night dives under the old oil-rig platform"
+      },
+      {
+        "zh": "卡帕莱 Mandarin Valley 的麒麟鱼",
+        "en": "Mandarinfish at Kapalai's Mandarin Valley"
+      },
+      {
+        "zh": "Lobster Wall 的海龟与火焰乌贼",
+        "en": "Turtles and flamboyant cuttlefish at Lobster Wall"
+      },
+      {
+        "zh": "多数潜点 5–20 米，新手也能潜",
+        "en": "Most sites sit at 5–20 m and suit beginners"
+      }
+    ],
+    "sources": [
+      "https://dive-the-world.com/diving-sites-malaysia-mabul-island.php",
+      "https://www.liveaboard.com/diving/malaysia/mabul",
+      "https://www.liveaboard.com/diving/malaysia/kapalai",
+      "https://www.sabahtourism.com/destination/mabul-island/"
+    ],
+    "verified": true,
+    "notes": "新增潜点（种子里没有），马布与卡帕莱合并为一条，因为两者相距约 5 km、行程总是捆绑。季节：DTW 写全年可潜、12–2 月雨季，3–9 月旱季能见度最好；liveaboard.com 马布页与卡帕莱页都写 3–10 月最佳。取 3–10 月，10 月按 DTW 算肩季。11 月诗巴丹闭岛但马布 / 卡帕莱照常（Sabah Parks 公告只针对诗巴丹）。水温：DTW / liveaboard 马布 27–29，liveaboard 卡帕莱 26–30，合并 26–30。能见度 5–15 取 DTW（liveaboard 只说'常见能见度有限'）。麒麟鱼：liveaboard 马布页写 Paradise 鹿角珊瑚里、卡帕莱页写 Mandarin Valley；DTW 马布页未提。Sabah Tourism：Semporna 码头约 45 分钟船程。DTW：马布在诗巴丹以北 12 km（约 25 分钟船程）、卡帕莱以西 5 km。钻井平台潜点原名 Seaventure Platform（度假村名），页面文案里改写成'旧钻井平台'以避开品牌。可考虑以后加 flamboyant-cuttlefish（火焰乌贼）物种，马布 / 蓝碧 / 阿尼洛都能用。坐标为马布岛（约 4.25N, 118.63E），按地图常识取，精度约 ±2 km。",
     "updatedAt": "2026-10-20",
-    "pinyin": "kemoduo kmd"
+    "pinyin": "mabudaoyukapalai mbdykpl"
   },
   {
     "id": "malapascua",
@@ -1339,16 +2345,90 @@
     "bestMonths": [],
     "species": [
       "thresher-shark",
+      "hammerhead",
       "mandarinfish",
+      "whitetip-reef-shark",
       "nudibranch"
     ],
     "level": "AOW",
     "types": [
       "pelagic",
-      "muck",
-      "reef"
+      "reef",
+      "wreck"
     ],
     "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      25,
+      29
+    ],
+    "visibilityM": [
+      5,
+      25
+    ],
+    "summary": {
+      "zh": "宿务北端小岛。天亮前出海，到 Monad 或 Kimod 浅滩清洁站等长尾鲨上来；12–5 月 Kimod 还有锤头鲨群。黄昏在 Lighthouse 看麒麟鱼求偶，Gato 岛洞里常有白顶礁鲨休息。",
+      "en": "A small island off the northern tip of Cebu. Boats leave before dawn for the cleaning stations on Monad and Kimod shoals, where thresher sharks rise from deeper water; from December to May, Kimod also draws scalloped hammerheads. At dusk mandarinfish mate at Lighthouse, and whitetip reef sharks rest in the cave at Gato Island."
+    },
+    "highlights": [
+      {
+        "zh": "黎明的长尾鲨清洁站",
+        "en": "Dawn thresher shark dives at the cleaning stations"
+      },
+      {
+        "zh": "12–5 月 Kimod 的锤头鲨群",
+        "en": "Scalloped hammerheads at Kimod, December–May"
+      },
+      {
+        "zh": "Lighthouse 黄昏的麒麟鱼",
+        "en": "Mandarinfish courtship at Lighthouse at dusk"
+      },
+      {
+        "zh": "Gato 岛洞穴里的白顶礁鲨",
+        "en": "Whitetip reef sharks in Gato Island's cave"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-philippines-malapascua.php",
+      "https://www.liveaboard.com/diving/philippines/malapascua",
+      "https://divernet.com/world-dives/philippines-diving-hotspots-anda-anilao-malapascua-dumaguete-coron/",
+      "https://www.dive-the-world.com/diving-sites-philippines.php"
+    ],
+    "verified": true,
+    "notes": "全年（bestMonths 为空）：DTW 与 liveaboard.com 都写长尾鲨全年都在，保留种子。海况：DTW 写 2 月下旬–5 月最平静（能见度 15–25 m、水温 27–29），6–9 月有水母、建议全身防寒衣，10–12 月台风季、能见度可降到 5–10 m；DTW 菲律宾总页写米沙鄢全年可潜、1–5 月为旺季；liveaboard 写 7–12 月为雨季但比宿务少雨。分歧：DTW 写长尾鲨因锤头鲨出现（尤其 1–4 月）已大多离开 Monad，现在 Kimod（平台 12–14 m）更可靠；liveaboard.com 与 Divernet（2025-10）仍写 Monad 每天可见、约 5 点出发、距岛约 20 分钟。所以摘要两个浅滩都写。锤头鲨：liveaboard 写 12–5 月、4 月前后可见多达 200 条一群；DTW 写 2 月下旬–5 月最好、12 月起可见。等级 AOW 沿用种子（Monad 清洁站约 25 m）；liveaboard 写 OW + 10–20 潜即可，Kimod 平台较浅。水温：DTW 26–29（冬季深处 25），liveaboard 24–30，取 25–29；能见度 5–25 取 DTW。交通：宿务市巴士约 5 小时、打车约一半（liveaboard）；DTW 写距宿务市约 140 km。Divernet 列出 55 m 的二战 Pioneer 沉船（技术潜）。坐标沿用种子（岛上，潜店所在）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "malapasikua mamadao mlpsk mmd"
+  },
+  {
+    "id": "moalboal",
+    "name": {
+      "zh": "墨宝",
+      "en": "Moalboal"
+    },
+    "country": {
+      "zh": "菲律宾",
+      "en": "Philippines"
+    },
+    "region": "coral-triangle",
+    "coords": [
+      123.37,
+      9.95
+    ],
+    "bestMonths": [],
+    "species": [
+      "sardine-run",
+      "green-turtle",
+      "hawksbill",
+      "frogfish"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "wall"
+    ],
+    "access": [
+      "shore",
       "boat"
     ],
     "waterTempC": [
@@ -1356,17 +2436,115 @@
       30
     ],
     "visibilityM": [
-      10,
-      25
+      15,
+      30
     ],
     "summary": {
-      "zh": "清晨出海，在清洁站边等长尾鲨甩着长尾巴从深处升上来——这是全球最稳定的长尾鲨观测点之一。",
-      "en": "Head out before dawn and wait beside a cleaning station as thresher sharks rise from the deep — one of the most reliable places in the world to see them."
+      "zh": "宿务西岸的小镇，Panagsama 海滩外不远就是数以百万计的沙丁鱼群，浅水就能看到，而且全年都在。坐船到 Pescador 岛可潜峭壁和洞穴，Tongo Point 的海龟常在礁洞里睡觉。",
+      "en": "A town on Cebu's west coast where millions of sardines swirl just off Panagsama Beach, in shallow water and all year round. A boat ride away, Pescador Island offers a steep wall and a cavern, and turtles often sleep in reef holes at Tongo Point."
     },
-    "sources": [],
-    "verified": false,
+    "highlights": [
+      {
+        "zh": "岸边就能潜的沙丁鱼风暴",
+        "en": "A sardine swarm you can reach from the beach"
+      },
+      {
+        "zh": "Pescador 岛的峭壁与 Cathedral 洞穴",
+        "en": "Pescador Island's wall and the Cathedral cavern"
+      },
+      {
+        "zh": "Tongo Point 的绿海龟与玳瑁",
+        "en": "Green and hawksbill turtles at Tongo Point"
+      },
+      {
+        "zh": "Panagsama 礁上的躄鱼、豆丁海马等微距",
+        "en": "Macro on Panagsama reef: frogfish and pygmy seahorses"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-philippines-cebu.php",
+      "https://www.liveaboard.com/diving/philippines/moalboal",
+      "https://www.dive-the-world.com/diving-sites-philippines.php"
+    ],
+    "verified": true,
+    "notes": "新增潜点。全年（bestMonths 为空）：DTW 宿务页写沙丁鱼'全年'都在 Panagsama 礁；liveaboard.com 写全年可潜、总有避风的潜点。季节背景：DTW 写 2–5 月旱季、6–10 月雨季（约一半日子下雨）；liveaboard 写区域雨季 7–12 月；DTW 菲律宾总页写米沙鄢 1–5 月为旺季。沙丁鱼：liveaboard 写几年前鱼群迁到 Panagsama 海滩、就在岸边、浮潜也能看到，入水轻松；没有来源明说'岸潜'，但这是潜店的常规做法，access 写 shore + boat（Pescador 必须坐船）。DTW：Pescador 是海洋保护区、峭壁深可达 600 m，Cathedral 洞 15–37 m；Sunken Island 22 m 起、不适合新手；Tongo Point 有绿海龟、玳瑁。水温：DTW 区域 26.5–29.5（6 月最暖、2 月最冷），liveaboard 27–30，取 26–30；能见度：DTW 区域旱季可超 30 m、雨季 15–20 m，取 15–30。等级 OW：liveaboard 写 OW + 10–20 潜。DTW 提到的鲸鲨（2–4 月）指 Oslob 喂食点，不在本条。坐标为 Panagsama 海滩（约 9.95, 123.37），按地图常识取，±1 km；Pescador 岛约在 [123.34, 9.92]。",
     "updatedAt": "2026-10-20",
-    "pinyin": "malapasikua mamadao mlpsk mmd"
+    "pinyin": "mobao mb"
+  },
+  {
+    "id": "nusa-penida",
+    "name": {
+      "zh": "佩尼达岛",
+      "en": "Nusa Penida"
+    },
+    "country": {
+      "zh": "印度尼西亚",
+      "en": "Indonesia"
+    },
+    "region": "coral-triangle",
+    "coords": [
+      115.46,
+      -8.71
+    ],
+    "bestMonths": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "sunfish",
+      "reef-manta"
+    ],
+    "level": "AOW",
+    "types": [
+      "drift",
+      "pelagic",
+      "reef"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      19,
+      26
+    ],
+    "visibilityM": [
+      15,
+      30
+    ],
+    "summary": {
+      "zh": "巴厘岛东南的离岛，处在龙目海峡的强流里。Manta Point 几乎全年有蝠鲼清洁；7–10 月翻车鲀上浮到 Crystal Bay 等潜点，水温随之降到 20°C 出头。流向多变，适合有经验者。",
+      "en": "An island off southeast Bali sitting in the strong currents of the Lombok Strait. Mantas visit the cleaning stations at Manta Point almost year-round, and from July to October sunfish rise to sites such as Crystal Bay while the water drops into the low 20s °C. Currents shift quickly, so it suits experienced divers."
+    },
+    "highlights": [
+      {
+        "zh": "7–10 月 Crystal Bay 的翻车鲀",
+        "en": "Sunfish at Crystal Bay, July–October"
+      },
+      {
+        "zh": "Manta Point 清洁站的蝠鲼",
+        "en": "Mantas at the Manta Point cleaning stations"
+      },
+      {
+        "zh": "Toyapakeh 沿峭壁放流",
+        "en": "Wall drift dives at Toyapakeh"
+      },
+      {
+        "zh": "从萨努尔坐快艇约 30–45 分钟",
+        "en": "30–45 minutes by fast boat from Sanur"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-indonesia-bali.php",
+      "https://www.liveaboard.com/diving/indonesia/nusa-penida",
+      "https://divernet.com/world-dives/tulamben-and-nusa-penida-dive-adventures/"
+    ],
+    "verified": true,
+    "notes": "新增潜点。bestMonths 取翻车鲀季 7–10 月：DTW 巴厘页（Crystal Bay 翻车鲀季 7–10 月）、liveaboard.com（7–10 月最佳）、Divernet 双中心文（最佳 7–10 月）三源一致；DTW FAQ 另写 6–9 月 / 8–10 月，自相矛盾。全年都能潜：DTW 写 Manta Point 清洁站全年有蝠鲼（4–6 月最多），liveaboard 写'几乎全年'，Divernet 写几乎必见、礁蝠鲼和大洋蝠鲼都见过。水温：DTW 写通常 25–26°C、翻车鲀季降到 20 出头，liveaboard 写翻车鲀季'低 20 几度'；19–26 取 DTW 巴厘总表（19–26）。当地常说的更冷温跃层（< 18°C）没找到来源，没写。能见度：DTW 一般 20–30 m，liveaboard 写 Manta Point 有涌、更浑，Crystal Bay 好天可超 45 m，取 15–30。等级 AOW：三源都写流强且多变；liveaboard 写 Crystal Bay 相对避流、各级都可。access：liveaboard 写萨努尔快艇 30–45 分钟，船宿从 Benoa / 萨努尔出发约 2 小时；DTW 列蓝梦岛（Lembongan）日潜。翻车鲀在 Penida 实为 Mola alexandrini 为主，贴纸用通用翻车鲀。DTW 没有单独的 Penida / Tulamben 潜点页，用的是巴厘总页。坐标为西北岸 Crystal Bay（约 -8.71, 115.46），按地图常识取，±1 km；Manta Point 在南岸。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "peinidadao pndd"
   },
   {
     "id": "raja-ampat",
@@ -1394,16 +2572,16 @@
     ],
     "species": [
       "reef-manta",
-      "pygmy-seahorse",
-      "nudibranch",
       "jack-school",
-      "napoleon-wrasse"
+      "barracuda",
+      "pygmy-seahorse",
+      "nudibranch"
     ],
     "level": "AOW",
     "types": [
       "reef",
       "drift",
-      "muck"
+      "wall"
     ],
     "access": [
       "liveaboard",
@@ -1414,15 +2592,39 @@
       30
     ],
     "visibilityM": [
-      10,
-      25
+      15,
+      30
     ],
     "summary": {
-      "zh": "珊瑚三角的核心，鱼类多样性居世界前列。船宿是最省心的玩法，一周里能从蝠鲼清洁站看到豆丁海马。",
-      "en": "The heart of the Coral Triangle, with some of the highest fish diversity on earth. A liveaboard is the easy way: manta cleaning stations to pygmy seahorses in one week."
+      "zh": "珊瑚三角的核心，已记录硬珊瑚超 600 种。10 月至次年 4 月海况稳，船宿多在此时开航。Dampier 海峡 Manta Ridge 有蝠鲼清洁站，Cape Kri 鱼群密集；多为中等流的放流。",
+      "en": "The heart of the Coral Triangle, with more than 600 hard coral species recorded. Seas are calmest from October to April, when most liveaboards run. In the Dampier Strait, Manta Ridge has a manta cleaning station and Cape Kri is dense with schooling fish. Expect drift dives in moderate current; not ideal for brand-new divers."
     },
-    "sources": [],
-    "verified": false,
+    "highlights": [
+      {
+        "zh": "Manta Ridge 的蝠鲼，12–4 月概率最高",
+        "en": "Mantas at Manta Ridge, best odds December–April"
+      },
+      {
+        "zh": "Cape Kri 的梭鱼、鲹鱼和胡椒鲷群",
+        "en": "Schools of barracuda, trevally and sweetlips at Cape Kri"
+      },
+      {
+        "zh": "地毯鲨（流苏须鲨）与豆丁海马",
+        "en": "Tasselled wobbegongs and pygmy seahorses"
+      },
+      {
+        "zh": "船宿航线北至 Wayag、南至 Misool",
+        "en": "Liveaboard routes run from Wayag in the north to Misool in the south"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-indonesia-raja-ampat.php",
+      "https://www.dive-the-world.com/faqs-diving-indonesia.php",
+      "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-raja-ampat-indonesia",
+      "https://divernet.com/world-dives/asia/diving-indonesia-an-overview-of-the-worlds-largest-archipelago/"
+    ],
+    "verified": true,
+    "notes": "季节：DTW FAQ 写旺季 10–4 月、很多船宿只在这段开航；liveaboard.com 季节页写 10–5 月为旺季、6–9 月风浪大部分海域船宿难以到达；Divernet（2025-10）正文写 11–2 月、FAQ 写 11–4 月。保留种子的 10–4 月，5 月为肩季。蝠鲼 12–4 月在 Dampier 海峡与 Misool 清洁站概率最高（liveaboard.com）。DTW 潜点页没有季节和水温数字（页面较旧，还写'即将设立保护区'）。水温 27–30 沿用种子（liveaboard.com 写 28–30）；能见度 15–30 取 liveaboard.com（种子 10–25）。'硬珊瑚超 600 种'取自 Divernet（其正文写礁鱼 1,700 种、边栏写 1,300 种，自相矛盾，所以没写鱼种数）。等级 AOW：DTW 写不适合完全新手、多为放流；liveaboard.com 写旺季流况可控。海洋公园门票未找到可靠来源，没写。species 由种子的苏眉换成梭鱼风暴（DTW 写 Cape Kri 等处的梭鱼、鲹鱼群）。types 把 muck 换成 wall（DTW 有 Bird Wall、Blue Wall）。坐标沿用种子（Dampier 海峡 Arborek 一带）；船宿多从索龙出发。",
     "updatedAt": "2026-10-20",
     "pinyin": "siwangqundao swqd"
   },
@@ -1447,7 +2649,9 @@
       6,
       7,
       8,
-      9
+      9,
+      10,
+      12
     ],
     "species": [
       "green-turtle",
@@ -1463,33 +2667,48 @@
       "reef"
     ],
     "access": [
-      "boat"
+      "boat",
+      "liveaboard"
     ],
     "waterTempC": [
-      27,
+      26,
       30
     ],
     "visibilityM": [
-      15,
+      10,
       30
     ],
     "summary": {
-      "zh": "一座从深海拔地而起的海洋岛，峭壁边缘常年有海龟巡游，梭鱼与杰克鱼在蓝水中旋成风暴。每日入岛名额有限，需提前预订。",
-      "en": "An oceanic island rising from deep water. Turtles patrol the wall, barracuda and trevally spin into tornadoes in the blue. Daily permits are limited — book early."
+      "zh": "从深海拔起的海洋岛，离岸几步就是深达 600 米的峭壁。绿海龟和玳瑁几乎每潜可见，Barracuda Point 常有梭鱼与杰克鱼成群。须持进阶证并凭当日许可下水，每年 11 月闭岛休养。",
+      "en": "An oceanic island where the wall drops some 600 m just a few metres from the beach. Green and hawksbill turtles appear on almost every dive, and barracuda and trevally often school at Barracuda Point. Diving needs Advanced certification and a daily permit, and the island closes every November so the reef can recover."
     },
     "highlights": [
       {
-        "zh": "Barracuda Point 的梭鱼风暴",
-        "en": "Barracuda tornado at Barracuda Point"
+        "zh": "Barracuda Point 的梭鱼风暴与杰克鱼群",
+        "en": "Barracuda and trevally schools at Barracuda Point"
       },
       {
-        "zh": "几乎每一潜都能遇到绿海龟",
-        "en": "Green turtles on nearly every dive"
+        "zh": "清晨成群巡游的隆头鹦哥鱼",
+        "en": "Herds of bumphead parrotfish on early-morning dives"
+      },
+      {
+        "zh": "几乎每潜都能遇到绿海龟和玳瑁",
+        "en": "Green and hawksbill turtles on nearly every dive"
+      },
+      {
+        "zh": "许可经持牌潜店申请、不保证日期，建议住 4 晚以上",
+        "en": "Permits go through licensed operators and dates are not guaranteed, so plan at least four nights"
       }
     ],
-    "sources": [],
-    "verified": false,
-    "notes": "示例种子数据：数值为常见说法，待逐条核实并补来源。",
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-malaysia-sipadan.php",
+      "https://www.liveaboard.com/diving/malaysia/sipadan",
+      "https://www.sabahparks.org.my/index.php/resource-centre/news/sipadan-island-to-close-for-a-month-for-conservation",
+      "https://www.sabahtourism.com/destination/sipadan-island/",
+      "https://www.xray-mag.com/content/tighter-restrictions-visiting-sipadan"
+    ],
+    "verified": true,
+    "notes": "季节：liveaboard.com 写'多数运营商认为 4–12 月最佳'；DTW 写 3–7 月与 10–12 月海况最稳（3–5 月最好），1–2 月北风、8 月至 9 月初南风为最不稳定月份。按'优先运营商'取 4–12 月，再扣掉 11 月：Sabah Parks 2023-10-30 公告 11 月整月闭岛、12/1 重开（2020 年起每年执行；Sabah Tourism 页仍写'每年 12 月闭岛'，为 2019 年旧方案，以 Sabah Parks 为准）。未找到 2024–2026 年的闭岛公告，每年需复核。许可规则各源不一致：DTW 写每日 178 张、每天最多 3 潜、禁夜潜；Sabah Tourism 写每日 252 张、每人每天最多 2 潜；X-Ray Mag（2022-10）写 2022-10-01 起每天 2 潜、每日 120 人、外国人 RM350/天、单点同时 ≤50 人、7:00–16:30 下水。三源一致：至少 AOW、经持牌运营商申请、岛上无住宿。'深达 600 米的峭壁'取自 Sabah Tourism。水温 26–30、能见度 10–30 取 DTW（liveaboard.com 写 26–34°C，偏离常识未采用）。access 由种子的 boat 补上 liveaboard（DTW：Celebes Explorer 船宿夜泊马布）。坐标沿用种子（岛中心）。",
     "updatedAt": "2026-10-20",
     "pinyin": "shibadan sbd"
   },
@@ -1515,11 +2734,11 @@
       6
     ],
     "species": [
-      "whale-shark",
-      "reef-manta",
       "grey-reef-shark",
       "whitetip-reef-shark",
-      "green-turtle"
+      "green-turtle",
+      "reef-manta",
+      "whale-shark"
     ],
     "level": "AOW",
     "types": [
@@ -1539,13 +2758,397 @@
       40
     ],
     "summary": {
-      "zh": "苏禄海中央的世界遗产环礁，每年只开放一个短季，只能船宿前往。峭壁、鲨鱼与极高的能见度是它的标签。",
-      "en": "A World Heritage atoll in the middle of the Sulu Sea, open only for a short season and reachable only by liveaboard. Walls, sharks and exceptional visibility."
+      "zh": "苏禄海中央的世界遗产环礁，距公主港约 150 公里，每年只在 3–6 月开放，只能坐船宿前往。峭壁直落蓝水，灰礁鲨和白顶礁鲨很常见，也有机会遇到鲸鲨、蝠鲼和锤头鲨。",
+      "en": "A World Heritage atoll in the middle of the Sulu Sea, about 150 km from Puerto Princesa, open only from March to June and reachable only by liveaboard. Walls fall straight into blue water; grey reef and whitetip sharks are routine, with chances of whale sharks, mantas and hammerheads. Expect current, negative entries and reef hooks."
     },
-    "sources": [],
-    "verified": false,
+    "highlights": [
+      {
+        "zh": "北环礁 Shark Airport、Amos Rock 的鲨鱼",
+        "en": "Sharks at North Atoll sites such as Shark Airport and Amos Rock"
+      },
+      {
+        "zh": "开放季能见度常有 20–40 米",
+        "en": "Visibility often 20–40 m during the season"
+      },
+      {
+        "zh": "南环礁的 Delsan 沉船与灯塔礁",
+        "en": "The Delsan wreck and Lighthouse on the South Atoll"
+      },
+      {
+        "zh": "单程航行 10–12 小时，船宿多为 7 晚",
+        "en": "A 10–12 hour crossing; most trips run seven nights"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-philippines-tubbataha.php",
+      "https://www.liveaboard.com/diving/philippines/tubbataha",
+      "https://tubbatahareefs.org/tourism",
+      "https://tubbatahareefs.org/permits-and-fees"
+    ],
+    "verified": true,
+    "notes": "季节 3–6 月：DTW（只在 3–6 月允许潜水、苏禄海最平静）与 liveaboard.com（潜季只有 3–6 月）一致，保留种子。官方 TMO 网站的 tourism 页只列持证船宿运营商（说明进入靠持证船宿、TMO 本身不经营行程），permits 页列保护费：游客每人 P5,000、潜导每人 P500、12 岁及以下免，页面未注明年份；须在入园前缴费拿许可，潜导潜水时禁止拍照录像。DTW：距公主港约 150 km、航行 10–12 小时，多数 7 晚；有 10 / 12 晚的过渡航线加潜 Cagayancillo；1993 年列入世界遗产。水温 27–30、能见度 20–40 取 DTW。等级：DTW 写中级到进阶、要会负浮力入水和用流钩；liveaboard 写多数船只要求 OW + 若干潜数，Solitude One 要求 AOW + 50 潜，取 AOW。species 顺序改了：种子把鲸鲨放第一，但鲸鲨在这里是偶遇，礁鲨才是每潜都有的招牌，所以灰礁鲨排第一（贴纸）、鲸鲨排最后。UNESCO 页（whc.unesco.org/en/list/653）抓取 403，没列入来源。坐标沿用种子（两环礁之间）。",
     "updatedAt": "2026-10-20",
     "pinyin": "tubataha tbth"
+  },
+  {
+    "id": "tulamben",
+    "name": {
+      "zh": "图兰奔（自由号沉船）",
+      "en": "Tulamben – USAT Liberty"
+    },
+    "country": {
+      "zh": "印度尼西亚",
+      "en": "Indonesia"
+    },
+    "region": "coral-triangle",
+    "coords": [
+      115.59,
+      -8.27
+    ],
+    "bestMonths": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "species": [
+      "bumphead-parrotfish",
+      "jack-school",
+      "napoleon-wrasse",
+      "nudibranch"
+    ],
+    "level": "OW",
+    "types": [
+      "wreck",
+      "reef",
+      "wall"
+    ],
+    "access": [
+      "shore",
+      "boat"
+    ],
+    "waterTempC": [
+      26,
+      30
+    ],
+    "visibilityM": [
+      10,
+      30
+    ],
+    "summary": {
+      "zh": "巴厘岛东北的卵石海滩，走几步下水就是二战美军运输船自由号。船体长约 120 米，躺在 5–30 米深的沙坡上，覆满珊瑚；黎明常有隆头鹦哥鱼群聚集。以岸潜为主，深浅都能潜。",
+      "en": "A stony beach in northeast Bali where a few steps take you onto the USAT Liberty, a WWII US Army cargo ship about 120 m long, lying on a sand slope at 5–30 m and covered in coral. A resident group of bumphead parrotfish gathers at first light. Mostly shore entries, with depths to suit every level."
+    },
+    "highlights": [
+      {
+        "zh": "黎明时分的隆头鹦哥鱼群",
+        "en": "Bumphead parrotfish at first light"
+      },
+      {
+        "zh": "1942 年中雷搁浅，1963 年阿贡火山喷发后滑入海中",
+        "en": "Torpedoed in 1942, then pushed into the sea by Mount Agung's 1963 eruption"
+      },
+      {
+        "zh": "沉船北侧的 Drop Off 峭壁深逾 80 米",
+        "en": "The Drop Off wall north of the wreck plunges past 80 m"
+      },
+      {
+        "zh": "附近 Seraya 的微距：拟态章鱼、躄鱼、丑角虾",
+        "en": "Macro at nearby Seraya Secret: mimic octopus, frogfish, harlequin shrimp"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/diving-sites-indonesia-bali.php",
+      "https://www.dive-the-world.com/posts/bali/diving-tulamben-bali-gateway-underwater-wonders.php",
+      "https://www.liveaboard.com/diving/indonesia/tulamben-bay",
+      "https://divernet.com/world-dives/tulamben-and-nusa-penida-dive-adventures/"
+    ],
+    "verified": true,
+    "notes": "新增潜点。季节：liveaboard.com 写全年可潜、约 4–10 月旱季海况和能见度更好；DTW 文章写 4–11 月旱季最佳、12–3 月雨季也可潜；DTW 巴厘页写 4 月初–7 月与 10–11 月最好（跳过 8–9 月）；Divernet（2025-10 印尼综述）只写'一年大部分时间可潜'。取 4–10 月，11 月为肩季。船长：DTW 文章 394 ft（约 120 m）、Divernet 双中心文约 120 m、Divernet 其他文章 100 m / 130 m，取约 120 m。深度：liveaboard 5–30 m、Divernet 综述 9–30 m。liveaboard 写 1942 年 1 月被日本潜艇鱼雷击中后拖上岸，1963 年阿贡火山喷发推回海里（DTW 文章一致）。Divernet 写很多潜店也用船送到沉船上，所以 access 加了 boat。水温：liveaboard 26–30、DTW 文章 79–84°F（26–29），取 26–30。能见度：DTW 文章旱季 15–25 m、雨季 5–15 m，liveaboard 写可超 30 m，取 10–30。人多：早上或傍晚下水更清静（liveaboard）。坐标为自由号沉船（约 -8.27, 115.59），按地图常识取，±1 km。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "tulanben ziyouhaochenchuan tlb zyhcc"
+  },
+  {
+    "id": "beqa-lagoon",
+    "name": {
+      "zh": "贝卡潟湖",
+      "en": "Beqa Lagoon"
+    },
+    "country": {
+      "zh": "斐济",
+      "en": "Fiji"
+    },
+    "region": "pacific",
+    "coords": [
+      178.08,
+      -18.24
+    ],
+    "bestMonths": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "bull-shark",
+      "tiger-shark",
+      "lemon-shark",
+      "nurse-shark",
+      "grey-reef-shark"
+    ],
+    "level": "AOW",
+    "types": [
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      23,
+      29
+    ],
+    "visibilityM": [
+      15,
+      30
+    ],
+    "summary": {
+      "zh": "太平洋港外鲨鱼礁海洋保护区里的喂鲨潜水。第一潜直下 30 米，几十条公牛鲨聚在喂食点周围，护士鲨、柠檬鲨也会来，偶有虎鲨独自来访；10 米处喂灰礁鲨和柠檬鲨，4 米安全停留时周围是白顶礁鲨和黑鳍礁鲨。",
+      "en": "A shark-feeding dive inside the Shark Reef Marine Reserve off Pacific Harbour. The first dive goes straight to 30 m, where dozens of bull sharks crowd the feeding station, tawny nurse and sicklefin lemon sharks may join, and a lone tiger shark sometimes drops in. Grey reef and lemon sharks are fed at 10 m, and whitetips and blacktips circle the 4 m safety stop."
+    },
+    "highlights": [
+      {
+        "zh": "30 米“竞技场”里围着喂食员的公牛鲨",
+        "en": "Bull sharks crowding the feeders in the 30 m 'Arena'"
+      },
+      {
+        "zh": "偶尔独自来访的虎鲨，多为雌性",
+        "en": "Occasional solo visits from tiger sharks, mostly females"
+      },
+      {
+        "zh": "一片礁上记录到 8 种鲨鱼",
+        "en": "Eight shark species recorded on a single reef"
+      }
+    ],
+    "sources": [
+      "https://www.fijisharkdive.com/the-fiji-shark-dive/",
+      "https://www.fijisharkdive.com/shark-species/",
+      "https://www.bluewaterdivetravel.com/fiji-scuba-diving-travel",
+      "https://diveadventures.com.au/?p=1907",
+      "https://www.dive-the-world.com/newsletter-200510-shark-diving-in-fiji.php",
+      "https://www.divessi.com/en/blog/best-diving-in-fiji-10046.html"
+    ],
+    "verified": true,
+    "notes": "季节：Bluewater 说 6–10 月是公牛鲨旺季；Dive Adventures 说多数鲨鱼全年都在，但 11–12 月交配季公牛鲨互动较少。搜索摘要里还有两种说法：一个运营商说 9–10 月起数量下降，斐济旅游局说 6–9 月最佳（fiji.travel 返回 403，未列入来源）。取 6–10 月，喂鲨全年都有。运营商 Beqa Adventure Divers（持有保护区潜水权）：必须持证，潜水少于 30 次的配专人潜导；第一潜在 30 m 停 10–12 分钟，再到 10 m 和 4 m；第二潜根据季节和海况在 25 m 或 15 m；每次最多 20 名客人，要穿深色全身防寒衣、戴黑手套。保护区 2004 年设立（来自搜索摘要，未逐页核实）。物种映射：lemon-shark 贴纸画的是大西洋柠檬鲨，这里是镰鳍柠檬鲨 Negaprion acutidens；nurse-shark 贴纸画的是铰口鲨，这里是茶色护士鲨 Nebrius ferrugineus，都按口语泛称。另有银鳍鲨、白顶礁鲨、黑鳍礁鲨。水温：SSI 旱季约 23°C、暖季 28°C；Bluewater 23–30°C；Dive Adventures 26–28°C。能见度：Dive Adventures 20–30 m，7–9 月最好；Bluewater 雨季常超 18 m。坐标为太平洋港（Pacific Harbour，出发点，OSM），鲨鱼礁在其外海。DTW 新闻稿是 2005 年的旧文，只用来核对物种清单。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "beikaxihu bkxh"
+  },
+  {
+    "id": "chuuk-lagoon",
+    "name": {
+      "zh": "楚克潟湖（特鲁克）",
+      "en": "Chuuk Lagoon (Truk)"
+    },
+    "country": {
+      "zh": "密克罗尼西亚联邦",
+      "en": "Micronesia"
+    },
+    "region": "pacific",
+    "coords": [
+      151.86,
+      7.44
+    ],
+    "bestMonths": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "species": [
+      "barracuda",
+      "jack-school",
+      "green-turtle"
+    ],
+    "level": "AOW",
+    "types": [
+      "wreck"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      27,
+      30
+    ],
+    "visibilityM": [
+      10,
+      30
+    ],
+    "summary": {
+      "zh": "潟湖里有 60 多艘沉船，多为 1944 年 2 月美军“冰雹行动”击沉的日本舰船。货舱里仍有零式战机残骸、坦克、卡车和弹药，船体长满软珊瑚与海扇。浅的船顶约 12 米，最深超过 50 米，需技术潜。",
+      "en": "The sheltered lagoon holds more than 60 WWII wrecks, most of them Japanese ships sunk by US air raids in Operation Hailstone in February 1944. Holds still carry Zero fighter parts, tanks, trucks and munitions, and the hulls are draped in soft coral and sea fans. The shallowest wreck tops sit around 12 m, while the deepest wrecks lie beyond 50 m and are technical dives."
+    },
+    "highlights": [
+      {
+        "zh": "富士川丸货舱里的零式战机残骸",
+        "en": "Zero fighter parts in the holds of the Fujikawa Maru"
+      },
+      {
+        "zh": "平安丸上的潜望镜与散落的鱼雷",
+        "en": "Periscopes and scattered torpedoes on the Heian Maru"
+      },
+      {
+        "zh": "新国丸油轮上的软珊瑚与海扇",
+        "en": "Soft coral and sea fans on the Shinkoku Maru tanker"
+      }
+    ],
+    "sources": [
+      "https://www.dive-the-world.com/faqs-diving-chuuk.php",
+      "https://www.dive-the-world.com/diving-sites-chuuk.php",
+      "https://www.bluewaterdivetravel.com/destination/truk-lagoon-diving"
+    ],
+    "verified": true,
+    "notes": "季节：Dive The World 与 Bluewater 都说全年可潜，12–4 月旱季最受欢迎、海况最平；DTW 说 7–11 月有台风风险，Bluewater 说 11–2 月少雨时能见度可达 24 m 以上。取 12–4 月（如果想按全年处理，可改成空数组）。能见度：Bluewater 一般 12–18 m，差的时候约 10 m；DTW 9–30 m。水温 Bluewater 27–30°C，DTW 28–29°C。深度：DTW 说浅的船顶 12 m、最深约 60 m；同一站 FAQ 写多数 25–40 m，简介写 15–50 m，前后不一致。旧金山丸（San Francisco Maru，甲板上有坦克）50–64 m，属技术潜（DTW），Bluewater 写 52 m。DTW 说这里不适合随便玩玩的度假潜水员，有 AOW 或沉船证才能进最好的舱室，建议用高氧。物种：沉船才是主角，DTW 只泛称 reef sharks、sea turtles、barracuda、jacks，没分海龟种类；贴纸用梭鱼风暴，只是代表。坐标为韦诺岛（Weno，主岛和出发点，OSM），主要沉船在其南面的杜布隆（Tonoas）与费凡一带。中文船名按日文汉字。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "chukexihu teluke ckxh tlk"
+  },
+  {
+    "id": "fakarava",
+    "name": {
+      "zh": "法卡拉瓦",
+      "en": "Fakarava"
+    },
+    "country": {
+      "zh": "法属波利尼西亚",
+      "en": "French Polynesia"
+    },
+    "region": "pacific",
+    "coords": [
+      -145.46,
+      -16.51
+    ],
+    "bestMonths": [],
+    "species": [
+      "grey-reef-shark",
+      "whitetip-reef-shark",
+      "lemon-shark"
+    ],
+    "level": "AOW",
+    "types": [
+      "drift",
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      26,
+      29
+    ],
+    "visibilityM": [
+      10,
+      40
+    ],
+    "summary": {
+      "zh": "法卡拉瓦环礁属联合国教科文组织生物圈保护区。南通道（Tumakohua）涨潮时，数百条灰礁鲨在水道里顶流排成“鲨鱼墙”，全年可见；6–7 月满月前后石斑鱼聚集产卵，鲨鱼最多。通道流强，需有放流经验。",
+      "en": "Fakarava atoll lies inside a UNESCO biosphere reserve. On the incoming tide in the South Pass (Tumakohua), hundreds of grey reef sharks hold position against the current in a 'wall of sharks' that is there all year. Around the June and July full moons, spawning groupers pull in the most sharks. Currents are strong, so come with drift experience."
+    },
+    "highlights": [
+      {
+        "zh": "南通道涨潮时的灰礁鲨墙",
+        "en": "The wall of grey reef sharks in the South Pass on the incoming tide"
+      },
+      {
+        "zh": "6–7 月满月前后的石斑鱼产卵",
+        "en": "Grouper spawning around the June and July full moons"
+      },
+      {
+        "zh": "在法属波利尼西亚最宽的北通道 Garuae 放流",
+        "en": "Drift dives through Garuae, the widest pass in French Polynesia"
+      }
+    ],
+    "sources": [
+      "https://www.bluewaterdivetravel.com/destination/fakarava-diving",
+      "https://dan.org/?p=52739",
+      "https://divernet.com/world-dives/french-polynesia-unveiling-the-marine-treasures-of-fakarava/",
+      "https://tahititourisme.pf/en-pf/activities/underwater-exploration/diving-in-the-islands-of-tahiti/diving-at-its-best-in-the-islands-of-tahiti/"
+    ],
+    "verified": true,
+    "notes": "季节：Bluewater 与 Divernet 都说灰礁鲨全年可见，所以 bestMonths 留空（全年）。石斑鱼产卵在 6–7 月满月前后（DAN Alert Diver、Bluewater；Divernet 写 6 月中到 7 月初），这时鲨鱼最多，潜店要提前订。如果希望月份筛选只在产卵季突出这里，可改成 [6, 7]。Divernet：4–11 月天气较晴，11–3 月雨季，2–3 月有双髻鲨，8–10 月有座头鲸。Bluewater：11–4 月雨季可能取消潟湖行程，6–9 月海况可能较差。鲨鱼数量：DAN 写数百条，图注说可达 500；Divernet 估计南通道约 700 条（只有这一个估计，文案只写数百条）。水流：DAN 与 Divernet 都说通道流强，DAN 建议持 AOW 加放流证，并随身带 SMB；Tahiti Tourisme 一页写南通道（Tetamanu）流缓，与前两者不一致，按强流处理。Garuae 宽度：Tahiti Tourisme 写超过 1600 m，维基写 1.37 km，文案只说最宽。水温 Bluewater 26–29°C，Divernet 26–28°C（DAN 写 21–29°C，是 79°F 换算错误）。能见度 Bluewater 10–30 m，DAN 作者估计约 46 m。物种：Bluewater 记南通道有柠檬鲨、白顶礁鲨；lemon-shark 贴纸画的是大西洋柠檬鲨，这里是镰鳍柠檬鲨。产卵的是清水石斑鱼（Epinephelus polyphekadion，camouflage grouper），species.json 里没有，没有新增。坐标为南通道旁的 Tetamanu 村（OSM）。UNESCO：法卡拉瓦 2016 年并入 1977 年设立的生物圈保护区（维基）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "fakalawa fklw"
+  },
+  {
+    "id": "kona",
+    "name": {
+      "zh": "科纳（夏威夷）",
+      "en": "Kona (Hawaii)"
+    },
+    "country": {
+      "zh": "美国",
+      "en": "United States"
+    },
+    "region": "pacific",
+    "coords": [
+      -156.06,
+      19.73
+    ],
+    "bestMonths": [],
+    "species": [
+      "reef-manta",
+      "green-turtle",
+      "dolphin"
+    ],
+    "level": "OW",
+    "types": [
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      24,
+      28
+    ],
+    "visibilityM": [
+      15,
+      30
+    ],
+    "summary": {
+      "zh": "夏威夷大岛科纳海岸的蝠鲼夜潜。潜水员在沙石底围成半圈、灯光朝上，浮潜者在水面往下照，灯光聚来的浮游生物引来礁蝠鲼在光柱里进食。只看不摸。全年都能看到，夏季海况更稳。",
+      "en": "The manta night dive off the Kona coast of Hawaii's Big Island. Divers settle in a semicircle on the sand and rubble, shining lights upward while snorkellers light the water from above. The plankton drawn to the light brings in reef mantas to feed in the beams. Look, don't touch. Mantas show up year-round; summer brings the calmest seas."
+    },
+    "highlights": [
+      {
+        "zh": "在灯光里来回进食的礁蝠鲼",
+        "en": "Reef mantas feeding back and forth through the light"
+      },
+      {
+        "zh": "日落前先在花园鳗沙地潜一支",
+        "en": "A sunset dive over the garden eel colony first"
+      },
+      {
+        "zh": "不潜水也能参加的蝠鲼夜间浮潜",
+        "en": "A night snorkel option for non-divers"
+      }
+    ],
+    "sources": [
+      "https://jacksdivinglocker.com/charters/manta-ray-night-dive-and-snorkel",
+      "https://www.padi.com/diving-in/big-island/",
+      "https://www.divessi.com/blog/the-iconic-Kona-manta-dive-9717.html",
+      "https://en.wikipedia.org/wiki/Manta_ray_night_dive",
+      "https://blog.padi.com/close-focus-manta-ray-world-night/"
+    ],
+    "verified": true,
+    "notes": "季节：PADI 说全年都常见蝠鲼，夏季海况最稳，最佳潜水月份 5–10 月；SSI 说 5–9 月是旺季；Jack's Diving Locker 全年开班（4–9 月与 10–3 月只是集合时间不同）；维基说全年都有，不受季节限制。取全年。冬季偶有涌浪影响部分潜点（PADI）。观鲼点有两处：机场旁的 Garden Eel Cove（Manta Heaven，Jack's 的行程去这里）和 Keauhou 湾的 Manta Village；坐标取 Garden Eel Cove（维基 19.733°N, 156.057°W）。规则：只看不摸，潜水员留在海底围成半圈，浮潜者在水面保持水平（Jack's）；十几家运营商共用同一处灯阵（DIVE Magazine 编辑在 PADI 博客上写的）。州政府 2022 年开始推动商业观鲼许可规则（来自搜索结果，最终是否生效未核实，文案没写）。物种：科纳的蝠鲼主要是礁蝠鲼 Mobula alfredi（PADI 博客、Jack's）；PADI 列了海龟、海豚、礁鲨，Jack's 页面提到出海途中常见海豚。水温 PADI 26–28°C；冬季下限 24°C 是估计（SSI 只说冬季穿 5 mm）。等级 OW：持证就能参加，打开的来源都没写更高要求。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "kena xiaweiyi kn xwy"
   },
   {
     "id": "palau",
@@ -1568,18 +3171,21 @@
       1,
       2,
       3,
-      4
+      4,
+      5
     ],
     "species": [
       "grey-reef-shark",
       "reef-manta",
       "napoleon-wrasse",
+      "barracuda",
       "green-turtle"
     ],
     "level": "AOW",
     "types": [
       "drift",
       "wall",
+      "reef",
       "wreck"
     ],
     "access": [
@@ -1591,17 +3197,429 @@
       30
     ],
     "visibilityM": [
-      20,
+      15,
       40
     ],
     "summary": {
-      "zh": "Blue Corner 的放流、German Channel 的蝠鲼、以及二战沉船——帕劳把大流、大货和历史装进了同一片海。",
-      "en": "Drift at Blue Corner, mantas at German Channel, WWII wrecks in the lagoon — Palau packs current, big animals and history into one sea."
+      "zh": "蓝角是外礁伸向深海的一块平台，有流时挂上流钩，看礁鲨、梭鱼群、杰克鱼和苏眉在面前巡游。德国水道有蝠鲼清洁站，12–3 月交配季数量最多；附近还有二战日本沉船。",
+      "en": "Blue Corner is a reef plateau that juts out toward deep water. When the current runs, divers clip on with reef hooks and watch reef sharks, barracuda, jacks and Napoleon wrasse cruise past. Mantas visit the cleaning station at German Channel, most of all in the December–March mating season, and WWII Japanese wrecks lie nearby."
     },
-    "sources": [],
-    "verified": false,
+    "highlights": [
+      {
+        "zh": "蓝角挂流钩，看鲨鱼和鱼群顶流巡游",
+        "en": "Hooked in at Blue Corner as sharks and schooling fish work the current"
+      },
+      {
+        "zh": "德国水道的蝠鲼清洁站",
+        "en": "The manta cleaning station at German Channel"
+      },
+      {
+        "zh": "3–4 月满月前后石斑鱼与隆头鹦哥鱼聚集",
+        "en": "Groupers and bumphead parrotfish gather around the March–April full moons"
+      },
+      {
+        "zh": "Iro Maru 等二战日本沉船",
+        "en": "WWII Japanese wrecks such as the Iro Maru"
+      }
+    ],
+    "sources": [
+      "https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-palau",
+      "https://www.dive-the-world.com/faqs-diving-palau.php",
+      "https://www.dive-the-world.com/diving-sites-palau.php",
+      "https://www.samstours.com/reef-diving"
+    ],
+    "verified": true,
+    "notes": "季节：liveaboard.com 写 10–5 月，Dive The World FAQ 写 11–5 月（干季，海况最平，能见度常超 40 m），取交集 11–5 月。另有 Scuba Diving 说 12–3 月最平静（页面 403 未能打开，未列入来源）。6–9 月雨季外礁可能因风浪受限，能见度降到 15–20 m（DTW）。蝠鲼全年可见：DTW 潜点页说德国水道 12–3 月交配季最多，DTW FAQ 说 1–4 月更容易见到，两页说法不一致。liveaboard.com 说 3–4 月满月前后石斑鱼与隆头鹦哥鱼聚集。水温 liveaboard.com 27–30°C，DTW 26–30°C。DTW 的 Blue Corner 段只写 sharks（灰礁鲨列在 Peleliu 段），保留种子里的 grey-reef-shark 作代表；新增 barracuda 依据 DTW 所列 chevron barracuda（即 Sphyraena qenie）。Iro Maru：1944 年沉没，正立于 40 m，进船舱需沉船训练（DTW）。坐标沿用种子（蓝角外礁）；Nominatim 无结果，未能独立核对。等级 AOW：强流，需会用流钩（DTW）。",
     "updatedAt": "2026-10-20",
     "pinyin": "palao pl"
+  },
+  {
+    "id": "rainbow-reef",
+    "name": {
+      "zh": "彩虹礁（塔韦乌尼）",
+      "en": "Rainbow Reef (Taveuni)"
+    },
+    "country": {
+      "zh": "斐济",
+      "en": "Fiji"
+    },
+    "region": "pacific",
+    "coords": [
+      179.93,
+      -16.78
+    ],
+    "bestMonths": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "soft-coral",
+      "whitetip-reef-shark",
+      "barracuda",
+      "leopard-shark"
+    ],
+    "level": "AOW",
+    "types": [
+      "wall",
+      "drift",
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      22,
+      30
+    ],
+    "visibilityM": [
+      15,
+      35
+    ],
+    "summary": {
+      "zh": "塔韦乌尼岛与瓦努阿岛之间的索莫索莫海峡潮流强劲，养出成片软珊瑚，有流时颜色最盛。大白墙整面覆满白色软珊瑚，峭壁一直延伸到休闲潜水深度以下，要盯紧深度。多数潜点为放流。",
+      "en": "Strong tidal currents in the Somosomo Strait, between Taveuni and Vanua Levu, feed dense soft coral that looks its best when the water is moving. On the Great White Wall, white soft coral blankets a wall that drops far below recreational limits, so watch your depth. Most dives here are drifts."
+    },
+    "highlights": [
+      {
+        "zh": "大白墙满壁的白色软珊瑚",
+        "en": "White soft coral blanketing the Great White Wall"
+      },
+      {
+        "zh": "有流时彩虹通道的彩色软珊瑚与拟花鮨",
+        "en": "Colourful soft coral and anthias at Rainbow Passage when the current runs"
+      },
+      {
+        "zh": "Annie's Bommies 的豹纹鲨",
+        "en": "Zebra sharks at Annie's Bommies"
+      },
+      {
+        "zh": "Jerry's Jelly 放流时的白顶礁鲨与犬齿金枪鱼",
+        "en": "Whitetip sharks and dogtooth tuna on the Jerry's Jelly drift"
+      }
+    ],
+    "sources": [
+      "https://dive-the-world.com/resort-travel-fiji-taveuni.php",
+      "https://diveadventures.com.au/region/fiji-taveuni/",
+      "https://www.padi.com/dive-site/fiji/the-great-white-wall-4/",
+      "https://divemagazine.com/destination-guides/fiji/taveuni-somosomo-strait",
+      "https://www.bluewaterdivetravel.com/fiji-scuba-diving-travel",
+      "https://en.wikipedia.org/wiki/Rainbow_Reef"
+    ],
+    "verified": true,
+    "notes": "季节：Dive The World 与 Dive Adventures 都写 4–10 月是主季（雨季结束，能见度最好）；PADI 大白墙潜点页写 4–9 月（软珊瑚最盛）。取 4–10 月，全年都能潜。7–9 月是南半球冬季，风大，海峡水面起浪（Dive Adventures）。Dive Adventures 说蝠鲼在 11–5 月、海龟在 10–4 月，和主季错开，所以没列蝠鲼。大白墙要看潮流时机，PADI：流中到强，墙底约 75 m，潜水深度 8–40 m；Dive Adventures 建议只给进阶潜水员；Bluewater 写白色软珊瑚集中在 24–37 m（80–120 ft）。物种：提议新增 soft-coral（软珊瑚，Dendronephthya 属，刺胞动物），给这里当贴纸，因为彩虹礁出名的是软珊瑚，没有招牌鱼；如果不采纳，把 whitetip-reef-shark 挪到第一位。leopard-shark 即豹纹鲨（斑马鲨 Stegostoma），DIVE Magazine 记在 Annie's Bommies；梭鱼与白顶礁鲨见于 Rainbow Passage。坐标取维基 Rainbow Reef 条目（16.777°S, 179.932°E），紧挨 180° 经线。水温：Dive Adventures 说旱季低到 22°C、雨季约 30°C；DTW 26–30°C；PADI 26–29°C。能见度 PADI 25–35 m；搜索摘要里一份 Undercurrent 读者报告是 12–24 m。中文：瓦努阿岛 = Vanua Levu。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "caihongjiao taweiwuni chj twwn"
+  },
+  {
+    "id": "rangiroa",
+    "name": {
+      "zh": "兰吉罗阿",
+      "en": "Rangiroa"
+    },
+    "country": {
+      "zh": "法属波利尼西亚",
+      "en": "French Polynesia"
+    },
+    "region": "pacific",
+    "coords": [
+      -147.63,
+      -14.97
+    ],
+    "bestMonths": [],
+    "species": [
+      "dolphin",
+      "grey-reef-shark",
+      "barracuda",
+      "eagle-ray",
+      "reef-manta"
+    ],
+    "level": "AOW",
+    "types": [
+      "drift",
+      "pelagic"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      26,
+      29
+    ],
+    "visibilityM": [
+      15,
+      40
+    ],
+    "summary": {
+      "zh": "蒂普塔通道（Tiputa）是兰吉罗阿的招牌潜点，涨潮时顺流冲进潟湖。海豚全年在通道活动，有时会凑近潜水员；灰礁鲨常驻。1–3 月深处 40–50 米有机会遇到大双髻鲨，8–10 月蝠鲼较多。",
+      "en": "Tiputa Pass is Rangiroa's signature dive: a drift into the lagoon on the incoming tide. Dolphins use the pass all year and sometimes come close to divers, and grey reef sharks are resident. From January to March, great hammerheads cruise at 40 to 50 m; mantas are more likely from late August to October."
+    },
+    "highlights": [
+      {
+        "zh": "通道里全年可见、有时凑近的海豚",
+        "en": "Dolphins in the pass all year, sometimes up close"
+      },
+      {
+        "zh": "1–3 月深处的大双髻鲨",
+        "en": "Great hammerheads at depth from January to March"
+      },
+      {
+        "zh": "6 月峡谷里聚集的灰礁鲨",
+        "en": "Grey reef sharks massing in the canyons in June"
+      },
+      {
+        "zh": "涨潮时顺流冲进潟湖",
+        "en": "Riding the incoming tide into the lagoon"
+      }
+    ],
+    "sources": [
+      "https://www.tahititourisme.com/activities/diving/rangiroa/",
+      "https://www.bluewaterdivetravel.com/destination/rangiroa-diving",
+      "https://www.diveplanit.com/?p=57032",
+      "https://tahititourisme.pf/en-pf/activities/underwater-exploration/diving-in-the-islands-of-tahiti/diving-at-its-best-in-the-islands-of-tahiti/"
+    ],
+    "verified": true,
+    "notes": "季节：Tahiti Tourisme 说蒂普塔的海豚全年可见，Bluewater 说全年可潜，所以 bestMonths 留空。大双髻鲨在 1–3 月（Bluewater 与 DivePlanit 一致；DivePlanit 说出现在 The Step 40–50 m，只适合经验丰富的潜水员；搜索摘要里其他来源有 12–3、11–2、2–4 月等说法）。蝠鲼：Bluewater 写 8 月下旬到 10 月中（其他说法有 7–9、7–10 月）。6 月灰礁鲨繁殖期，数百条聚在 Canyons（DivePlanit）。11–4 月雨季，6–8 月东南风 Maramu 带来风浪（Bluewater）。等级：通道潜水偏进阶；DivePlanit 列的 The Windmill（最深 25 m）对所有持证潜水员开放。species 里的 hammerhead 是路氏双髻鲨，和这里的大双髻鲨（Sphyrna mokarran）不是同一种，所以没列；以后如果新增 great-hammerhead，比米尼也能用。dolphin 是泛称（有来源说是宽吻海豚）。barracuda 依据 Tahiti Tourisme 列的 barracudas；eagle-ray 依据 Bluewater（1–3 月较多）。Bluewater 说兰吉罗阿有数百条常驻灰礁鲨。水温 Bluewater 夏 29°C、冬 26°C；能见度 15–40 m。坐标：维基 Tiputa Pass 条目（14.973°S, 147.629°W，见于搜索结果）。中文名还有“朗伊罗阿”的译法，这里用更常见的“兰吉罗阿”。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "lanjiluoa ljla"
+  },
+  {
+    "id": "saipan",
+    "name": {
+      "zh": "塞班岛（蓝洞）",
+      "en": "Saipan (The Grotto)"
+    },
+    "country": {
+      "zh": "北马里亚纳群岛",
+      "en": "Northern Mariana Islands"
+    },
+    "region": "pacific",
+    "coords": [
+      145.82,
+      15.26
+    ],
+    "bestMonths": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "whitetip-reef-shark",
+      "green-turtle",
+      "eagle-ray",
+      "napoleon-wrasse"
+    ],
+    "level": "AOW",
+    "types": [
+      "cave",
+      "reef",
+      "wreck"
+    ],
+    "access": [
+      "shore",
+      "boat"
+    ],
+    "waterTempC": [
+      26,
+      30
+    ],
+    "visibilityM": [
+      15,
+      40
+    ],
+    "summary": {
+      "zh": "蓝洞（Grotto）是塞班岛北部的石灰岩天坑，走 100 多级台阶到水边跨步入水，三条水下隧道通往外海，阳光从洞口透进一片蓝。涌浪和流大时很危险，须跟本地向导。西岸潟湖有二战沉船，劳劳湾适合新手。",
+      "en": "The Grotto is a limestone sinkhole in northern Saipan. Divers walk down more than 100 steps, stride in from a rock and swim three submerged tunnels to the open sea, lit blue by sunlight through the openings. Surge and current can make it dangerous, so dive it with a local guide. WWII wrecks lie in the western lagoon, and Lau Lau Beach suits beginners."
+    },
+    "highlights": [
+      {
+        "zh": "隧道口透进来的蓝光",
+        "en": "Blue light pouring in through the tunnel openings"
+      },
+      {
+        "zh": "洞外常见白顶礁鲨，偶有海龟和鹰鳐",
+        "en": "Whitetip reef sharks outside, with the odd turtle or eagle ray"
+      },
+      {
+        "zh": "西岸潟湖的二战沉船、飞机与坦克",
+        "en": "WWII ships, aircraft and tanks in the western lagoon"
+      },
+      {
+        "zh": "Eagle Ray City 成群的鹰鳐",
+        "en": "Groups of eagle rays at Eagle Ray City"
+      }
+    ],
+    "sources": [
+      "https://mva.mymarianas.com/dive-spots/",
+      "https://www.uw360.asia/the-marvel-of-the-marianas/",
+      "https://www.padi.com/diving-in/northern-mariana-islands/",
+      "https://en.wikivoyage.org/wiki/Diving_in_Saipan"
+    ],
+    "verified": false,
+    "notes": "未核实的原因：各来源的季节说法不一，也没有来源直接给出蓝洞本身的月份。UW360（Asian Geographic 旗下水下媒体，2019 年）说推荐 5–10 月，全年可潜。马里亚纳旅游局（MVA）说北岸 Banzai Cliff 只在 5–9 月可潜，Wing Beach 因北风大只在夏季可潜，说明北岸夏季更稳。PADI 说旺季 12–5 月、淡季 6–11 月（偏向旅游季）。Wikivoyage 提醒秋季台风可能让人连续几天下不了水。暂取 5–10 月，需要本地潜店确认。MVA 警告蓝洞的强流“极其危险”，带进去的东西必须带出来。Wikivoyage：蓝洞主要给持证潜水员；要走 112 级台阶，从岩石上跨步入 5 m 深的水；三条隧道出口在 0–18 m；左侧 12–15 m 处的 Batcave 只能跟本地向导去；洞外常见 1–3 条白顶礁鲨，偶有绿海龟、苏眉、鹰鳐。MVA：劳劳湾适合新手；西岸的 Maritime Heritage Trail 有日本船、日美飞机和坦克。水温：UW360 年均约 28°C；PADI 页面写平均 30°C。能见度：Wikivoyage 一般 16–30 m，蓝洞常超 30 m；PADI 说常超 50 m。坐标为蓝洞（OSM 15.260°N, 145.824°E）。选塞班而不选关岛：蓝洞在中国潜水员里更有名（这是判断，不是来源）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "saibandao landong sbd ld"
+  },
+  {
+    "id": "vavau",
+    "name": {
+      "zh": "瓦瓦乌群岛",
+      "en": "Vava'u"
+    },
+    "country": {
+      "zh": "汤加",
+      "en": "Tonga"
+    },
+    "region": "pacific",
+    "coords": [
+      -173.98,
+      -18.65
+    ],
+    "bestMonths": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "humpback-whale",
+      "eagle-ray",
+      "dolphin"
+    ],
+    "level": "OW",
+    "types": [
+      "pelagic",
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      23,
+      27
+    ],
+    "visibilityM": [
+      15,
+      35
+    ],
+    "summary": {
+      "zh": "7–10 月座头鲸来到汤加海域。持牌向导带浮潜者下水，每组最多 4 位客人；与鲸同游只能浮潜，水肺和人工光源一律禁止。鲸季在瓦瓦乌的礁石潜水，常能听到鲸歌。",
+      "en": "Humpback whales are in Tongan waters from July to October. Licensed guides take snorkellers in, no more than four guests at a time; swimming with whales is snorkel-only, and scuba or artificial lights near the whales are banned. On reef dives around Vava'u during the season, whale song is often audible."
+    },
+    "highlights": [
+      {
+        "zh": "跟持牌向导浮潜看座头鲸",
+        "en": "Snorkelling with humpbacks alongside a licensed guide"
+      },
+      {
+        "zh": "有机会看到母鲸带着幼鲸",
+        "en": "A chance to see a mother and calf together"
+      },
+      {
+        "zh": "鲸季潜水时听到鲸歌",
+        "en": "Whale song on scuba dives during the season"
+      },
+      {
+        "zh": "燕子洞（Swallows Cave）里成片的小鱼",
+        "en": "Clouds of small reef fish in Swallows Cave"
+      }
+    ],
+    "sources": [
+      "https://oceanicsociety.org/travel-ideas/swimming-with-whales-in-tonga-common-questions",
+      "https://www.divessi.com/en/blog/swimming-with-humpbacks-in-Tonga-1440",
+      "https://diveadventures.com.au/region/tonga-vavau/"
+    ],
+    "verified": true,
+    "notes": "规则（页面上必须写准确）：与鲸同游只能浮潜，水肺潜水和人工光源接近鲸鱼都被明令禁止（Oceanic Society）。只有持牌的游泳运营商能让客人下水，只有持证的观鲸船能进入鲸鱼 300 m 范围内；水中最多 4 名客人加 1 名持牌向导（Oceanic Society；SSI 也写 4 人上限）。搜索摘要里还有：每次接触限 90 分钟，与鲸保持 5 m（来自 IWC 观鲸手册，页面 403 未能打开，未列入来源，也没写进文案）。等级 OW 只针对瓦瓦乌的礁石潜水；与鲸共游本身不需要潜水证，但要会浮潜，运营商可能另有要求。季节：SSI 说官方季是 7–10 月，6 月底到 11 月都有鲸；Oceanic Society 说 6 月底到 10 月，8–9 月最好；Dive Adventures 写 7 月下旬到 11 月，最佳 7–10 月。取 7–10 月。11–4 月是飓风季。水温：Oceanic Society 说鲸季约 24°C（75°F），建议 3 mm；Dive Adventures 说 5–11 月 25–27°C；SSI 说多数人穿 5 mm。能见度：SSI 说鲸季潜水常超 30 m，下限 15 m 是估计。物种：Dive Adventures 记 Pelagic Pinnacle 有鹰鳐和礁鲨，划皮划艇时能见到海豚和海龟；Swallows Cave 最深 18 m，有一段 5 m 的穿越。坐标为内亚夫港（Neiafu，OSM）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "wawawuqundao wwwqd"
+  },
+  {
+    "id": "yap",
+    "name": {
+      "zh": "雅浦岛",
+      "en": "Yap"
+    },
+    "country": {
+      "zh": "密克罗尼西亚联邦",
+      "en": "Micronesia"
+    },
+    "region": "pacific",
+    "coords": [
+      138.12,
+      9.52
+    ],
+    "bestMonths": [
+      12,
+      1,
+      2,
+      3,
+      4
+    ],
+    "species": [
+      "reef-manta",
+      "grey-reef-shark",
+      "barracuda"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "drift",
+      "wall"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      27,
+      29
+    ],
+    "visibilityM": [
+      6,
+      30
+    ],
+    "summary": {
+      "zh": "雅浦的礁蝠鲼是常住居民，环岛水道里有几处浅水清洁站，全年都能看到。12–4 月交配季互动最多，可见求偶追逐。外礁 Vertigo 常有灰礁鲨巡游；水道能见度随潮汐变化很大。",
+      "en": "Yap's reef mantas are year-round residents, visiting several shallow cleaning stations in the channels that cut through the island's reef. December to April is the mating season, with the most encounters and courtship chases. Out on the wall at Vertigo, grey reef sharks are common. Visibility in the channels swings widely with the tide."
+    },
+    "highlights": [
+      {
+        "zh": "在浅水清洁站静候蝠鲼，一潜可达 55–75 分钟",
+        "en": "Waiting quietly for mantas at shallow cleaning stations on 55–75 minute dives"
+      },
+      {
+        "zh": "12–4 月交配季的求偶追逐",
+        "en": "Courtship chases in the December–April mating season"
+      },
+      {
+        "zh": "外礁 Vertigo 的灰礁鲨与黑鳍礁鲨",
+        "en": "Grey and blacktip reef sharks at Vertigo on the outer reef"
+      },
+      {
+        "zh": "Crescent Reef 的梭鱼群",
+        "en": "Schooling barracuda at Crescent Reef"
+      }
+    ],
+    "sources": [
+      "https://mantaray.com/experiences/manta-diving/",
+      "https://www.padi.com/diving-in/yap/",
+      "https://www.bluewaterdivetravel.com/yap-diving",
+      "https://visityap.com/dive_yap.php",
+      "https://dan.org/alert-diver/article/yap-island-of-pure-magic/",
+      "https://xray-mag.com/content/yap",
+      "https://mantaray.com/sites/"
+    ],
+    "verified": true,
+    "notes": "季节：Manta Ray Bay Resort（当地运营商）、PADI、Bluewater 一致以 12–4 月（蝠鲼交配季，旱季能见度最好）为最佳；雅浦旅游局与运营商都说蝠鲼常驻，全年可潜。PADI 说 5–11 月雨季风浪较大，但仍可潜；运营商说夏季风小，可去更多外礁；Bluewater 说 Valley of the Rays 在夏季东岸风平时开放。Wetpixel（社区维基，未列入来源）说冬季在 Mi'l 水道、夏季在 Goofnuw 水道。2008 年立法设蝠鲼保护区，范围离岸 12 英里（旅游局）。能见度：Bluewater 写水道 6–30+ m、外礁 30 m+。水温 PADI 27–29°C。等级 OW：清洁站浅，Bluewater 标 All Levels；Vertigo 外墙有流。坐标为科洛尼亚（Colonia，Manta Ray Bay Resort 所在地和出发码头，OSM）；Mi'l 水道在岛北，未找到精确坐标。barracuda 依据运营商潜点页 Crescent Reef 的 black bar barracuda（即 Sphyraena qenie）。傍晚的麒麟鱼潜水常被提起，但打开的来源都没提到，未列入。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "yapudao ypd"
   },
   {
     "id": "great-barrier-reef",
@@ -2969,6 +4987,307 @@
     "pinyin": "suokeluo skl"
   },
   {
+    "id": "el-hierro",
+    "name": {
+      "zh": "耶罗岛（加那利群岛）",
+      "en": "El Hierro (Canary Islands)"
+    },
+    "country": {
+      "zh": "西班牙",
+      "en": "Spain"
+    },
+    "region": "atlantic-med",
+    "coords": [
+      -17.98,
+      27.64
+    ],
+    "bestMonths": [],
+    "species": [
+      "dusky-grouper",
+      "barracuda",
+      "jack-school"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "wall"
+    ],
+    "access": [
+      "boat",
+      "shore"
+    ],
+    "waterTempC": [
+      18,
+      25
+    ],
+    "visibilityM": [
+      20,
+      40
+    ],
+    "summary": {
+      "zh": "耶罗岛南端的拉雷斯廷加渔村紧挨“平静海”海洋保护区，岛体挡住信风，海面多半平静。区内石斑个头很大，梭鱼、鲹群和魟鱼常见；外侧的埃尔巴洪海山流急，偶有蝠鲼、鲸鲨经过，每年潜水名额有限。",
+      "en": "La Restinga, a fishing village at El Hierro's southern tip, sits on the La Restinga–Mar de las Calmas marine reserve, where the island shelters the sea from the trade winds. Groupers in the reserve grow large, and barracuda, jacks and rays are common. El Bajón, an offshore pinnacle with stronger currents, sometimes draws mantas or whale sharks, and the number of divers allowed there is capped each year."
+    },
+    "highlights": [
+      {
+        "zh": "保护区里的大石斑",
+        "en": "Large groupers in the reserve"
+      },
+      {
+        "zh": "埃尔巴洪：双峰顶约在 6 米和 9 米，岩壁落到百米",
+        "en": "El Bajón: twin peaks at about 6 and 9 m, walls dropping to 100 m"
+      },
+      {
+        "zh": "“沙漠”潜点的大片花园鳗",
+        "en": "A large garden eel colony at El Desierto"
+      },
+      {
+        "zh": "拉雷斯廷加港内的夜潜",
+        "en": "Night dives in La Restinga harbour"
+      }
+    ],
+    "sources": [
+      "https://elhierro.travel/en/volcanic-diving/",
+      "https://www.tourspain.es/en/b2b/el-hierro-underwater-paradise-canary-islands/",
+      "https://www.hellocanaryislands.com/dive-points/el-hierro/diving-in-el-bajon/",
+      "https://divernet.com/world-dives/north-central-america/diving-holidays-el-hierro-canaries/",
+      "https://rtvc.es/aumento-de-inmersiones-en-el-hierro-para-este-ano/"
+    ],
+    "verified": true,
+    "notes": "季节：耶罗岛旅游局（elhierro.travel）与西班牙国家旅游局（Turespaña）都写全年水温 18–25°C、全年可潜，故 bestMonths 留空；DIVER（Divernet，2005 年旧文）建议 2–11 月。没找到蝠鲼 / 鲸鲨的可靠季节，只写'偶有'。能见度：Turespaña'最高 30 m'，旅游局'最高 50 m'，取 20–40。名额：RTVC（2023-11）报道埃尔巴洪每年潜水上限 2,300 人次，2023 年底临时加 700 个名额；保护区由西班牙农渔部管理，潜水需经当地潜水中心申请许可（mapa.gob.es 页面证书错误未能打开，细则未核实）。level 取 OW：港内、Punta Restinga 等多数点 OW 可潜；埃尔巴洪最深 41–50 m（Hello Canary Islands 标'中级'），流急，需进阶经验。物种：乌鳍石斑（Epinephelus marginatus，dusky grouper）为新增，中文名取自词典条目，未见权威分类译名，可改；jack-school 在这里指白鲹（guelly jack）与高体鰤群，barracuda 为大西洋梭鱼。坐标为拉雷斯廷加港。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "yeluodao jianaliqundao yld jnlqd"
+  },
+  {
+    "id": "malta",
+    "name": {
+      "zh": "马耳他",
+      "en": "Malta"
+    },
+    "country": {
+      "zh": "马耳他",
+      "en": "Malta"
+    },
+    "region": "atlantic-med",
+    "coords": [
+      14.33,
+      35.99
+    ],
+    "bestMonths": [],
+    "species": [
+      "dusky-grouper",
+      "barracuda",
+      "nudibranch"
+    ],
+    "level": "AOW",
+    "types": [
+      "wreck",
+      "reef"
+    ],
+    "access": [
+      "shore",
+      "boat"
+    ],
+    "waterTempC": [
+      15,
+      27
+    ],
+    "visibilityM": [
+      15,
+      40
+    ],
+    "summary": {
+      "zh": "岛上沉船多可岸潜：南岸 Um El Faroud 是 110 米长的油轮，北端奇尔凯瓦有 P29 巡逻艇和 Rozi 拖船，瓦莱塔港的二战驱逐舰毛利人号仅十几米深。全年可潜，好沉船多在 30 米以下。",
+      "en": "Malta's coast mixes Second World War wrecks with ships scuttled for divers, most reached from shore. Um El Faroud, a 110 m tanker off Wied iż-Żurrieq, broke in two in the winter of 2005–06; at Ċirkewwa the P29 patrol boat and the tug Rozi sit near 35 m; HMS Maori's bow lies shallow in Valletta. Diving runs all year; most of the better wrecks are below 30 m."
+    },
+    "highlights": [
+      {
+        "zh": "Um El Faroud 的烟囱与螺旋桨",
+        "en": "The funnel and propeller of Um El Faroud"
+      },
+      {
+        "zh": "奇尔凯瓦岸潜：P29、Rozi 和水下拱门",
+        "en": "Ċirkewwa shore dives: P29, Rozi and an underwater arch"
+      },
+      {
+        "zh": "二战布伦海姆轰炸机残骸（船潜，约 42 米）",
+        "en": "A WWII Blenheim bomber (boat dive, about 42 m)"
+      },
+      {
+        "zh": "毛利人号附近找海马",
+        "en": "Seahorses around HMS Maori"
+      }
+    ],
+    "sources": [
+      "https://divemagazine.com/scuba-diving-travel/europe/in-depth-malta-wrecks",
+      "https://divernet.com/world-dives/europe/malta-wreck-capital-of-the-med/",
+      "https://www.visitmalta.com/en/experience-diving/"
+    ],
+    "verified": true,
+    "notes": "季节：DIVE Magazine（2022）与 Scuba Diver / Divernet（2026）都说全年可潜，故 bestMonths 留空；但对'哪季最好'说法相反——Divernet 称 5–10 月水最暖、能见度最好，DIVE 称冬春能见度最好、夏秋水暖但能见度稍差。水温：DIVE 写冬春约 18°C、夏秋浅水约 25°C，Divernet 写旺季最高 28°C，搜索所见其他资料冬季 14–16°C，取 15–27；11–5 月多需半干或干衣。深度：Um El Faroud 最深 34 m（DIVE）至 36–40 m（其他资料），P29 37 m、Rozi 34 m、Imperial Eagle 42 m、Blenheim 42 m（仅船潜）、HMS Maori 12–16 m（OW 可潜）。level 取 AOW：DIVE 称除毛利人号和两艘拖船外，好沉船大多超过 30 m；Divernet 称 P29、Karwela 用高氧才有足够底时。范围：本条只写马耳他本岛；戈佐 / 科米诺的 Karwela、Xlendi、Cominoland、P31 可以以后单列 gozo。坐标为奇尔凯瓦（P29 / Rozi 岸潜点），Um El Faroud 在南岸 Wied iż-Żurrieq（约 14.45, 35.82）。Visit Malta 有'Heritage Malta Wreck Sites'分类（历史沉船），访问规则未核实。物种：DIVE 说马耳他礁区生物'平平'，Imperial Eagle 有石斑、偶见梭鱼；Divernet 列出梭鱼、石斑、章鱼、海鳗、海蛞蝓、海马（毛利人号）等。dusky-grouper 为本批新增（见 el-hierro）。中文名'毛利人号'为 HMS Maori 意译，Um El Faroud 无通行中文名，保留英文。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "maerta met"
+  },
+  {
+    "id": "princess-alice-bank",
+    "name": {
+      "zh": "爱丽丝公主浅滩（亚速尔）",
+      "en": "Princess Alice Bank (Azores)"
+    },
+    "country": {
+      "zh": "葡萄牙",
+      "en": "Portugal"
+    },
+    "region": "atlantic-med",
+    "coords": [
+      -29.3,
+      37.92
+    ],
+    "bestMonths": [
+      7,
+      8,
+      9
+    ],
+    "species": [
+      "sicklefin-devil-ray",
+      "oceanic-manta",
+      "galapagos-shark",
+      "jack-school"
+    ],
+    "level": "AOW",
+    "types": [
+      "pelagic"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      20,
+      24
+    ],
+    "visibilityM": [
+      15,
+      40
+    ],
+    "summary": {
+      "zh": "亚速尔群岛皮库岛西南约 90 公里的海山，山顶在水下约 30 米。夏季褐背蝠鲼成群聚集，通常十来只，多时数十只，偶见大洋蝠鲼。单程船程约 3 小时，流大，船家要求进阶证和 30–50 次潜水记录。",
+      "en": "A seamount about 90 km southwest of Pico in the Azores, its summit around 30 m down. In summer sicklefin devil rays gather here, usually around a dozen and sometimes several dozen, with the odd giant manta or Galápagos shark. The boat ride takes about three hours each way, currents can be strong, and operators ask for Advanced Open Water plus 30–50 logged dives."
+    },
+    "highlights": [
+      {
+        "zh": "抓着下潜绳，看褐背蝠鲼成群游过",
+        "en": "Hang on the descent line as groups of devil rays pass"
+      },
+      {
+        "zh": "蓝水里偶遇大洋蝠鲼、加拉帕戈斯鲨和金枪鱼",
+        "en": "Chance of giant mantas, Galápagos sharks and tuna in the blue"
+      },
+      {
+        "zh": "往返途中常有海豚伴船",
+        "en": "Dolphins often escort the boat on the crossing"
+      },
+      {
+        "zh": "一日两潜，船上吃午餐",
+        "en": "Two dives on a full-day trip, lunch on board"
+      }
+    ],
+    "sources": [
+      "https://dive.visitazores.com/en/node/367",
+      "https://www.cwazores.com/princessalice",
+      "https://cursosdebuceo.com/es/cursos/horta/diveazores/princess-alice-bank/176306",
+      "https://sharkrayareas.org/wp-content/uploads/isra-factsheets/2EuropeanAtlantic/Princess-Alice-Bank-2EuropeanAtlantic.pdf",
+      "https://divernet.com/world-dives/far-off-bright-azores/",
+      "https://saveourseasmagazine.com/devils-deep-blue/"
+    ],
+    "verified": true,
+    "notes": "季节：两家运营商一致——CW Azores（皮库岛马达莱纳出发）称 7 月初至 9 月底、成功率近 100%；DiveAzores（法亚尔岛奥尔塔出发）称 7–9 月，故 bestMonths 取 7–9。DIVER（Divernet 2019）、Save Our Seas（2017）和 IUCN ISRA 情况表（2025）称蝠鲼 6 月到、10 月底离开（怀孕雌鲼 6–10 月），6 月与 10 月算肩季。数量：ISRA 照片识别统计平均 7–15 只、最多 45 只；运营商宣传 20–40 只，summary 按 ISRA 写。门槛：官方潜点页（Visit Azores）写 AOW、平均 35 m、最深 60 m、流中到强；CW 要求 AOW + 50 次 + 18 岁 + check dive，DiveAzores 要求 AOW + 30 次 + check dive。水温 20–24°C 取自两家运营商；能见度官方'最高 40 m'，CW 15–30+ m。物种：褐背蝠鲼（Mobula tarapacana，搜索所见 FAO AGROVOC 中文名）为新增；大洋蝠鲼、加拉帕戈斯鲨、杰克鱼（almaco jack / Seriola）均见于官方潜点页，CW 也列 jacks / tunas / barracudas。保护：浅滩已纳入亚速尔海洋保护区网络 RAMPA（据搜索摘要为 Decreto Legislativo Regional 14/2024/A，2026 年仍有修订），DiveAzores 页面称 2025 年起为全保护区，运营商仍在带潜，具体规则未能从官方页面核实（portal.azores.gov.pt 返回 403）。坐标：按 ISRA 给出的'皮库岛西南 92.6 km、法亚尔岛西南 83.3 km'推算，精度约 ±15 km；维基百科坐标 37°55′N 31°30′W 与这两个距离矛盾，未采用。中文名'爱丽丝公主浅滩'沿用中文潜水资料里的译法，括号补'亚速尔'便于搜索。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "ailisigongzhuqiantan yasuer alsgzqt yse"
+  },
+  {
+    "id": "scapa-flow",
+    "name": {
+      "zh": "斯卡帕湾（奥克尼群岛）",
+      "en": "Scapa Flow (Orkney)"
+    },
+    "country": {
+      "zh": "英国",
+      "en": "United Kingdom"
+    },
+    "region": "atlantic-med",
+    "coords": [
+      -3.15,
+      58.89
+    ],
+    "bestMonths": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "nudibranch",
+      "seal"
+    ],
+    "level": "AOW",
+    "types": [
+      "wreck",
+      "coldwater"
+    ],
+    "access": [
+      "boat",
+      "liveaboard",
+      "shore"
+    ],
+    "waterTempC": [
+      8,
+      14
+    ],
+    "visibilityM": [
+      3,
+      15
+    ],
+    "summary": {
+      "zh": "1919 年德国公海舰队在奥克尼锚地自沉，剩下 3 艘战列舰倒扣在 35–45 米，4 艘轻巡洋舰侧卧在 25–35 米。能见度多不足 10 米，需干衣；2025 年起为历史海洋保护区，禁止带走物品。",
+      "en": "In 1919 the interned German High Seas Fleet scuttled itself in this Orkney anchorage. After decades of salvage, three battleships and four light cruisers remain: the cruisers lie on their sides at 25–35 m, the upturned battleships at 35–45 m. Water is cold and visibility often under 10 m, so drysuits are standard. Since November 2025 the wrecks are a Historic Marine Protected Area; removing anything is an offence."
+    },
+    "highlights": [
+      {
+        "zh": "侧卧的轻巡洋舰，沿甲板高度游览",
+        "en": "Light cruisers lying on their sides, explored at deck level"
+      },
+      {
+        "zh": "倒扣的战列舰，巨炮从残骸中伸出",
+        "en": "Upturned battleships with big guns jutting from the wreckage"
+      },
+      {
+        "zh": "伯拉海峡的浅水阻塞船，平潮时下水",
+        "en": "Shallow blockships in Burra Sound, dived at slack water"
+      },
+      {
+        "zh": "船体上成片的羽状海葵与海蛞蝓",
+        "en": "Plumose anemones and sea slugs covering the hulls"
+      }
+    ],
+    "sources": [
+      "https://divernet.com/world-dives/scapa-flow-100/",
+      "https://divernet.com/world-dives/pilgrimage-to-scapa-flow/",
+      "https://divernet.com/scuba-diving/lawson-wood-explains-the-lure-of-scapa-flow/",
+      "https://divernet.com/world-dives/dive-scapa-flow/",
+      "https://xray-mag.com/content/new-legal-protections-granted-scottish",
+      "https://scapaflowwrecks.com/wildlife/",
+      "https://www.stromnessmuseum.org.uk/node/4998",
+      "https://www.padi.com/diving-in/united-kingdom/orkney/"
+    ],
+    "verified": false,
+    "notes": "未核实原因：明确写季节且能打开的只有 PADI Orkney 页（最佳 4–10 月，'传统上 4 月到 11 月初'）；奥克尼旅游局 orkney.com 的潜水页（搜索摘要：复活节到 11 月初、9 月中水温约 13°C、秋季浮游生物消退后能见度变好）对 WebFetch 返回 403，未能打开；Divernet 2017 factfile 反而说约 10 条潜水船全年运营。按旅游局 / PADI 取 4–10 月；Undercurrent 读者报告（2013）写 4–9 月，未列为来源。深度：Divernet 称巡洋舰 25–35 m（Karlsruhe 最深 27 m）、战列舰 35–45 m，全部 <46 m。level 取 AOW：Divernet 2022 称主沉船需 AOW + 干衣 + 深潜专长、高氧推荐，OW 可潜其他点（丘吉尔屏障的阻塞船岸潜很浅，伯拉海峡阻塞船须平潮）。能见度：Divernet 3–10 m / 3–9 m，factfile 平均 10–15 m；春季与初秋藻华时可低于 5 m（scapaflowwrecks）。HMS Royal Oak 与 HMS Vanguard 是战争坟墓，禁止潜水。保护：苏格兰政府 2025-11-01 起设斯卡帕湾历史海洋保护区（X-Ray Mag；DIVE Magazine 2025-08 报道公告），移走、改动、扰动沉船属刑事犯罪，可以观赏潜水。物种：scapaflowwrecks 记录灰海豹与港海豹偶尔造访沉船，Stromness Museum 记录 Dresden 等沉船上的海蛞蝓（Jorunna tomentosa、海柠檬等）；seal 为新增物种。坐标指向德国舰队沉船区（Cava 以东、Barrel of Butter 附近），出发港为 Stromness（约 -3.30, 58.96）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "sikapawan aokeniqundao skpw aknqd"
+  },
+  {
     "id": "silfra",
     "name": {
       "zh": "丝浮拉裂缝",
@@ -2984,7 +5303,9 @@
       64.26
     ],
     "bestMonths": [],
-    "species": [],
+    "species": [
+      "arctic-char"
+    ],
     "level": "OW",
     "types": [
       "coldwater"
@@ -3001,12 +5322,564 @@
       100
     ],
     "summary": {
-      "zh": "在两块大陆板块之间的裂缝里潜水，冰川融水能见度常常超过 100 米。需要干衣证书或等效经验。",
-      "en": "Dive in the fissure between two continental plates, in glacial meltwater with visibility often beyond 100 m. Drysuit certification or equivalent experience required."
+      "zh": "辛格维利尔国家公园的淡水裂缝，夹在北美与欧亚板块之间。冰川融水经熔岩过滤数十年，水温常年 2–4°C，能见度近百米。潜水需开放水域证加干衣证或近两年 10 次干衣潜水，限深 18 米；不持证可浮潜。",
+      "en": "A freshwater fissure in Þingvellir National Park, in the rift between the North American and Eurasian plates. Meltwater from the Langjökull glacier filters through lava for decades before rising here at 2–4°C all year, with visibility around 100 m. Divers need Open Water plus a drysuit certificate or 10 logged drysuit dives in the past two years; the depth limit is 18 m. Snorkellers need no certification."
     },
-    "sources": [],
-    "verified": false,
+    "highlights": [
+      {
+        "zh": "在北美与欧亚板块之间的裂缝里潜水",
+        "en": "Dive in the rift between the North American and Eurasian plates"
+      },
+      {
+        "zh": "大裂缝、大厅、大教堂三段深峡",
+        "en": "The deep Big Crack, Hall and Cathedral sections"
+      },
+      {
+        "zh": "浅湖段亮绿色的“巨魔头发”藻，一眼望出约百米",
+        "en": "Bright green 'troll hair' algae in the shallow Lagoon, with about 100 m of view"
+      },
+      {
+        "zh": "8–9 月偶见北极红点鲑",
+        "en": "Arctic char sometimes pass through in August and September"
+      }
+    ],
+    "sources": [
+      "https://www.thingvellir.is/en/things-to-do/diving/",
+      "https://www.dive.is/dive-sites/silfra",
+      "https://www.dive.is/faq/how-cold-is-the-water-in-silfra",
+      "https://guidetoiceland.is/travel-iceland/drive/silfra"
+    ],
+    "verified": true,
+    "notes": "季节：运营商 DIVE.IS 与 Guide to Iceland 都说全年开放、水温不随季节变，bestMonths 留空；冬季（约 11–3 月）只剩丝浮拉和 Davíðsgjá 可潜，水面严寒、路上可能结冰，夏季人多。规则来自辛格维利尔国家公园官网：开放水域同级证 + 干衣证，或近两年 10 次干衣潜水并由教练书面确认；限深 18 m；禁止进洞 / 顶部封闭环境；必须结伴；干衣必穿，浮潜可穿厚湿衣。DIVE.IS 另写：最低 17 岁，导潜比 3:1、浮潜 6:1，公园费每人 1,500 ISK，不允许穿湿衣水肺潜水。能见度：DIVE.IS 说'超过 100 m'，Guide to Iceland 说'约 100 m'，保留种子值 70–100。冰川名：朗格冰川（Langjökull），融水在熔岩中渗流 30–100 年（DIVE.IS）。物种：丝浮拉看的是地形，不是动物；唯一可能见到的鱼是北极红点鲑（DIVE.IS：8–9 月繁殖季进出裂缝，矮型红点鲑常年躲在暗处，很少见到），新增 arctic-char 只是为了让这条记录有贴纸，若宁可显示圆点可删掉；特有的端足类 Crymostygius thingvallensis 太小，不适合做贴纸。中文名沿用种子'丝浮拉裂缝'，台湾资料也写'史费拉'。level 取 OW（另需干衣资质）。",
     "updatedAt": "2026-10-20",
     "pinyin": "sifulaliefeng sfllf"
+  },
+  {
+    "id": "skjervoy",
+    "name": {
+      "zh": "舍尔维于（特罗姆瑟以北）",
+      "en": "Skjervøy (north of Tromsø)"
+    },
+    "country": {
+      "zh": "挪威",
+      "en": "Norway"
+    },
+    "region": "polar",
+    "coords": [
+      20.97,
+      70.03
+    ],
+    "bestMonths": [
+      11,
+      12,
+      1
+    ],
+    "species": [
+      "orca",
+      "humpback-whale"
+    ],
+    "level": "OW",
+    "types": [
+      "pelagic",
+      "coldwater"
+    ],
+    "access": [
+      "boat",
+      "liveaboard"
+    ],
+    "waterTempC": [
+      4,
+      7
+    ],
+    "visibilityM": [
+      5,
+      20
+    ],
+    "summary": {
+      "zh": "冬季大批鲱鱼游进特罗姆瑟以北舍尔维于一带的峡湾越冬，虎鲸和座头鲸跟着进来觅食。游客穿干衣从小艇下水浮潜，不背气瓶，水温约 4–7°C。极夜期间每天只有几小时天光，风浪大时可能只能在船上观鲸。",
+      "en": "Each winter, herring move into the fjords around Skjervøy, north of Tromsø, to overwinter, and orcas and humpback whales follow them in to feed. Guests snorkel from small boats in drysuits, without scuba, in water around 4–7°C. During the polar night there are only a few hours of usable light, and rough seas can turn a snorkel trip into whale watching from the deck."
+    },
+    "highlights": [
+      {
+        "zh": "水面上看虎鲸合作围捕鲱鱼",
+        "en": "Watch orcas herd herring together from the surface"
+      },
+      {
+        "zh": "座头鲸张大嘴冲进鲱鱼群",
+        "en": "Humpbacks lunging through the herring"
+      },
+      {
+        "zh": "极夜正午短暂的蓝色天光",
+        "en": "The brief blue midday twilight of the polar night"
+      },
+      {
+        "zh": "干衣和浮潜装备由船家提供",
+        "en": "Drysuits and snorkel gear supplied by operators"
+      }
+    ],
+    "sources": [
+      "https://whalesafari.no/trips-skjervoy",
+      "https://whalesafari.no/snorkeling-with-orcas",
+      "https://dan.org/alert-diver/article/orcas-in-norway/",
+      "https://www.bluewaterdivetravel.com/orca-norway-expeditions",
+      "https://orca.org.uk/news-blog/a-year-of-whale-watching-along-the-norwegian-coast"
+    ],
+    "verified": true,
+    "notes": "季节：运营商 Whalesafari（舍尔维于港出发）写 10 月中至 1 月底；DAN Alert Diver（2026-06）写 10–1 月；Bluewater 写 10 月底至 1 月中；Visit Tromsø（旅游局）据搜索摘要为 11–1 月，但 visittromso.no 全站对 WebFetch 返回 403，未能打开。四方重叠且旅游局口径为 11–1 月，故 bestMonths 取 11、12、1，10 月中下旬算肩季。地点会变：鲱鱼越冬地 1990 年代在 Tysfjord，2014–2017 在 Andfjord，约 2018 年起在舍尔维于 / Kvænangen 峡湾（DAN），以后可能再移，每季出发前要确认。监管（以下均来自搜索摘要，原页未能打开）：挪威 2019 年《hvalsafari 条例》禁止干扰鲸，要求游泳 / 潜水在离渔船和渔具 0.4 海里以外，没有执照或船数限制；IWC 观鲸手册称 Visit Tromsø 准则不鼓励与鲸同游；2026-05 有观鲸业者对话会讨论加强规范。DAN（已打开）也说自律还是立法仍无定论，正有研究评估浮潜者是否干扰虎鲸。这里只有浮潜、不背气瓶，也不要求潜水证；level 取最低档 OW 只是因为字段没有'浮潜'选项，UI 可考虑注明。Whalesafari 最低 15 岁、单次约 2.5 小时，天气差时只能观鲸。水温：DAN 写 10 月底约 6°C、12 月约 5°C，Bluewater 写 4–6°C，取 4–7。能见度：没找到舍尔维于专门的数据，Bluewater 给挪威整体 9–24 m，加上冬季光线很暗，取 5–20 作估计。交通：Bluewater 写从特罗姆瑟坐巴士约 5 小时，并有从舍尔维于出发的 3 / 6 天船宿；搜索摘要另见'约 160 km、4–5 小时车程'和从特罗姆瑟出发的快船一日游（未核实）。中文名：Skjervøy 没有通行中文译名，按挪威语读音音译为'舍尔维于'，括号加'特罗姆瑟以北'便于搜索。坐标为舍尔维于港。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "sheerweiyu teluomuseyibei sewy tlmsyb"
+  },
+  {
+    "id": "green-island-taiwan",
+    "name": {
+      "zh": "台湾绿岛",
+      "en": "Green Island, Taiwan"
+    },
+    "country": {
+      "zh": "中国",
+      "en": "China"
+    },
+    "region": "east-asia",
+    "coords": [
+      121.47,
+      22.65
+    ],
+    "bestMonths": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "species": [
+      "hard-coral",
+      "nudibranch",
+      "pygmy-seahorse",
+      "frogfish"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "drift"
+    ],
+    "access": [
+      "shore",
+      "boat"
+    ],
+    "waterTempC": [
+      22,
+      29
+    ],
+    "visibilityM": [
+      10,
+      30
+    ],
+    "summary": {
+      "zh": "台东外海 33 公里的火山岛，富冈乘船 40–50 分钟。黑潮流经、水清，石朗、柴口可岸潜和浮潜。石朗外海 18 米处的「大香菇」是巨型团块珊瑚，2016 年台风后受损、正在复育。东北季风期出船受限。",
+      "en": "A volcanic island about 33 km off Taitung, 40–50 minutes by ferry from Fugang. The Kuroshio keeps the water clear, and Shilang and Chaikou are easy shore dives and snorkelling spots. Off Shilang at about 18 m stands Big Mushroom, a single giant Porites colony damaged by a 2016 typhoon and now regrowing. North-east monsoon months limit boat trips."
+    },
+    "highlights": [
+      {
+        "zh": "石朗外海的「大香菇」巨型珊瑚",
+        "en": "Big Mushroom, a giant Porites coral off Shilang"
+      },
+      {
+        "zh": "石朗、柴口的岸潜与浮潜",
+        "en": "Easy shore dives and snorkelling at Shilang and Chaikou"
+      },
+      {
+        "zh": "公馆鼻一带的海蛞蝓、躄鱼和豆丁海马",
+        "en": "Nudibranchs, frogfish and pygmy seahorses around Gongguan on the north side"
+      },
+      {
+        "zh": "石朗水下约 11.5 米的海底邮筒",
+        "en": "An underwater postbox at about 11.5 m off Shilang"
+      }
+    ],
+    "sources": [
+      "https://www.eastcoast-nsa.gov.tw/greenisland/zh-tw/experience/sea",
+      "https://www.eastcoast-nsa.gov.tw/greenisland/zh-tw/attractions/detail/66",
+      "https://www.uw360.asia/diving-taiwan/",
+      "https://topics.amcham.com.tw/2018/09/flocking-to-a-place-once-feared-green-island",
+      "https://taiwan-scene.com/go-green-a-guide-to-visiting-taiwans-green-island/"
+    ],
+    "verified": true,
+    "notes": "季节有分歧，按管理处取 4–9 月：东部海岸风景区管理处写石朗 4 月（飞鱼）与夏季最宜、柴口 6–8 月（西南季风背风面）；Taiwan Scene 写 4–9 月、10–3 月东北季风船程颠簸宜避开。Underwater360（原载 Asian Diver 2014）写全年可潜、7–9 月台风；AmCham Topics（台湾观光部门供稿）写能见度可达 20 m、不少潜水员偏爱冬季。故冬季并非不能潜，只是出船与潜点受季风限制。水温 22–29°C 取 Underwater360（冬 22–25、夏 26–29）；能见度 10–30 m 综合 AmCham（最高 20 m）与 Underwater360（通常超过 30 m）。大香菇：管理处一页写根部 18 m、另一页写水深 20 m、高约 12 m；Underwater360 写高约 10 m、周长约 31 m；2016 年莫兰蒂台风后受损。豆丁海马 / 躄鱼 / 海蛞蝓来自 Underwater360 的公馆鼻（北岸，3–9 月最佳）与管理处潜点表。没有找到海龟的官方来源，未列。渡轮 40–50 分钟（AmCham，富冈出发）。名称按大陆写法，country 为中国。坐标指向石朗潜水区。垦丁为另一候选，留给第二波。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "taiwanlüdao twld"
+  },
+  {
+    "id": "ishigaki",
+    "name": {
+      "zh": "石垣岛",
+      "en": "Ishigaki"
+    },
+    "country": {
+      "zh": "日本",
+      "en": "Japan"
+    },
+    "region": "east-asia",
+    "coords": [
+      124.11,
+      24.47
+    ],
+    "bestMonths": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "reef-manta",
+      "green-turtle",
+      "whitetip-reef-shark"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "drift"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      22,
+      30
+    ],
+    "visibilityM": [
+      15,
+      30
+    ],
+    "summary": {
+      "zh": "八重山群岛的主岛，那霸飞约 1 小时。西北岸川平石崎的蝠鲼清洁站水浅、几乎无流，新手也能在礁边看蝠鲼盘旋，9–11 月求偶季有机会看到多条追逐。冬季北风大时北岸常出不了船。",
+      "en": "The main island of the Yaeyama group, about an hour's flight from Naha. Off Kabira Ishizaki on the north-west coast, shallow cleaning stations with almost no current let new divers watch reef mantas circle, and from September to mid-November several may chase each other in courtship. Strong winter northerlies can keep boats off the north side."
+    },
+    "highlights": [
+      {
+        "zh": "川平石崎清洁站上盘旋的蝠鲼",
+        "en": "Reef mantas circling the Kabira Ishizaki cleaning stations"
+      },
+      {
+        "zh": "9–11 月蝠鲼求偶追逐",
+        "en": "Manta courtship trains, September to November"
+      },
+      {
+        "zh": "礁上全年可见的海龟",
+        "en": "Turtles on the reef all year"
+      },
+      {
+        "zh": "礁岩下休息的白顶礁鲨",
+        "en": "Whitetip reef sharks resting under ledges"
+      }
+    ],
+    "sources": [
+      "https://www.japan.travel/en/spot/572/",
+      "https://visitokinawajapan.com/travel-inspiration/okinawa-diving-guide/",
+      "https://en.marinediving.com/area/okinawa/ishigaki/"
+    ],
+    "verified": true,
+    "notes": "季节：JNTO 写潜水最佳 3–10 月、蝠鲼夏到初秋聚集、冬季海况差；OCVB 写 Manta Scramble 蝠鲼通常 4–11 月；Marine Diving 写 Manta City 4–11 月、Manta Scramble 9 月初–11 月中为求偶季。三者交集 4–10 月；11 月仍可见蝠鲼但北风渐强。Marine Diving 列出 4 个蝠鲼点：川平石崎 Manta Scramble、Manta City、Yonara 水道（小滨岛与西表岛之间，流急，仅限进阶）、Panari Big Corner；冬季北岸停潜时运营商多改去南边水道，此说法来自运营商页面，未作为来源。海龟（全年，川平石崎）与白顶礁鲨（Yonehara W reef）来自 Marine Diving。水温 22–30°C 为运营商常见说法（冬 23–25、夏 28–30），OCVB 冲绳全年均值为 21.5–28.6°C；能见度 15–30 m 为估计，三个来源均未给数字。Manta Scramble 最大水深 25 m、几乎无流、所有级别（Marine Diving）。坐标指向川平石崎外的 Manta Scramble。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "shiyuandao syd"
+  },
+  {
+    "id": "kerama-islands",
+    "name": {
+      "zh": "庆良间群岛",
+      "en": "Kerama Islands"
+    },
+    "country": {
+      "zh": "日本",
+      "en": "Japan"
+    },
+    "region": "east-asia",
+    "coords": [
+      127.3,
+      26.21
+    ],
+    "bestMonths": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "green-turtle",
+      "reef-manta",
+      "humpback-whale",
+      "hawksbill"
+    ],
+    "level": "OW",
+    "types": [
+      "reef",
+      "drift"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      21,
+      29
+    ],
+    "visibilityM": [
+      20,
+      50
+    ],
+    "summary": {
+      "zh": "那霸泊港乘高速船 35–60 分钟可到的国立公园海域，水色清透，海龟常见，多数潜点平缓、适合新手。5–10 月有蝠鲼到清洁站；12–4 月座头鲸来此繁殖，船上可见，水下有时能听到鲸歌。",
+      "en": "A national park of small islands 35–60 minutes by fast ferry from Naha's Tomari Port. The water is very clear, turtles are common and most sites are gentle enough for new divers. Mantas visit a cleaning station from May to October; humpback whales breed here from December to April, seen from the boat and sometimes heard underwater."
+    },
+    "highlights": [
+      {
+        "zh": "清透的「庆良间蓝」与大片珊瑚",
+        "en": "Clear 'Kerama blue' water over broad coral reefs"
+      },
+      {
+        "zh": "礁上休息、觅食的绿海龟和玳瑁",
+        "en": "Green and hawksbill turtles resting and feeding on the reef"
+      },
+      {
+        "zh": "5–10 月来清洁站的蝠鲼",
+        "en": "Manta rays at a cleaning station, May to October"
+      },
+      {
+        "zh": "冬季船上看座头鲸，水下听鲸歌",
+        "en": "Humpbacks from the boat in winter, and their song underwater"
+      }
+    ],
+    "sources": [
+      "https://www.env.go.jp/nature/nationalparks/list/kerama-shoto/feature/",
+      "https://www.japan.travel/national-parks/parks/keramashoto/explore/",
+      "https://visitokinawajapan.com/discover/dive-sites-okinawa/kerama-islands-diving/",
+      "https://en.marinediving.com/area/okinawa/kerama/",
+      "https://www.japan.travel/en/sports/diving/guides/okinawa/"
+    ],
+    "verified": true,
+    "notes": "季节：Marine Diving 写最佳为夏到秋；JNTO 冲绳潜水指南写多数岛屿夏到秋最好；OCVB 冲绳潜水指南写 6 月起舒适、夏季最宜出海、8–10 月注意台风、11–2 月北风大。三者一致，取 6–10 月；全年可潜，5 月与 11 月为肩季。座头鲸：环境省 12–4 月、JNTO 12 月下旬–4 月上旬，冬季是看鲸季不是潜水旺季，故不放进 bestMonths。蝠鲼：OCVB 写 Ijyakajya 清洁站 5–10 月；Marine Diving 写 Ugan 夏秋偶见。水温 21–29°C 取 OCVB 冲绳全年均值 21.5–28.6°C（非庆良间单点）。能见度 20–50 m：Marine Diving 写渡嘉敷最高 50 m、Shimosone 夏季 30–50 m，20 m 下限为保守估计。渡轮：JNTO 写最快 35 分钟到渡嘉敷；Marine Diving 写高速船约 1 小时到座间味 / 阿嘉（2020 年 2 月数据）。海龟种类：环境省写绿海龟、玳瑁；OCVB 另提蠵龟。坐标为座间味—阿嘉之间的主潜区。冲绳另一候选与那国岛（冬季双髻鲨，JNTO 写冬到春、Marine Diving 推荐 12–2 月）留给第二波。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "qingliangjianqundao qljqd"
+  },
+  {
+    "id": "seogwipo",
+    "name": {
+      "zh": "济州岛西归浦",
+      "en": "Seogwipo, Jeju"
+    },
+    "country": {
+      "zh": "韩国",
+      "en": "South Korea"
+    },
+    "region": "east-asia",
+    "coords": [
+      126.57,
+      33.23
+    ],
+    "bestMonths": [
+      9,
+      10
+    ],
+    "species": [
+      "soft-coral",
+      "hard-coral"
+    ],
+    "level": "OW",
+    "types": [
+      "wall",
+      "drift",
+      "reef"
+    ],
+    "access": [
+      "boat"
+    ],
+    "waterTempC": [
+      14,
+      26
+    ],
+    "visibilityM": [
+      5,
+      20
+    ],
+    "summary": {
+      "zh": "西归浦港外约 1.3 公里的蚊岛一带受暖流影响，岩壁长满紫红色软珊瑚，也有亚热带鱼群。水温偏低、流常较急，要看潮水下潜。9–10 月水暖、能见度较好。2024、2026 年夏季部分软珊瑚出现倒伏。",
+      "en": "Munseom and its neighbouring islets lie about 1.3 km off Seogwipo harbour. Warm currents let purple and red soft corals cover the walls, with subtropical fish alongside. The water is cool and currents are often strong, so dives are timed to the tide. September and October bring the warmest water and best visibility. Some soft corals slumped in the summers of 2024 and 2026."
+    },
+    "highlights": [
+      {
+        "zh": "岩壁上成片的紫红色软珊瑚",
+        "en": "Walls carpeted in purple and red soft corals"
+      },
+      {
+        "zh": "礁石间穿梭的雀鲷鱼群",
+        "en": "Schools of damselfish weaving between the rocks"
+      },
+      {
+        "zh": "西归浦港出船几分钟就到潜点",
+        "en": "Dive sites a few minutes by boat from Seogwipo harbour"
+      }
+    ],
+    "sources": [
+      "https://www.koreaherald.com/article/10549294",
+      "https://www.khan.co.kr/article/200104101736341/amp",
+      "https://www.visitjeju.net/en/detail/view?contentsid=CONT_000000000500200",
+      "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000011997",
+      "https://www.fnnews.com/news/202608261347484119"
+    ],
+    "verified": true,
+    "notes": "季节：Korea Herald（2025-08）写 9–10 月水暖、能见度最好；京乡新闻（2001-04）写春季海藻融化、能见度不如秋季，春季成山浦水温约 15°C。两者都指向秋季，取 9–10 月；6 月中–7 月底为梅雨。每日新闻（2014）称一年四季都有人潜，并写软珊瑚覆盖 15–60 m 岩壁、平潮最好潜、新手宜选小潮。Visit Jeju（济州观光公社）：蚊岛在西归浦港以南 1.3 km，有 92 种珊瑚虫类、成片的棘穗软珊瑚类（Dendronephthya，밤수지맨드라미、자색수지맨드라미 等），可见雀鲷（자리돔）群；섶섬（Seopseom）多分枝状硬珊瑚，所以第二物种用 hard-coral。中文名「蚊岛」取自 Visit Jeju 中文页正文（该页标题误作「秃岛」），没有用虎岛 / 森岛等未核实的译名。风险：fnnews（2026-08-26）报道市民科学调查在蚊岛「见面广场」10–25 m 调查区超过 50% 出现软珊瑚倒伏，2024 年也有过，原因未定（高水温、低盐度等）；建议每年复查。管控：文化财厅 2021-12 把出入限制扩大到海域（含水肺），2023-04-07 恢复原范围，现按济州道管理指南执行（NewsSeoul 2023-11）。等级定为 OW：Korea Herald 称 10–30 m 适合休闲与进阶潜水员，Visit Jeju 也列有无证体验潜；但流急时不适合新手，범섬（Beomseom）尤其如此（每日新闻 2020），选潜点要听向导。水温 14–26°C、能见度 5–20 m 为估计。坐标为蚊岛。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "jizhoudaoxiguipu jzdxgp"
+  },
+  {
+    "id": "weizhou-island",
+    "name": {
+      "zh": "涠洲岛",
+      "en": "Weizhou Island"
+    },
+    "country": {
+      "zh": "中国",
+      "en": "China"
+    },
+    "region": "east-asia",
+    "coords": [
+      109.11,
+      21.03
+    ],
+    "bestMonths": [
+      4,
+      5
+    ],
+    "species": [
+      "hard-coral",
+      "brydes-whale",
+      "soft-coral"
+    ],
+    "level": "OW",
+    "types": [
+      "reef"
+    ],
+    "access": [
+      "shore",
+      "boat"
+    ],
+    "waterTempC": [
+      18,
+      30
+    ],
+    "visibilityM": [
+      3,
+      10
+    ],
+    "summary": {
+      "zh": "北部湾里的火山岛，北海乘船约 1.5 小时。岛周浅海是珊瑚礁国家级海洋公园，以跟教练的体验潜为主，可见鹿角珊瑚、柳珊瑚和小鱼群，能见度多为几米。4–5 月前后风浪小、水最清；冬春可乘船出海看布氏鲸。",
+      "en": "A volcanic island in the Beibu Gulf, about 90 minutes by ferry from Beihai. Its shallow reefs form a national marine park, dived mostly as guided try-dives among staghorn corals, sea fans and small fish; visibility is usually a few metres. The sea is calmest and clearest around April and May, and boats go out to look for Bryde's whales in winter and spring."
+    },
+    "highlights": [
+      {
+        "zh": "春季风平浪静时清澈的「玻璃海」",
+        "en": "Glass-clear water on calm spring days"
+      },
+      {
+        "zh": "浅水区的鹿角珊瑚、柳珊瑚和珊瑚修复区",
+        "en": "Staghorn corals, sea fans and coral-restoration plots in the shallows"
+      },
+      {
+        "zh": "冬春乘船寻找布氏鲸（船上观赏）",
+        "en": "Boat trips to look for Bryde's whales in winter and spring, watched from the deck"
+      },
+      {
+        "zh": "火山岩塑造的海底地形",
+        "en": "A seabed shaped by volcanic rock"
+      }
+    ],
+    "sources": [
+      "https://city.cri.cn/20250612/953461f1-33a6-361c-d413-b107f8d1f920.html",
+      "https://www.cma.gov.cn/2011xzt/2020zt/20201123/2020112304/202011/t20201124_567114.html",
+      "https://news.cctv.com/2025/12/21/ARTIc56Vdr9OLNWHPXb255Nw251221.shtml",
+      "https://china.chinadaily.com.cn/a/201911/06/WS5dc2c366a31099ab995ea666.html",
+      "https://www.news.cn/local/20240326/c3413511c03048dcbaf2767e40a88b0f/c.html"
+    ],
+    "verified": true,
+    "notes": "季节：国际在线（转广西日报，2025-06）写「玻璃海」每年 3–5 月出现在蓝桥一带，风平浪静、泥沙不起；中国气象局（中国气象报，2020-11）写 4–5 月东南风、天气温和，6–9 月西南季风浪大、7–9 月大风台风最多，冬季北风风速全年最大，海上 7 级以上停航。两者都指向 4–5 月，取 4–5 月；3 月雾多（气象局：雾集中在 12–4 月，2–3 月最多），9–11 月有攻略推荐但无官方来源。广西文旅厅、广西海洋局、北海市政府网站从本机连不上（gxzf.gov.cn 超时 / 被重置），改用央媒与气象局；文旅厅转载的《中国旅游报》称岛上有浮潜、岸潜、船潜，因未能打开未列为来源。水温：气象局写 6–9 月海水接近 30°C，冬季 18°C 为攻略常见值（无官方数字）。能见度：央视（2025-12）写深潜平台水下能见度超过 5 米；中国日报转人民日报（2019-11）写天气差时不到 1 米，3–10 m 为估计。人民日报（2019）：62 种珊瑚、近岸珊瑚礁近 3000 公顷、海洋公园 2012 年 12 月设立、北海国际客运港乘船约 90 分钟。布氏鲸：新华社（2024-03）写 1–4 月几乎每天可见十几头，央视写 12 月到次年 4 月概率较大；只在船上看，潜水看不到，故排第二。新物种 hard-coral / brydes-whale / soft-coral 见 newSpecies。坐标为岛南侧（南湾—石螺口之间）。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "weizhoudao wzd"
+  },
+  {
+    "id": "wuzhizhou-island",
+    "name": {
+      "zh": "三亚蜈支洲岛",
+      "en": "Wuzhizhou Island, Sanya"
+    },
+    "country": {
+      "zh": "中国",
+      "en": "China"
+    },
+    "region": "east-asia",
+    "coords": [
+      109.76,
+      18.31
+    ],
+    "bestMonths": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "species": [
+      "hard-coral",
+      "soft-coral"
+    ],
+    "level": "OW",
+    "types": [
+      "reef"
+    ],
+    "access": [
+      "shore",
+      "boat"
+    ],
+    "waterTempC": [
+      22,
+      30
+    ],
+    "visibilityM": [
+      6,
+      20
+    ],
+    "summary": {
+      "zh": "三亚海棠湾内的小岛，从浅水体验潜到 OW、AOW 课程都有。南侧珊瑚礁保护较好，体验潜一般在 3–8 米。海洋牧场和游客种珊瑚在持续修复礁区。能见度随天气变化大，节假日游客多。",
+      "en": "A small island in Sanya's Haitang Bay offering everything from shallow try-dives to open-water and advanced courses. The better-kept reef is on the south side, and try-dives stay at 3–8 m. A marine ranch and visitor coral-planting are slowly rebuilding the reef. Visibility swings with the weather, and holidays are busy."
+    },
+    "highlights": [
+      {
+        "zh": "南侧浅水区的珊瑚礁",
+        "en": "Coral reef in the shallows on the south side"
+      },
+      {
+        "zh": "跟着教练在海底种一株珊瑚",
+        "en": "Plant a coral fragment on the seabed with an instructor"
+      },
+      {
+        "zh": "在岛上考 OW、AOW 潜水证",
+        "en": "Take open-water and advanced courses on the island"
+      }
+    ],
+    "sources": [
+      "https://www.wuzhizhou.com/ticket",
+      "https://lwj.sanya.gov.cn/wljsite/gqdt/202510/7d68b72fd036464e8b2f10f8939e750a.shtml",
+      "https://hain.chinadaily.com.cn/a/202604/12/WS69db47d7a310942cc49a7381.html",
+      "https://paper.people.com.cn/hwbwap/html/2020-11/16/content_2018493.htm",
+      "https://cn.chinadaily.com.cn/a/202203/17/WS6232acd9a3101c3ee7acc0d4.html"
+    ],
+    "verified": false,
+    "notes": "未核实原因：只有中国日报（海南记者站，2026-04-12）明确写「每年 4 月至 10 月是三亚海域最佳潜水期」，是三亚整体而非蜈支洲岛单点；另一个写季节的 intotravelchina.com（4–11 月）是商业旅行社页面，未列为来源；中国天气网（2009）只写水温常年 21–27°C。需要第二个官方来源（三亚旅文局、海南省旅文厅或潜水中心公示）再改 true。景区官网票务页：能见度 6–27 m、南部海域珊瑚礁保护较好、珊瑚礁潜水 3–8 m / 25 分钟 / 7–60 岁；能见度取 6–20 m，27 m 是最好情况（人民日报海外版 2020 也写最高 27 m）。三亚旅文局（2025-10，转三亚日报）：2021 年起游客累计移植珊瑚超 3 万株。中国日报（2022-03）：国家级海洋牧场示范区，可考 PADI OW / AOW 与自由潜。水温 22–30°C 为估计。物种：来源只写「形态各异的珊瑚」、石斑鱼、海参、龙虾等，没有海龟的可靠来源，所以用新增的 hard-coral / soft-coral。没选陵水分界洲岛（任务给的二选一），它有圈养海豚项目，且不在三亚。坐标为蜈支洲岛。",
+    "updatedAt": "2026-10-20",
+    "pinyin": "sanyawuzhizhoudao sywzzd"
   }
 ]

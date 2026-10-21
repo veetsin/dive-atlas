@@ -118,5 +118,17 @@
       65
     ],
     "color": "#9ED9C9"
+  },
+  {
+    "id": "east-asia",
+    "name": {
+      "zh": "东亚",
+      "en": "East Asia"
+    },
+    "center": [
+      122.5,
+      25.5
+    ],
+    "color": "#D2649A"
   }
 ]
