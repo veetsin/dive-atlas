@@ -11,7 +11,6 @@ const sites = read('sites.json');
 const species = read('species.json');
 const regions = read('regions.json');
 const labels = read('labels.json');
-const footprintIndex = read('footprint-index.json');
 
 const errors = [];
 const warnings = [];
@@ -134,17 +133,6 @@ for (const s of sites) {
 for (const id of speciesIds) if (!usedSpecies.has(id)) warn(`species/${id}`, 'not referenced by any site');
 
 // ---- footprint index: append-only bit order for ?d=&w= masks (SPEC §7.3a) ----
-if (!Array.isArray(footprintIndex) || footprintIndex.some((x) => typeof x !== 'string')) {
-  err('footprint-index', 'must be an array of site ids');
-} else {
-  const seen = new Set();
-  for (const id of footprintIndex) {
-    if (seen.has(id)) err('footprint-index', `duplicate id "${id}"`);
-    seen.add(id);
-    if (!siteIds.has(id)) warn('footprint-index', `"${id}" is no longer in sites.json (tombstone, keep it)`);
-  }
-  for (const id of siteIds) if (!seen.has(id)) err('footprint-index', `site "${id}" missing — append it at the END of the array`);
-}
 
 const verifiedCount = sites.filter((s) => s.verified).length;
 console.log(`sites: ${sites.length} (verified ${verifiedCount}) · species: ${species.length} · regions: ${regions.length} · labels: ${labels.length}`);

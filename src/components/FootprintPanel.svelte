@@ -1,14 +1,25 @@
 <script lang="ts">
   import { t, tx } from '../lib/i18n';
-  import { lang, footprint, viewing, adoptViewing, footprintShareUrl } from '../lib/stores';
-  import { siteById } from '../lib/data';
+  import { lang, footprint, siteUrl, openSite } from '../lib/stores';
+  import { siteById, speciesById, spriteUrl } from '../lib/data';
   import { copyText } from '../lib/clipboard';
-  import { renderShareImage } from '../lib/share-image';
+  import { renderShareImage, shareStrings } from '../lib/share-image';
+  import type { DiveSite } from '../lib/types';
 
   let { onclose }: { onclose: () => void } = $props();
 
-  const fp = $derived($viewing ?? $footprint);
-  const url = $derived(footprintShareUrl(fp, $lang));
+  /** The QR and the copied link both lead to the plain site (SPEC §3.4): no footprint in any URL. */
+  const url = $derived(siteUrl($lang));
+  const list = (ids: string[]) => ids.map((id) => siteById.get(id)).filter((s): s is DiveSite => !!s);
+  const dived = $derived(list($footprint.dived));
+  const wish = $derived(list($footprint.wish));
+  const countries = $derived(new Set(dived.map((s) => s.country.en)).size);
+  const speciesSeen = $derived(new Set(dived.flatMap((s) => s.species)).size);
+  /** Lead-species sticker as the row thumbnail. */
+  function thumb(site: DiveSite): string | undefined {
+    const sp = speciesById.get(site.species[0] ?? '');
+    return sp ? spriteUrl(sp.sprite, 192) : undefined;
+  }
 
   let busy = $state(false);
   let failed = $state(false);
@@ -30,13 +41,7 @@
     // let the "rendering…" label paint before the canvas work blocks the thread
     await new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0)));
     try {
-      img = await renderShareImage(fp, $lang, {
-        title: $t('footprint.shareTitle'),
-        dived: $t('footprint.dived'),
-        wish: $t('footprint.wish'),
-        scan: $t('footprint.scanHint'),
-        brand: `${$t('app.title')} · ${$t('app.subtitle')}`,
-      }, url);
+      img = await renderShareImage($footprint, $lang, url);
     } catch {
       failed = true;
     } finally {
@@ -50,10 +55,6 @@
     copyFailed = !ok;
     if (ok) setTimeout(() => (copied = false), 1600);
   }
-
-  function adopt() {
-    if (confirm($t('footprint.adoptConfirm'))) adoptViewing();
-  }
 </script>
 
 <!-- The sheet is the top layer: it takes Escape before App closes the whole panel. -->
@@ -66,46 +67,51 @@
   }}
 />
 
+{#snippet rows(items: DiveSite[], kind: 'dived' | 'wish')}
+  {#if items.length}
+    <h3 class={kind}>{$t(kind === 'dived' ? 'footprint.dived' : 'footprint.wish')}</h3>
+    <ul class="sites">
+      {#each items as site (site.id)}
+        {@const src = thumb(site)}
+        <li>
+          <button class="site {kind}" onclick={() => openSite(site.id)}>
+            <span class="thumb">{#if src}<img {src} alt="" loading="lazy" />{/if}</span>
+            <span class="name">{$tx(site.name)}<small>{$tx(site.country)}</small></span>
+          </button>
+        </li>
+      {/each}
+    </ul>
+  {/if}
+{/snippet}
+
 <aside class="card" aria-label={$t('footprint.title')}>
   <button class="close" onclick={onclose} aria-label={$t('card.close')}>×</button>
-  <h2>{$viewing ? $t('footprint.viewingBanner') : $t('footprint.title')}</h2>
-
-  {#if $viewing}
-    <div class="row">
-      <button class="secondary" onclick={() => viewing.set(null)}>{$t('footprint.viewMine')}</button>
-      <button class="secondary" onclick={adopt}>{$t('footprint.adopt')}</button>
-    </div>
-  {/if}
+  <h2>{$t('footprint.title')}</h2>
 
   <div class="stats">
-    <div><strong class="dived">{fp.dived.length}</strong><span>{$t('footprint.dived')}</span></div>
-    <div><strong class="wish">{fp.wish.length}</strong><span>{$t('footprint.wish')}</span></div>
+    <div><strong class="dived">{dived.length}</strong><span>{$t('footprint.dived')}</span></div>
+    <div><strong class="wish">{wish.length}</strong><span>{$t('footprint.wish')}</span></div>
+    <div><strong>{countries}</strong><span>{shareStrings($lang).countries}</span></div>
+    <div><strong class="species">{speciesSeen}</strong><span>{shareStrings($lang).species}</span></div>
   </div>
 
-  {#if fp.dived.length + fp.wish.length === 0}
+  {#if dived.length + wish.length === 0}
     <p class="muted">{$t('footprint.none')}</p>
-  {:else}
-    {#if fp.dived.length}
-      <h3>{$t('footprint.dived')}</h3>
-      <div class="chips">{#each fp.dived as id (id)}<span class="chip dived">{$tx(siteById.get(id)?.name)}</span>{/each}</div>
-    {/if}
-    {#if fp.wish.length}
-      <h3>{$t('footprint.wish')}</h3>
-      <div class="chips">{#each fp.wish as id (id)}<span class="chip wish">{$tx(siteById.get(id)?.name)}</span>{/each}</div>
-    {/if}
   {/if}
+  {@render rows(dived, 'dived')}
+  {@render rows(wish, 'wish')}
 
   <footer>
     <button class="primary" bind:this={shareBtn} onclick={share} disabled={busy}>
       {busy ? $t('footprint.rendering') : $t('footprint.share')}
     </button>
-    <button class="secondary wide" onclick={copy}>{copied ? $t('card.copied') : $t('footprint.copyLink')}</button>
+    <button class="secondary wide" onclick={copy}>{copied ? $t('card.copied') : $t('card.copyLink')}</button>
     {#if copyFailed}
       <p class="muted">{$t('card.longPressCopy')}</p>
       <input class="url" readonly value={url} onclick={(e) => e.currentTarget.setSelectionRange(0, 9999)} />
     {/if}
     {#if failed}<p class="muted">{$t('footprint.shareFailed')}</p>{/if}
-    <p class="muted">{$t('footprint.privacy')}</p>
+    <p class="muted">{shareStrings($lang).privacy}</p>
   </footer>
 </aside>
 
@@ -145,31 +151,49 @@
     font-size: 22px;
   }
   h3 {
-    margin: 14px 0 6px;
-    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0 2px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.08em;
-    text-transform: uppercase;
     color: var(--ink-soft);
   }
-  .row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
+  h3::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--coral);
   }
+  h3.wish::before {
+    background: none;
+    box-shadow: inset 0 0 0 2px var(--sun);
+  }
+  /* the share poster's palette in miniature: navy band, serif numerals */
   .stats {
     display: flex;
-    gap: 24px;
+    gap: 12px;
     margin: 4px 0 8px;
+    padding: 14px 18px 12px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-mid));
+  }
+  .stats > div {
+    flex: 1;
+    min-width: 0;
   }
   .stats strong {
     display: block;
-    font-size: 34px;
-    line-height: 1.1;
+    color: var(--paper);
+    font-family: var(--font-serif);
+    font-size: 40px;
+    line-height: 1.05;
   }
   .stats span {
     font-size: 12px;
-    color: var(--ink-soft);
+    color: var(--seafoam);
   }
   strong.dived {
     color: var(--coral);
@@ -177,24 +201,55 @@
   strong.wish {
     color: var(--sun);
   }
-  .chips {
+  strong.species {
+    color: var(--seafoam);
+  }
+  .sites {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .site {
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 52px;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
   }
-  .chip {
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: var(--paper-2);
-    font-size: 13px;
+  li:last-child .site {
+    border-bottom: 0;
   }
-  .chip.dived {
-    background: var(--coral);
-    color: #fff;
+  .thumb {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(242, 121, 91, 0.14);
   }
-  .chip.wish {
-    background: var(--sun);
-    color: var(--ocean-deep);
+  .site.wish .thumb {
+    background: rgba(246, 196, 83, 0.22);
+  }
+  .thumb img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+  }
+  .name {
+    min-width: 0;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .name small {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--ink-soft);
   }
   .muted {
     color: var(--ink-soft);

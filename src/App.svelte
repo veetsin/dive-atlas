@@ -3,15 +3,14 @@
   import SiteCard from './components/SiteCard.svelte';
   import MonthPicker from './components/MonthPicker.svelte';
   import LangToggle from './components/LangToggle.svelte';
-  import ThemeToggle from './components/ThemeToggle.svelte';
   import FootprintPanel from './components/FootprintPanel.svelte';
   import SearchPanel from './components/SearchPanel.svelte';
   import { t, tx } from './lib/i18n';
-  import { selectedSiteId, speciesFilter, footprint, viewing, adoptViewing, mapView, toggleMapView } from './lib/stores';
+  import { selectedSiteId, speciesFilter, footprint, mapView, toggleMapView } from './lib/stores';
   import { siteById, speciesById } from './lib/data';
 
   const site = $derived($selectedSiteId ? (siteById.get($selectedSiteId) ?? null) : null);
-  const markCount = $derived(($viewing ?? $footprint).dived.length + ($viewing ?? $footprint).wish.length);
+  const markCount = $derived($footprint.dived.length + $footprint.wish.length);
   const filterSpecies = $derived($speciesFilter ? speciesById.get($speciesFilter) : undefined);
 
   // The side panel shows one thing at a time: a search, the footprint, or the selected site.
@@ -70,7 +69,6 @@
       <button class="pill" bind:this={openers.footprint} onclick={() => toggle('footprint')} aria-pressed={panel === 'footprint'}>
         {$t('footprint.open')}{#if markCount}<span class="n">{markCount}</span>{/if}
       </button>
-      <ThemeToggle />
       <LangToggle />
     </div>
   </header>
@@ -96,14 +94,6 @@
       </button>
     {/if}
   </div>
-
-  {#if $viewing}
-    <div class="banner">
-      <span>{$t('footprint.viewingBanner')}</span>
-      <button onclick={() => viewing.set(null)}>{$t('footprint.viewMine')}</button>
-      <button onclick={() => confirm($t('footprint.adoptConfirm')) && adoptViewing()}>{$t('footprint.adopt')}</button>
-    </div>
-  {/if}
 
   <main class="stage">
     <MapView />
@@ -177,39 +167,6 @@
     background: var(--coral);
     color: #fff;
     font-size: 11px;
-  }
-  .banner {
-    position: absolute;
-    top: 112px;
-    left: 8px;
-    right: 8px;
-    margin: 0 auto;
-    width: fit-content;
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 6px 8px;
-    max-width: calc(100% - 16px);
-    padding: 6px 8px 6px 14px;
-    border-radius: 20px;
-    background: var(--glass);
-    color: var(--ink);
-    font-size: 13px;
-  }
-  .banner button {
-    height: 40px;
-    padding: 0 12px;
-    border-radius: 999px;
-    background: var(--coral);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-  }
-  .banner button:first-of-type {
-    background: var(--paper-2);
-    color: var(--ink);
   }
   .logo {
     width: 34px;
@@ -328,10 +285,6 @@
     .controls :global(.pill),
     .controls :global(button) {
       padding: 0 10px;
-    }
-    .banner {
-      top: 108px;
-      font-size: 12px;
     }
     .toolbar {
       left: 8px;

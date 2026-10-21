@@ -62,6 +62,8 @@ const dict = {
     en: 'No base map yet — run npm run geo first',
   },
   'map.sitesShown': { zh: '个潜点', en: 'sites' },
+  /** {n} = how many sites one tap could mean (the overlap chooser) */
+  'map.nearbySites': { zh: '这里有 {n} 个潜点', en: '{n} sites here' },
   'footprint.open': { zh: '足迹', en: 'Log' },
   'footprint.title': { zh: '我的足迹', en: 'My dive log' },
   'footprint.shareTitle': { zh: '我的潜水足迹', en: 'My dive footprint' },

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { t, tx, MONTH_KEYS } from '../lib/i18n';
-  import { lang, month, shareUrl, footprint, viewing, setMark, markOf } from '../lib/stores';
+  import { lang, month, shareUrl, footprint, setMark, markOf } from '../lib/stores';
   import { speciesById, regionById, spriteUrl, loadSiteDetails } from '../lib/data';
   import { copyText } from '../lib/clipboard';
   import type { DiveSite, SiteDetails, Species, LocalizedText } from '../lib/types';
@@ -8,6 +8,7 @@
   // App.svelte wraps this in {#key site.id}, so transient state resets per site for free.
   let { site, onclose }: { site: DiveSite; onclose: () => void } = $props();
 
+  const mark = $derived(markOf($footprint, site.id));
   let copied = $state(false);
   let copyFailed = $state(false);
   let heroBroken = $state(false);
@@ -163,29 +164,24 @@
   {/if}
 
   <footer>
-    {#if $viewing}
-      <p class="muted">{$t('footprint.viewingBanner')}</p>
-    {:else}
-      {@const mark = markOf($footprint, site.id)}
-      <div class="marks">
-        <button
-          class="mark"
-          class:on={mark === 'dived'}
-          aria-pressed={mark === 'dived'}
-          onclick={() => setMark(site.id, mark === 'dived' ? null : 'dived')}
-        >
-          {$t('footprint.dived')}
-        </button>
-        <button
-          class="mark wish"
-          class:on={mark === 'wish'}
-          aria-pressed={mark === 'wish'}
-          onclick={() => setMark(site.id, mark === 'wish' ? null : 'wish')}
-        >
-          {$t('footprint.wish')}
-        </button>
-      </div>
-    {/if}
+    <div class="marks">
+      <button
+        class="mark"
+        class:on={mark === 'dived'}
+        aria-pressed={mark === 'dived'}
+        onclick={() => setMark(site.id, mark === 'dived' ? null : 'dived')}
+      >
+        {$t('footprint.dived')}
+      </button>
+      <button
+        class="mark wish"
+        class:on={mark === 'wish'}
+        aria-pressed={mark === 'wish'}
+        onclick={() => setMark(site.id, mark === 'wish' ? null : 'wish')}
+      >
+        {$t('footprint.wish')}
+      </button>
+    </div>
     <button class="primary" onclick={copyLink}>{copied ? $t('card.copied') : $t('card.copyLink')}</button>
     {#if copyFailed}
       <p class="muted">{$t('card.longPressCopy')}</p>

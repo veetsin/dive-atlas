@@ -83,16 +83,15 @@
 ### 3.4 状态与 URL
 
 全局状态（`src/lib/stores.ts`）：`lang`、`month`（0 = 全年）、`selectedSiteId`、`speciesFilter`、
-`footprint`（我的足迹，`{v:1, dived:[id], wish:[id]}`，存 `localStorage['dive-atlas:footprint']`）、
-`viewing`（正在查看的朋友足迹，只读，**永不写入 localStorage**，除非用户点"导入为我的"）、
+`footprint`（我的足迹，`{v:1, dived:[id], wish:[id]}`，只存 `localStorage['dive-atlas:footprint']`，不进任何 URL）、
 `mapView`（`atlas` 平面 | `globe` 地球，§4.3）。
 
-URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=globe&d=<mask>&w=<mask>`。
-- `view=globe` 只在地球模式写入（平面是默认，不写）。枚举类键用单词（`lang=`、`site=`、`view=`），短键只给数字与位图。加载顺序：URL `view` → `localStorage['dive-atlas:view']` → 平面；只有工具栏切换按钮写 localStorage，通过链接进入不写。足迹链接 / 二维码（`footprintShareUrl`）不带 `view`，二维码尺寸不变。
-- `d` / `w`（潜过 / 想去）是 base64url 位图：第 i 位对应 `data/footprint-index.json` 的第 i 个 id（**只追加、不重排、不删除**，所以旧二维码永远可解；见 §7.3a）。80 个潜点各 14 个字符，整条分享 URL 在短域名下约 60 字符，二维码 V4–V5。
-- 打开页面：先读 URL，再读 `localStorage`（lang、footprint），最后按浏览器语言猜。URL 里有 `d`/`w` 即进入"查看朋友足迹"模式，顶部横幅可切回"我的"。
-- 状态变化：`history.replaceState`，不产生历史记录。查看模式下 `syncUrl` 必须保留 `d`/`w`，否则点一下月份就丢了朋友的链接。
-- 单个潜点的"复制链接"**不带**足迹参数；只有足迹面板的"复制足迹链接 / 生成分享图"才把 `d`/`w` 写进链接，避免无意泄露。
+URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=globe`；其他参数（包括旧链接里的 `d` / `w`）加载后直接丢弃。
+- `view=globe` 只在地球模式写入（平面是默认，不写）。枚举类键用单词（`lang=`、`site=`、`view=`），短键只给数字与位图。加载顺序：URL `view` → `localStorage['dive-atlas:view']` → 平面；只有工具栏切换按钮写 localStorage，通过链接进入不写。分享图二维码 / 足迹面板"复制链接"（`siteUrl(lang)`）只有站点地址 + `?lang=`。
+- **2026-10-22 取消"查看朋友足迹"模式**（业主决定：二维码只要能打开网站）：`d` / `w` 位图、`viewing` 横幅与"导入为我的"全部删除；二维码编码纯站点地址（`origin + ?lang=zh|en`，短域名下约 28 字符，V3）。`data/footprint-index.json` 暂留待清理（§7.3a）。`stores.ts` 里还有一个恒为 null 的 `viewing` 只读 store，仅因 `MapView.svelte` 仍引用，那边去掉引用后删除。
+- 打开页面：先读 URL，再读 `localStorage`（lang、footprint），最后按浏览器语言猜。
+- 状态变化：`history.replaceState`，不产生历史记录。
+- 单个潜点的"复制链接"= 当前视图链接；足迹只出现在分享图的画面里，不在任何链接里。
 - 任何页面都应可被复制分享后还原。
 
 ---
@@ -188,7 +187,7 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=globe&d=<m
 | `--glass` | `rgba(251,248,241,.88)` | `rgba(19,41,61,.82)` | 悬浮药丸背景（替代 `color-mix`，旧内核可用） |
 | `--font-serif` | `'Songti SC','STSong','Noto Serif CJK SC',Georgia,serif` | 同 | 海域名、刻度、罗盘；Android 多半回退为 sans，可接受 |
 
-主题通过 `<html data-theme="night">` 切换（`src/lib/stores.ts` 的 `theme`：默认跟随 `prefers-color-scheme`，右上角按钮切换后记入 localStorage，不进 URL）。除 token 外，MapView 只按 `data-theme` 切换几个图层的显隐：夜间隐藏纵向渐变、晕影、最宽的一条大陆架带和标记投影，显示径向夜海、星点和标记发光环。贴纸会落在 `#0E2A47 → #19858F`（日）/ `#0E2A47 → #123A5C`（夜）的背景上，验收贴纸时两种底色都要看。
+主题通过 `<html data-theme="night">` 切换（`src/lib/stores.ts` 的 `theme`：默认跟随 `prefers-color-scheme`，右上角按钮切换后记入 localStorage，不进 URL）。**2026-10-22 起夜潜主题搁置**：业主认为日夜区分度不大、先做好日间，右上角切换按钮已删，`theme` 恒为 `day`（忽略 localStorage 里旧的 `night`），夜间 token 与 MapView 的夜间图层原样保留、处于休眠；分享图仍用夜潜配色。除 token 外，MapView 只按 `data-theme` 切换几个图层的显隐：夜间隐藏纵向渐变、晕影、最宽的一条大陆架带和标记投影，显示径向夜海、星点和标记发光环。贴纸会落在 `#0E2A47 → #19858F`（日）/ `#0E2A47 → #123A5C`（夜）的背景上，验收贴纸时两种底色都要看。
 
 ### 5.3 字体
 
@@ -226,8 +225,8 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=globe&d=<m
 | 8 | 移动端 | 375 px 可用；触控目标 ≥ 40 px；抽屉可点海面 / Escape / × 关闭（拖动关闭移至 v1.5）；窄屏默认 1.9x 定位到东南亚（整张世界图在手机上太小） |
 | 9 | 可访问性 | 标记可键盘聚焦；卡片有 `aria-label`；动效尊重 `prefers-reduced-motion` |
 | 10 | 我的足迹 | 卡片底部两个开关"潜过 / 想去"（≥ 40 px，`aria-pressed`）；地图上潜过 = 珊瑚色实心、想去 = 日光色圆环、其余弱化；顶部"足迹"按钮打开面板（计数、名单、一行隐私提示） |
-| 11 | 分享图 + 二维码 | 面板点"生成分享图"：Canvas2D 画 1080×1920 JPEG（q 0.92；顶部 1/3 世界图 + 足迹点，下方计数与地名，右下二维码 8 px/模块、ECC M）；结果以 `<img src="data:image/jpeg…">` 弹层显示并提示"长按保存"（微信里 `download`、`navigator.share(files)` 都不可用）；二维码内容 = 足迹链接 |
-| 12 | 足迹查看模式 | 扫码 / 点链接打开 `?d=&w=` 时只读展示朋友足迹，横幅提供"看我的"与"导入为我的足迹"（二次确认）；复制链接在微信失败时回退到 `execCommand('copy')`，再失败显示可长按选中的链接框 |
+| 11 | 分享图 + 二维码 | 面板点"生成分享图"：Canvas2D 画 1080×1920 JPEG（q 0.9），夜潜海报配色（与日间 App 刻意反差，色值在 `share-image.ts` 内写死）：标题 + 去过的国家；地图按标记潜点外接框裁切（跨经度 > 140° 或无标记时画全球），大陆架发光带 + 经纬网 + 星点，潜过 = 珊瑚色圆点 + 光晕、想去 = 日光色圆环，潜过点自西向东连虚线大圆航线，地名标签贪心避让（放不下只丢标签不丢点）；四格计数 潜过 / 想去 / 国家地区 / 物种；潜过潜点最常见物种的贴纸条（≤ 10 张、192 px WebP、2 s 超时即跳过）；潜过 / 想去地名胶囊（行数封顶，余下合成"还有 N 个"）；右下二维码 8 px/模块、ECC M、白色静区，内容 = 纯站点地址；空足迹画全球 + 邀请语 + 全站常见物种。结果以 `<img src="data:image/jpeg…">` 弹层显示并提示"长按保存"（微信里 `download`、`navigator.share(files)` 都不可用） |
+| 12 | ~~足迹查看模式~~（2026-10-22 取消） | 二维码与"复制链接"都只编码纯站点地址（`origin + ?lang=`），`?d=&w=` 加载时忽略；不再有朋友足迹横幅与导入。复制链接在微信失败时回退到 `execCommand('copy')`，再失败显示可长按选中的链接框 |
 | 13 | 区域聚合气泡（从 v1.5 提前） | 缩放低于阈值（桌面 1.6x、窄屏 2.6x）且某区域可见潜点 ≥ 3 时，该区域折叠成一个气泡：区域色外环 + 当季潜点数 + 区域名；点气泡缩放到该区域范围（约占视口 70%）后散开为标记；不足 3 个的区域始终显示单个标记；月份 / 物种筛选影响气泡计数 |
 | 14 | 地球模式（2026-10-21） | 工具栏地球图标（`aria-pressed`）切换平面 / 地球；拖动旋转、内容跟手；滚轮 / 双指 / 双击以中心缩放；点标记开卡、点海面或圆盘外关卡、拖动不开卡；南北拖到 −60° / 85° 停住不翻转；背面潜点不画；深链接 `?site=&view=globe` 在手机上把潜点放在抽屉上方（南边被 −60° 夹住时提高缩放，如 Poor Knights）；搜索沿大圆飞行 ≤ 1.3 s；气泡点开缩放到散开；海名只画中心 70° 内；键盘：Tab 到地球（`role="application"`），方向键旋转 10°/k，+ / - 缩放，Escape 关卡；筛选 / 足迹颜色 / 计数与平面一致；分享图仍是平面图 |
 
@@ -307,11 +306,15 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=globe&d=<m
 
 ### 7.3a `data/footprint-index.json`
 
+> 2026-10-22：查看模式取消后此文件已删除，位图编码不再使用；以下为历史记录。
+
 ```jsonc
 // 足迹位图的位序。只能在末尾追加；潜点下线也不删，只在 sites.json 里移除。
 ["sipadan", "komodo", "raja-ampat", …]
 ```
 校验：每个 `sites.json` 的 id 在索引里恰好出现一次；索引里多出的 id 只警告（墓碑）。
+
+> 2026-10-22：足迹链接取消（§3.4），运行时已不再读取本文件；文件与校验规则暂留，待后续清理时一并删除。
 
 ### 7.4 校验规则（`scripts/validate-data.mjs`）
 
@@ -426,3 +429,11 @@ URL 同步规则：`?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=globe&d=<m
   - 375×812 + CDP 6× CPU 减速：拖动帧间隔 p50 33.3 / p95 50 ms、松手帧 102–108 ms（达标）。飞行每帧同时改缩放，比纯旋转贵：只有第 9、10 步时飞行 p50 33.4 / p95 83 ms（不开卡片 66.6 ms）。
   - 于是按 §5 回退清单的下一步，**只在程序飞行中**再隐藏 s4 与海域名（`svg.flying`，飞行结束或被取消即清除；拖动不受影响）。之后 6×：不开卡片的飞行 p50 33.3 / p95 50 / max 50 ms（**达标**）；搜索飞行（同时打开卡片）两次实测 p50 33.3–33.4 / p95 66.6–83.3 ms（**仍未达 p95 ≤ 50**）。超标帧是卡片挂载那一帧（83 ms）和飞行中偶发的一帧 67–167 ms 尖峰，其余帧 33–50 ms。拖动数字不变。不再加回退，下一步是微信真机实测。
 - **未做 / 待定**：惯性；以指针为原点的缩放（现以视口中心）；双指拖动只在缩放到上下限时旋转（k 一变就按缩放处理）；大陆在地平线裁开的边被大陆架描边（§5.5）；低端安卓微信真机测试。
+
+### 2026-10-22 · 分享图重做、取消查看模式、夜潜主题搁置
+
+- **分享图**（§6.1 #11）：重写 `src/lib/share-image.ts`。旧图地名几乎看不见的原因：颜色读自 CSS 变量，跟随 App 主题，夜间 `--paper` 是 `#13293D`，在海军蓝底上等于隐形；现在海报色值写死为夜潜 token。新版：按标记潜点裁切地图、发光海岸、航线、标签避让、四格计数、物种贴纸条、地名胶囊、二维码页脚，空状态单独排版。`renderShareImage(fp, lang, url)` 不再接收文案参数，已有文案走 `translate()`，新文案暂放模块内的小字典（i18n.ts 当时被别的任务锁定，之后迁入）。`projection.ts` 抽出 `unwrappedPathFor()` 供裁切后的投影画格陵兰。
+- **足迹面板**：每行显示首个明星物种贴纸缩略图 + 国家，点行飞到潜点；计数改为海军蓝底的宋体数字（潜过 / 想去 / 国家地区 / 物种）；"复制链接"复制纯站点地址。
+- **取消查看模式**（§3.4、§6.1 #12）：删除 `encodeMask` / `decodeMask`、`adoptViewing`、`footprintShareUrl`、App 横幅；新增 `siteUrl(lang)`。
+- **主题**（§5）：删除 `ThemeToggle.svelte`，`theme` 恒为 `day`，`index.html` 的 `theme-color` 改为日间 `#19858F`。
+

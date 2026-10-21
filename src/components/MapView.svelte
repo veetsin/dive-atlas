@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount, untrack } from 'svelte';
+  import { onMount, tick, untrack } from 'svelte';
   import { get } from 'svelte/store';
   import { select } from 'd3-selection';
   import { zoom as d3zoom, zoomIdentity, type ZoomTransform, type ZoomBehavior, type D3ZoomEvent } from 'd3-zoom';
@@ -9,7 +9,7 @@
   import { createMapProjection, createGlobeProjection, globeRadius, LAT_RANGE, type MapProjection } from '../lib/projection';
   import { loadCoast } from '../lib/geo';
   import { sites, siteById, labels, regionById, inSeason, speciesById, spriteUrl, spritePx, SPRITE_PX } from '../lib/data';
-  import { month, selectedSiteId, speciesFilter, lang, footprint, viewing, markOf, flyTo, mapView } from '../lib/stores';
+  import { month, selectedSiteId, speciesFilter, lang, footprint, markOf, flyTo, mapView } from '../lib/stores';
   import { t, tx } from '../lib/i18n';
   import type { DiveSite, SeaLabel } from '../lib/types';
 
@@ -25,7 +25,11 @@
    * `centre`, zoom stays in `zoomT` as a scale about the viewport centre, and drags rotate.
    */
 
-  const ZOOM_EXTENT: [number, number] = [1, 8];
+  // ponytail: 12×, not 16×: only the 3 % world TopoJSON is loaded (the `--detail` build is never fetched),
+  // and its coastlines turn into polygons past that. Wire countries-detail in before raising this.
+  const ZOOM_EXTENT: [number, number] = [1, 12];
+  /** A tap also offers every marker whose centre is this close (CSS px), not just the ones under it. */
+  const NEAR_PX = 18;
   /** Site labels appear above this zoom; narrow screens need more room. */
   const LABEL_ZOOM = { wide: 2.5, narrow: 4 };
   /** A sea-name tier shows once one degree of longitude spans this many pixels. */
@@ -273,8 +277,7 @@
     const t = zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
     zoomBehavior.transform(select(svgEl), zoomBehavior.constrain()(t, extent, extent));
   }
-  /** Whose footprint colours the markers: a friend's while viewing a shared link, else mine. */
-  const fpView = $derived($viewing ?? $footprint);
+  const fpView = $derived($footprint);
   const hasMarks = $derived(fpView.dived.length + fpView.wish.length > 0);
 
   // ---- static furniture ----
@@ -447,7 +450,7 @@
   /** Pan / zoom limits of the current view. The globe pans by rotating, so d3 must not bound it. */
   function setExtents() {
     if (!zoomBehavior) return;
-    if (globe) zoomBehavior.translateExtent([[-Infinity, -Infinity], [Infinity, Infinity]]).scaleExtent([1, 8 * toGlobeK]);
+    if (globe) zoomBehavior.translateExtent([[-Infinity, -Infinity], [Infinity, Infinity]]).scaleExtent([1, ZOOM_EXTENT[1] * toGlobeK]);
     else
       zoomBehavior
         .translateExtent([
@@ -498,6 +501,7 @@
       .scaleExtent(ZOOM_EXTENT)
       .duration(REDUCED_MOTION ? 0 : 250)
       .on('start', (e: D3ZoomEvent<SVGSVGElement, unknown>) => {
+        chooser = null; // its anchor would drift; a tap reopens it after the gesture's start
         if (e.sourceEvent) cancelFlight(); // a touch / click / wheel takes over from a flight
       })
       .on('zoom', (e: D3ZoomEvent<SVGSVGElement, unknown>) => {
@@ -562,10 +566,58 @@
     });
   });
 
-  function onMapClick(e: MouseEvent) {
-    // open water, or the space around the globe
-    if ((e.target as Element).classList.contains('sea') || e.target === svgEl) selectedSiteId.set(null);
+  // ---- taps: one handler for the whole map, so near-coincident sites get a chooser instead of a guess ----
+  /** Sites under a tap that could mean more than one; x / y are the tap in map px. */
+  let chooser: { items: Marker[]; from: string; x: number; y: number } | null = $state(null);
+  let chooserEl: HTMLDivElement | undefined = $state();
+
+  /** Drawn markers whose disc, sprite or label is under the point, or whose centre is within NEAR_PX; nearest first. */
+  function markersAt(e: MouseEvent): Marker[] {
+    const hit = new Set(document.elementsFromPoint(e.clientX, e.clientY).map((el) => el.closest<SVGElement>('.site')?.dataset.id));
+    const r = svgEl!.getBoundingClientRect();
+    return drawn
+      .map((m) => {
+        const [x, y] = zoomT.apply([m.x, m.y]);
+        return { m, d: Math.hypot(x - (e.clientX - r.left), y - (e.clientY - r.top)) };
+      })
+      .filter(({ m, d }) => d <= NEAR_PX || hit.has(m.site.id))
+      .sort((a, b) => a.d - b.d)
+      .map(({ m }) => m);
   }
+
+  function onMapClick(e: MouseEvent) {
+    const target = e.target as Element;
+    if (target.closest('.bubble')) return;
+    chooser = null;
+    const own = target.closest<SVGElement>('.site')?.dataset.id;
+    const ms = markersAt(e);
+    // a screen reader's synthetic click can land off its own marker: open that one
+    if (own && !ms.some((m) => m.site.id === own)) select_(own);
+    else if (ms.length > 1) {
+      const r = svgEl!.getBoundingClientRect();
+      chooser = { items: ms, from: own ?? ms[0]!.site.id, x: e.clientX - r.left, y: e.clientY - r.top };
+      tick().then(() => chooserEl?.querySelector('button')?.focus({ preventScroll: true }));
+    } else if (ms[0]) select_(ms[0].site.id);
+    // open water, or the space around the globe
+    else if (target.classList.contains('sea') || target === svgEl) selectedSiteId.set(null);
+  }
+
+  /** Close the chooser; if it had focus, hand it to the marker of `id` (the picked or the tapped site). */
+  function closeChooser(id = chooser?.from) {
+    const had = !!chooserEl?.contains(document.activeElement);
+    chooser = null;
+    if (had && id) tick().then(() => svgEl?.querySelector<SVGElement>(`.site[data-id="${id}"]`)?.focus({ preventScroll: true }));
+  }
+
+  /** Below the tap if it fits, else above; always inside the map with an 8 px margin. Rows are 44 px, 5.5 visible. */
+  const chooserBox = $derived.by(() => {
+    if (!chooser) return null;
+    const w = Math.min(280, width - 16);
+    const h = 40 + Math.min(chooser.items.length, 5.5) * 44;
+    const left = Math.max(8, Math.min(width - w - 8, chooser.x - w / 2));
+    const top = chooser.y + 20 + h <= height - 8 ? chooser.y + 20 : Math.max(8, chooser.y - 20 - h);
+    return { left, top, w, h };
+  });
 
   /** Globe keyboard: arrows rotate 10° / zoom, + / - zoom. Keys from a focused marker move focus to the globe. */
   function onKey(e: KeyboardEvent) {
@@ -727,7 +779,7 @@
               role="button"
               tabindex="0"
               aria-label={$tx(m.site.name)}
-              onclick={() => select_(m.site.id)}
+              data-id={m.site.id}
               onkeydown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
@@ -735,7 +787,7 @@
                 }
               }}
             >
-              <circle class="hit" r={dot ? 14 : 20} />
+              <circle class="hit" r={dot ? 16 : 20} />
               {#if !dot}<circle class="glow" r="10" />{/if}
               {#if dot}
                 <circle class="ring" r="3" />
@@ -802,6 +854,38 @@
       </g>
     </svg>
     <div class="grain" aria-hidden="true"></div>
+  {/if}
+
+  {#if chooser && chooserBox}
+    <div
+      class="chooser"
+      bind:this={chooserEl}
+      role="dialog"
+      aria-labelledby="chooser-title"
+      tabindex="-1"
+      style:left={`${chooserBox.left}px`}
+      style:top={`${chooserBox.top}px`}
+      style:width={`${chooserBox.w}px`}
+      style:max-height={`${chooserBox.h}px`}
+      onkeydown={(e) => {
+        if (e.key !== 'Escape') return;
+        e.stopPropagation(); // only the chooser: App's Escape would close the card too
+        closeChooser();
+      }}
+    >
+      <p id="chooser-title">{$t('map.nearbySites').replace('{n}', String(chooser.items.length))}</p>
+      {#each chooser.items as m (m.site.id)}
+        <button
+          onclick={() => {
+            select_(m.site.id);
+            closeChooser(m.site.id);
+          }}
+        >
+          {#if m.sprite}<img src={m.sprite} alt="" decoding="async" />{:else}<span class="disc"></span>{/if}
+          <span>{$tx(m.site.name)}</span>
+        </button>
+      {/each}
+    </div>
   {/if}
 
   {#if geoStatus !== 'ready'}
@@ -971,7 +1055,60 @@
     stroke-width: 3px;
     stroke-opacity: 0.9;
     stroke-linejoin: round;
-    pointer-events: none;
+  }
+
+  /* ---- several sites under one tap ---- */
+  .chooser {
+    position: absolute;
+    z-index: 4; /* .map is no stacking context: this sits over the toolbar and the phone drawer */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+    padding: 4px;
+    border-radius: 12px;
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: var(--shadow);
+    outline: none;
+  }
+  .chooser p {
+    margin: 0;
+    padding: 8px 10px 6px;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+  .chooser button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 44px;
+    padding: 0 8px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .chooser button:hover,
+  .chooser button:focus-visible {
+    background: var(--paper-2);
+    outline: none;
+  }
+  .chooser img,
+  .chooser .disc {
+    flex: none;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  .chooser .disc {
+    border-radius: 50%;
+    background: radial-gradient(var(--coral) 0 4px, var(--paper-2) 4.5px 9px, transparent 9.5px);
+  }
+  .chooser span:last-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   /* ---- region bubbles ---- */

@@ -35,6 +35,7 @@
   --card-w: 360px;
 }
 
+/* Night theme parked 2026-10-22, toggle removed: nothing sets data-theme="night" now; tokens kept dormant. */
 /* Night-dive theme: tokens only; MapView toggles a few layers on data-theme (SPEC §5.2). */
 :root[data-theme='night'] {
   --ocean-mid: #0b1f35;
@@ -94,7 +95,7 @@ a {
   color: var(--coral);
 }
 
-/* Floating control over the map (language / theme / footprint buttons). */
+/* Floating control over the map (language / footprint buttons). */
 .pill {
   height: 40px;
   padding: 0 14px;

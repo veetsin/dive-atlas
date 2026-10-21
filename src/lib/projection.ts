@@ -59,29 +59,34 @@ export function fitWorld(
   projection.scale(k).translate([width / 2, height / 2 + k * yMid]);
 }
 
+/**
+ * Path for "unwrapped" features under a fitted flat projection (any scale / translate):
+ * rotate by hand, keep the longitude continuous across the cut, then apply the raw
+ * projection and the same scale/translate d3 uses internally.
+ */
+export function unwrappedPathFor(projection: GeoProjection): GeoPath {
+  const k = projection.scale();
+  const [tx, ty] = projection.translate();
+  return geoPath(
+    geoTransform({
+      point(lon: number, lat: number) {
+        let l = lon - CENTRAL_MERIDIAN;
+        if (l < WRAP_THRESHOLD) l += 360;
+        const [x, y] = geoNaturalEarth1Raw(l * RAD, lat * RAD);
+        this.stream.point(tx + k * x, ty - k * y);
+      },
+    }),
+  );
+}
+
 export function createMapProjection(width: number, height: number, padding = 8): MapProjection {
   const projection = geoNaturalEarth1().rotate([-CENTRAL_MERIDIAN, 0]);
   fitWorld(projection, width, height, padding);
 
-  const k = projection.scale();
-  const [tx, ty] = projection.translate();
-
-  // Manual projection for "unwrapped" features: rotate by hand, keep the
-  // longitude continuous across the cut, then apply the raw projection and the
-  // same scale/translate d3 uses internally.
-  const unwrapped = geoTransform({
-    point(lon: number, lat: number) {
-      let l = lon - CENTRAL_MERIDIAN;
-      if (l < WRAP_THRESHOLD) l += 360;
-      const [x, y] = geoNaturalEarth1Raw(l * RAD, lat * RAD);
-      this.stream.point(tx + k * x, ty - k * y);
-    },
-  });
-
   return {
     projection,
     path: geoPath(projection),
-    unwrappedPath: geoPath(unwrapped),
+    unwrappedPath: unwrappedPathFor(projection),
     point: (p) => projection(p),
     width,
     height,
