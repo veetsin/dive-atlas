@@ -1,274 +1,274 @@
 {
   "barracuda": {
-    "aspect": 1.706,
+    "aspect": 1.564,
     "files": {
       "192": {
-        "bytes": 10938,
-        "sha1": "6ab87d4c01"
+        "bytes": 10326,
+        "sha1": "3d2c585390"
       },
       "512": {
-        "bytes": 29864,
-        "sha1": "0682fd2ca1"
+        "bytes": 27616,
+        "sha1": "891d45280a"
       }
     }
   },
   "bumphead-parrotfish": {
-    "aspect": 1.49,
+    "aspect": 1.501,
     "files": {
       "192": {
-        "bytes": 6068,
-        "sha1": "eef80357d2"
+        "bytes": 6032,
+        "sha1": "d1e7b168fd"
       },
       "512": {
-        "bytes": 16738,
-        "sha1": "9b7be98e9c"
+        "bytes": 16554,
+        "sha1": "641830c507"
       }
     }
   },
   "dolphin": {
-    "aspect": 2.296,
+    "aspect": 2.303,
     "files": {
       "192": {
-        "bytes": 4426,
-        "sha1": "5437383298"
+        "bytes": 4218,
+        "sha1": "2232ebcdf7"
       },
       "512": {
-        "bytes": 11250,
-        "sha1": "c225d61fcd"
+        "bytes": 10668,
+        "sha1": "e4370af2fb"
       }
     }
   },
   "dugong": {
-    "aspect": 2.074,
+    "aspect": 2.281,
     "files": {
       "192": {
-        "bytes": 3768,
-        "sha1": "f039fa540f"
+        "bytes": 3648,
+        "sha1": "430f9166b2"
       },
       "512": {
-        "bytes": 9542,
-        "sha1": "1222ac97d5"
+        "bytes": 8974,
+        "sha1": "2d95d2b59d"
       }
     }
   },
   "eagle-ray": {
-    "aspect": 1.627,
+    "aspect": 1.43,
     "files": {
       "192": {
-        "bytes": 5386,
-        "sha1": "e41d8149b3"
+        "bytes": 5518,
+        "sha1": "ffcbb9e4b1"
       },
       "512": {
-        "bytes": 14388,
-        "sha1": "01cd0494c1"
+        "bytes": 14670,
+        "sha1": "0ac44c4ff1"
       }
     }
   },
   "galapagos-shark": {
-    "aspect": 1.863,
+    "aspect": 1.866,
     "files": {
       "192": {
-        "bytes": 4432,
-        "sha1": "a98b6e540b"
+        "bytes": 4192,
+        "sha1": "f246652401"
       },
       "512": {
-        "bytes": 11404,
-        "sha1": "ed92e5097a"
+        "bytes": 10690,
+        "sha1": "9fed9ed18d"
       }
     }
   },
   "green-turtle": {
-    "aspect": 1.621,
+    "aspect": 1.761,
     "files": {
       "192": {
-        "bytes": 6160,
-        "sha1": "f1de7551d9"
+        "bytes": 5808,
+        "sha1": "128aa694f7"
       },
       "512": {
-        "bytes": 20440,
-        "sha1": "73e028ad07"
+        "bytes": 19062,
+        "sha1": "31da36c8be"
       }
     }
   },
   "grey-reef-shark": {
-    "aspect": 2.151,
+    "aspect": 2.198,
     "files": {
       "192": {
-        "bytes": 4658,
-        "sha1": "3e6922f9a7"
+        "bytes": 4160,
+        "sha1": "bb45b7a928"
       },
       "512": {
-        "bytes": 12266,
-        "sha1": "3bc89e1380"
+        "bytes": 10544,
+        "sha1": "ff20628d8f"
       }
     }
   },
   "hammerhead": {
-    "aspect": 1.519,
+    "aspect": 1.574,
     "files": {
       "192": {
-        "bytes": 5352,
-        "sha1": "b0099a1c5b"
+        "bytes": 5244,
+        "sha1": "acb1fa4a15"
       },
       "512": {
-        "bytes": 13842,
-        "sha1": "3e6c26e296"
+        "bytes": 12770,
+        "sha1": "161c9b1bb2"
       }
     }
   },
   "hawksbill": {
-    "aspect": 1.738,
+    "aspect": 1.743,
     "files": {
       "192": {
-        "bytes": 7012,
-        "sha1": "cdfa8918b2"
+        "bytes": 6822,
+        "sha1": "0294754eac"
       },
       "512": {
-        "bytes": 23976,
-        "sha1": "110fbcbed7"
+        "bytes": 23026,
+        "sha1": "649b1f55dd"
       }
     }
   },
   "humpback-whale": {
-    "aspect": 1.842,
+    "aspect": 1.939,
     "files": {
       "192": {
-        "bytes": 5504,
-        "sha1": "7a41b1b951"
+        "bytes": 5594,
+        "sha1": "fa6350311d"
       },
       "512": {
-        "bytes": 15370,
-        "sha1": "e03eb30668"
+        "bytes": 15626,
+        "sha1": "1593a13b78"
       }
     }
   },
   "jack-school": {
-    "aspect": 1.093,
+    "aspect": 1.194,
     "files": {
       "192": {
-        "bytes": 15780,
-        "sha1": "cd961e468d"
+        "bytes": 13846,
+        "sha1": "24f00e63d2"
       },
       "512": {
-        "bytes": 45062,
-        "sha1": "98a873633f"
+        "bytes": 39892,
+        "sha1": "3d74f288fe"
       }
     }
   },
   "mandarinfish": {
-    "aspect": 1.367,
+    "aspect": 1.363,
     "files": {
       "192": {
-        "bytes": 9644,
-        "sha1": "93f37c1ac4"
+        "bytes": 9732,
+        "sha1": "5aa1b506a4"
       },
       "512": {
-        "bytes": 31974,
-        "sha1": "89593dd846"
+        "bytes": 32162,
+        "sha1": "e5aa715629"
       }
     }
   },
   "napoleon-wrasse": {
-    "aspect": 1.62,
+    "aspect": 1.617,
     "files": {
       "192": {
-        "bytes": 6074,
-        "sha1": "933911d956"
+        "bytes": 6062,
+        "sha1": "5371d70e06"
       },
       "512": {
-        "bytes": 20900,
-        "sha1": "61f4b70c2b"
+        "bytes": 20650,
+        "sha1": "c3225a3152"
       }
     }
   },
   "nudibranch": {
-    "aspect": 2.148,
+    "aspect": 2.157,
     "files": {
       "192": {
-        "bytes": 6932,
-        "sha1": "483e8ff480"
+        "bytes": 6494,
+        "sha1": "6f40b7cae6"
       },
       "512": {
-        "bytes": 22338,
-        "sha1": "5f1a02e748"
+        "bytes": 20584,
+        "sha1": "9d2684722b"
       }
     }
   },
   "oceanic-manta": {
-    "aspect": 1.477,
+    "aspect": 1.171,
     "files": {
       "192": {
-        "bytes": 4922,
-        "sha1": "cb850471e2"
+        "bytes": 5272,
+        "sha1": "550549d35b"
       },
       "512": {
-        "bytes": 12726,
-        "sha1": "547b9dd0ad"
+        "bytes": 13652,
+        "sha1": "1cecfea281"
       }
     }
   },
   "orca": {
-    "aspect": 1.76,
+    "aspect": 1.662,
     "files": {
       "192": {
-        "bytes": 4750,
-        "sha1": "2c2a101a62"
+        "bytes": 4666,
+        "sha1": "e0f3bccf60"
       },
       "512": {
-        "bytes": 11642,
-        "sha1": "562a76cfb8"
+        "bytes": 11396,
+        "sha1": "ebd44da7f9"
       }
     }
   },
   "pygmy-seahorse": {
-    "aspect": 0.745,
+    "aspect": 0.738,
     "files": {
       "192": {
-        "bytes": 8986,
-        "sha1": "07a7561ea2"
+        "bytes": 8922,
+        "sha1": "bf64e07342"
       },
       "512": {
-        "bytes": 26086,
-        "sha1": "c0b7e73c02"
+        "bytes": 24740,
+        "sha1": "1176ad177d"
       }
     }
   },
   "reef-manta": {
-    "aspect": 1.292,
+    "aspect": 1.161,
     "files": {
       "192": {
-        "bytes": 4816,
-        "sha1": "2df2748f33"
+        "bytes": 5038,
+        "sha1": "7cbd039801"
       },
       "512": {
-        "bytes": 12622,
-        "sha1": "8d7a907957"
+        "bytes": 13160,
+        "sha1": "1af70dfc15"
       }
     }
   },
   "sardine-run": {
-    "aspect": 1.035,
+    "aspect": 1.108,
     "files": {
       "192": {
-        "bytes": 13902,
-        "sha1": "28c8e948df"
+        "bytes": 11356,
+        "sha1": "073935bf49"
       },
       "512": {
-        "bytes": 42252,
-        "sha1": "b513a5687a"
+        "bytes": 36964,
+        "sha1": "7fadb4d42f"
       }
     }
   },
   "sea-lion": {
-    "aspect": 1.698,
+    "aspect": 1.702,
     "files": {
       "192": {
-        "bytes": 4570,
-        "sha1": "604441234c"
+        "bytes": 4472,
+        "sha1": "412dd9e647"
       },
       "512": {
-        "bytes": 12258,
-        "sha1": "38a6577c29"
+        "bytes": 11542,
+        "sha1": "d0de061fee"
       }
     }
   },
@@ -276,77 +276,77 @@
     "aspect": 2.468,
     "files": {
       "192": {
-        "bytes": 3700,
-        "sha1": "64334773cf"
+        "bytes": 3692,
+        "sha1": "4b9f0e613b"
       },
       "512": {
-        "bytes": 8966,
-        "sha1": "ae59518eec"
+        "bytes": 8744,
+        "sha1": "2e36f260ec"
       }
     }
   },
   "sunfish": {
-    "aspect": 1.0,
+    "aspect": 0.803,
     "files": {
       "192": {
-        "bytes": 4930,
-        "sha1": "36c4c69919"
+        "bytes": 4348,
+        "sha1": "d50f83466c"
       },
       "512": {
-        "bytes": 13682,
-        "sha1": "7fd354f848"
+        "bytes": 11348,
+        "sha1": "67074f74a4"
       }
     }
   },
   "thresher-shark": {
-    "aspect": 1.618,
+    "aspect": 1.945,
     "files": {
       "192": {
-        "bytes": 4852,
-        "sha1": "dda7912c09"
+        "bytes": 4180,
+        "sha1": "7e226a14c7"
       },
       "512": {
-        "bytes": 12864,
-        "sha1": "f741409b13"
+        "bytes": 10250,
+        "sha1": "a731660bde"
       }
     }
   },
   "tiger-shark": {
-    "aspect": 1.982,
+    "aspect": 2.008,
     "files": {
       "192": {
-        "bytes": 5520,
-        "sha1": "2fbf047514"
+        "bytes": 5030,
+        "sha1": "79ed0cf847"
       },
       "512": {
-        "bytes": 14704,
-        "sha1": "c853b09442"
+        "bytes": 13640,
+        "sha1": "ad4cfb6a0f"
       }
     }
   },
   "whale-shark": {
-    "aspect": 1.753,
+    "aspect": 2.043,
     "files": {
       "192": {
-        "bytes": 6798,
-        "sha1": "41c5f8949e"
+        "bytes": 6046,
+        "sha1": "3175973e5e"
       },
       "512": {
-        "bytes": 19856,
-        "sha1": "baa420880a"
+        "bytes": 18764,
+        "sha1": "70dc421179"
       }
     }
   },
   "whitetip-reef-shark": {
-    "aspect": 2.455,
+    "aspect": 2.461,
     "files": {
       "192": {
-        "bytes": 3470,
-        "sha1": "071cf88abd"
+        "bytes": 3454,
+        "sha1": "90090d576c"
       },
       "512": {
-        "bytes": 8906,
-        "sha1": "af37c967d3"
+        "bytes": 8582,
+        "sha1": "7846c90f8d"
       }
     }
   }
