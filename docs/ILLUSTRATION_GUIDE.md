@@ -309,22 +309,23 @@ uv run --python 3.13 --with pillow python scripts/process-sprites.py art/raw/bat
 （`npm run sprites -- …` 等价于直接调脚本，但它用的是系统 `python3`，在这台机器上不可用。）
 
 ```
-art/raw/<batch>/grid.png        ← ChatGPT 下载的原图（PNG）
+art/raw/<batch>/grid.png + ids.txt   ← ChatGPT 下载的原图（PNG）+ 四个 id（阅读顺序，"-" 表示该格作废）
         │  scripts/process-sprites.py
         ▼
-1. 按固定象限切 2×2（所以 prompt 里要求 10% 留白、不压线）
-2. rembg 去底（isnet-general-use，alpha matting）或 --no-rembg
+1. 整张图先 rembg 去底（isnet-general-use，alpha matting）或 --no-rembg
+2. 按连通域切分，每个连通域按质心归到所在格：越过中线的尾巴 / 翼尖跟着自己的动物走，
+   邻格伸过来的鳍不会被带进来；碎屑（< 最大块 0.4%）丢弃；抠图留下的封闭空洞（灰底上的白肚皮）用原图像素补回
 3. 裁掉透明边（留 4% 安全边）
-4. 等比缩放到 192 / 512 长边，导出 WebP（quality 82，method 6）；超预算会打印 "← over budget"
+4. 等比缩放到 192 / 512 长边；--outline 2.5 烘入米白刀模边；导出 WebP（quality 82，method 6）；超预算会打印 "← over budget"
 5. 写入 public/sprites/manifest.json
 ```
 
 `--outline 2.5`（**2026-10-21 定稿，所有贴纸统一加**）：一圈 2.5 px（按 192 尺寸计，512 尺寸按比例放大）的米白"刀模边"，解决深色物种（鲸鲨、蝠鲼）在夜间深蓝海面上看不见的问题；边是在导出时烘进 WebP 的，运行时零开销，体积反而略小。
 
 检查项：
-- `public/sprites/*-192.webp` 全部 ≤ 15 KB；超了先降 quality 到 75，再考虑简化画面重画。
+- `public/sprites/*-192.webp` 全部 ≤ 15 KB、`*-512.webp` ≤ 40 KB；密集鱼群（杰克鱼风暴、沙丁鱼风暴）压缩差，单独用 `"--ids=-,jack-school,sardine-run,-" --quality 60` 重导出即可达标。
 - 在日 / 夜两种背景各预览一次，看是否有残留白边；有则 `--alpha-erode 1`。
-- 象限切割没有"越线检测"：鳍、尾、鞭尾压到中线会被无声切断，所以 §7 的验收第 3 条必须做。真的反复越线再给脚本加连通域切割，不预先做。
+- 两个动物贴在一起（连通域连成一块）时会被归到同一格：那是 prompt 问题，用局部编辑重画那一格。§7 验收第 3 条（压线）因此只需防"互相接触"，轻微越线已由脚本处理。
 
 ---
 

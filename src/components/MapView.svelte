@@ -8,7 +8,7 @@
 
   import { createMapProjection, LAT_RANGE, type MapProjection } from '../lib/projection';
   import { loadCoast } from '../lib/geo';
-  import { sites, siteById, labels, inSeason, speciesById, spriteUrl, spritePx, SPRITE_PX } from '../lib/data';
+  import { sites, siteById, labels, regionById, inSeason, speciesById, spriteUrl, spritePx, SPRITE_PX } from '../lib/data';
   import { month, selectedSiteId, speciesFilter, lang, footprint, viewing, markOf, flyTo } from '../lib/stores';
   import { t, tx } from '../lib/i18n';
   import type { DiveSite, SeaLabel } from '../lib/types';
@@ -28,6 +28,9 @@
   /** A sea-name tier shows once one degree of longitude spans this many pixels. */
   const TIER_PX_PER_DEG = [0, 0, 2.2, 4.5];
   const PHONE_START: { center: [number, number]; k: number } = { center: [118, 8], k: 1.9 };
+  /** Below this zoom, regions with at least CLUSTER_MIN visible sites collapse into one bubble (SPEC §6.1 #13). */
+  const CLUSTER_K = { wide: 1.6, narrow: 2.6 };
+  const CLUSTER_MIN = 3;
 
   let width = $state(0);
   let height = $state(0);
@@ -116,6 +119,66 @@
     return out;
   });
   const showLabels = $derived(zoomT.k >= (narrow ? LABEL_ZOOM.narrow : LABEL_ZOOM.wide));
+
+  // ---- region bubbles: dense regions collapse until the user zooms in ----
+  type Bubble = { region: string; x: number; y: number; count: number; season: number; color: string };
+  const clusterZoom = $derived(narrow ? CLUSTER_K.narrow : CLUSTER_K.wide);
+  const bubbles: Bubble[] = $derived.by(() => {
+    if (zoomT.k >= clusterZoom) return [];
+    const groups = new Map<string, Marker[]>();
+    for (const m of markers) {
+      const g = groups.get(m.site.region);
+      if (g) g.push(m);
+      else groups.set(m.site.region, [m]);
+    }
+    const out: Bubble[] = [];
+    for (const [region, ms] of groups) {
+      if (ms.length < CLUSTER_MIN) continue;
+      out.push({
+        region,
+        x: ms.reduce((s, m) => s + m.x, 0) / ms.length,
+        y: ms.reduce((s, m) => s + m.y, 0) / ms.length,
+        count: ms.length,
+        season: ms.filter((m) => m.season).length,
+        color: regionById.get(region)?.color ?? '#F2795B',
+      });
+    }
+    // Neighbouring regions (东南亚 / 珊瑚三角) can share a centroid area: push overlapping
+    // bubbles apart in screen space so both stay tappable.
+    const radius = (b: Bubble) => (22 + Math.min(10, b.count) + 4) / zoomT.k;
+    for (let pass = 0; pass < 4; pass++) {
+      for (let i = 0; i < out.length; i++) {
+        for (let j = i + 1; j < out.length; j++) {
+          const a = out[i]!, b = out[j]!;
+          const dx = b.x - a.x, dy = b.y - a.y;
+          const d = Math.hypot(dx, dy) || 0.001;
+          const min = radius(a) + radius(b);
+          if (d >= min) continue;
+          const push = (min - d) / 2;
+          const ux = dx / d, uy = dy / d;
+          a.x -= ux * push; a.y -= uy * push;
+          b.x += ux * push; b.y += uy * push;
+        }
+      }
+    }
+    return out;
+  });
+  const clusteredRegions = $derived(new Set(bubbles.map((b) => b.region)));
+  /** Markers drawn individually: everything outside a bubble. */
+  const looseMarkers = $derived(markers.filter((m) => !clusteredRegions.has(m.site.region)));
+
+  /** Zoom so the region's sites fill ~70 % of the viewport (and markers replace the bubble). */
+  function openRegion(region: string) {
+    if (!svgEl || !zoomBehavior) return;
+    const ms = markers.filter((m) => m.site.region === region);
+    if (!ms.length) return;
+    const xs = ms.map((m) => m.x), ys = ms.map((m) => m.y);
+    const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+    const k = Math.max(clusterZoom + 0.2, Math.min(8, 0.7 * Math.min(width / Math.max(1, x1 - x0), height / Math.max(1, y1 - y0))));
+    const extent: [[number, number], [number, number]] = [[0, 0], [width, height]];
+    const t = zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-(x0 + x1) / 2, -(y0 + y1) / 2);
+    zoomBehavior.transform(select(svgEl), zoomBehavior.constrain()(t, extent, extent));
+  }
   /** Whose footprint colours the markers: a friend's while viewing a shared link, else mine. */
   const fpView = $derived($viewing ?? $footprint);
   const hasMarks = $derived(fpView.dived.length + fpView.wish.length > 0);
@@ -341,8 +404,33 @@
           {/each}
         </g>
 
+        <g class="bubbles">
+          {#each bubbles as b (b.region)}
+            <g
+              class="bubble"
+              transform={`translate(${b.x},${b.y}) scale(${1 / zoomT.k})`}
+              role="button"
+              tabindex="0"
+              aria-label={`${$tx(regionById.get(b.region)?.name)} · ${b.season} ${$t('map.sitesShown')}`}
+              style:--region={b.color}
+              onclick={() => openRegion(b.region)}
+              onkeydown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  openRegion(b.region);
+                }
+              }}
+            >
+              <circle class="halo" r={22 + Math.min(10, b.count)} />
+              <circle class="disc" r={16 + Math.min(10, b.count)} />
+              <text class="n" dy=".35em">{b.season}</text>
+              <text class="name" y={30 + Math.min(10, b.count)}>{$tx(regionById.get(b.region)?.name)}</text>
+            </g>
+          {/each}
+        </g>
+
         <g class="sites">
-          {#each markers as m (m.site.id)}
+          {#each looseMarkers as m (m.site.id)}
             {@const selected = $selectedSiteId === m.site.id}
             {@const mark = markOf(fpView, m.site.id)}
             <g
@@ -567,6 +655,44 @@
     font-size: 11px;
     font-weight: 600;
     fill: var(--ink);
+    paint-order: stroke;
+    stroke: var(--paper);
+    stroke-width: 3px;
+    stroke-opacity: 0.9;
+    stroke-linejoin: round;
+    pointer-events: none;
+  }
+
+  /* ---- region bubbles ---- */
+  .bubble {
+    cursor: pointer;
+    outline: none;
+  }
+  .bubble .halo {
+    fill: var(--region);
+    fill-opacity: 0.22;
+  }
+  .bubble .disc {
+    fill: var(--paper);
+    stroke: var(--region);
+    stroke-width: 3;
+  }
+  .bubble:hover .disc,
+  .bubble:focus-visible .disc {
+    stroke: var(--sun);
+  }
+  .bubble .n {
+    font-size: 15px;
+    font-weight: 700;
+    fill: var(--ink);
+    text-anchor: middle;
+    pointer-events: none;
+  }
+  .bubble .name {
+    font-size: 11px;
+    font-weight: 600;
+    fill: var(--ink);
+    text-anchor: middle;
     paint-order: stroke;
     stroke: var(--paper);
     stroke-width: 3px;

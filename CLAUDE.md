@@ -93,7 +93,7 @@ art/raw/                  ← GPT 原始出图（gitignore，体积大）
 - [x] 底图风格重设计落地：日 / 夜主题、海域名、图框罗盘；1280 与 375、日夜四种组合已在浏览器确认；顺带修了 zoom 重建弹回、深链接被抽屉遮挡、`role="img"`、`color-mix` 等缺陷
 - [x] 足迹 + 分享图 + 二维码（SPEC §6.1 #10–#12）：`stores.ts` 的 `footprint` / `viewing` 与位图编解码、`share-image.ts`（Canvas2D + lean-qr）、`FootprintPanel.svelte`、`data/footprint-index.json`；浏览器里已验证标记、分享图、`?d=&w=` 查看模式不落盘、导入覆盖。**真机未测**：微信长按保存 / 识别二维码、低端安卓渲染耗时
 - [ ] v1 潜点数据：**目标 ≥ 200 个**（用户要求不少于参考图）。2026-10-21 第一波已合并 43 个（东南亚 / 红海 / 澳新 / 美洲，34 个已核实，含来源与维护 notes）；珊瑚三角、东亚、印度洋、太平洋、大西洋/极地 5 个区域因额度中断待续跑（workflow `wf_7dc44019-bfe` 可 resume），之后再跑第二波补到 200+。物种中文名策略见 ILLUSTRATION_GUIDE §3.4。**200 个潜点前必须先做区域聚合气泡（SPEC §6.2 #10），否则世界视图挤成一团**
-- [ ] 分级缩放 + 区域聚合气泡（数据过百后的硬需求）
+- [x] 区域聚合气泡（SPEC §6.1 #13）：桌面 < 1.6x、窄屏 < 2.6x 且区域可见潜点 ≥ 3 时折叠为"区域色外环 + 当季数 + 区域名"的气泡，点击缩放到该区域；稀疏区域仍显示单个贴纸
 - [ ] 地球模式（可拖动旋转的正射投影，日/夜）：已评估可行，d3-geo 自带、零新依赖；效果预览见 `preview/map-style-candidates/globe-preview.png`；排在聚合气泡之后
 - [x] 搜索（中文 / 英文 / 拼音 / 国家）：工具栏放大镜 → `SearchPanel.svelte`，选中后 `openSite()` 飞到潜点；`pinyin` 字段由 `npm run data:pinyin` 生成并被校验脚本要求；`?sp=` 物种筛选现在有可关闭的芯片
 - [x] 贴纸落地准备：`spriteUrl()` 只对 `public/sprites/manifest.json` 里有的贴纸返回地址（没画的不再 404），地图贴纸尺寸按 `sizeClass` 48/40/32/24 px
