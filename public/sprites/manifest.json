@@ -1,4 +1,30 @@
 {
+  "american-crocodile": {
+    "aspect": 2.905,
+    "files": {
+      "192": {
+        "bytes": 4432,
+        "sha1": "3ed65fe74c"
+      },
+      "512": {
+        "bytes": 12732,
+        "sha1": "fb34f4bac4"
+      }
+    }
+  },
+  "arctic-char": {
+    "aspect": 2.261,
+    "files": {
+      "192": {
+        "bytes": 4652,
+        "sha1": "aa9c4d5af9"
+      },
+      "512": {
+        "bytes": 12844,
+        "sha1": "c100440bdc"
+      }
+    }
+  },
   "barracuda": {
     "aspect": 1.564,
     "files": {
@@ -12,6 +38,45 @@
       }
     }
   },
+  "blacktip-reef-shark": {
+    "aspect": 2.19,
+    "files": {
+      "192": {
+        "bytes": 3738,
+        "sha1": "63410c2001"
+      },
+      "512": {
+        "bytes": 9682,
+        "sha1": "d9908ef6e5"
+      }
+    }
+  },
+  "brydes-whale": {
+    "aspect": 2.698,
+    "files": {
+      "192": {
+        "bytes": 3842,
+        "sha1": "06aab4a416"
+      },
+      "512": {
+        "bytes": 10526,
+        "sha1": "a788ef6389"
+      }
+    }
+  },
+  "bull-shark": {
+    "aspect": 1.844,
+    "files": {
+      "192": {
+        "bytes": 5094,
+        "sha1": "b2d6372040"
+      },
+      "512": {
+        "bytes": 13146,
+        "sha1": "a7ed1c3605"
+      }
+    }
+  },
   "bumphead-parrotfish": {
     "aspect": 1.501,
     "files": {
@@ -22,6 +87,19 @@
       "512": {
         "bytes": 16554,
         "sha1": "641830c507"
+      }
+    }
+  },
+  "caribbean-reef-shark": {
+    "aspect": 2.09,
+    "files": {
+      "192": {
+        "bytes": 4238,
+        "sha1": "203a0f5b45"
+      },
+      "512": {
+        "bytes": 10532,
+        "sha1": "f9ea8020a0"
       }
     }
   },
@@ -51,6 +129,32 @@
       }
     }
   },
+  "dusky-grouper": {
+    "aspect": 1.543,
+    "files": {
+      "192": {
+        "bytes": 7152,
+        "sha1": "249083febd"
+      },
+      "512": {
+        "bytes": 22022,
+        "sha1": "47a4ec9e5f"
+      }
+    }
+  },
+  "dwarf-minke-whale": {
+    "aspect": 2.195,
+    "files": {
+      "192": {
+        "bytes": 3724,
+        "sha1": "d77b626eab"
+      },
+      "512": {
+        "bytes": 9460,
+        "sha1": "6767ecdfcc"
+      }
+    }
+  },
   "eagle-ray": {
     "aspect": 1.43,
     "files": {
@@ -61,6 +165,19 @@
       "512": {
         "bytes": 14670,
         "sha1": "0ac44c4ff1"
+      }
+    }
+  },
+  "frogfish": {
+    "aspect": 1.314,
+    "files": {
+      "192": {
+        "bytes": 7844,
+        "sha1": "05914a7abe"
+      },
+      "512": {
+        "bytes": 20958,
+        "sha1": "dc8cbac6c6"
       }
     }
   },
@@ -77,6 +194,32 @@
       }
     }
   },
+  "giant-grouper": {
+    "aspect": 1.566,
+    "files": {
+      "192": {
+        "bytes": 6692,
+        "sha1": "03a1b92a65"
+      },
+      "512": {
+        "bytes": 18832,
+        "sha1": "fe252b390e"
+      }
+    }
+  },
+  "great-white-shark": {
+    "aspect": 1.968,
+    "files": {
+      "192": {
+        "bytes": 4824,
+        "sha1": "c26d98c230"
+      },
+      "512": {
+        "bytes": 12154,
+        "sha1": "54c83d6384"
+      }
+    }
+  },
   "green-turtle": {
     "aspect": 1.761,
     "files": {
@@ -87,6 +230,19 @@
       "512": {
         "bytes": 19062,
         "sha1": "31da36c8be"
+      }
+    }
+  },
+  "grey-nurse-shark": {
+    "aspect": 2.359,
+    "files": {
+      "192": {
+        "bytes": 4008,
+        "sha1": "c0ac1d703c"
+      },
+      "512": {
+        "bytes": 10206,
+        "sha1": "b35aac557b"
       }
     }
   },
@@ -113,6 +269,19 @@
       "512": {
         "bytes": 12770,
         "sha1": "161c9b1bb2"
+      }
+    }
+  },
+  "hard-coral": {
+    "aspect": 1.538,
+    "files": {
+      "192": {
+        "bytes": 10514,
+        "sha1": "9bead5647f"
+      },
+      "512": {
+        "bytes": 37340,
+        "sha1": "17c1ad2d39"
       }
     }
   },
@@ -155,6 +324,32 @@
       }
     }
   },
+  "lemon-shark": {
+    "aspect": 2.106,
+    "files": {
+      "192": {
+        "bytes": 4154,
+        "sha1": "58ec3edc5d"
+      },
+      "512": {
+        "bytes": 10672,
+        "sha1": "52bfeaed38"
+      }
+    }
+  },
+  "leopard-shark": {
+    "aspect": 2.149,
+    "files": {
+      "192": {
+        "bytes": 4532,
+        "sha1": "d76f585634"
+      },
+      "512": {
+        "bytes": 13812,
+        "sha1": "6de472d93e"
+      }
+    }
+  },
   "mandarinfish": {
     "aspect": 1.363,
     "files": {
@@ -194,6 +389,19 @@
       }
     }
   },
+  "nurse-shark": {
+    "aspect": 2.442,
+    "files": {
+      "192": {
+        "bytes": 3860,
+        "sha1": "fe55bd0308"
+      },
+      "512": {
+        "bytes": 9600,
+        "sha1": "91cd9607a7"
+      }
+    }
+  },
   "oceanic-manta": {
     "aspect": 1.171,
     "files": {
@@ -207,6 +415,19 @@
       }
     }
   },
+  "oceanic-whitetip": {
+    "aspect": 1.502,
+    "files": {
+      "192": {
+        "bytes": 4870,
+        "sha1": "049dc5d312"
+      },
+      "512": {
+        "bytes": 13160,
+        "sha1": "c8b5eb63a9"
+      }
+    }
+  },
   "orca": {
     "aspect": 1.662,
     "files": {
@@ -217,6 +438,19 @@
       "512": {
         "bytes": 11396,
         "sha1": "ebd44da7f9"
+      }
+    }
+  },
+  "potato-cod": {
+    "aspect": 1.545,
+    "files": {
+      "192": {
+        "bytes": 7194,
+        "sha1": "550b129470"
+      },
+      "512": {
+        "bytes": 21410,
+        "sha1": "6054a93e9e"
       }
     }
   },
@@ -269,6 +503,84 @@
       "512": {
         "bytes": 11542,
         "sha1": "d0de061fee"
+      }
+    }
+  },
+  "seal": {
+    "aspect": 2.252,
+    "files": {
+      "192": {
+        "bytes": 4266,
+        "sha1": "90ac37a961"
+      },
+      "512": {
+        "bytes": 12122,
+        "sha1": "8cbd0e5530"
+      }
+    }
+  },
+  "short-tail-stingray": {
+    "aspect": 1.352,
+    "files": {
+      "192": {
+        "bytes": 3592,
+        "sha1": "fd18e6bedd"
+      },
+      "512": {
+        "bytes": 9368,
+        "sha1": "4fc11edbb2"
+      }
+    }
+  },
+  "sicklefin-devil-ray": {
+    "aspect": 1.332,
+    "files": {
+      "192": {
+        "bytes": 4254,
+        "sha1": "1f2b2dfd35"
+      },
+      "512": {
+        "bytes": 11274,
+        "sha1": "339104530b"
+      }
+    }
+  },
+  "silky-shark": {
+    "aspect": 1.945,
+    "files": {
+      "192": {
+        "bytes": 4130,
+        "sha1": "94361d4fce"
+      },
+      "512": {
+        "bytes": 10472,
+        "sha1": "bede83a25d"
+      }
+    }
+  },
+  "soft-coral": {
+    "aspect": 1.297,
+    "files": {
+      "192": {
+        "bytes": 9908,
+        "sha1": "e73b923e4e"
+      },
+      "512": {
+        "bytes": 31730,
+        "sha1": "ebc992ab8b"
+      }
+    }
+  },
+  "southern-stingray": {
+    "aspect": 1.554,
+    "files": {
+      "192": {
+        "bytes": 3072,
+        "sha1": "da7b80d300"
+      },
+      "512": {
+        "bytes": 8038,
+        "sha1": "ab08f7a25d"
       }
     }
   },

@@ -89,7 +89,7 @@ art/raw/                  ← GPT 原始出图（gitignore，体积大）
 - [x] 底图数据：`public/geo/countries.topo.json` 已生成（Natural Earth 10m CHN POV，简化 3%，160 KB / gzip 48 KB），1280 与 375 宽度预览已确认投影与格陵兰正常
 - [x] 贴纸流水线本机验证通过（uv + Python 3.13 + rembg）
 - [x] 贴纸 B1（鲸鲨 / 礁蝠鲼 / 绿海龟 / 海蛞蝓）已出图、验收、入库，**冻结为后续批次的参考图**（`art/raw/batch-01/grid.png`）；统一加 `--outline 2.5` 米白刀模边；地图贴纸按 `species.lengthM` 对数缩放
-- [ ] 贴纸 B2–B7、D1–D2：按 §3.3 继续（现在 43 个物种里只有 4 个有贴纸，其余显示圆点）
+- [x] 贴纸 B1–B13：52 个物种中 51 个已有贴纸（玻璃鱼群待第二波数据后凑 B14），全部 `--outline 2.5`、体积达标；B12 布氏鲸、B13 硬珊瑚、B09 护士鲨建议局部重画（指令在 `art/prompts/出图教程-B8-B13.md`）；D1–D2 装饰未画
 - [x] 底图风格重设计落地：日 / 夜主题、海域名、图框罗盘；1280 与 375、日夜四种组合已在浏览器确认；顺带修了 zoom 重建弹回、深链接被抽屉遮挡、`role="img"`、`color-mix` 等缺陷
 - [x] 足迹 + 分享图 + 二维码（SPEC §6.1 #10–#12）：`stores.ts` 的 `footprint` / `viewing` 与位图编解码、`share-image.ts`（Canvas2D + lean-qr）、`FootprintPanel.svelte`、`data/footprint-index.json`；浏览器里已验证标记、分享图、`?d=&w=` 查看模式不落盘、导入覆盖。**真机未测**：微信长按保存 / 识别二维码、低端安卓渲染耗时
 - [ ] v1 潜点数据：**目标 ≥ 200 个**（用户要求不少于参考图）。2026-10-21 第一波（4 区域）+ 1b（5 区域）已合并 **79 个**潜点、51 个物种、11 个区域（含新加的 east-asia），每条带来源与维护 notes；第二波（11 个区域、约 115 个）用 Opus 5.5 在跑。研究类 agent 一律用 `claude-opus-5-5` / `max`（用户要求）。物种中文名策略见 ILLUSTRATION_GUIDE §3.4
