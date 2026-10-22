@@ -4,14 +4,19 @@ import { defineConfig, type Plugin } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 const SITES_JSON = fileURLToPath(new URL('./data/sites.json', import.meta.url));
-/** Fields only the open site card needs (plus maintainer notes, which the UI never shows). */
-const DETAIL_FIELDS = ['summary', 'highlights', 'sources', 'notes'] as const;
+const SPECIES_JSON = fileURLToPath(new URL('./data/species.json', import.meta.url));
+/** Fields only the open site card needs (plus maintainer notes, which the UI never shows), per file. */
+const DETAIL_FIELDS = new Map([
+  ['sites.json', ['summary', 'highlights', 'sources', 'notes']],
+  ['species.json', ['blurb']],
+]);
 
 /**
- * data/sites.json stays one hand-edited file, but ships as two modules:
- *  - the static import of `data/sites.json` gets the light fields (map, search, footprint);
- *  - `virtual:site-details` (summary / highlights / sources, keyed by id) is a separate chunk
- *    that SiteCard pulls in on first open. Notes never ship.
+ * data/sites.json and data/species.json stay hand-edited files, but each ships in two parts:
+ *  - their static imports get the light fields (map, search, footprint);
+ *  - `virtual:site-details` = { sites: summary / highlights / sources by site id,
+ *    speciesBlurbs: blurb by species id } is a separate chunk that SiteCard pulls in on
+ *    first open. Notes never ship.
  * With 200 sites this keeps the main bundle ~50 KB gzip lighter (SPEC §7.1).
  */
 function siteData(): Plugin {
@@ -26,17 +31,20 @@ function siteData(): Plugin {
     load(id) {
       if (id !== RESOLVED) return null;
       this.addWatchFile(SITES_JSON);
-      const sites = JSON.parse(readFileSync(SITES_JSON, 'utf8')) as Record<string, unknown>[];
-      const details = Object.fromEntries(
-        sites.map((s) => [s.id, { summary: s.summary, highlights: s.highlights ?? [], sources: s.sources ?? [] }]),
+      this.addWatchFile(SPECIES_JSON);
+      const read = (f: string) => JSON.parse(readFileSync(f, 'utf8')) as Record<string, unknown>[];
+      const sites = Object.fromEntries(
+        read(SITES_JSON).map((s) => [s.id, { summary: s.summary, highlights: s.highlights ?? [], sources: s.sources ?? [] }]),
       );
-      return `export default ${JSON.stringify(details)};`;
+      const speciesBlurbs = Object.fromEntries(read(SPECIES_JSON).map((s) => [s.id, s.blurb]));
+      return `export default ${JSON.stringify({ sites, speciesBlurbs })};`;
     },
     transform(code, id) {
-      if (!id.replace(/\?.*$/, '').endsWith('/data/sites.json')) return null;
-      const sites = JSON.parse(code) as Record<string, unknown>[];
-      for (const s of sites) for (const f of DETAIL_FIELDS) delete s[f];
-      return { code: JSON.stringify(sites), map: null };
+      const fields = DETAIL_FIELDS.get(id.replace(/\?.*$/, '').match(/\/data\/([^/]+)$/)?.[1] ?? '');
+      if (!fields) return null;
+      const rows = JSON.parse(code) as Record<string, unknown>[];
+      for (const r of rows) for (const f of fields) delete r[f];
+      return { code: JSON.stringify(rows), map: null };
     },
   };
 }

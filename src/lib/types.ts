@@ -17,6 +17,8 @@ export type DiveType =
   | 'kelp';
 export type Access = 'shore' | 'boat' | 'liveaboard';
 export type SizeClass = 'xl' | 'l' | 'm' | 's';
+/** Sighting-game tier: how hard a recreational diver finds it to actually meet the species. */
+export type Rarity = 'common' | 'rare' | 'epic' | 'legendary';
 
 export interface DiveSite {
   id: string;
@@ -53,6 +55,7 @@ export interface Species {
   sci?: string;
   sprite: string;
   sizeClass: SizeClass;
+  rarity: Rarity;
   /** Typical adult length in metres (for schools: the size of the school as seen); drives sprite size on the map. */
   lengthM?: number;
   tags?: string[];

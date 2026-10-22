@@ -56,6 +56,12 @@ const dict = {
   'species.length': { zh: '体长', en: 'Length' },
   'species.about': { zh: '约', en: '≈' },
   'species.collapse': { zh: '收起', en: 'Collapse' },
+  'species.sighted': { zh: '目击过', en: 'Sighted' },
+  /** sighting tier (Species.rarity); the poster and the species panel mark rare ◆, epic ◆◆, legendary ◆◆◆ */
+  'rarity.common': { zh: '普通', en: 'Common' },
+  'rarity.rare': { zh: '珍稀', en: 'Rare' },
+  'rarity.epic': { zh: '史诗', en: 'Epic' },
+  'rarity.legendary': { zh: '传说', en: 'Legendary' },
   'map.loading': { zh: '地图加载中…', en: 'Loading map…' },
   'map.noGeo': {
     zh: '还没有底图数据，请先运行 npm run geo',
@@ -66,7 +72,7 @@ const dict = {
   'map.nearbySites': { zh: '这里有 {n} 个潜点', en: '{n} sites here' },
   'footprint.open': { zh: '足迹', en: 'Log' },
   'footprint.title': { zh: '我的足迹', en: 'My dive log' },
-  'footprint.shareTitle': { zh: '我的潜水足迹', en: 'My dive footprint' },
+  'footprint.shareTitle': { zh: '我的潜水星图', en: 'My dive star chart' },
   'footprint.dived': { zh: '潜过', en: 'Dived' },
   'footprint.wish': { zh: '想去', en: 'Want to go' },
   'footprint.none': { zh: '还没有标记，点开一个潜点卡片试试', en: 'Nothing marked yet, open a site card to start' },
@@ -80,7 +86,51 @@ const dict = {
   'footprint.adopt': { zh: '导入为我的足迹', en: 'Import as mine' },
   'footprint.adoptConfirm': { zh: '会覆盖你现在的足迹，继续？', en: 'This replaces your current log. Continue?' },
   'footprint.scanHint': { zh: '扫码看我的潜水足迹', en: 'Scan to see my dive map' },
-  'footprint.privacy': { zh: '链接和分享图会显示你标记的潜点', en: 'The link and the image show the sites you mark' },
+  'footprint.privacy': { zh: '分享图会显示你的名字、标记的潜点和目击的物种', en: 'The share image shows your name, the sites you mark and the species you sighted' },
+  'footprint.countries': { zh: '国家', en: 'Countries' },
+  'footprint.species': { zh: '物种', en: 'Species' },
+  'footprint.seen': { zh: '目击', en: 'Sighted' },
+  'footprint.namePrompt': { zh: '分享图上署什么名？', en: 'Name to show on the image' },
+  'footprint.namePlaceholder': { zh: '你的名字或昵称', en: 'Your name or nickname' },
+  'footprint.nameGenerate': { zh: '生成', en: 'Generate' },
+  'footprint.nameSkip': { zh: '跳过', en: 'Skip' },
+  'footprint.nameSave': { zh: '保存', en: 'Save' },
+  'footprint.nameCancel': { zh: '取消', en: 'Cancel' },
+  'footprint.nameEdit': { zh: '修改名字', en: 'Edit name' },
+  /** title ladder (src/lib/ranks.ts): {n} = level */
+  'rank.level': { zh: '第 {n} 级', en: 'Level {n}' },
+  'rank.scopeOcean': { zh: '跨洋', en: 'Transoceanic' },
+  'rank.scopeGlobal': { zh: '环球', en: 'Global' },
+  'rank.0': { zh: '岸上观望者', en: 'Shore Watcher' },
+  'rank.1': { zh: '初潜者', en: 'First Bubbles' },
+  'rank.2': { zh: '泻湖学徒', en: 'Lagoon Apprentice' },
+  'rank.3': { zh: '礁石新客', en: 'Reef Newcomer' },
+  'rank.4': { zh: '探路者', en: 'Pathfinder' },
+  'rank.5': { zh: '漫游者', en: 'Wanderer' },
+  'rank.6': { zh: '巡游者', en: 'Voyager' },
+  'rank.7': { zh: '洋流骑士', en: 'Current Rider' },
+  'rank.8': { zh: '远征者', en: 'Expeditioner' },
+  'rank.9': { zh: '群岛收藏家', en: 'Archipelago Collector' },
+  'rank.10': { zh: '领航员', en: 'Navigator' },
+  'rank.11': { zh: '深蓝旅人', en: 'Blue Traveller' },
+  'rank.12': { zh: '大洋行者', en: 'Ocean Strider' },
+  'rank.13': { zh: '七海船长', en: 'Captain of the Seven Seas' },
+  'rank.14': { zh: '深渊使者', en: 'Envoy of the Deep' },
+  'rank.15': { zh: '海洋传奇', en: 'Ocean Legend' },
+  /** share poster (src/lib/share-image.ts); {n} {m} {k} {name} {year} are filled in there */
+  'poster.edition': { zh: 'No. {n} · {year}', en: 'No. {n} · {year}' },
+  'poster.byline': { zh: '@{name} 的潜水星图', en: "@{name}'s dive star chart" },
+  'poster.sites': { zh: '潜点', en: 'Sites' },
+  'poster.countries': { zh: '国家', en: 'Countries' },
+  'poster.species': { zh: '物种', en: 'Species' },
+  'poster.km': { zh: '公里跨度', en: 'km span' },
+  'poster.log': { zh: '标本录', en: 'Specimen log' },
+  'poster.logCount': { zh: '{n} / {m} · 含 {k} 种稀有+', en: '{n} / {m} · {k} rare+' },
+  'poster.logEmpty': { zh: '还没有目击记录，点开潜点卡片标记', en: 'No sightings yet — mark them in a site card' },
+  'poster.invite': { zh: '在地图上标记你的第一个潜点', en: 'Mark your first dive on the map' },
+  'poster.equator': { zh: '赤道', en: 'Equator' },
+  'poster.ask': { zh: '你潜过几个？', en: 'How many have you dived?' },
+  'poster.scan': { zh: '扫码，点亮你的潜水星图', en: 'Scan to light up your own chart' },
   'level.OW': { zh: '开放水域 OW', en: 'Open Water' },
   'level.AOW': { zh: '进阶 AOW', en: 'Advanced' },
   'level.Tech': { zh: '技术潜水', en: 'Technical' },
@@ -110,6 +160,12 @@ export const t = derived(lang, ($lang) => (key: I18nKey) => translate(key, $lang
 
 /** Pick one language from a {zh, en} object. */
 export const tx = derived(lang, ($lang) => (text: LocalizedText | undefined) => text?.[$lang] ?? '');
+
+/** Title ladder names, level 0 → top; ranks.ts holds the thresholds (same length). */
+export const RANK_KEYS = [
+  'rank.0', 'rank.1', 'rank.2', 'rank.3', 'rank.4', 'rank.5', 'rank.6', 'rank.7',
+  'rank.8', 'rank.9', 'rank.10', 'rank.11', 'rank.12', 'rank.13', 'rank.14', 'rank.15',
+] as const satisfies readonly I18nKey[];
 
 export const MONTH_KEYS = [
   'month.1', 'month.2', 'month.3', 'month.4', 'month.5', 'month.6',

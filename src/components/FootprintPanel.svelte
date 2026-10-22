@@ -1,9 +1,9 @@
 <script lang="ts">
   import { t, tx } from '../lib/i18n';
-  import { lang, footprint, siteUrl, openSite } from '../lib/stores';
+  import { lang, footprint, siteUrl, openSite, displayName, setDisplayName, NAME_MAX } from '../lib/stores';
   import { siteById, speciesById, spriteUrl } from '../lib/data';
   import { copyText } from '../lib/clipboard';
-  import { renderShareImage, shareStrings } from '../lib/share-image';
+  import { footprintStats, rankTitle } from '../lib/ranks';
   import type { DiveSite } from '../lib/types';
 
   let { onclose }: { onclose: () => void } = $props();
@@ -13,8 +13,8 @@
   const list = (ids: string[]) => ids.map((id) => siteById.get(id)).filter((s): s is DiveSite => !!s);
   const dived = $derived(list($footprint.dived));
   const wish = $derived(list($footprint.wish));
-  const countries = $derived(new Set(dived.map((s) => s.country.en)).size);
-  const speciesSeen = $derived(new Set(dived.flatMap((s) => s.species)).size);
+  const stats = $derived(footprintStats(dived));
+  const title = $derived(rankTitle(stats, $lang));
   /** Lead-species sticker as the row thumbnail. */
   function thumb(site: DiveSite): string | undefined {
     const sp = speciesById.get(site.species[0] ?? '');
@@ -35,13 +35,38 @@
     else shareBtn?.focus({ preventScroll: true });
   });
 
-  async function share() {
+  /** Name form: 'share' = asked before the first poster (生成 / 跳过), 'edit' = from the name chip (保存 / 取消). */
+  let nameForm: 'share' | 'edit' | null = $state(null);
+  let draft = $state('');
+  let nameInput: HTMLInputElement | undefined = $state();
+  $effect(() => {
+    if (nameForm) nameInput?.focus();
+  });
+
+  function share() {
+    if ($displayName) render();
+    else {
+      draft = '';
+      nameForm = 'share';
+    }
+  }
+  /** Submit saves the draft (empty clears the name); either way a 'share' form goes on to render. */
+  function closeName(save: boolean) {
+    if (save) setDisplayName(draft);
+    const go = nameForm === 'share';
+    nameForm = null;
+    if (go) render();
+  }
+
+  async function render() {
     busy = true;
     failed = false;
     // let the "rendering…" label paint before the canvas work blocks the thread
     await new Promise((r) => requestAnimationFrame(() => setTimeout(r, 0)));
     try {
-      img = await renderShareImage($footprint, $lang, url);
+      // lazy: lean-qr and the poster code stay out of the main bundle
+      const { renderShareImage } = await import('../lib/share-image');
+      img = await renderShareImage($footprint, $lang, url, $displayName);
     } catch {
       failed = true;
     } finally {
@@ -60,12 +85,36 @@
 <!-- The sheet is the top layer: it takes Escape before App closes the whole panel. -->
 <svelte:window
   onkeydowncapture={(e) => {
-    if (img && e.key === 'Escape') {
-      img = null;
+    if ((img || nameForm) && e.key === 'Escape') {
+      if (img) img = null;
+      else nameForm = null;
       e.stopPropagation();
     }
   }}
 />
+
+{#snippet nameEditor(mode: 'share' | 'edit')}
+  {#if nameForm === mode}
+    <form class="name-form" onsubmit={(e) => (e.preventDefault(), closeName(true))}>
+      <label for="fp-name">{$t('footprint.namePrompt')}</label>
+      <input
+        id="fp-name"
+        bind:this={nameInput}
+        bind:value={draft}
+        maxlength={NAME_MAX}
+        placeholder={$t('footprint.namePlaceholder')}
+        autocomplete="nickname"
+        enterkeyhint="done"
+      />
+      <div class="row">
+        <button class="primary" type="submit">{$t(mode === 'share' ? 'footprint.nameGenerate' : 'footprint.nameSave')}</button>
+        <button class="secondary" type="button" onclick={() => closeName(false)}>
+          {$t(mode === 'share' ? 'footprint.nameSkip' : 'footprint.nameCancel')}
+        </button>
+      </div>
+    </form>
+  {/if}
+{/snippet}
 
 {#snippet rows(items: DiveSite[], kind: 'dived' | 'wish')}
   {#if items.length}
@@ -91,9 +140,25 @@
   <div class="stats">
     <div><strong class="dived">{dived.length}</strong><span>{$t('footprint.dived')}</span></div>
     <div><strong class="wish">{wish.length}</strong><span>{$t('footprint.wish')}</span></div>
-    <div><strong>{countries}</strong><span>{shareStrings($lang).countries}</span></div>
-    <div><strong class="species">{speciesSeen}</strong><span>{shareStrings($lang).species}</span></div>
+    <div><strong>{stats.countries}</strong><span>{$t('footprint.countries')}</span></div>
+    <div><strong>{stats.species}</strong><span>{$t('footprint.species')}</span></div>
+    <div><strong>{$footprint.seen.length}</strong><span>{$t('footprint.seen')}</span></div>
   </div>
+  <div class="rank">
+    <span class="lv">{$t('rank.level').replace('{n}', String(stats.level))}</span>
+    <span class="title">{title.prefix} <b>{title.noun}</b></span>
+    {#if $displayName && nameForm !== 'edit'}
+      <button
+        class="name"
+        onclick={() => ((draft = $displayName), (nameForm = 'edit'))}
+        aria-label="{$t('footprint.nameEdit')} @{$displayName}"
+      >
+        @{$displayName}
+        <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M11 2.5l2.5 2.5L6 12.5 3 13l.5-3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" /></svg>
+      </button>
+    {/if}
+  </div>
+  {@render nameEditor('edit')}
 
   {#if dived.length + wish.length === 0}
     <p class="muted">{$t('footprint.none')}</p>
@@ -102,16 +167,20 @@
   {@render rows(wish, 'wish')}
 
   <footer>
-    <button class="primary" bind:this={shareBtn} onclick={share} disabled={busy}>
-      {busy ? $t('footprint.rendering') : $t('footprint.share')}
-    </button>
+    {#if nameForm === 'share'}
+      {@render nameEditor('share')}
+    {:else}
+      <button class="primary" bind:this={shareBtn} onclick={share} disabled={busy}>
+        {busy ? $t('footprint.rendering') : $t('footprint.share')}
+      </button>
+    {/if}
     <button class="secondary wide" onclick={copy}>{copied ? $t('card.copied') : $t('card.copyLink')}</button>
     {#if copyFailed}
       <p class="muted">{$t('card.longPressCopy')}</p>
       <input class="url" readonly value={url} onclick={(e) => e.currentTarget.setSelectionRange(0, 9999)} />
     {/if}
     {#if failed}<p class="muted">{$t('footprint.shareFailed')}</p>{/if}
-    <p class="muted">{shareStrings($lang).privacy}</p>
+    <p class="muted">{$t('footprint.privacy')}</p>
   </footer>
 </aside>
 
@@ -171,14 +240,14 @@
     background: none;
     box-shadow: inset 0 0 0 2px var(--sun);
   }
-  /* the share poster's palette in miniature: navy band, serif numerals */
+  /* the share poster's palette in miniature (share-image.ts literals): charcoal band, gold */
   .stats {
     display: flex;
-    gap: 12px;
-    margin: 4px 0 8px;
-    padding: 14px 18px 12px;
+    gap: 8px;
+    margin: 4px 0 0;
+    padding: 12px 14px 10px;
     border-radius: 12px;
-    background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-mid));
+    background: #101113;
   }
   .stats > div {
     flex: 1;
@@ -186,23 +255,80 @@
   }
   .stats strong {
     display: block;
-    color: var(--paper);
-    font-family: var(--font-serif);
-    font-size: 40px;
-    line-height: 1.05;
+    color: #f3f1ec;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
   }
   .stats span {
-    font-size: 12px;
-    color: var(--seafoam);
+    display: block;
+    font-size: 11px;
+    line-height: 1.25;
+    color: #8b8e94;
   }
   strong.dived {
-    color: var(--coral);
+    color: #d4a74a;
   }
-  strong.wish {
-    color: var(--sun);
+  .rank {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 2px 8px;
+    margin: 8px 0 4px;
+    font-size: 13px;
   }
-  strong.species {
-    color: var(--seafoam);
+  .rank .lv {
+    color: var(--ink-soft);
+    font-size: 12px;
+  }
+  .rank b {
+    color: #a77b25; /* poster gold, darkened for contrast on paper */
+  }
+  .rank .name {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    min-height: 32px;
+    padding: 0 10px;
+    border-radius: 999px;
+    background: var(--paper-2);
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .name-form {
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--paper-2);
+  }
+  .name-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .name-form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-size: 16px; /* < 16 px makes iOS zoom the page on focus */
+  }
+  .name-form .row {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .name-form .primary {
+    flex: 1;
+  }
+  .name-form .secondary {
+    background: var(--paper);
   }
   .sites {
     list-style: none;
@@ -307,8 +433,8 @@
     justify-content: center;
     gap: 12px;
     padding: 16px;
-    background: rgba(14, 42, 71, 0.9);
-    color: var(--map-line);
+    background: rgba(16, 17, 19, 0.92); /* the poster charcoal */
+    color: #f3f1ec;
   }
   .sheet img {
     max-width: min(100%, 420px);

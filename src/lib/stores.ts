@@ -5,7 +5,8 @@ import type { Lang } from './types';
 /**
  * Global UI state + URL synchronisation.
  *
- * URL contract (shareable): ?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=globe (anything else is dropped)
+ * URL contract (shareable): ?lang=zh|en&m=1..12&site=<id>&sp=<speciesId>&view=atlas (anything else is dropped;
+ * the globe is the default view and writes nothing, an incoming view=globe is still honoured)
  * Priority on load: URL > localStorage (lang, view) > browser language.
  */
 
@@ -53,19 +54,21 @@ export function toggleLang(): void {
 export type Theme = 'day' | 'night';
 export const theme = readable<Theme>('day');
 
-// ---- flat atlas / globe (SPEC §3.4): `view=globe` in the URL, else the last explicit toggle ----
+// ---- flat atlas / globe (SPEC §3.4): URL `view`, else the last explicit toggle, else the globe ----
 
 export type MapView = 'atlas' | 'globe';
 const VIEW_KEY = 'dive-atlas:view';
 
+/** Globe by default (2026-10-22, owner: "默认用地球模式，不然没人会切换"). */
 function initialMapView(): MapView {
-  if (initialParam('view') === 'globe') return 'globe';
+  const fromUrl = initialParam('view');
+  if (fromUrl === 'atlas' || fromUrl === 'globe') return fromUrl;
   try {
-    if (localStorage.getItem(VIEW_KEY) === 'globe') return 'globe';
+    if (localStorage.getItem(VIEW_KEY) === 'atlas') return 'atlas';
   } catch {
     /* ignore */
   }
-  return 'atlas';
+  return 'globe';
 }
 
 export const mapView = writable<MapView>(initialMapView());
@@ -101,13 +104,15 @@ export function openSite(id: string): void {
   flyTo.set(id);
 }
 
-// ---- footprint: 潜过 / 想去 per site (SPEC §3.4, §6.1 #10–11), local only ----
+// ---- footprint: 潜过 / 想去 per site, 目击 per species (SPEC §3.4, §6.1 #10–11), local only ----
 
 export type Mark = 'dived' | 'wish';
 export interface Footprint {
   v: 1;
   dived: string[];
   wish: string[];
+  /** Species ids the diver has sighted (目击过); added 2026-10-22, missing in older storage → []. */
+  seen: string[];
 }
 const FP_KEY = 'dive-atlas:footprint';
 function loadFootprint(): Footprint {
@@ -116,15 +121,16 @@ function loadFootprint(): Footprint {
     if (raw) {
       const p = JSON.parse(raw) as Partial<Footprint>;
       if (p && p.v === 1 && Array.isArray(p.dived) && Array.isArray(p.wish)) {
-        // drop ids of sites that have since left sites.json
+        // drop ids of sites / species that have since left the data
         const ok = (x: unknown): x is string => typeof x === 'string' && siteById.has(x);
-        return { v: 1, dived: p.dived.filter(ok), wish: p.wish.filter(ok) };
+        const okSp = (x: unknown): x is string => typeof x === 'string' && speciesById.has(x);
+        return { v: 1, dived: p.dived.filter(ok), wish: p.wish.filter(ok), seen: Array.isArray(p.seen) ? p.seen.filter(okSp) : [] };
       }
     }
   } catch {
     /* ignore */
   }
-  return { v: 1, dived: [], wish: [] };
+  return { v: 1, dived: [], wish: [], seen: [] };
 }
 
 export const footprint = writable<Footprint>(loadFootprint());
@@ -147,9 +153,50 @@ export function setMark(id: string, mark: Mark | null): void {
     const wish = fp.wish.filter((x) => x !== id);
     if (mark === 'dived') dived.push(id);
     else if (mark === 'wish') wish.push(id);
-    return { v: 1, dived, wish };
+    return { ...fp, dived, wish };
   });
 }
+
+/**
+ * Sightings (目击过), for the species panel's toggle: `isSeen($footprint, sp.id)` is reactive in a
+ * component, `toggleSeen(sp.id)` flips it. Independent of the site marks; feeds the poster's 标本录.
+ */
+export function isSeen(fp: Footprint, speciesId: string): boolean {
+  return fp.seen.includes(speciesId);
+}
+export function toggleSeen(speciesId: string): void {
+  footprint.update((fp) => ({
+    ...fp,
+    seen: fp.seen.includes(speciesId) ? fp.seen.filter((x) => x !== speciesId) : [...fp.seen, speciesId],
+  }));
+}
+
+// ---- name on the share poster: trimmed, at most 12 characters, local only ----
+
+const NAME_KEY = 'dive-atlas:name';
+export const NAME_MAX = 12;
+/** Trim and cut to NAME_MAX characters (code points, so an emoji is never split). */
+const cleanName = (s: string) => [...s.trim()].slice(0, NAME_MAX).join('').trim();
+function loadName(): string {
+  try {
+    return cleanName(localStorage.getItem(NAME_KEY) ?? '');
+  } catch {
+    return '';
+  }
+}
+/** '' = no name yet. Set it through setDisplayName so it is always clean. */
+export const displayName = writable<string>(loadName());
+export function setDisplayName(s: string): void {
+  displayName.set(cleanName(s));
+}
+displayName.subscribe((n) => {
+  try {
+    if (n) localStorage.setItem(NAME_KEY, n);
+    else localStorage.removeItem(NAME_KEY);
+  } catch {
+    /* ignore */
+  }
+});
 
 /** The link behind the share image's QR and "copy link": the plain site in the viewer's language. */
 export function siteUrl(l: Lang): string {
@@ -165,7 +212,7 @@ derived([lang, month, selectedSiteId, speciesFilter, mapView], ([$lang, $month, 
   if ($month) params.set('m', String($month));
   if ($site) params.set('site', $site);
   if ($sp) params.set('sp', $sp);
-  if ($mapView === 'globe') params.set('view', 'globe');
+  if ($mapView === 'atlas') params.set('view', 'atlas');
   const qs = params.toString();
   return qs ? `?${qs}` : '';
 }).subscribe((search) => {

@@ -8,6 +8,7 @@
     "sci": "Rhincodon typus",
     "sprite": "whale-shark",
     "sizeClass": "xl",
+    "rarity": "rare",
     "tags": [
       "pelagic",
       "big"
@@ -27,6 +28,7 @@
     "sci": "Mobula alfredi",
     "sprite": "reef-manta",
     "sizeClass": "l",
+    "rarity": "rare",
     "tags": [
       "big"
     ],
@@ -45,6 +47,7 @@
     "sci": "Mobula birostris",
     "sprite": "oceanic-manta",
     "sizeClass": "xl",
+    "rarity": "epic",
     "tags": [
       "pelagic",
       "big"
@@ -64,6 +67,7 @@
     "sci": "Sphyrna lewini",
     "sprite": "hammerhead",
     "sizeClass": "l",
+    "rarity": "epic",
     "tags": [
       "pelagic",
       "shark"
@@ -83,6 +87,7 @@
     "sci": "Alopias pelagicus",
     "sprite": "thresher-shark",
     "sizeClass": "l",
+    "rarity": "rare",
     "tags": [
       "shark"
     ],
@@ -101,6 +106,7 @@
     "sci": "Carcharhinus amblyrhynchos",
     "sprite": "grey-reef-shark",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "shark"
     ],
@@ -119,6 +125,7 @@
     "sci": "Triaenodon obesus",
     "sprite": "whitetip-reef-shark",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "shark"
     ],
@@ -137,6 +144,7 @@
     "sci": "Galeocerdo cuvier",
     "sprite": "tiger-shark",
     "sizeClass": "l",
+    "rarity": "epic",
     "tags": [
       "shark",
       "big"
@@ -156,6 +164,7 @@
     "sci": "Carcharhinus galapagensis",
     "sprite": "galapagos-shark",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "shark"
     ],
@@ -174,6 +183,7 @@
     "sci": "Aetobatus narinari",
     "sprite": "eagle-ray",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [],
     "lengthM": 2,
     "blurb": {
@@ -190,6 +200,7 @@
     "sci": "Chelonia mydas",
     "sprite": "green-turtle",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "turtle"
     ],
@@ -208,6 +219,7 @@
     "sci": "Eretmochelys imbricata",
     "sprite": "hawksbill",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "turtle"
     ],
@@ -226,6 +238,7 @@
     "sci": "Megaptera novaeangliae",
     "sprite": "humpback-whale",
     "sizeClass": "xl",
+    "rarity": "legendary",
     "tags": [
       "whale",
       "big"
@@ -245,6 +258,7 @@
     "sci": "Physeter macrocephalus",
     "sprite": "sperm-whale",
     "sizeClass": "xl",
+    "rarity": "legendary",
     "tags": [
       "whale",
       "big"
@@ -264,6 +278,7 @@
     "sci": "Orcinus orca",
     "sprite": "orca",
     "sizeClass": "xl",
+    "rarity": "legendary",
     "tags": [
       "whale",
       "big",
@@ -284,6 +299,7 @@
     "sci": "Stenella longirostris",
     "sprite": "dolphin",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [],
     "lengthM": 2,
     "blurb": {
@@ -300,6 +316,7 @@
     "sci": "Dugong dugon",
     "sprite": "dugong",
     "sizeClass": "l",
+    "rarity": "epic",
     "tags": [],
     "lengthM": 3,
     "blurb": {
@@ -316,6 +333,7 @@
     "sci": "Zalophus wollebaeki",
     "sprite": "sea-lion",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [],
     "lengthM": 2,
     "blurb": {
@@ -332,6 +350,7 @@
     "sci": "Mola mola",
     "sprite": "sunfish",
     "sizeClass": "l",
+    "rarity": "epic",
     "tags": [
       "pelagic"
     ],
@@ -350,6 +369,7 @@
     "sci": "Sphyraena qenie",
     "sprite": "barracuda",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "school"
     ],
@@ -368,6 +388,7 @@
     "sci": "Caranx sexfasciatus",
     "sprite": "jack-school",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "school"
     ],
@@ -386,6 +407,7 @@
     "sci": "Sardinops sagax",
     "sprite": "sardine-run",
     "sizeClass": "l",
+    "rarity": "rare",
     "tags": [
       "school"
     ],
@@ -404,6 +426,7 @@
     "sci": "Bolbometopon muricatum",
     "sprite": "bumphead-parrotfish",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [],
     "lengthM": 1.2,
     "blurb": {
@@ -420,6 +443,7 @@
     "sci": "Cheilinus undulatus",
     "sprite": "napoleon-wrasse",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [],
     "lengthM": 1.5,
     "blurb": {
@@ -436,6 +460,7 @@
     "sci": "Hippocampus bargibanti",
     "sprite": "pygmy-seahorse",
     "sizeClass": "s",
+    "rarity": "rare",
     "tags": [
       "macro"
     ],
@@ -454,6 +479,7 @@
     "sci": "Chromodoris annae",
     "sprite": "nudibranch",
     "sizeClass": "s",
+    "rarity": "common",
     "tags": [
       "macro"
     ],
@@ -472,6 +498,7 @@
     "sci": "Synchiropus splendidus",
     "sprite": "mandarinfish",
     "sizeClass": "s",
+    "rarity": "rare",
     "tags": [
       "macro"
     ],
@@ -490,6 +517,7 @@
     "sci": "Stegostoma tigrinum",
     "sprite": "leopard-shark",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "shark"
     ],
@@ -508,6 +536,7 @@
     "sci": "Antennarius pictus",
     "sprite": "frogfish",
     "sizeClass": "s",
+    "rarity": "common",
     "tags": [
       "macro"
     ],
@@ -526,6 +555,7 @@
     "sci": "Carcharhinus longimanus",
     "sprite": "oceanic-whitetip",
     "sizeClass": "l",
+    "rarity": "epic",
     "tags": [
       "pelagic",
       "shark"
@@ -545,6 +575,7 @@
     "sci": "Epinephelus tukula",
     "sprite": "potato-cod",
     "sizeClass": "l",
+    "rarity": "rare",
     "tags": [
       "big"
     ],
@@ -563,6 +594,7 @@
     "sci": "Balaenoptera acutorostrata",
     "sprite": "dwarf-minke-whale",
     "sizeClass": "xl",
+    "rarity": "legendary",
     "tags": [
       "whale",
       "big"
@@ -582,6 +614,7 @@
     "sci": "Epinephelus lanceolatus",
     "sprite": "giant-grouper",
     "sizeClass": "l",
+    "rarity": "rare",
     "tags": [
       "big"
     ],
@@ -600,6 +633,7 @@
     "sci": "Carcharias taurus",
     "sprite": "grey-nurse-shark",
     "sizeClass": "l",
+    "rarity": "rare",
     "tags": [
       "shark"
     ],
@@ -618,6 +652,7 @@
     "sci": "Carcharodon carcharias",
     "sprite": "great-white-shark",
     "sizeClass": "xl",
+    "rarity": "epic",
     "tags": [
       "shark",
       "big",
@@ -639,6 +674,7 @@
     "sci": "Bathytoshia brevicaudata",
     "sprite": "short-tail-stingray",
     "sizeClass": "l",
+    "rarity": "common",
     "tags": [
       "coldwater"
     ],
@@ -657,6 +693,7 @@
     "sci": "Hypanus americanus",
     "sprite": "southern-stingray",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [],
     "lengthM": 1.5,
     "blurb": {
@@ -673,6 +710,7 @@
     "sci": "Carcharhinus perezi",
     "sprite": "caribbean-reef-shark",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "shark"
     ],
@@ -691,6 +729,7 @@
     "sci": "Carcharhinus falciformis",
     "sprite": "silky-shark",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "shark",
       "pelagic"
@@ -710,6 +749,7 @@
     "sci": "Negaprion brevirostris",
     "sprite": "lemon-shark",
     "sizeClass": "l",
+    "rarity": "common",
     "tags": [
       "shark"
     ],
@@ -728,6 +768,7 @@
     "sci": "Carcharhinus leucas",
     "sprite": "bull-shark",
     "sizeClass": "l",
+    "rarity": "rare",
     "tags": [
       "shark",
       "big"
@@ -747,6 +788,7 @@
     "sci": "Ginglymostoma cirratum",
     "sprite": "nurse-shark",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "shark"
     ],
@@ -765,6 +807,7 @@
     "sci": "Crocodylus acutus",
     "sprite": "american-crocodile",
     "sizeClass": "l",
+    "rarity": "rare",
     "tags": [
       "big"
     ],
@@ -783,6 +826,7 @@
     "sci": "Acropora hyacinthus",
     "sprite": "hard-coral",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "coral"
     ],
@@ -801,6 +845,7 @@
     "sci": "Dendronephthya sp.",
     "sprite": "soft-coral",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "coral"
     ],
@@ -819,6 +864,7 @@
     "sci": "Balaenoptera edeni",
     "sprite": "brydes-whale",
     "sizeClass": "xl",
+    "rarity": "epic",
     "tags": [
       "whale",
       "big"
@@ -838,6 +884,7 @@
     "sci": "Carcharhinus melanopterus",
     "sprite": "blacktip-reef-shark",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "shark"
     ],
@@ -856,6 +903,7 @@
     "sci": "Mobula tarapacana",
     "sprite": "sicklefin-devil-ray",
     "sizeClass": "l",
+    "rarity": "rare",
     "tags": [
       "pelagic",
       "big"
@@ -875,6 +923,7 @@
     "sci": "Epinephelus marginatus",
     "sprite": "dusky-grouper",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [],
     "lengthM": 1.2,
     "blurb": {
@@ -891,6 +940,7 @@
     "sci": "Salvelinus alpinus",
     "sprite": "arctic-char",
     "sizeClass": "s",
+    "rarity": "common",
     "tags": [
       "coldwater"
     ],
@@ -909,6 +959,7 @@
     "sci": "Halichoerus grypus",
     "sprite": "seal",
     "sizeClass": "m",
+    "rarity": "common",
     "tags": [
       "coldwater"
     ],
@@ -927,6 +978,7 @@
     "sci": "Parapriacanthus ransonneti",
     "sprite": "glassfish",
     "sizeClass": "m",
+    "rarity": "common",
     "lengthM": 1,
     "tags": [
       "school"
@@ -945,6 +997,7 @@
     "sci": "Macrocystis pyrifera",
     "sprite": "giant-kelp",
     "sizeClass": "l",
+    "rarity": "common",
     "lengthM": 20,
     "tags": [
       "kelp",
@@ -964,6 +1017,7 @@
     "sci": "Stereolepis gigas",
     "sprite": "giant-sea-bass",
     "sizeClass": "l",
+    "rarity": "rare",
     "lengthM": 2,
     "tags": [
       "big"
@@ -982,6 +1036,7 @@
     "sci": "Triakis semifasciata",
     "sprite": "california-leopard-shark",
     "sizeClass": "m",
+    "rarity": "common",
     "lengthM": 1.4,
     "tags": [
       "shark"
@@ -1000,6 +1055,7 @@
     "sci": "Kajikia audax",
     "sprite": "striped-marlin",
     "sizeClass": "l",
+    "rarity": "epic",
     "lengthM": 2.8,
     "tags": [
       "pelagic",
@@ -1019,6 +1075,7 @@
     "sci": "Balaenoptera musculus",
     "sprite": "blue-whale",
     "sizeClass": "xl",
+    "rarity": "legendary",
     "lengthM": 24,
     "tags": [
       "whale",
@@ -1038,6 +1095,7 @@
     "sci": "Phyllopteryx taeniolatus",
     "sprite": "weedy-seadragon",
     "sizeClass": "s",
+    "rarity": "rare",
     "lengthM": 0.4,
     "tags": [
       "coldwater"
@@ -1056,6 +1114,7 @@
     "sci": "Leptomithrax gaimardii",
     "sprite": "giant-spider-crab",
     "sizeClass": "s",
+    "rarity": "rare",
     "lengthM": 0.4,
     "tags": [
       "coldwater"
@@ -1074,6 +1133,7 @@
     "sci": "Laticauda colubrina",
     "sprite": "sea-snake",
     "sizeClass": "m",
+    "rarity": "common",
     "lengthM": 1,
     "tags": [],
     "blurb": {
@@ -1090,6 +1150,7 @@
     "sci": "Hemiscyllium freycineti",
     "sprite": "walking-shark",
     "sizeClass": "m",
+    "rarity": "legendary",
     "lengthM": 0.7,
     "tags": [
       "shark"
@@ -1108,6 +1169,7 @@
     "sci": "Sphyrna mokarran",
     "sprite": "great-hammerhead",
     "sizeClass": "l",
+    "rarity": "epic",
     "lengthM": 4,
     "tags": [
       "shark",
@@ -1127,6 +1189,7 @@
     "sci": "Epinephelus itajara",
     "sprite": "goliath-grouper",
     "sizeClass": "l",
+    "rarity": "rare",
     "lengthM": 2,
     "tags": [
       "big"
@@ -1145,6 +1208,7 @@
     "sci": "Hippocampus spp.",
     "sprite": "seahorse",
     "sizeClass": "s",
+    "rarity": "common",
     "lengthM": 0.15,
     "tags": [
       "macro"
@@ -1163,6 +1227,7 @@
     "sci": "Amphiprion clarkii",
     "sprite": "clownfish",
     "sizeClass": "s",
+    "rarity": "common",
     "lengthM": 0.12,
     "tags": [
       "reef",
@@ -1182,6 +1247,7 @@
     "sci": "Torquigener albomaculosus",
     "sprite": "white-spotted-pufferfish",
     "sizeClass": "s",
+    "rarity": "rare",
     "lengthM": 0.12,
     "tags": [
       "sand",
@@ -1201,6 +1267,7 @@
     "sci": "Clione limacina",
     "sprite": "clione",
     "sizeClass": "s",
+    "rarity": "rare",
     "lengthM": 0.03,
     "tags": [
       "coldwater",
@@ -1220,6 +1287,7 @@
     "sci": "Antipathella fiordensis",
     "sprite": "black-coral",
     "sizeClass": "m",
+    "rarity": "common",
     "lengthM": 2,
     "tags": [
       "coral",
@@ -1239,6 +1307,7 @@
     "sci": "Corynactis australis",
     "sprite": "jewel-anemone",
     "sizeClass": "s",
+    "rarity": "common",
     "lengthM": 0.02,
     "tags": [
       "macro",
@@ -1258,6 +1327,7 @@
     "sci": "Phycodurus eques",
     "sprite": "leafy-seadragon",
     "sizeClass": "s",
+    "rarity": "rare",
     "lengthM": 0.35,
     "tags": [
       "coldwater"
@@ -1276,6 +1346,7 @@
     "sci": "Sepia apama",
     "sprite": "giant-cuttlefish",
     "sizeClass": "s",
+    "rarity": "rare",
     "lengthM": 0.6,
     "tags": [
       "coldwater"
@@ -1294,6 +1365,7 @@
     "sci": "Eubalaena australis",
     "sprite": "southern-right-whale",
     "sizeClass": "xl",
+    "rarity": "epic",
     "lengthM": 15,
     "tags": [
       "whale",
@@ -1314,6 +1386,7 @@
     "sci": "Salminus brasiliensis",
     "sprite": "dourado",
     "sizeClass": "s",
+    "rarity": "common",
     "lengthM": 0.8,
     "tags": [
       "freshwater"
@@ -1332,6 +1405,7 @@
     "sci": "Notorynchus cepedianus",
     "sprite": "broadnose-sevengill-shark",
     "sizeClass": "l",
+    "rarity": "rare",
     "lengthM": 2.5,
     "tags": [
       "shark",
@@ -1351,6 +1425,7 @@
     "sci": "Caretta caretta",
     "sprite": "loggerhead-turtle",
     "sizeClass": "m",
+    "rarity": "common",
     "lengthM": 0.9,
     "tags": [
       "turtle"
@@ -1369,6 +1444,7 @@
     "sci": "Cetorhinus maximus",
     "sprite": "basking-shark",
     "sizeClass": "xl",
+    "rarity": "legendary",
     "lengthM": 8,
     "tags": [
       "pelagic",
@@ -1389,6 +1465,7 @@
     "sci": "Trichechus manatus",
     "sprite": "manatee",
     "sizeClass": "l",
+    "rarity": "rare",
     "lengthM": 3,
     "tags": [
       "big"
@@ -1407,6 +1484,7 @@
     "sci": "Squatina squatina",
     "sprite": "angel-shark",
     "sizeClass": "m",
+    "rarity": "rare",
     "lengthM": 1.5,
     "tags": [
       "shark"
@@ -1425,6 +1503,7 @@
     "sci": "Corallium rubrum",
     "sprite": "red-coral",
     "sizeClass": "s",
+    "rarity": "common",
     "lengthM": 0.2,
     "tags": [
       "coral"
@@ -1443,6 +1522,7 @@
     "sci": "Paramuricea clavata",
     "sprite": "red-gorgonian",
     "sizeClass": "m",
+    "rarity": "common",
     "lengthM": 1,
     "tags": [
       "coral"
@@ -1461,6 +1541,7 @@
     "sci": "Anarrhichthys ocellatus",
     "sprite": "wolf-eel",
     "sizeClass": "m",
+    "rarity": "rare",
     "lengthM": 2,
     "tags": [
       "coldwater"
@@ -1479,6 +1560,7 @@
     "sci": "Enteroctopus dofleini",
     "sprite": "giant-pacific-octopus",
     "sizeClass": "m",
+    "rarity": "rare",
     "lengthM": 3,
     "tags": [
       "coldwater"
@@ -1497,6 +1579,7 @@
     "sci": "Odobenus rosmarus",
     "sprite": "walrus",
     "sizeClass": "l",
+    "rarity": "legendary",
     "lengthM": 3,
     "tags": [],
     "blurb": {
@@ -1513,6 +1596,7 @@
     "sci": "Anarhichas lupus",
     "sprite": "wolffish",
     "sizeClass": "m",
+    "rarity": "rare",
     "lengthM": 1.2,
     "tags": [],
     "blurb": {
@@ -1529,6 +1613,7 @@
     "sci": "Gadus morhua",
     "sprite": "atlantic-cod",
     "sizeClass": "m",
+    "rarity": "common",
     "lengthM": 1,
     "tags": [],
     "blurb": {
@@ -1545,6 +1630,7 @@
     "sci": "Pygoscelis papua",
     "sprite": "penguin",
     "sizeClass": "s",
+    "rarity": "epic",
     "lengthM": 0.8,
     "tags": [],
     "blurb": {

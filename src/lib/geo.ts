@@ -28,18 +28,26 @@ type Props = { ADM0_A3: string };
 type Country = (TopoPolygon<Props> | TopoMultiPolygon<Props>) & { properties: Props };
 const SMALL_SR = 1e-4;
 
-let pending: Promise<Coast> | null = null;
+const pending = new Map<boolean, Promise<Coast>>();
 
-export function loadCoast(): Promise<Coast> {
-  pending ??= fetchCoast().catch((e) => {
-    pending = null;
-    throw e;
-  });
-  return pending;
+/**
+ * `detail`: the 15 % build (`npm run geo -- --detail`, ~140 KB gzip) for deep zoom; the map fetches it
+ * lazily, never on the first load. Each file is fetched once; a failed fetch is retried on the next call.
+ */
+export function loadCoast(detail = false): Promise<Coast> {
+  let p = pending.get(detail);
+  if (!p) {
+    p = fetchCoast(detail ? 'countries-detail' : 'countries').catch((e) => {
+      pending.delete(detail);
+      throw e;
+    });
+    pending.set(detail, p);
+  }
+  return p;
 }
 
-async function fetchCoast(): Promise<Coast> {
-  const res = await fetch(`${import.meta.env.BASE_URL}geo/countries.topo.json`);
+async function fetchCoast(file: string): Promise<Coast> {
+  const res = await fetch(`${import.meta.env.BASE_URL}geo/${file}.topo.json`);
   if (!res.ok) throw new Error(String(res.status));
   const topo = (await res.json()) as Topology;
   const key = Object.keys(topo.objects)[0];

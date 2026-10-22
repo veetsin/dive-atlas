@@ -4,10 +4,10 @@
   import { select } from 'd3-selection';
   import { zoom as d3zoom, zoomIdentity, type ZoomTransform, type ZoomBehavior, type D3ZoomEvent } from 'd3-zoom';
   import { geoCircle, geoDistance, geoGraticule, geoInterpolate } from 'd3-geo';
-  import type { MultiPolygon, MultiLineString, Position } from 'geojson';
+  import type { MultiLineString, Position } from 'geojson';
 
   import { createMapProjection, createGlobeProjection, globeRadius, LAT_RANGE, type MapProjection } from '../lib/projection';
-  import { loadCoast } from '../lib/geo';
+  import { loadCoast, type Coast } from '../lib/geo';
   import { sites, siteById, labels, regionById, inSeason, speciesById, spriteUrl, spritePx, SPRITE_PX } from '../lib/data';
   import { month, selectedSiteId, speciesFilter, lang, footprint, markOf, flyTo, mapView } from '../lib/stores';
   import { t, tx } from '../lib/i18n';
@@ -25,9 +25,11 @@
    * `centre`, zoom stays in `zoomT` as a scale about the viewport centre, and drags rotate.
    */
 
-  // ponytail: 12×, not 16×: only the 3 % world TopoJSON is loaded (the `--detail` build is never fetched),
-  // and its coastlines turn into polygons past that. Wire countries-detail in before raising this.
-  const ZOOM_EXTENT: [number, number] = [1, 12];
+  // ponytail: 24× is about where the 15 % detail build (lon quantised to 0.036°) starts to show steps on a
+  // 1280 px screen; past that, rebuild countries-detail with a finer quantisation in build-geo.sh.
+  const ZOOM_EXTENT: [number, number] = [1, 24];
+  /** Past this (flat-map) zoom the detail coastline is fetched once and drawn instead of the world one. */
+  const DETAIL_K = 6;
   /** A tap also offers every marker whose centre is this close (CSS px), not just the ones under it. */
   const NEAR_PX = 18;
   /** Site labels appear above this zoom; narrow screens need more room. */
@@ -35,6 +37,8 @@
   /** A sea-name tier shows once one degree of longitude spans this many pixels. */
   const TIER_PX_PER_DEG = [0, 0, 2.2, 4.5];
   const PHONE_START: { center: [number, number]; k: number } = { center: [118, 8], k: 1.9 };
+  /** Share of the phone's width the globe's disc spans in the default view. */
+  const PHONE_GLOBE_FILL = 0.92;
   /** Below this zoom, regions with at least CLUSTER_MIN visible sites collapse into one bubble (SPEC §6.1 #13). */
   const CLUSTER_K = { wide: 1.6, narrow: 2.6 };
   const CLUSTER_MIN = 3;
@@ -47,10 +51,8 @@
   /** On-screen y of the equator / height; drives the light band of the day ocean. */
   let eqY = $state(0.5);
 
-  let landGeom: MultiPolygon | null = $state(null);
-  let landLoGeom: MultiPolygon | null = $state(null);
-  let bigGeom: MultiPolygon | null = $state(null);
-  let grlGeom: MultiPolygon | null = $state(null);
+  let baseCoast = $state.raw<Coast | null>(null);
+  let detailCoast = $state.raw<Coast | null>(null);
   let geoStatus: 'loading' | 'ready' | 'missing' = $state('loading');
   let brokenSprites = $state(new Set<string>());
 
@@ -90,10 +92,13 @@
       Array.from({ length: 181 }, (_, i): Position => [-180 + i * 2, lat]),
     ),
   };
-  const landD = $derived(proj && landGeom ? (proj.path((moving && landLoGeom) || landGeom) ?? '') : '');
+  /** Zoomed in far enough for the detail coastline; it replaces the world one once loaded, both views. */
+  const deep = $derived(effK >= DETAIL_K);
+  const coast = $derived((deep && detailCoast) || baseCoast);
+  const landD = $derived(proj && coast ? (proj.path(moving ? coast.landLo : coast.land) ?? '') : '');
   // Motion LOD: the wide shelf bands (hidden by svg.moving anyway) are not re-projected while the globe turns.
-  const bigD = $derived(proj && bigGeom && !moving ? (proj.path(bigGeom) ?? '') : '');
-  const grlD = $derived(proj && grlGeom ? (proj.unwrappedPath(grlGeom) ?? '') : '');
+  const bigD = $derived(proj && coast && !moving ? (proj.path(coast.big) ?? '') : '');
+  const grlD = $derived(proj && coast?.greenland ? (proj.unwrappedPath(coast.greenland) ?? '') : '');
   const graticuleD = $derived(proj ? (proj.path(globe ? GRATICULE_GLOBE : GRATICULE) ?? '') : '');
   const tropicsD = $derived(proj ? (proj.path(TROPICS) ?? '') : '');
   const capD = $derived(proj && globe ? (proj.path(POLAR_CAP) ?? '') : '');
@@ -324,16 +329,16 @@
   // ---- data loading ----
   async function loadGeo() {
     try {
-      const coast = await loadCoast();
-      landGeom = coast.land;
-      landLoGeom = coast.landLo;
-      bigGeom = coast.big;
-      grlGeom = coast.greenland;
+      baseCoast = await loadCoast();
       geoStatus = 'ready';
     } catch {
       geoStatus = 'missing';
     }
   }
+  // First deep zoom fetches the detail map; until it arrives (or if it fails) the world map stays.
+  $effect(() => {
+    if (deep && !detailCoast) loadCoast(true).then((c) => (detailCoast = c), () => {});
+  });
 
   // ---- interaction ----
   function select_(id: string) {
@@ -473,7 +478,8 @@
     const sel = select(svgEl);
     if (globe) {
       centre = clampCentre(c ?? (width < 600 ? PHONE_START.center : (flat.projection.invert?.([width / 2, height / 2]) ?? PHONE_START.center)));
-      zoomBehavior.transform(sel, zoomIdentity); // k = 1; the zoom handler places it about the centre
+      // Phones: the disc spans PHONE_GLOBE_FILL of the width, not min(w, h) − 48 px. The zoom handler places it about the centre.
+      zoomBehavior.transform(sel, zoomIdentity.scale(width < 600 ? Math.max(1, (PHONE_GLOBE_FILL * width) / (2 * R)) : 1));
       return;
     }
     // Narrow screens: the whole world is too small to read, so start on Southeast Asia.

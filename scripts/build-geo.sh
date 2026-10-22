@@ -2,7 +2,7 @@
 # Build the base-map TopoJSON from Natural Earth (China point-of-view variant).
 #
 #   npm run geo              # world view  → public/geo/countries.topo.json        (~3% of vertices)
-#   npm run geo -- --detail  # also build  → public/geo/countries-detail.topo.json (~15%, for zoom ≥ 4x, lazy-loaded)
+#   npm run geo -- --detail  # also build  → public/geo/countries-detail.topo.json (~15%, lazy-loaded past 6x zoom)
 #
 # Source: Natural Earth v5+ via the nvkelso/natural-earth-vector GitHub mirror (public domain).
 # Note: the point-of-view variants (ne_*_admin_0_countries_chn) only exist at 10m scale, so both

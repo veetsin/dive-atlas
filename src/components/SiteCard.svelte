@@ -1,9 +1,9 @@
 <script lang="ts">
   import { t, tx, MONTH_KEYS } from '../lib/i18n';
-  import { lang, month, shareUrl, footprint, setMark, markOf } from '../lib/stores';
+  import { lang, month, shareUrl, footprint, setMark, markOf, isSeen, toggleSeen } from '../lib/stores';
   import { speciesById, regionById, spriteUrl, loadSiteDetails } from '../lib/data';
   import { copyText } from '../lib/clipboard';
-  import type { DiveSite, SiteDetails, Species, LocalizedText } from '../lib/types';
+  import type { DiveSite, SiteDetails, LocalizedText, Rarity } from '../lib/types';
 
   // App.svelte wraps this in {#key site.id}, so transient state resets per site for free.
   let { site, onclose }: { site: DiveSite; onclose: () => void } = $props();
@@ -12,12 +12,14 @@
   let copied = $state(false);
   let copyFailed = $state(false);
   let heroBroken = $state(false);
-  /** Text block, loaded lazily (one shared chunk for all sites). */
+  /** Text block and species blurbs, loaded lazily (one shared chunk for all sites). */
   let details: SiteDetails | undefined = $state();
+  let blurbs: Record<string, LocalizedText> | undefined = $state();
   $effect(() => {
     const id = site.id;
     loadSiteDetails().then((all) => {
-      if (id === site.id) details = all[id];
+      if (id === site.id) details = all.sites[id];
+      blurbs = all.speciesBlurbs;
     });
   });
 
@@ -27,13 +29,15 @@
     return sp ? spriteUrl(sp.sprite, 512) : undefined;
   });
 
-  // Species chips open one inline panel at a time. `blurb` may not be in the data yet.
-  type SpeciesInfo = Species & { blurb?: LocalizedText };
+  // Species chips open one inline panel at a time.
   /** lengthM of a school, a reef or a kelp stand is not a body length, so it is not shown. */
   const NO_LENGTH = new Set(['school', 'coral', 'kelp']);
   let openSp: string | null = $state(null);
   const chipEls: Record<string, HTMLButtonElement> = {};
-  const openInfo = $derived(openSp ? (speciesById.get(openSp) as SpeciesInfo | undefined) : undefined);
+  const openInfo = $derived(openSp ? speciesById.get(openSp) : undefined);
+  const openBlurb = $derived(openSp ? blurbs?.[openSp] : undefined);
+  /** Same marks as the share poster's 标本录 (share-image.ts `diamonds`). */
+  const GEMS: Record<Rarity, string> = { common: '', rare: '◆', epic: '◆◆', legendary: '◆◆◆' };
   const lengthText = (m: number) => (m >= 1 ? `${+m.toFixed(1)} m` : `${Math.round(m * 100)} cm`);
   /** Collapse from the panel's × and hand focus back to the chip that opened it. */
   function collapse() {
@@ -57,6 +61,10 @@
     if (ok) setTimeout(() => (copied = false), 1600);
   }
 </script>
+
+{#snippet check()}
+  <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+{/snippet}
 
 <aside class="card" aria-label={$tx(site.name)}>
   <button class="close" onclick={onclose} aria-label={$t('card.close')}>×</button>
@@ -100,27 +108,42 @@
         {@const thumb = sp && spriteUrl(sp.sprite, 192)}
         <button
           class="chip"
+          class:top={sp?.rarity === 'epic' || sp?.rarity === 'legendary'}
           bind:this={chipEls[id]}
           aria-expanded={openSp === id}
           aria-controls="sp-panel"
           onclick={() => (openSp = openSp === id ? null : id)}
         >
-          {#if thumb}<img src={thumb} alt="" loading="lazy" decoding="async" />{:else}<span class="disc"></span>{/if}
+          <span class="thumb">
+            {#if thumb}<img src={thumb} alt="" loading="lazy" decoding="async" />{:else}<span class="disc"></span>{/if}
+            {#if isSeen($footprint, id)}<span class="tick" role="img" aria-label={$t('species.sighted')}>{@render check()}</span>{/if}
+          </span>
           {sp ? $tx(sp.name) : id}
         </button>
       {/each}
     </div>
     {#if openInfo}
       {@const big = spriteUrl(openInfo.sprite, 512)}
+      {@const spId = openInfo.id}
+      {@const seen = isSeen($footprint, spId)}
       <div id="sp-panel" class="sp-wrap"><div class="sp">
         <button class="sp-close" onclick={collapse} aria-label={$t('species.collapse')}>×</button>
         {#if big}<img class="sp-img" src={big} alt="" decoding="async" />{:else}<span class="disc"></span>{/if}
-        <h4>{$tx(openInfo.name)} <small>{openInfo.name[$lang === 'zh' ? 'en' : 'zh']}</small></h4>
+        <h4>
+          {$tx(openInfo.name)} <small>{openInfo.name[$lang === 'zh' ? 'en' : 'zh']}</small>
+          <span class="tier" class:common={openInfo.rarity === 'common'}
+            >{#if GEMS[openInfo.rarity]}<span class="gems" aria-hidden="true">{GEMS[openInfo.rarity]}</span>{/if}{$t(`rarity.${openInfo.rarity}`)}</span
+          >
+        </h4>
         {#if openInfo.sci}<p class="sci">{openInfo.sci}</p>{/if}
         {#if openInfo.lengthM && !openInfo.tags?.some((x) => NO_LENGTH.has(x))}
           <p class="len"><span>{$t('species.length')}</span> {$t('species.about')} {lengthText(openInfo.lengthM)}</p>
         {/if}
-        {#if openInfo.blurb}<p class="blurb">{$tx(openInfo.blurb)}</p>{/if}
+        <!-- stays mounted while toggling, so focus stays on it -->
+        <button class="sighted" class:on={seen} aria-pressed={seen} onclick={() => toggleSeen(spId)}>
+          {#if seen}{@render check()}{/if}{$t('species.sighted')}
+        </button>
+        {#if openBlurb}<p class="blurb">{$tx(openBlurb)}</p>{/if}
       </div></div>
     {/if}
   </section>
@@ -291,13 +314,39 @@
     background: var(--paper-2);
     font-size: 13px;
   }
+  .chip.top {
+    box-shadow: inset 0 0 0 1px rgba(167, 123, 37, 0.45); /* --gold, faint: epic / legendary */
+  }
   .chip[aria-expanded='true'] {
     box-shadow: inset 0 0 0 2px var(--coral);
   }
+  .thumb {
+    position: relative;
+    display: block;
+    flex: none;
+  }
   .chip img {
+    display: block;
     width: 32px;
     height: 32px;
     object-fit: contain;
+  }
+  .tick {
+    position: absolute;
+    right: -3px;
+    bottom: -2px;
+    display: grid;
+    place-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #fff;
+    box-shadow: 0 0 0 1.5px var(--paper-2);
+  }
+  .tick svg {
+    width: 11px;
+    height: 11px;
   }
   .disc {
     display: block;
@@ -364,6 +413,28 @@
     font-weight: 400;
     color: var(--ink-soft);
   }
+  .tier {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 1px 8px;
+    border-radius: 999px;
+    background: rgba(167, 123, 37, 0.12); /* --gold, tinted */
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    vertical-align: 2px;
+  }
+  .tier.common {
+    background: var(--paper-2);
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+  .gems {
+    margin-right: 3px;
+    color: var(--gold);
+    letter-spacing: 0;
+  }
   .sci {
     margin: 2px 0 0;
     font-size: 13px;
@@ -383,8 +454,30 @@
     text-transform: uppercase;
     color: var(--ink-soft);
   }
+  .sighted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: var(--paper-2);
+    color: var(--ink);
+    font-weight: 600;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .sighted.on {
+    background: var(--coral);
+    color: #fff;
+  }
+  .sighted svg {
+    width: 16px;
+    height: 16px;
+  }
   .blurb {
-    margin: 8px 0 0;
+    margin: 10px 0 0;
     font-size: 13px;
     line-height: 1.6;
   }

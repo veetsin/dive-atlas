@@ -22,6 +22,7 @@ const LEVELS = new Set(['OW', 'AOW', 'Tech']);
 const TYPES = new Set(['reef', 'wall', 'drift', 'wreck', 'cave', 'muck', 'pelagic', 'coldwater', 'kelp']);
 const ACCESS = new Set(['shore', 'boat', 'liveaboard']);
 const SIZES = new Set(['xl', 'l', 'm', 's']);
+const RARITIES = new Set(['common', 'rare', 'epic', 'legendary']);
 
 const hasText = (o) => o && typeof o.zh === 'string' && o.zh.trim() && typeof o.en === 'string' && o.en.trim();
 const cjkLen = (s) => [...s].length;
@@ -37,6 +38,7 @@ for (const s of species) {
   if (!hasText(s.name)) err(ctx, 'name needs zh and en');
   if (typeof s.sprite !== 'string' || !s.sprite) err(ctx, 'sprite missing');
   if (!SIZES.has(s.sizeClass)) err(ctx, `sizeClass must be one of ${[...SIZES].join('|')}`);
+  if (!RARITIES.has(s.rarity)) err(ctx, `rarity must be one of ${[...RARITIES].join('|')}`);
   if (s.lengthM !== undefined && !(typeof s.lengthM === 'number' && s.lengthM > 0 && s.lengthM <= 40)) err(ctx, 'lengthM must be a number in (0, 40]');
   if (s.lengthM === undefined) warn(ctx, 'no lengthM — sprite falls back to sizeClass');
   if (!hasText(s.blurb)) err(ctx, 'blurb needs zh and en');
