@@ -6,7 +6,7 @@ import { sites, siteById, speciesById, spriteUrl } from './data';
 import { translate, type I18nKey } from './i18n';
 import { footprintStats, rankTitle } from './ranks';
 import type { Footprint } from './stores';
-import type { DiveSite, Lang, Species } from './types';
+import type { DiveSite, Lang, Rarity, Species } from './types';
 
 /**
  * 1080×1920 share poster v3, "潜水星图" (SPEC §6.1 #11): a dark editorial star chart, no landmasses.
@@ -28,7 +28,10 @@ const ROW_H = 74;
 
 const C = {
   bg: '#101113',
-  gold: '#d4a74a',
+  gold: '#d4a74a', // also the legendary tier
+  // rarity ◆ (rare / epic): app.css --rarity-* hues kept bright for charcoal; the app's are darkened for paper
+  rare: '#4f9fe0',
+  epic: '#a97ad8',
   white: '#f3f1ec',
   grey: '#8b8e94', // secondary text, wish labels
   dim: '#5c5f66', // context sites, tick labels
@@ -36,10 +39,10 @@ const C = {
   rule: '#2e3035',
 };
 
-type Rarity = 'common' | 'rare' | 'epic' | 'legendary';
 const RARITY: Record<Rarity, number> = { common: 0, rare: 1, epic: 2, legendary: 3 };
-/** `rarity` is being added to Species by another task; until then everything is common. */
-const rarityOf = (sp: Species) => RARITY[(sp as Species & { rarity?: Rarity }).rarity ?? 'common'] ?? 0;
+const rarityOf = (sp: Species) => RARITY[sp.rarity] ?? 0;
+/** ◆ colour by rarityOf(): index 0 (common) draws no marks. */
+const TIER = [C.dim, C.rare, C.epic, C.gold];
 
 const cssVar = (name: string) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 /** Longitude relative to the central meridian, in [-180, 180): left-to-right order on the app's map. */
@@ -95,23 +98,6 @@ function loadImages(urls: (string | undefined)[]): Promise<(HTMLImageElement | n
         : null,
     ),
   );
-}
-
-/** Stable 4-digit "edition number" from the name and the dived sites (FNV-1a). */
-function edition(key: string): string {
-  let h = 0x811c9dc5;
-  for (let i = 0; i < key.length; i++) h = Math.imul(h ^ key.charCodeAt(i), 0x01000193);
-  return String((h >>> 0) % 10000).padStart(4, '0');
-}
-
-function roman(n: number): string {
-  let out = '';
-  for (const [v, s] of [
-    [1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD'], [100, 'C'], [90, 'XC'],
-    [50, 'L'], [40, 'XL'], [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I'],
-  ] as const)
-    for (; n >= v; n -= v) out += s;
-  return out;
 }
 
 /**
@@ -199,7 +185,7 @@ function spline(ctx: Ctx, pts: [number, number][]): void {
   }
 }
 
-/** Gold diamonds, right-aligned at x: ◆ rare, ◆◆ epic, ◆◆◆ legendary. */
+/** Diamonds in the current fillStyle, right-aligned at x: ◆ rare, ◆◆ epic, ◆◆◆ legendary. */
 function diamonds(ctx: Ctx, n: number, xRight: number, y: number): void {
   ctx.beginPath();
   for (let i = 0; i < n; i++) {
@@ -269,7 +255,9 @@ export async function renderShareImage(fp: Footprint, lang: Lang, url: string, n
   ctx.fillText(ellipsis(ctx, (name ? `${tr('app.title')} · ${name}` : tr('app.title')).toUpperCase(), 560), M, 100);
   ctx.textAlign = 'right';
   ctx.fillStyle = C.grey;
-  ctx.fillText(fill(tr('poster.edition'), { n: edition(`${name}|${fp.dived.join(',')}`), year: roman(new Date().getFullYear()) }), W - M, 100);
+  const d = new Date(); // the viewer's local day
+  const date = `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
+  ctx.fillText(fill(tr('poster.stamp'), { n: st.level, date }), W - M, 100);
   ctx.textAlign = 'left';
   ctx.letterSpacing = '0px';
   rule(132);
@@ -565,7 +553,7 @@ export async function renderShareImage(fp: Footprint, lang: Lang, url: string, n
         ctx.font = `italic 400 21px ${serif}`;
         ctx.fillText(ellipsis(ctx, sp.sci, cellW - 76), x + 76, ry + 62);
       }
-      ctx.fillStyle = greyed ? C.dim : C.gold;
+      ctx.fillStyle = greyed ? C.dim : TIER[r]!;
       diamonds(ctx, r, x + cellW, ry + 23);
     });
   } else {

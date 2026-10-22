@@ -117,8 +117,9 @@ const dict = {
   'rank.13': { zh: '七海船长', en: 'Captain of the Seven Seas' },
   'rank.14': { zh: '深渊使者', en: 'Envoy of the Deep' },
   'rank.15': { zh: '海洋传奇', en: 'Ocean Legend' },
-  /** share poster (src/lib/share-image.ts); {n} {m} {k} {name} {year} are filled in there */
-  'poster.edition': { zh: 'No. {n} · {year}', en: 'No. {n} · {year}' },
+  /** share poster (src/lib/share-image.ts); {n} {m} {k} {name} {date} are filled in there */
+  /** top-right stamp: {n} = level (ranks.ts, as rank.level), {date} = YYYY.MM.DD, local */
+  'poster.stamp': { zh: '第 {n} 级 · {date}', en: 'Lv. {n} · {date}' },
   'poster.byline': { zh: '@{name} 的潜水星图', en: "@{name}'s dive star chart" },
   'poster.sites': { zh: '潜点', en: 'Sites' },
   'poster.countries': { zh: '国家', en: 'Countries' },

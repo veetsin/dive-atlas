@@ -107,8 +107,7 @@
         {@const sp = speciesById.get(id)}
         {@const thumb = sp && spriteUrl(sp.sprite, 192)}
         <button
-          class="chip"
-          class:top={sp?.rarity === 'epic' || sp?.rarity === 'legendary'}
+          class="chip {sp?.rarity ?? ''}"
           bind:this={chipEls[id]}
           aria-expanded={openSp === id}
           aria-controls="sp-panel"
@@ -131,7 +130,7 @@
         {#if big}<img class="sp-img" src={big} alt="" decoding="async" />{:else}<span class="disc"></span>{/if}
         <h4>
           {$tx(openInfo.name)} <small>{openInfo.name[$lang === 'zh' ? 'en' : 'zh']}</small>
-          <span class="tier" class:common={openInfo.rarity === 'common'}
+          <span class="tier {openInfo.rarity}"
             >{#if GEMS[openInfo.rarity]}<span class="gems" aria-hidden="true">{GEMS[openInfo.rarity]}</span>{/if}{$t(`rarity.${openInfo.rarity}`)}</span
           >
         </h4>
@@ -314,8 +313,11 @@
     background: var(--paper-2);
     font-size: 13px;
   }
-  .chip.top {
-    box-shadow: inset 0 0 0 1px rgba(167, 123, 37, 0.45); /* --gold, faint: epic / legendary */
+  .chip.epic {
+    box-shadow: inset 0 0 0 1px var(--rarity-epic);
+  }
+  .chip.legendary {
+    box-shadow: inset 0 0 0 1px var(--rarity-legendary);
   }
   .chip[aria-expanded='true'] {
     box-shadow: inset 0 0 0 2px var(--coral);
@@ -418,7 +420,7 @@
     margin-left: 4px;
     padding: 1px 8px;
     border-radius: 999px;
-    background: rgba(167, 123, 37, 0.12); /* --gold, tinted */
+    box-shadow: inset 0 0 0 1px currentColor; /* outlined on --paper: the tier colours are tuned for it */
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.04em;
@@ -426,13 +428,22 @@
     vertical-align: 2px;
   }
   .tier.common {
+    box-shadow: none;
     background: var(--paper-2);
     color: var(--ink-soft);
     font-weight: 400;
   }
+  .tier.rare {
+    color: var(--rarity-rare);
+  }
+  .tier.epic {
+    color: var(--rarity-epic);
+  }
+  .tier.legendary {
+    color: var(--rarity-legendary);
+  }
   .gems {
     margin-right: 3px;
-    color: var(--gold);
     letter-spacing: 0;
   }
   .sci {

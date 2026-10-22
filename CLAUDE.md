@@ -105,5 +105,6 @@ art/raw/                  ← GPT 原始出图（gitignore，体积大）
 - [x] 地球模式（2026-10-21，SPEC §5.5、§6.1 #14）：工具栏地球按钮、`?view=globe` + `localStorage dive-atlas:view`、MapView 内切模式（d3-zoom 事件改读为旋转 / 中心缩放）、大圆飞行、运动 LOD（旋转中隐藏 s1–s3，飞行中再隐藏 s4 与海名，抽稀陆地 `landLo`）；无头自检 `npm run preview:map 375 700 night globe` 会在有潜点落在圆盘外时报错。6× 慢 CPU 模拟：拖动达标，搜索飞行因开卡那一帧 83 ms 略超，**真机 / 微信未测**
 - [x] 搜索（中文 / 英文 / 拼音 / 国家）：工具栏放大镜 → `SearchPanel.svelte`，选中后 `openSite()` 飞到潜点；`pinyin` 字段由 `npm run data:pinyin` 生成并被校验脚本要求；`?sp=` 物种筛选现在有可关闭的芯片
 - [x] 贴纸落地准备：`spriteUrl()` 只对 `public/sprites/manifest.json` 里有的贴纸返回地址（没画的不再 404），地图贴纸尺寸按 `sizeClass` 48/40/32/24 px
-- [ ] 买域名 → 托管拍板 → 国内实测：三网测速 + 微信扫码打开
+- [x] 域名与托管（2026-10-22）：`veetsin.com` 裸域 A 记录 + www CNAME（阿里云 DNS）→ GitHub Pages（仓库 `veetsin/dive-atlas`，Actions 构建，`BASE_PATH` 变量 = `/`，`public/CNAME`）；证书已签发并强制 HTTPS，http 与 www 均 301 到 https://veetsin.com。推送 main 即部署
+- [ ] 国内实测：三网打开速度、微信扫码与长按保存海报、低端安卓的地球拖动与海报渲染
 - 下一步见 `docs/SPEC.md` §11 里程碑
